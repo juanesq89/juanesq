@@ -367,25 +367,33 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
   <div>
     <p class="section-label reveal">Contact</p>
     <h2 class="contact-title reveal">Let's talk.<br><em>En cualquier idioma.</em></h2>
-    <p class="contact-sub reveal">Whether you have an urgent legal matter or simply want to understand your options, reach out in any language. The first step is a conversation.</p>
+    <p class="contact-sub reveal">Whether you have an urgent legal matter or simply want to understand your options, reach out in English, Spanish, or Portuguese. The first step is a conversation.</p>
     <div class="contact-items reveal">
       <div class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-item-label">Email</div><div class="contact-item-value">juan@release-code.com</div></div></div>
       
       <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-item-label">Location</div><div class="contact-item-value">Seoul, Republic of Korea<br><span style="font-size:.7rem;color:rgba(245,240,232,.3)">Video consultations available worldwide</span></div></div></div>
     </div>
     <div class="contact-lang-note reveal">
-      <p>You may write in <strong>English</strong>, <strong>Español</strong>, or <strong>Português</strong>. All communications handled directly by Juan — no intermediary, no language barrier.</p>
+      <p>You may write in <strong>English</strong>, <strong>Español</strong>, or <strong>Português</strong>. Korean is also welcome. All communications handled directly by Juan.</p>
     </div>
   </div>
-  <div class="contact-form reveal">
-    <div class="form-group"><label class="form-label">Full Name *</label><input class="form-input" id="f-name" type="text" placeholder="John / Juan / João"></div>
-    <div class="form-group"><label class="form-label">Nationality</label><input class="form-input" id="f-nationality" type="text" placeholder="e.g. Brazilian, Mexican..."></div>
-    <div class="form-group"><label class="form-label">Email Address *</label><input class="form-input" id="f-email" type="email" placeholder="your@email.com"></div>
-    <div class="form-group"><label class="form-label">Preferred Language</label><select class="form-select" id="f-lang"><option>English</option><option>Español</option><option>Português</option><option>한국어</option></select></div>
-    <div class="form-group"><label class="form-label">Practice Area</label><select class="form-select" id="f-area"><option value="">Select area</option><option>Real Estate &amp; Construction</option><option>Family Law &amp; Divorce</option><option>Corporate &amp; Business Law</option><option>Criminal Defense</option><option>Immigration &amp; Visa</option><option>Other / Not Sure</option></select></div>
-    <div class="form-group"><label class="form-label">Brief Description *</label><textarea class="form-textarea" id="f-message" placeholder="Describe your situation. / Describa su situación. / Descreva sua situação."></textarea></div>
-    <button class="form-submit" onclick="handleSubmit()">Send · Enviar · Enviar</button>
-    <p class="form-note">🔒 All communications are protected by attorney-client privilege and treated with strict confidentiality.</p>
+  <div class="reveal" style="display:flex;flex-direction:column;justify-content:flex-end;height:100%;">
+    <div style="padding:32px;border:1px solid rgba(201,168,76,0.2);background:rgba(201,168,76,0.03);">
+      <p style="font-size:0.58rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Send a Message</p>
+      <p style="font-size:0.85rem;font-weight:300;line-height:1.9;color:rgba(245,240,232,0.5);margin-bottom:32px;">Click the email icon to open Gmail, or copy the address directly. Juan responds in English, Spanish, and Portuguese.</p>
+      <div style="display:flex;align-items:center;gap:16px;padding:20px 24px;border:1px solid rgba(201,168,76,0.25);background:rgba(255,255,255,0.03);">
+        <span style="font-size:0.95rem;font-weight:400;color:var(--ivory);letter-spacing:0.03em;">juan@release-code.com</span>
+        <div style="display:flex;gap:10px;margin-left:auto;">
+          <a href="https://mail.google.com/mail/?view=cm&to=juan@release-code.com&su=Legal%20Inquiry%20via%20juanesq.com" target="_blank" title="Send via Gmail" style="width:36px;height:36px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;color:var(--gold);text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.15)'" onmouseout="this.style.background='transparent'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
+          <button onclick="copyEmail()" title="Copy email address" style="width:36px;height:36px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;color:var(--gold);background:transparent;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.15)'" onmouseout="this.style.background='transparent'" id="copy-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          </button>
+        </div>
+      </div>
+      <p style="font-size:0.6rem;font-weight:300;color:rgba(245,240,232,0.25);margin-top:12px;">🔒 Attorney-client privilege applies to all communications.</p>
+    </div>
   </div>
 </section>
 
@@ -396,27 +404,23 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 </footer>
 
 <script>
+function copyEmail(){
+  navigator.clipboard.writeText('juan@release-code.com').then(()=>{
+    const btn=document.getElementById('copy-btn');
+    btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+    btn.style.borderColor='rgba(201,168,76,0.8)';
+    setTimeout(()=>{
+      btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
+      btn.style.borderColor='rgba(201,168,76,0.3)';
+    },2000);
+  });
+}
 const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
 const reveals=document.querySelectorAll('.reveal');
 const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*55);observer.unobserve(entry.target);}});},{threshold:.1});
 reveals.forEach(el=>observer.observe(el));
 function toggleMenu(){const l=document.querySelector('.nav-links');if(l.style.display==='flex'){l.style.display='none';}else{l.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(10,22,40,.98);padding:28px 24px;gap:22px;z-index:99;border-bottom:1px solid rgba(201,168,76,.15);';}}
-
-function handleSubmit(){
-  const name=document.getElementById('f-name').value;
-  const nationality=document.getElementById('f-nationality').value;
-  const email=document.getElementById('f-email').value;
-  const lang=document.getElementById('f-lang').value;
-  const area=document.getElementById('f-area').value;
-  const message=document.getElementById('f-message').value;
-  if(!name||!email||!message){alert('Please fill in Name, Email, and Message.');return;}
-  const subject=encodeURIComponent('Legal Inquiry - '+area+' ['+lang+']');
-  const body=encodeURIComponent('Name: '+name+'\nNationality: '+nationality+'\nEmail: '+email+'\nLanguage: '+lang+'\nPractice Area: '+area+'\n\nMessage:\n'+message);
-  window.location.href='mailto:juan@release-code.com?subject='+subject+'&body='+body;
-}
-
-
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});if(window.innerWidth<=900)document.querySelector('.nav-links').style.display='none';});});
 </script>
 </body>
