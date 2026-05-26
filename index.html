@@ -370,16 +370,12 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
     </div>
   </div>
   <div class="contact-form reveal">
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Full Name *</label><input class="form-input" type="text" placeholder="John / Juan / João"></div>
-      <div class="form-group"><label class="form-label">Nationality</label><input class="form-input" type="text" placeholder="e.g. Brazilian, Mexican..."></div>
-    </div>
-    <div class="form-group"><label class="form-label">Email Address *</label><input class="form-input" type="email" placeholder="your@email.com"></div>
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Preferred Language</label><select class="form-select"><option>English</option><option>Español</option><option>Português</option><option>한국어</option></select></div>
-      <div class="form-group"><label class="form-label">Practice Area</label><select class="form-select"><option value="">Select area</option><option>Real Estate &amp; Construction</option><option>Family Law &amp; Divorce</option><option>Corporate &amp; Business Law</option><option>Criminal Defense</option><option>Immigration &amp; Visa</option><option>Other / Not Sure</option></select></div>
-    </div>
-    <div class="form-group"><label class="form-label">Brief Description *</label><textarea class="form-textarea" placeholder="Describe your situation. / Describa su situación. / Descreva sua situação."></textarea></div>
+    <div class="form-group"><label class="form-label">Full Name *</label><input class="form-input" id="f-name" type="text" placeholder="John / Juan / João"></div>
+    <div class="form-group"><label class="form-label">Nationality</label><input class="form-input" id="f-nationality" type="text" placeholder="e.g. Brazilian, Mexican..."></div>
+    <div class="form-group"><label class="form-label">Email Address *</label><input class="form-input" id="f-email" type="email" placeholder="your@email.com"></div>
+    <div class="form-group"><label class="form-label">Preferred Language</label><select class="form-select" id="f-lang"><option>English</option><option>Español</option><option>Português</option><option>한국어</option></select></div>
+    <div class="form-group"><label class="form-label">Practice Area</label><select class="form-select" id="f-area"><option value="">Select area</option><option>Real Estate &amp; Construction</option><option>Family Law &amp; Divorce</option><option>Corporate &amp; Business Law</option><option>Criminal Defense</option><option>Immigration &amp; Visa</option><option>Other / Not Sure</option></select></div>
+    <div class="form-group"><label class="form-label">Brief Description *</label><textarea class="form-textarea" id="f-message" placeholder="Describe your situation. / Describa su situación. / Descreva sua situação."></textarea></div>
     <button class="form-submit" onclick="handleSubmit()">Send · Enviar · Enviar</button>
     <p class="form-note">🔒 All communications are protected by attorney-client privilege and treated with strict confidentiality.</p>
   </div>
@@ -398,33 +394,21 @@ const reveals=document.querySelectorAll('.reveal');
 const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*55);observer.unobserve(entry.target);}});},{threshold:.1});
 reveals.forEach(el=>observer.observe(el));
 function toggleMenu(){const l=document.querySelector('.nav-links');if(l.style.display==='flex'){l.style.display='none';}else{l.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(10,22,40,.98);padding:28px 24px;gap:22px;z-index:99;border-bottom:1px solid rgba(201,168,76,.15);';}}
-const SUPABASE_URL='https://bdojvwmobxpufiiuhlal.supabase.co';
-const SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJkb2p2d21vYnhwdWZpaXVobGFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxMjM2ODQsImV4cCI6MjA5NDY5OTY4NH0.HY4LuFFI1MDhd8il5-tIo6kSjlzdXP_GAwSIkH94p4c';
-async function handleSubmit(){
-  const inputs=document.querySelectorAll('.form-input');
-  const name=inputs[0].value, nationality=inputs[1].value, email=inputs[2].value;
-  const selects=document.querySelectorAll('.form-select');
-  const language=selects[0].value, area=selects[1].value;
-  const message=document.querySelector('.form-textarea').value;
+
+function handleSubmit(){
+  const name=document.getElementById('f-name').value;
+  const nationality=document.getElementById('f-nationality').value;
+  const email=document.getElementById('f-email').value;
+  const lang=document.getElementById('f-lang').value;
+  const area=document.getElementById('f-area').value;
+  const message=document.getElementById('f-message').value;
   if(!name||!email||!message){alert('Please fill in Name, Email, and Message.');return;}
-  const btn=document.querySelector('.form-submit');
-  btn.textContent='Sending...';btn.disabled=true;
-  try{
-    const res=await fetch(SUPABASE_URL+'/rest/v1/juanesq_contacts',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Prefer':'return=minimal'},
-      body:JSON.stringify({name,nationality,email,language,area,message})
-    });
-    if(res.ok){
-      btn.textContent='Sent ✓';
-      alert('Thank you / Gracias / Obrigado!\n\nI will respond within 24 hours.\n— Juan');
-      document.querySelectorAll('.form-input,.form-textarea').forEach(el=>el.value='');
-    } else { throw new Error(); }
-  } catch(e){
-    btn.textContent='Send · Enviar · Enviar';btn.disabled=false;
-    alert('Something went wrong. Please email: juan@release-code.com');
-  }
+  const subject=encodeURIComponent('Legal Inquiry - '+area+' ['+lang+']');
+  const body=encodeURIComponent('Name: '+name+'\nNationality: '+nationality+'\nEmail: '+email+'\nLanguage: '+lang+'\nPractice Area: '+area+'\n\nMessage:\n'+message);
+  window.location.href='mailto:juan@release-code.com?subject='+subject+'&body='+body;
 }
+
+
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});if(window.innerWidth<=900)document.querySelector('.nav-links').style.display='none';});});
 </script>
 </body>
