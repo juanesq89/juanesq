@@ -413,15 +413,30 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 
 <script>
 function copyEmail(){
-  navigator.clipboard.writeText('juan@release-code.com').then(()=>{
-    const btn=document.getElementById('copy-btn');
-    btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+  const email='juan@release-code.com';
+  const btn=document.getElementById('copy-btn');
+  const checkSVG='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+  const copySVG='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
+  function showCheck(){
+    btn.innerHTML=checkSVG;
     btn.style.borderColor='rgba(201,168,76,0.8)';
-    setTimeout(()=>{
-      btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
-      btn.style.borderColor='rgba(201,168,76,0.3)';
-    },2000);
-  });
+    setTimeout(()=>{btn.innerHTML=copySVG;btn.style.borderColor='rgba(201,168,76,0.3)';},2000);
+  }
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(email).then(showCheck).catch(()=>{
+      const ta=document.createElement('textarea');
+      ta.value=email;ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.focus();ta.select();
+      document.execCommand('copy');document.body.removeChild(ta);
+      showCheck();
+    });
+  } else {
+    const ta=document.createElement('textarea');
+    ta.value=email;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.focus();ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    showCheck();
+  }
 }
 const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
