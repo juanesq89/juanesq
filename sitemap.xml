@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://juanesq.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/"/>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
   </url>
   <url>
     <loc>https://juanesq.com/es/</loc>
@@ -17,9 +14,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/"/>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
     <loc>https://juanesq.com/pt/</loc>
@@ -27,8 +22,126 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/"/>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/korea-police-rights.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/korea-police-rights.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/korea-police-rights.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/korea-police-rights.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/korea-police-rights.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/korea-police-rights.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/korea-police-rights.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/korea-police-rights.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/korea-police-rights.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/korea-police-rights.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/korea-police-rights.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/korea-police-rights.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/korea-police-rights.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/korea-police-rights.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/korea-police-rights.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/start-business-korea.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/start-business-korea.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/start-business-korea.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/start-business-korea.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/start-business-korea.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/start-business-korea.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/start-business-korea.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/start-business-korea.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/start-business-korea.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/start-business-korea.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/start-business-korea.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/start-business-korea.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/start-business-korea.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/start-business-korea.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/start-business-korea.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/korea-defamation-law.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/korea-defamation-law.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/korea-defamation-law.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/korea-defamation-law.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/korea-defamation-law.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/korea-defamation-law.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/korea-defamation-law.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/korea-defamation-law.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/korea-defamation-law.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/korea-defamation-law.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/korea-defamation-law.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/korea-defamation-law.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/korea-defamation-law.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/korea-defamation-law.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/korea-defamation-law.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/divorce-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/divorce-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/divorce-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/divorce-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/divorce-korea-foreigners.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/divorce-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/divorce-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/divorce-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/divorce-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/divorce-korea-foreigners.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/divorce-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/divorce-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/divorce-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/divorce-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/divorce-korea-foreigners.html"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
 </urlset>
