@@ -144,4 +144,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/divorce-korea-foreigners.html"/>
     <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://juanesq.com/guide/dui-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/dui-korea-foreigners.html"/>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/korea-labor-law-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/korea-labor-law-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/korea-labor-law-foreigners.html"/>
+    <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
 </urlset>
