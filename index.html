@@ -240,8 +240,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
   <div>
     <p class="section-label reveal">About Juan</p>
     <h2 class="about-title reveal">Not just a lawyer.<br>Someone who <em>understands<br>your world.</em></h2>
-    <p class="about-body reveal">Before becoming a licensed Korean attorney , I spent years in the business world — first in shipbuilding sales for a major Korean industrial conglomerate, then leading Latin American operations for an international corporation. I know what it means to navigate complex systems in a foreign country, negotiate across cultures, and make high-stakes decisions without a safety net.</p>
-    <p class="about-body reveal">That experience shapes how I practice law today. Whether you're an expat, a Latin American national, a multinational executive, or a foreigner starting a business in Korea, I provide the legal clarity you deserve — in the language you think in.</p>
+    <p class="about-body reveal">Shipbuilding sales → Latin America business → Korean attorney. Real cross-cultural, cross-industry experience before law. I know what it means to navigate complex systems in a foreign country, negotiate across cultures, and make high-stakes decisions without a safety net.</p>
     <p class="about-body reveal">My personal brand follows me regardless of firm affiliation. When you hire Juan, you get Juan — consistent, committed, and contactable.</p>
     <div class="lang-showcase reveal">
       <div class="lang-showcase-title">Languages</div>
@@ -266,7 +265,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
       </div>
       <div class="career-item">
         <div class="career-period">Prior</div>
-        <div><div class="career-role">Latin America Business Division</div><div class="career-org">International Corporation · Sección Latinoamérica</div></div>
+        <div><div class="career-role">Latin America Business Division</div><div class="career-org">International Trading Company · Sección Latinoamérica</div></div>
       </div>
       <div class="career-item">
         <div class="career-period">Prior</div>
@@ -455,5 +454,27 @@ reveals.forEach(el=>observer.observe(el));
 function toggleMenu(){const l=document.querySelector('.nav-links');if(l.style.display==='flex'){l.style.display='none';}else{l.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(10,22,40,.98);padding:28px 24px;gap:22px;z-index:99;border-bottom:1px solid rgba(201,168,76,.15);';}}
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});if(window.innerWidth<=900)document.querySelector('.nav-links').style.display='none';});});
 </script>
+
+<!-- Floating CTA Bar -->
+<div id="floating-cta" style="position:fixed;bottom:0;left:0;right:0;background:rgba(10,22,40,0.97);border-top:1px solid rgba(201,168,76,0.3);padding:14px 48px;display:flex;align-items:center;justify-content:space-between;z-index:200;backdrop-filter:blur(8px);transition:transform 0.3s;">
+  <div>
+    <div style="font-size:0.85rem;font-weight:500;color:#f5f0e8;">Ready to talk?</div>
+    <div style="font-size:0.62rem;color:rgba(245,240,232,0.45);letter-spacing:0.12em;margin-top:2px;">English · Español · Português · 한국어</div>
+  </div>
+  <div style="display:flex;gap:12px;align-items:center;">
+    <a href="https://wa.me/821046878934" target="_blank" style="display:flex;align-items:center;gap:8px;background:#25D366;color:white;padding:10px 20px;font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='#1fb559'" onmouseout="this.style.background='#25D366'">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://mail.google.com/mail/?view=cm&to=juan@release-code.com&su=Legal%20Inquiry%20via%20juanesq.com" target="_blank" style="background:#c9a84c;color:#0a1628;padding:10px 24px;font-size:0.68rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='#e8cc85'" onmouseout="this.style.background='#c9a84c'">Email Juan</a>
+  </div>
+</div>
+<style>
+body { padding-bottom: 68px; }
+@media(max-width:600px){
+  #floating-cta { padding: 12px 20px; }
+  #floating-cta div:first-child { display: none; }
+}
+</style>
 </body>
 </html>
