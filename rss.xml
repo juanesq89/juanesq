@@ -5,9 +5,33 @@
     <link>https://juanesq.com/</link>
     <description>Plain-English guides to Korean law for foreign residents — immigration and visas, criminal defense, employment, real estate, family law, and tax.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Aug 2026 02:03:49 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 04:40:40 GMT</lastBuildDate>
     <generator>juanesq</generator>
     <atom:link href="https://juanesq.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Damages Without a Second Lawsuit: The Compensation Order (배상명령)</title>
+      <link>https://juanesq.com/guide/compensation-order-criminal-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/compensation-order-criminal-korea-foreigners.html</guid>
+      <category>Criminal Procedure</category>
+      <description>A crime victim in Korea does not always have to sue twice. The criminal court can order the defendant to pay — but only for certain offences, and only for certain losses.</description>
+      <pubDate>Mon, 31 Aug 2026 04:40:40 GMT</pubDate>
+    </item>
+    <item>
+      <title>Seven Days: Appealing a Criminal Conviction (항소) in Korea</title>
+      <link>https://juanesq.com/guide/criminal-appeal-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/criminal-appeal-korea-foreigners.html</guid>
+      <category>Criminal Defence</category>
+      <description>The verdict is not the end. But the window is seven days, and it starts running the day it is pronounced — not the day the written judgment arrives.</description>
+      <pubDate>Mon, 31 Aug 2026 04:40:40 GMT</pubDate>
+    </item>
+    <item>
+      <title>Acting From Abroad: The Power of Attorney (위임장) in Korea</title>
+      <link>https://juanesq.com/guide/power-of-attorney-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/power-of-attorney-korea-foreigners.html</guid>
+      <category>Documents &amp; Procedure</category>
+      <description>A power of attorney that is valid is not the same as one a Korean bank will accept. The difference is usually in the authentication, and in how narrowly it is drafted.</description>
+      <pubDate>Mon, 31 Aug 2026 04:40:40 GMT</pubDate>
+    </item>
     <item>
       <title>Investing Your Way In: The D-8 Corporate Investment Visa (기업투자) in Korea</title>
       <link>https://juanesq.com/guide/d8-corporate-investment-visa-korea-foreigners.html</link>
@@ -463,30 +487,6 @@
       <category>Family Law</category>
       <description>What a Korean prenuptial agreement can and can't do, how courts treat them, and the drafting mistakes that get them invalidated — explained by a Korean attorney.</description>
       <pubDate>Sat, 25 Jul 2026 04:47:41 GMT</pubDate>
-    </item>
-    <item>
-      <title>Hagwon Contract Disputes in Korea: A Foreign Teacher's Rights</title>
-      <link>https://juanesq.com/guide/hagwon-contract-dispute-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/hagwon-contract-dispute-korea-foreigners.html</guid>
-      <category>Labor &amp; Employment</category>
-      <description>Unpaid salary, cut hours, or a sudden firing at your hagwon (학원) — a foreign teacher's rights under Korean labor law, the E-2 visa risk of speaking up, and how to actually recover what you're owed.</description>
-      <pubDate>Fri, 24 Jul 2026 01:20:41 GMT</pubDate>
-    </item>
-    <item>
-      <title>Medical Malpractice in Korea: A Foreign Patient's Guide</title>
-      <link>https://juanesq.com/guide/medical-malpractice-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/medical-malpractice-korea-foreigners.html</guid>
-      <category>Medical Malpractice &amp; Patient Rights</category>
-      <description>How medical negligence (의료과실) is proven in Korea, the burden-of-proof problem foreign patients face, mediation through K-MEDI vs. a civil lawsuit, and the deadline to act.</description>
-      <pubDate>Fri, 24 Jul 2026 01:20:41 GMT</pubDate>
-    </item>
-    <item>
-      <title>School Violence in Korea: A Guide for Foreign Parents</title>
-      <link>https://juanesq.com/guide/school-violence-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/school-violence-korea-foreigners.html</guid>
-      <category>Family Law</category>
-      <description>How the School Violence Prevention Act (학교폭력예방법) process works, the School Violence Committee (학폭위) hearing, and what foreign and multicultural families need to know whether their child is the victim or the one accused.</description>
-      <pubDate>Fri, 24 Jul 2026 01:20:41 GMT</pubDate>
     </item>
   </channel>
 </rss>
