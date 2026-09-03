@@ -5,9 +5,33 @@
     <link>https://juanesq.com/</link>
     <description>Plain-English guides to Korean law for foreign residents — immigration and visas, criminal defense, employment, real estate, family law, and tax.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Sep 2026 01:39:06 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 01:37:50 GMT</lastBuildDate>
     <generator>juanesq</generator>
     <atom:link href="https://juanesq.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>When a Settlement Demand Becomes Extortion (공갈) in Korea</title>
+      <link>https://juanesq.com/guide/extortion-settlement-demand-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/extortion-settlement-demand-korea-foreigners.html</guid>
+      <category>Criminal Defense</category>
+      <description>Where a lawful settlement (합의) demand ends and extortion (공갈) begins &amp;mdash; and why paying quietly is rarely the safe option.</description>
+      <pubDate>Thu, 03 Sep 2026 01:37:50 GMT</pubDate>
+    </item>
+    <item>
+      <title>Brokerage Commission (중개보수) and Maintenance Fees (관리비) in Korea: The Rental Costs Nobody Explains</title>
+      <link>https://juanesq.com/guide/rental-brokerage-fee-maintenance-cost-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/rental-brokerage-fee-maintenance-cost-korea-foreigners.html</guid>
+      <category>Real Estate</category>
+      <description>How the agent fee is capped, who actually owes it, and why the maintenance fee (관리비) is where the real money hides.</description>
+      <pubDate>Thu, 03 Sep 2026 01:37:50 GMT</pubDate>
+    </item>
+    <item>
+      <title>Suspended Indictment, Suspended Sentence, Suspended Execution (기소유예·선고유예·집행유예) in Korea</title>
+      <link>https://juanesq.com/guide/suspended-dispositions-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/suspended-dispositions-korea-foreigners.html</guid>
+      <category>Criminal Defense</category>
+      <description>Why &quot;suspended&quot; can mean no conviction at all, a conviction that evaporates, or a prison term hanging over you for years.</description>
+      <pubDate>Thu, 03 Sep 2026 01:37:50 GMT</pubDate>
+    </item>
     <item>
       <title>Changing Your Visa Status Inside Korea: The Status Change Permit (체류자격 변경허가)</title>
       <link>https://juanesq.com/guide/change-of-status-korea-foreigners.html</link>
@@ -463,30 +487,6 @@
       <category>Labor &amp; Employment</category>
       <description>180 days of Employment Insurance, an involuntary separation, and active job-seeking — the real eligibility test for 실업급여, explained for foreign workers.</description>
       <pubDate>Mon, 27 Jul 2026 01:37:30 GMT</pubDate>
-    </item>
-    <item>
-      <title>Adopting a Child in Korea as a Foreigner: What the Family Court Actually Requires</title>
-      <link>https://juanesq.com/guide/adoption-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/adoption-korea-foreigners.html</guid>
-      <category>Family Law</category>
-      <description>Eligibility, the Family Court approval process, and the home study every applicant has to pass — adoption in Korea explained for foreign residents.</description>
-      <pubDate>Sun, 26 Jul 2026 06:12:24 GMT</pubDate>
-    </item>
-    <item>
-      <title>Freelancer or Employee? Korea's Platform Worker Rules and What They Mean for You</title>
-      <link>https://juanesq.com/guide/freelance-platform-worker-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/freelance-platform-worker-korea-foreigners.html</guid>
-      <category>Labor &amp; Employment</category>
-      <description>The person-providing-labor (노무제공자) category, insurance rights it triggers, and how misclassification disputes actually play out for gig and platform workers in Korea.</description>
-      <pubDate>Sun, 26 Jul 2026 06:12:24 GMT</pubDate>
-    </item>
-    <item>
-      <title>Changing Your Legal Name After Naturalizing in Korea: The Court Approval Nobody Mentions</title>
-      <link>https://juanesq.com/guide/name-change-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/name-change-korea-foreigners.html</guid>
-      <category>Nationality &amp; Military Service</category>
-      <description>Name change (개명) after naturalization runs through Family Court, not the district office counter. The standard judges apply, and why some petitions get denied.</description>
-      <pubDate>Sun, 26 Jul 2026 06:12:24 GMT</pubDate>
     </item>
   </channel>
 </rss>
