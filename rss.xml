@@ -5,9 +5,33 @@
     <link>https://juanesq.com/</link>
     <description>Plain-English guides to Korean law for foreign residents — immigration and visas, criminal defense, employment, real estate, family law, and tax.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 04 Sep 2026 21:36:57 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 02:34:14 GMT</lastBuildDate>
     <generator>juanesq</generator>
     <atom:link href="https://juanesq.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mandatory Child Abuse Reporting (아동학대 신고의무) for Foreign Teachers in Korea</title>
+      <link>https://juanesq.com/guide/child-abuse-reporting-duty-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/child-abuse-reporting-duty-korea-foreigners.html</guid>
+      <category>Labor &amp; Employment</category>
+      <description>A duty most foreign teachers carry without being told, with a fine attached for ignoring it.</description>
+      <pubDate>Mon, 07 Sep 2026 02:34:14 GMT</pubDate>
+    </item>
+    <item>
+      <title>Maternity and Parental Leave (출산휴가·육아휴직) in Korea for Foreign Workers</title>
+      <link>https://juanesq.com/guide/parental-maternity-leave-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/parental-maternity-leave-korea-foreigners.html</guid>
+      <category>Labor &amp; Employment</category>
+      <description>The leave rights that do not depend on your nationality — and the visa question nobody answers.</description>
+      <pubDate>Mon, 07 Sep 2026 02:34:14 GMT</pubDate>
+    </item>
+    <item>
+      <title>Called In as a Witness (참고인) in Korea: The Interview That Can Change Your Status</title>
+      <link>https://juanesq.com/guide/witness-summons-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/witness-summons-korea-foreigners.html</guid>
+      <category>Criminal Defense</category>
+      <description>The difference between a witness and a suspect is not the room — it is what the record says afterwards.</description>
+      <pubDate>Mon, 07 Sep 2026 02:34:14 GMT</pubDate>
+    </item>
     <item>
       <title>When Your Korean Employer Shuts Down or Stops Paying</title>
       <link>https://juanesq.com/guide/employer-shutdown-korea-foreigners.html</link>
@@ -463,30 +487,6 @@
       <category>Criminal Defense</category>
       <description>How insult (모욕죄) differs from defamation, the public-perception requirement, the six-month complaint deadline, and the visa risk of even a minor conviction.</description>
       <pubDate>Sat, 01 Aug 2026 15:03:20 GMT</pubDate>
-    </item>
-    <item>
-      <title>Common-Law Marriage (사실혼) in Korea for Foreign Partners</title>
-      <link>https://juanesq.com/guide/common-law-marriage-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/common-law-marriage-korea-foreigners.html</guid>
-      <category>Family Law</category>
-      <description>What a foreign partner in a de facto marriage (사실혼) actually gets under Korean law, what they don't, and why registering the marriage still matters.</description>
-      <pubDate>Sat, 01 Aug 2026 14:21:16 GMT</pubDate>
-    </item>
-    <item>
-      <title>D-2 Student Visa Part-Time Work Permit (시간제 취업허가) in Korea</title>
-      <link>https://juanesq.com/guide/d2-student-visa-work-permit-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/d2-student-visa-work-permit-korea-foreigners.html</guid>
-      <category>Immigration &amp; Visas</category>
-      <description>The one-semester waiting rule, hour caps tied to your Korean ability, off-limits jobs, and the immigration risk of working without a permit — explained for international students.</description>
-      <pubDate>Sat, 01 Aug 2026 14:21:16 GMT</pubDate>
-    </item>
-    <item>
-      <title>Gift Tax (증여세) in Korea for Foreign Residents</title>
-      <link>https://juanesq.com/guide/gift-tax-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/gift-tax-korea-foreigners.html</guid>
-      <category>Tax Law</category>
-      <description>Who counts as a taxable recipient, the deduction traps foreign families fall into, and the 3-month filing deadline — gift tax in Korea explained for foreign residents.</description>
-      <pubDate>Sat, 01 Aug 2026 14:21:16 GMT</pubDate>
     </item>
   </channel>
 </rss>
