@@ -876,4 +876,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/kiip-social-integration-program-korea-foreigners.html"/>
     <lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://juanesq.com/privacy.html</loc>
+    <lastmod>2026-09-13</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
+  </url>
 </urlset>

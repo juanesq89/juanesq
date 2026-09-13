@@ -179,11 +179,32 @@ section{position:relative;z-index:1}
 footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;justify-content:space-between;align-items:center;background:var(--navy)}
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;letter-spacing:.1em;color:var(--gold)}
 .footer-copy{font-size:.62rem;font-weight:300;color:rgba(245,240,232,.22);letter-spacing:.1em}
+.footer-disclaimer a{display:inline-block;margin-top:9px;font-size:.6rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.65);text-decoration:none}
+.footer-disclaimer a:hover{color:var(--gold-light)}
 .footer-disclaimer{font-size:.58rem;font-weight:300;color:rgba(245,240,232,.18);text-align:right;max-width:360px;line-height:1.7}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+/* 홈 → 개별 가이드 직접 링크 */
+#guides{padding:120px 60px;background:var(--navy)}
+.guides-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:46px;flex-wrap:wrap}
+.guides-label{font-size:.58rem;font-weight:500;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:16px}
+.guides-label::before{content:'';width:34px;height:1px;background:var(--gold)}
+.guides-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.18;color:var(--ivory);max-width:620px}
+.guides-all{font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;white-space:nowrap;padding-bottom:6px;border-bottom:1px solid rgba(201,168,76,.35);transition:color .3s,border-color .3s}
+.guides-all:hover{color:var(--gold-light);border-color:var(--gold-light)}
+.guides-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.guide-tile{display:block;background:rgba(255,255,255,.02);border:1px solid rgba(201,168,76,.1);padding:32px 28px;text-decoration:none;position:relative;overflow:hidden;transition:background .4s,border-color .4s,transform .3s}
+.guide-tile::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.guide-tile:hover{background:rgba(201,168,76,.05);border-color:rgba(201,168,76,.3);transform:translateY(-4px)}
+.guide-tile:hover::before{transform:scaleX(1)}
+.gt-cat{display:block;font-size:.54rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:rgba(201,168,76,.65);margin-bottom:14px}
+.gt-title{display:block;font-family:'Cormorant Garamond',serif;font-size:1.32rem;font-weight:500;line-height:1.28;color:var(--ivory);margin-bottom:11px}
+.gt-desc{display:block;font-size:.79rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,.5)}
+.gt-more{background:rgba(201,168,76,.045)}
+@media(max-width:1100px){.guides-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){#guides{padding:80px 24px}.guides-grid{grid-template-columns:1fr}.guides-title{font-size:1.62rem}}
 @media(max-width:1440px){.nav-links{gap:20px}.nav-links a{font-size:.62rem;letter-spacing:.13em}nav{padding:20px 32px}nav.scrolled{padding:14px 32px}}
 @media(max-width:1200px){.practice-grid{grid-template-columns:repeat(3,1fr)}.hero-line{display:none}.hero-portrait{max-width:52vw;top:50%;bottom:auto;transform:translateY(-50%)}.why-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:1120px){.nav-links{display:none}.hamburger{display:flex}}
@@ -232,6 +253,43 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
       <a href="#contact" class="btn-primary">Agendar uma Consulta</a>
       <a href="#about" class="btn-secondary">Saiba Mais</a>
     </div>
+  </div>
+</section>
+
+<section id="guides">
+  <div class="guides-head">
+    <div>
+      <p class="guides-label">Guias</p>
+      <h2 class="guides-title">Comece pela pergunta que o trouxe até aqui.</h2>
+    </div>
+    <a href="/guide/pt/" class="guides-all">Todos os guias</a>
+  </div>
+  <div class="guides-grid">
+    <a href="/guide/pt/korea-police-rights.html" class="guide-tile">
+      <span class="gt-cat">Defesa Criminal</span>
+      <span class="gt-title">A polícia coreana está a interrogá-lo</span>
+      <span class="gt-desc">Que direitos tem desde o primeiro minuto e quais perde se não os invocar a tempo.</span>
+    </a>
+    <a href="/guide/pt/korea-defamation-law.html" class="guide-tile">
+      <span class="gt-cat">Difamação Criminal</span>
+      <span class="gt-title">Aquela avaliação negativa pode sair cara</span>
+      <span class="gt-desc">Na Coreia a difamação é crime mesmo quando o que diz é verdade. Como funciona e o que arrisca.</span>
+    </a>
+    <a href="/guide/pt/divorce-korea-foreigners.html" class="guide-tile">
+      <span class="gt-cat">Direito de Família</span>
+      <span class="gt-title">Divorciar-se na Coreia sendo estrangeiro</span>
+      <span class="gt-desc">Jurisdição, culpa, partilha de bens, guarda dos filhos — e o que acontece ao seu visto depois.</span>
+    </a>
+    <a href="/guide/pt/start-business-korea.html" class="guide-tile">
+      <span class="gt-cat">Direito Empresarial</span>
+      <span class="gt-title">Abrir um negócio na Coreia</span>
+      <span class="gt-desc">Visto D-8, capital mínimo, constituição da sociedade e os trâmites que quase todos esquecem.</span>
+    </a>
+    <a href="/guide/" class="guide-tile gt-more">
+      <span class="gt-cat">Mais guias</span>
+      <span class="gt-title">126 guias de direito coreano</span>
+      <span class="gt-desc">O arquivo completo está em inglês: criminal, imigração, trabalho, família, habitação e empresa.</span>
+    </a>
   </div>
 </section>
 
@@ -289,7 +347,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
     <div class="about-credentials reveal" style="margin-top:40px">
       <div class="credential"><div class="credential-dot"></div><div class="credential-text">Advogado, República da Coreia</div></div>
       <div class="credential"><div class="credential-dot"></div><div class="credential-text">Ordem dos Advogados da Coreia · Ordem dos Advogados de Seul</div></div>
-      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Casos transfronteiriços entre Coreia e América Latina</div></div>
+      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Idiomas de trabalho: coreano, inglês, espanhol e português</div></div>
     </div>
 </div>
 </section>
@@ -330,7 +388,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
     <div class="practice-card reveal">
       <div class="practice-num">05</div><div class="practice-icon">✈️</div>
       <h3 class="practice-name">Imigração e Vistos</h3>
-      <p class="practice-desc">Solicitações de visto, prorrogações, indeferimentos e defesa contra deportação. Orientação sobre residência permanente (F-5). Com experiência especial com cidadãos latino-americanos.</p>
+      <p class="practice-desc">Solicitações de visto, prorrogações, indeferimentos e defesa contra deportação. Orientação sobre residência permanente (F-5).</p>
       <div class="practice-tags"><span class="tag">Visto / Residência</span><span class="tag">Deportação</span><span class="tag">F-5 / Residência</span></div>
     </div>
   </div>
@@ -430,7 +488,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 <footer>
   <div class="footer-logo">Juan W. Hong, Advogado</div>
   <div class="footer-copy">홍우원 · 법무법인 에스엔케이 (SNK Law Firm), Seul<br>© 2026 juanesq.com</div>
-  <div class="footer-disclaimer">Este site tem caráter meramente informativo e não constitui aconselhamento jurídico. O contato com este escritório não estabelece uma relação advogado-cliente.</div>
+  <div class="footer-disclaimer">Este site tem caráter meramente informativo e não constitui aconselhamento jurídico. O contato com este escritório não estabelece uma relação advogado-cliente.<br><a href="/privacy.html#pt">Política de Privacidade</a></div>
 </footer>
 
 <script>

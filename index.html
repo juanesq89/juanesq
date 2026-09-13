@@ -188,6 +188,25 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 .reveal.visible{opacity:1;transform:translateY(0)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+/* 홈 → 개별 가이드 직접 링크 */
+#guides{padding:120px 60px;background:var(--navy)}
+.guides-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:46px;flex-wrap:wrap}
+.guides-label{font-size:.58rem;font-weight:500;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:16px}
+.guides-label::before{content:'';width:34px;height:1px;background:var(--gold)}
+.guides-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.18;color:var(--ivory);max-width:620px}
+.guides-all{font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;white-space:nowrap;padding-bottom:6px;border-bottom:1px solid rgba(201,168,76,.35);transition:color .3s,border-color .3s}
+.guides-all:hover{color:var(--gold-light);border-color:var(--gold-light)}
+.guides-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.guide-tile{display:block;background:rgba(255,255,255,.02);border:1px solid rgba(201,168,76,.1);padding:32px 28px;text-decoration:none;position:relative;overflow:hidden;transition:background .4s,border-color .4s,transform .3s}
+.guide-tile::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.guide-tile:hover{background:rgba(201,168,76,.05);border-color:rgba(201,168,76,.3);transform:translateY(-4px)}
+.guide-tile:hover::before{transform:scaleX(1)}
+.gt-cat{display:block;font-size:.54rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:rgba(201,168,76,.65);margin-bottom:14px}
+.gt-title{display:block;font-family:'Cormorant Garamond',serif;font-size:1.32rem;font-weight:500;line-height:1.28;color:var(--ivory);margin-bottom:11px}
+.gt-desc{display:block;font-size:.79rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,.5)}
+.gt-more{background:rgba(201,168,76,.045)}
+@media(max-width:1100px){.guides-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){#guides{padding:80px 24px}.guides-grid{grid-template-columns:1fr}.guides-title{font-size:1.62rem}}
 @media(max-width:1440px){.nav-links{gap:20px}.nav-links a{font-size:.62rem;letter-spacing:.13em}nav{padding:20px 32px}nav.scrolled{padding:14px 32px}}
 @media(max-width:1200px){.practice-grid{grid-template-columns:repeat(3,1fr)}.hero-line{display:none}.hero-portrait{max-width:52vw;top:50%;bottom:auto;transform:translateY(-50%);opacity:0;animation:fadeIn 1.4s 1.1s forwards}.why-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:1120px){.nav-links{display:none}.hamburger{display:flex}}
@@ -211,6 +230,16 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 .jf-msg.ok{display:block;border-color:rgba(201,168,76,.5);background:rgba(201,168,76,.07);color:var(--gold-light)}
 .jf-msg.err{display:block;border-color:rgba(214,124,104,.45);background:rgba(214,124,104,.07);color:#e3a595}
 .jf-note{font-size:.6rem;font-weight:300;line-height:1.75;color:rgba(245,240,232,.28);margin-top:12px}
+.jf-consent{display:flex;align-items:flex-start;gap:11px;margin:4px 0 16px;cursor:pointer}
+.jf-consent input{appearance:none;-webkit-appearance:none;flex:0 0 16px;width:16px;height:16px;margin-top:3px;border:1px solid rgba(201,168,76,.5);background:rgba(255,255,255,.03);cursor:pointer;transition:background .25s,border-color .25s;border-radius:0}
+.jf-consent input:checked{background:var(--gold);border-color:var(--gold)}
+.jf-consent input:checked::after{content:'';display:block;width:4px;height:9px;margin:1px auto 0;border:solid var(--navy);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.jf-consent input:focus-visible{outline:1px solid var(--gold-light);outline-offset:2px}
+.jf-consent span{font-size:.7rem;font-weight:300;line-height:1.75;color:rgba(245,240,232,.5)}
+.jf-consent a{color:rgba(201,168,76,.85);text-decoration:underline;text-underline-offset:2px}
+.jf-consent a:hover{color:var(--gold-light)}
+.footer-disclaimer a{display:inline-block;margin-top:9px;font-size:.6rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.65);text-decoration:none}
+.footer-disclaimer a:hover{color:var(--gold-light)}
 .jf-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
 </style>
 </head>
@@ -255,6 +284,48 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
       <a href="#contact" class="btn-primary">Book a Consultation</a>
       <a href="#about" class="btn-secondary">Learn More</a>
     </div>
+  </div>
+</section>
+
+<section id="guides">
+  <div class="guides-head">
+    <div>
+      <p class="guides-label">Guides</p>
+      <h2 class="guides-title">Start with the question that brought you here.</h2>
+    </div>
+    <a href="/guide/" class="guides-all">All 126 guides</a>
+  </div>
+  <div class="guides-grid">
+    <a href="/guide/jeonse-scam-korea-foreigners.html" class="guide-tile">
+      <span class="gt-cat">Real Estate &amp; Leasing</span>
+      <span class="gt-title">Jeonse Scams in Korea</span>
+      <span class="gt-desc">How foreigners lose the whole deposit — registry checks, guarantee insurance, and the red flags that show up early.</span>
+    </a>
+    <a href="/guide/visa-overstay-korea-foreigners.html" class="guide-tile">
+      <span class="gt-cat">Immigration &amp; Visas</span>
+      <span class="gt-title">Overstayed Your Visa?</span>
+      <span class="gt-desc">Fines, entry bans and detention are all on the table — but overstaying does not automatically mean deportation.</span>
+    </a>
+    <a href="/guide/dui-korea-foreigners.html" class="guide-tile">
+      <span class="gt-cat">Criminal Defense</span>
+      <span class="gt-title">DUI in Korea</span>
+      <span class="gt-desc">The limit is 0.03% — two drinks can put you over it. Penalties, visa consequences, and what to do at the roadside.</span>
+    </a>
+    <a href="/guide/wrongful-termination-korea-foreigners.html" class="guide-tile">
+      <span class="gt-cat">Labor &amp; Employment</span>
+      <span class="gt-title">Fired Without Warning</span>
+      <span class="gt-desc">Korea does not allow at-will firing. How an unfair dismissal (부당해고) claim works, and the three-month deadline.</span>
+    </a>
+    <a href="/guide/severance-pay-korea-foreigners.html" class="guide-tile">
+      <span class="gt-cat">Labor &amp; Employment</span>
+      <span class="gt-title">Severance Pay (퇴직금)</span>
+      <span class="gt-desc">Owed to anyone who worked a year or more — whatever your visa, and whatever the reason the job ended.</span>
+    </a>
+    <a href="/guide/divorce-korea-foreigners.html" class="guide-tile">
+      <span class="gt-cat">Family Law</span>
+      <span class="gt-title">Divorce as a Foreigner</span>
+      <span class="gt-desc">Korean courts may have jurisdiction even if you married abroad. Fault, assets, custody, and your visa.</span>
+    </a>
   </div>
 </section>
 
@@ -311,7 +382,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
     <div class="about-credentials reveal" style="margin-top:40px">
       <div class="credential"><div class="credential-dot"></div><div class="credential-text">Attorney at Law, Republic of Korea</div></div>
       <div class="credential"><div class="credential-dot"></div><div class="credential-text">Korean Bar Association · Seoul Bar Association</div></div>
-      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Korean–Latin American cross-border matters</div></div>
+      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Working languages: Korean, English, Spanish, Portuguese</div></div>
     </div>
   </div>
 </section>
@@ -346,13 +417,13 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
     <div class="practice-card reveal">
       <div class="practice-num">04</div><div class="practice-icon">🛡️</div>
       <h3 class="practice-name">Criminal Defense</h3>
-      <p class="practice-desc">Representing foreign nationals in Korean criminal proceedings. Police investigation, prosecution, trial, and appeal — explained in your language at every step.</p>
+      <p class="practice-desc">Defence of foreign nationals in Korean criminal proceedings. Police investigation, prosecution, trial, and appeal — explained in your language at every step.</p>
       <div class="practice-tags"><span class="tag">Investigation</span><span class="tag">Trial Defense</span><span class="tag">Appeal</span></div>
     </div>
     <div class="practice-card reveal">
       <div class="practice-num">05</div><div class="practice-icon">✈️</div>
       <h3 class="practice-name">Immigration &amp; Visa</h3>
-      <p class="practice-desc">Visa applications, extensions, rejections, and deportation defense. Permanent residency (F-5) guidance. Particularly experienced with Latin American nationals.</p>
+      <p class="practice-desc">Visa applications, extensions, rejections, and deportation defense. Permanent residency (F-5) guidance.</p>
       <div class="practice-tags"><span class="tag">Visa / Residency</span><span class="tag">Deportation</span><span class="tag">F-5 / PR</span></div>
     </div>
   </div>
@@ -453,6 +524,10 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
           <textarea class="jf-textarea" id="jf-message" name="message" placeholder="A short summary is enough. Please leave out sensitive details — we can go through them in the consultation." required></textarea>
         </div>
         <label class="jf-hp" aria-hidden="true">Leave this empty<input type="checkbox" name="botcheck" tabindex="-1"></label>
+        <label class="jf-consent" for="jf-agree">
+          <input type="checkbox" id="jf-agree" name="consent" required>
+          <span>I agree to the collection and use of my personal information as described in the <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>, including transfer to a form service located outside Korea.</span>
+        </label>
         <button class="jf-submit" type="submit" id="jf-submit">Send Inquiry</button>
         <div class="jf-msg" id="jf-result" role="status" aria-live="polite"></div>
         <p class="jf-note">English, Español, Português, 한국어.<br>Submissions are delivered by e-mail through a third-party form service. Please keep details general here.</p>
@@ -472,7 +547,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 <footer>
   <div class="footer-logo">Juan W. Hong, Attorney at Law</div>
   <div class="footer-copy">홍우원 · 법무법인 에스엔케이 (SNK Law Firm), Seoul<br>© 2026 juanesq.com</div>
-  <div class="footer-disclaimer">This website is for informational purposes only and does not constitute legal advice. Contacting this office does not establish an attorney-client relationship.</div>
+  <div class="footer-disclaimer">This website is for informational purposes only and does not constitute legal advice. Contacting this office does not establish an attorney-client relationship.<br><a href="/privacy.html">Privacy Policy</a></div>
 </footer>
 
 <script>
@@ -534,8 +609,15 @@ body { padding-bottom: 68px; }
     e.preventDefault();
     out.className = 'jf-msg';
 
-    if (!form.checkValidity()) {
+    var missing = ['jf-name', 'jf-contact', 'jf-type', 'jf-message'].some(function (id) {
+      return !(document.getElementById(id).value || '').trim();
+    });
+    if (missing) {
       show('err', 'Please fill in every field before sending.');
+      return;
+    }
+    if (!document.getElementById('jf-agree').checked) {
+      show('err', 'Please tick the consent box \u2014 without it we are not allowed to receive your inquiry through this form. You can also e-mail or WhatsApp us directly.');
       return;
     }
     if (ACCESS_KEY.indexOf('PASTE_') === 0) {
@@ -553,7 +635,9 @@ body { padding-bottom: 68px; }
       contact: contact,
       case_type: d.get('case_type'),
       message: d.get('message'),
-      botcheck: d.get('botcheck') ? true : false
+      botcheck: d.get('botcheck') ? true : false,
+      consent: 'Agreed to Privacy Policy (rev. 2026-09-13), incl. transfer to Web3Forms (US)',
+      consent_at: new Date().toISOString()
     };
     if (contact.indexOf('@') > 0) payload.replyto = contact;
 
