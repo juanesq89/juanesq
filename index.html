@@ -7,13 +7,13 @@
 <meta name="description" content="Juan — Korean attorney fluent in English, Spanish & Portuguese. Former Latin America sales &amp; business development professional. Legal counsel for foreigners in Korea: real estate, family, corporate, criminal & immigration law.">
 <meta name="keywords" content="Korean lawyer English Spanish Portuguese, korea lawyer foreigners, english speaking lawyer Seoul, korean lawyer spanish, abogado coreano, abogado coreano habla español, advogado coreano fala português, Korean attorney Latin America, foreigner lawyer Korea, real estate lawyer Korea foreigner, immigration lawyer Korea English, lawyer for foreigners Korea, attorney Seoul English">
 <meta name="robots" content="index, follow">
-<meta name="author" content="Juan, Attorney at Law">
+<meta name="author" content="Juan W. Hong, Attorney at Law">
 <link rel="canonical" href="https://juanesq.com/">
 <link rel="alternate" hreflang="en" href="https://juanesq.com/">
 <link rel="alternate" hreflang="es" href="https://juanesq.com/es/">
 <link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/">
 <link rel="alternate" hreflang="x-default" href="https://juanesq.com/">
-<link rel="alternate" type="application/rss+xml" title="Juan, Attorney at Law — Guides" href="https://juanesq.com/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="Juan W. Hong, Attorney at Law — Guides" href="https://juanesq.com/rss.xml">
 <meta name="naver-site-verification" content="116c1971d2329b8364f6b40220c571b331c976ca" />
 <meta property="og:type" content="website">
 <meta property="og:title" content="Juan | Korean Lawyer — English · Español · Português">
@@ -26,9 +26,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Attorney",
-  "name": "Juan",
+  "name": "Juan W. Hong",
+  "alternateName": "홍우원",
+  "image": "https://juanesq.com/img/juan-portrait.jpg",
+  "worksFor": { "@type": "LegalService", "name": "SNK Law Firm", "alternateName": "법무법인 에스엔케이" },
   "url": "https://juanesq.com",
-  "description": "Korean attorney  fluent in Korean, English, Spanish and Portuguese. Former Latin America sales &amp; business development professional with shipbuilding industry background. Specializes in legal counsel for foreign nationals in Korea.",
+  "description": "Korean attorney at SNK Law Firm in Seoul, working in Korean, English, Spanish and Portuguese. Prior career in Latin America business at POSCO International and ship sales at Hyundai Heavy Industries. Legal counsel for foreign nationals in Korea.",
   "areaServed": ["Korea","Latin America"],
   "knowsLanguage": ["Korean","English","Spanish","Portuguese"],
   "serviceType": ["Real Estate Law","Family Law","Corporate Law","Criminal Defense","Immigration Law"],
@@ -86,10 +89,8 @@ nav.scrolled{background:rgba(10,22,40,.97);padding:16px 60px;box-shadow:0 1px 0 
 .btn-secondary::after{content:'→';transition:transform .3s}
 .btn-secondary:hover{color:var(--gold)}
 .btn-secondary:hover::after{transform:translateX(4px)}
-.hero-right{position:absolute;right:60px;top:50%;transform:translateY(-50%);z-index:1;text-align:right;opacity:0;animation:fadeIn 1.2s 1.2s forwards}
-.hero-stat{margin-bottom:40px}
-.hero-stat-num{font-family:'Montserrat',sans-serif;font-size:3.4rem;letter-spacing:0.02em;font-weight:300;color:var(--gold);line-height:1}
-.hero-stat-label{font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,240,232,.35);margin-top:6px}
+.hero-portrait{position:absolute;right:7%;top:9%;bottom:0;height:auto;width:auto;max-width:46vw;object-fit:contain;object-position:bottom right;z-index:0;opacity:0;animation:fadeIn 1.4s 1.1s forwards;pointer-events:none}
+.hero-scrim{position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,var(--navy) 0%,rgba(10,22,40,.94) 30%,rgba(10,22,40,0) 56%);pointer-events:none}
 section{position:relative;z-index:1}
 .section-label{font-size:.58rem;font-weight:500;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:16px}
 .section-label::before{content:'';width:30px;height:1px;background:var(--gold)}
@@ -108,12 +109,12 @@ section{position:relative;z-index:1}
 .career-org{font-size:.7rem;font-weight:300;color:rgba(245,240,232,.38);letter-spacing:.04em}
 .lang-showcase{margin-top:44px;padding:28px;border:1px solid rgba(201,168,76,.2);background:rgba(201,168,76,.03)}
 .lang-showcase-title{font-size:.56rem;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.lang-list{display:flex;flex-direction:column;gap:14px}
-.lang-item{display:flex;justify-content:space-between;align-items:center}
+.lang-list{display:flex;flex-direction:column;gap:0}
+.lang-item{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid rgba(201,168,76,.14)}
+.lang-item:last-child{border-bottom:none}
 .lang-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--ivory)}
-.lang-level{font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,168,76,.6)}
-.lang-bar{width:100%;height:1px;background:rgba(201,168,76,.1);margin-top:5px;position:relative}
-.lang-bar-fill{height:100%;background:var(--gold);position:absolute;top:0;left:0}
+.lang-level{font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,168,76,.6);text-align:right}
+.about-portrait{width:190px;height:190px;object-fit:cover;object-position:center 22%;border:1px solid rgba(201,168,76,.28);margin-bottom:36px;display:block}
 #practice{padding:140px 60px;background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 50%,var(--navy) 100%)}
 .practice-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:80px}
 .practice-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.6rem);font-weight:300;line-height:1.1;color:var(--ivory)}
@@ -186,8 +187,8 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 .reveal.visible{opacity:1;transform:translateY(0)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@media(max-width:1200px){.practice-grid{grid-template-columns:repeat(3,1fr)}.hero-right,.hero-line{display:none}.why-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:900px){nav{padding:20px 24px}nav.scrolled{padding:14px 24px}.nav-links{display:none}.hamburger{display:flex}#hero{padding:120px 24px 80px;min-height:auto}#about,#contact,#latam{grid-template-columns:1fr;gap:52px;padding:80px 24px}.practice-grid{grid-template-columns:1fr 1fr}.practice-header{flex-direction:column;align-items:flex-start;gap:20px}.practice-subtitle{text-align:left}#practice,#why,#process{padding:80px 24px}.why-grid{grid-template-columns:1fr;gap:20px}.process-steps{grid-template-columns:1fr 1fr;gap:48px}.process-steps::before{display:none}footer{flex-direction:column;gap:20px;text-align:center;padding:36px 24px}.footer-disclaimer{text-align:center}.form-row{grid-template-columns:1fr}}
+@media(max-width:1200px){.practice-grid{grid-template-columns:repeat(3,1fr)}.hero-line{display:none}.hero-portrait{max-width:52vw;opacity:0;animation:fadeIn 1.4s 1.1s forwards}.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){nav{padding:20px 24px}nav.scrolled{padding:14px 24px}.nav-links{display:none}.hamburger{display:flex}#hero{padding:120px 24px 80px;min-height:auto}.hero-portrait,.hero-scrim{display:none}#about,#contact,#latam{grid-template-columns:1fr;gap:52px;padding:80px 24px}.practice-grid{grid-template-columns:1fr 1fr}.practice-header{flex-direction:column;align-items:flex-start;gap:20px}.practice-subtitle{text-align:left}#practice,#why,#process{padding:80px 24px}.why-grid{grid-template-columns:1fr;gap:20px}.process-steps{grid-template-columns:1fr 1fr;gap:48px}.process-steps::before{display:none}footer{flex-direction:column;gap:20px;text-align:center;padding:36px 24px}.footer-disclaimer{text-align:center}.form-row{grid-template-columns:1fr}}
 @media(max-width:600px){.practice-grid{grid-template-columns:1fr}.process-steps{grid-template-columns:1fr}}
 
 /* 문의 폼 */
@@ -213,7 +214,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 <body>
 
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">Juan, Attorney at Law<span>Korean Attorney · juanesq.com</span></a>
+  <a href="#hero" class="nav-logo">Juan W. Hong<span>Attorney at Law · SNK Law Firm</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#practice">Practice Areas</a></li>
@@ -228,74 +229,84 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-line"></div>
+  <picture>
+    <source srcset="/img/juan-hero.webp" type="image/webp">
+    <img class="hero-portrait" src="/img/juan-hero.png" alt="Juan W. Hong, attorney at SNK Law Firm, Seoul" width="1200" height="1600" fetchpriority="high">
+  </picture>
+  <div class="hero-scrim"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">🇰🇷 Based in Seoul, Korea · Serving Foreigners in Korea</p>
+    <p class="hero-eyebrow">Based in Seoul · Serving foreigners in Korea</p>
     <h1 class="hero-title">Living in Korea?<br><em>You need a lawyer</em><br>who gets it.</h1>
-    <p class="hero-name">Juan, Attorney at Law</p>
-    <p style="font-size:0.65rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.55);margin-bottom:28px;opacity:0;animation:fadeUp .8s .65s forwards">Currently in practice at a Seoul-based law firm</p>
+    <p class="hero-name">Juan W. Hong, Attorney at Law</p>
+    <p style="font-size:0.65rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.55);margin-bottom:28px;opacity:0;animation:fadeUp .8s .65s forwards">SNK Law Firm · Seoul</p>
     <div class="hero-langs">
-      <span class="hero-lang-badge">🇰🇷 한국어</span>
-      <span class="hero-lang-badge">🇺🇸 English</span>
-      <span class="hero-lang-badge">🇪🇸 Español</span>
-      <span class="hero-lang-badge">🇧🇷 Português</span>
+      <span class="hero-lang-badge">한국어</span>
+      <span class="hero-lang-badge">English</span>
+      <span class="hero-lang-badge">Español</span>
+      <span class="hero-lang-badge">Português</span>
     </div>
-    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);padding:12px 20px;margin-bottom:28px;">
-      <span style="font-size:1rem">🇰🇷</span>
-      <span style="font-size:0.7rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)">Korea-based Attorney · For Foreigners Living &amp; Working in Korea</span>
-    </div>
-    <p class="hero-desc">Foreigners in Korea face unique legal challenges — language barriers, unfamiliar laws, and a system that wasn't built with you in mind. I'm a Korean attorney based in Seoul, fluent in English, Spanish and Portuguese, and I'm here specifically for you.</p>
+    <p class="hero-desc">Foreigners in Korea face unique legal challenges — language barriers, unfamiliar laws, and a system that wasn't built with you in mind. I'm a Korean attorney at SNK Law Firm in Seoul, and I work with clients in English, Spanish and Portuguese.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Book a Consultation</a>
       <a href="#about" class="btn-secondary">Learn More</a>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="hero-stat"><div class="hero-stat-num">4</div><div class="hero-stat-label">Languages Spoken</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">5</div><div class="hero-stat-label">Practice Areas</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">1</div><div class="hero-stat-label">Attorney. Always Here.</div></div>
-  </div>
 </section>
 
 <section id="about">
   <div>
-    <p class="section-label reveal">About Juan</p>
+    <p class="section-label reveal">About</p>
     <h2 class="about-title reveal">Not just a lawyer.<br>Someone who <em>understands<br>your world.</em></h2>
-    <p class="about-body reveal">Shipbuilding sales → Latin America business → Korean attorney. Real cross-cultural, cross-industry experience before law. I know what it means to navigate complex systems in a foreign country, negotiate across cultures, and make high-stakes decisions without a safety net.</p>
-    <p class="about-body reveal">My personal brand follows me regardless of firm affiliation. When you hire Juan, you get Juan — consistent, committed, and contactable.</p>
+    <p class="about-body reveal">Before law I worked in ship sales at Hyundai Heavy Industries, on the Latin America desk at POSCO International covering renewable energy, and as a Spanish interpreter at Samsung SDS. I know what it is to deal with an unfamiliar system in someone else's country, and to negotiate when the other side sets the terms and the language.</p>
+    <p class="about-body reveal">I practise at SNK Law Firm in Seoul. Matters are handled by the firm; I am the person you talk to, in your language, from the first message onward.</p>
     <div class="lang-showcase reveal">
       <div class="lang-showcase-title">Languages</div>
       <div class="lang-list">
-        <div><div class="lang-item"><span class="lang-name">한국어 Korean</span><span class="lang-level">Native</span></div><div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div></div>
-        <div><div class="lang-item"><span class="lang-name">English</span><span class="lang-level">Fluent</span></div><div class="lang-bar"><div class="lang-bar-fill" style="width:95%"></div></div></div>
-        <div><div class="lang-item"><span class="lang-name">Español</span><span class="lang-level">Fluent</span></div><div class="lang-bar"><div class="lang-bar-fill" style="width:93%"></div></div></div>
-        <div><div class="lang-item"><span class="lang-name">Português</span><span class="lang-level">Fluent</span></div><div class="lang-bar"><div class="lang-bar-fill" style="width:90%"></div></div></div>
+        <div class="lang-item"><span class="lang-name">한국어 Korean</span><span class="lang-level">Native</span></div>
+        <div class="lang-item"><span class="lang-name">English</span><span class="lang-level">Fluent</span></div>
+        <div class="lang-item"><span class="lang-name">Español</span><span class="lang-level">Fluent · Argentina, 5 years</span></div>
+        <div class="lang-item"><span class="lang-name">Português</span><span class="lang-level">Fluent · Brazil, 3 years</span></div>
       </div>
     </div>
   </div>
   <div>
+    <picture>
+      <source srcset="/img/juan-portrait.webp" type="image/webp">
+      <img class="about-portrait reveal" src="/img/juan-portrait.jpg" alt="Juan W. Hong, attorney at SNK Law Firm, Seoul" width="800" height="800" loading="lazy">
+    </picture>
     <p class="section-label reveal">Career</p>
     <div class="career-timeline reveal">
       <div class="career-item">
         <div class="career-period">Now</div>
-        <div><div class="career-role">Attorney at Law</div><div class="career-org">Korean Law Firm · Seoul, Korea</div></div>
+        <div><div class="career-role">Attorney at Law</div><div class="career-org">SNK Law Firm · Seoul, Korea</div></div>
       </div>
       <div class="career-item">
         <div class="career-period">Now</div>
-        <div><div class="career-role">Indie Developer</div><div class="career-org">Release Code · Solo Software Developer</div></div>
+        <div><div class="career-role">Legal Application Developer</div><div class="career-org">Legal tools for everyday procedures</div></div>
       </div>
       <div class="career-item">
         <div class="career-period">Prior</div>
-        <div><div class="career-role">Latin America Business Division</div><div class="career-org">International Trading Company · Sección Latinoamérica</div></div>
+        <div><div class="career-role">Latin America Business</div><div class="career-org">POSCO International · Latin America Section, Renewable Energy Group</div></div>
       </div>
       <div class="career-item">
         <div class="career-period">Prior</div>
-        <div><div class="career-role">Shipbuilding Sales</div><div class="career-org">Korean Heavy Industry · Global Ship Sales</div></div>
+        <div><div class="career-role">Global Ship Sales</div><div class="career-org">Hyundai Heavy Industries</div></div>
+      </div>
+      <div class="career-item">
+        <div class="career-period">Prior</div>
+        <div><div class="career-role">Spanish Interpreter</div><div class="career-org">Samsung SDS</div></div>
       </div>
     </div>
+    <p class="section-label reveal" style="margin-top:44px">Education</p>
+    <div class="career-timeline reveal">
+      <div class="career-item"><div class="career-period">Law</div><div><div class="career-role">Jeonbuk National University School of Law</div><div class="career-org">Juris Master</div></div></div>
+      <div class="career-item"><div class="career-period">BA</div><div><div class="career-role">Korea University</div><div class="career-org">Economics</div></div></div>
+      <div class="career-item"><div class="career-period">HS</div><div><div class="career-role">The American School of São Paulo</div><div class="career-org">São Paulo, Brazil</div></div></div>
+    </div>
     <div class="about-credentials reveal" style="margin-top:40px">
-      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Licensed Attorney  — Republic of Korea Bar Association</div></div>
-      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Indie developer — technical fluency bridges legal precision with digital accessibility</div></div>
-      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Deep expertise in Korean–Latin American cross-border matters</div></div>
+      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Attorney at Law, Republic of Korea</div></div>
+      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Korean Bar Association · Seoul Bar Association</div></div>
+      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Korean–Latin American cross-border matters</div></div>
     </div>
   </div>
 </section>
@@ -306,7 +317,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
       <p class="section-label">Practice Areas</p>
       <h2 class="practice-title">Every legal matter<br><em>foreigners face</em> in Korea</h2>
     </div>
-    <p class="practice-subtitle">Five practice areas. Four languages. One attorney who stays with you throughout.</p>
+    <p class="practice-subtitle">Matters I handle at SNK Law Firm, in four languages.</p>
   </div>
   <div class="practice-grid">
     <div class="practice-card reveal">
@@ -346,7 +357,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
   <div class="reveal">
     <p class="section-label" style="color:var(--gold)">Para Latinoamericanos · Para Brasileiros</p>
     <h2 class="latam-title">Abogado coreano.<br><em>Habla tu idioma.</em><br>Entiende tu cultura.</h2>
-    <p class="latam-body">Soy el único abogado coreano con experiencia directa en negocios latinoamericanos, fluido en español y portugués. Antes de ejercer el derecho, trabajé en la división de Latinoamérica de una empresa internacional — lo que me da una perspectiva única para representar a clientes latinoamericanos en Corea.<br><br><span style="color:rgba(245,240,232,.4);font-size:.8rem">Também atendo em português para clientes brasileiros. O único advogado coreano fluente em português.</span></p>
+    <p class="latam-body">Soy abogado coreano y hablo español. Antes de ejercer el derecho trabajé en la sección de Latinoamérica de POSCO International y fui intérprete de español en Samsung SDS. Viví cinco años en Argentina.<br><br><span style="color:rgba(245,240,232,.4);font-size:.8rem">Também atendo em português. Morei três anos no Brasil e concluí o ensino médio em São Paulo.</span></p>
   </div>
   <div class="reveal">
     <p class="section-label">Serving Clients From</p>
@@ -367,13 +378,13 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 <section id="why">
   <div class="reveal">
     <p class="section-label">Why Juan</p>
-    <h2 class="why-title">A background that no other<br>Korean attorney <em>can offer.</em></h2>
+    <h2 class="why-title">Why clients<br><em>work with me.</em></h2>
   </div>
   <div class="why-grid">
     <div class="why-item reveal"><div class="why-num">I</div><h3 class="why-heading">4 Languages</h3><p class="why-body">Korean, English, Spanish, and Portuguese — fluent in all four. Your case is handled in the language you are most comfortable with. No interpreter. No meaning lost in translation.</p></div>
-    <div class="why-item reveal"><div class="why-num">II</div><h3 class="why-heading">Business Background</h3><p class="why-body">Shipbuilding sales. Latin American operations. Real industry experience before law. I understand how businesses operate, contracts are negotiated, and disputes actually unfold in the real world.</p></div>
-    <div class="why-item reveal"><div class="why-num">III</div><h3 class="why-heading">Personal Brand</h3><p class="why-body">My commitment follows me, not my firm. Law firm affiliations change — but my direct contact, my reputation, and my dedication to your case remain constant throughout our entire relationship.</p></div>
-    <div class="why-item reveal"><div class="why-num">IV</div><h3 class="why-heading">Tech-Savvy Lawyer</h3><p class="why-body">As an indie developer, I combine legal expertise with technical precision. Clear documentation, efficient processes, and a client experience built for the modern era — not the 1990s law office.</p></div>
+    <div class="why-item reveal"><div class="why-num">II</div><h3 class="why-heading">Business Background</h3><p class="why-body">Ship sales at Hyundai Heavy Industries and Latin America renewable-energy business at POSCO International. I spent years on the commercial side before I read a contract as a lawyer.</p></div>
+    <div class="why-item reveal"><div class="why-num">III</div><h3 class="why-heading">Life Abroad</h3><p class="why-body">Five years in Argentina, three in Brazil, high school in São Paulo. Being the foreigner who does not know how the system works is not something I read about in a case file.</p></div>
+    <div class="why-item reveal"><div class="why-num">IV</div><h3 class="why-heading">Tech-Savvy Lawyer</h3><p class="why-body">I build legal applications myself, so the paperwork side runs on tools rather than on waiting. You get documents you can read and a process you can follow.</p></div>
   </div>
 </section>
 
@@ -385,8 +396,8 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
   <div class="process-steps">
     <div class="process-step reveal"><div class="process-circle">1</div><h3 class="process-name">Inquiry</h3><p class="process-body">Send a message in English, Spanish, or Portuguese. Describe your situation. I respond within 24 hours.</p></div>
     <div class="process-step reveal"><div class="process-circle">2</div><h3 class="process-name">Consultation</h3><p class="process-body">30–60 minute call or meeting. Your situation reviewed, options assessed, strategy discussed — in your language.</p></div>
-    <div class="process-step reveal"><div class="process-circle">3</div><h3 class="process-name">Engagement</h3><p class="process-body">Transparent fee agreement. Clear scope of work. You decide — no pressure, no hidden costs, no surprises.</p></div>
-    <div class="process-step reveal"><div class="process-circle">4</div><h3 class="process-name">Resolution</h3><p class="process-body">Active representation with regular updates in your language. Your case, managed from start to finish.</p></div>
+    <div class="process-step reveal"><div class="process-circle">3</div><h3 class="process-name">Engagement</h3><p class="process-body">If we go ahead, the engagement is with SNK Law Firm. Scope and fees are set out in writing before any work begins.</p></div>
+    <div class="process-step reveal"><div class="process-circle">4</div><h3 class="process-name">Resolution</h3><p class="process-body">The firm acts for you and I keep you updated in your language as the matter moves.</p></div>
   </div>
 </section>
 
@@ -396,13 +407,13 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
     <h2 class="contact-title reveal">Let's talk.<br><em>En cualquier idioma.</em></h2>
     <p class="contact-sub reveal">Whether you have an urgent legal matter or simply want to understand your options, reach out in English, Spanish, or Portuguese. The first step is a conversation.</p>
     <div class="contact-items reveal">
-      <div class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-item-label">Email</div><div class="contact-item-value">juan@release-code.com</div></div></div>
+      <div class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-item-label">Email</div><div class="contact-item-value">wwhong@snkpartners.com</div></div></div>
       <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-item-label">WhatsApp</div><div class="contact-item-value"><a href="https://wa.me/821046878934" target="_blank" style="color:rgba(245,240,232,0.65);text-decoration:none;">wa.me/821046878934</a><br><span style="font-size:0.7rem;color:rgba(245,240,232,0.3)">Tap to open WhatsApp</span></div></div></div>
       
       <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-item-label">Location</div><div class="contact-item-value">Seoul, Republic of Korea<br><span style="font-size:.7rem;color:rgba(245,240,232,.3)">Video consultations available worldwide</span></div></div></div>
     </div>
     <div class="contact-lang-note reveal">
-      <p>You may write in <strong>English</strong>, <strong>Español</strong>, or <strong>Português</strong>. Korean is also welcome. All communications handled directly by Juan.</p>
+      <p>You may write in <strong>English</strong>, <strong>Español</strong>, or <strong>Português</strong>. Korean is also welcome. I read every message myself.</p>
     </div>
   </div>
   <div class="reveal" style="display:flex;flex-direction:column;justify-content:flex-end;height:100%;">
@@ -439,23 +450,23 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
         <label class="jf-hp" aria-hidden="true">Leave this empty<input type="checkbox" name="botcheck" tabindex="-1"></label>
         <button class="jf-submit" type="submit" id="jf-submit">Send Inquiry</button>
         <div class="jf-msg" id="jf-result" role="status" aria-live="polite"></div>
-        <p class="jf-note">Sent directly to Juan. English, Español, Português, 한국어.<br>Submissions are delivered by e-mail through a third-party form service. Please keep details general here.</p>
+        <p class="jf-note">English, Español, Português, 한국어.<br>Submissions are delivered by e-mail through a third-party form service. Please keep details general here.</p>
       </form>
 
       <a href="https://wa.me/821046878934" target="_blank" style="display:flex;align-items:center;gap:16px;padding:20px 24px;border:1px solid rgba(201,168,76,0.25);background:rgba(255,255,255,0.03);text-decoration:none;transition:background 0.3s;margin-bottom:12px;" onmouseover="this.style.background='rgba(201,168,76,0.06)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="#c9a84c" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span style="font-size:0.95rem;font-weight:400;color:var(--ivory);letter-spacing:0.03em;">WhatsApp · Juan esq.</span>
+        <span style="font-size:0.95rem;font-weight:400;color:var(--ivory);letter-spacing:0.03em;">WhatsApp · Juan W. Hong</span>
         <span style="margin-left:auto;font-size:0.65rem;color:rgba(201,168,76,0.6);letter-spacing:0.15em;text-transform:uppercase;">Chat Now →</span>
       </a>
 
-      <p style="font-size:0.6rem;font-weight:300;color:rgba(245,240,232,0.25);margin-top:4px;">🔒 Attorney-client privilege applies to all communications.</p>
+      <p style="font-size:0.6rem;font-weight:300;color:rgba(245,240,232,0.25);margin-top:4px;">Please keep first messages general. A lawyer–client relationship begins only once SNK Law Firm accepts the matter in writing.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="footer-logo">Juan, Attorney at Law</div>
-  <div class="footer-copy">© 2025 Juan, Attorney at Law · juanesq.com</div>
+  <div class="footer-logo">Juan W. Hong, Attorney at Law</div>
+  <div class="footer-copy">홍우원 · 법무법인 에스엔케이 (SNK Law Firm), Seoul<br>© 2026 juanesq.com</div>
   <div class="footer-disclaimer">This website is for informational purposes only and does not constitute legal advice. Contacting this office does not establish an attorney-client relationship.</div>
 </footer>
 

@@ -76,7 +76,7 @@ if (items.length === 0) throw new Error('가이드를 하나도 읽지 못했습
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Juan, Attorney at Law — Korean Law Guides for Foreign Nationals</title>
+    <title>Juan W. Hong, Attorney at Law — Korean Law Guides for Foreign Nationals</title>
     <link>${BASE}/</link>
     <description>Plain-English guides to Korean law for foreign residents — immigration and visas, criminal defense, employment, real estate, family law, and tax.</description>
     <language>en</language>
