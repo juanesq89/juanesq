@@ -89,7 +89,7 @@ nav.scrolled{background:rgba(10,22,40,.97);padding:16px 60px;box-shadow:0 1px 0 
 .btn-secondary::after{content:'→';transition:transform .3s}
 .btn-secondary:hover{color:var(--gold)}
 .btn-secondary:hover::after{transform:translateX(4px)}
-.hero-portrait{position:absolute;right:7%;bottom:0;height:91%;width:auto;max-width:46vw;object-fit:contain;object-position:bottom right;z-index:0;opacity:0;animation:fadeIn 1.4s 1.1s forwards;pointer-events:none}
+.hero-portrait{position:absolute;right:7%;bottom:0;height:auto;max-height:91%;width:auto;max-width:46vw;object-fit:contain;object-position:bottom right;z-index:0;opacity:0;animation:fadeIn 1.4s 1.1s forwards;pointer-events:none}
 .hero-scrim{position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,var(--navy) 0%,rgba(10,22,40,.94) 30%,rgba(10,22,40,0) 56%);pointer-events:none}
 section{position:relative;z-index:1}
 .section-label{font-size:.58rem;font-weight:500;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:16px}
@@ -187,7 +187,7 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 .reveal.visible{opacity:1;transform:translateY(0)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@media(max-width:1200px){.practice-grid{grid-template-columns:repeat(3,1fr)}.hero-line{display:none}.hero-portrait{max-width:52vw;opacity:0;animation:fadeIn 1.4s 1.1s forwards}.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1200px){.practice-grid{grid-template-columns:repeat(3,1fr)}.hero-line{display:none}.hero-portrait{max-width:52vw;top:50%;bottom:auto;transform:translateY(-50%);opacity:0;animation:fadeIn 1.4s 1.1s forwards}.why-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){nav{padding:20px 24px}nav.scrolled{padding:14px 24px}.nav-links{display:none}.hamburger{display:flex}#hero{padding:120px 24px 80px;min-height:auto}.hero-portrait,.hero-scrim{display:none}#about,#contact,#latam{grid-template-columns:1fr;gap:52px;padding:80px 24px}.practice-grid{grid-template-columns:1fr 1fr}.practice-header{flex-direction:column;align-items:flex-start;gap:20px}.practice-subtitle{text-align:left}#practice,#why,#process{padding:80px 24px}.why-grid{grid-template-columns:1fr;gap:20px}.process-steps{grid-template-columns:1fr 1fr;gap:48px}.process-steps::before{display:none}footer{flex-direction:column;gap:20px;text-align:center;padding:36px 24px}.footer-disclaimer{text-align:center}.form-row{grid-template-columns:1fr}}
 @media(max-width:600px){.practice-grid{grid-template-columns:1fr}.process-steps{grid-template-columns:1fr}}
 
