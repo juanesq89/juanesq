@@ -56,13 +56,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 60px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(10,22,40,.95),transparent);transition:background .4s,padding .4s}
 nav.scrolled{background:rgba(10,22,40,.97);padding:16px 60px;box-shadow:0 1px 0 rgba(201,168,76,.2)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;letter-spacing:.08em;color:var(--gold);text-decoration:none}
-.nav-logo span{display:block;font-size:.52rem;font-family:'Montserrat',sans-serif;font-weight:300;letter-spacing:.35em;color:rgba(201,168,76,.55);text-transform:uppercase;margin-top:3px}
+.nav-logo span{display:block;white-space:nowrap;font-size:.52rem;font-family:'Montserrat',sans-serif;font-weight:300;letter-spacing:.35em;color:rgba(201,168,76,.55);text-transform:uppercase;margin-top:3px}
 .nav-links{display:flex;gap:36px;list-style:none;align-items:center}
 .nav-links a{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.65);text-decoration:none;transition:color .3s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
 .nav-links a:hover{color:var(--gold)}
 .nav-links a:hover::after{transform:scaleX(1)}
-.nav-cta{background:transparent;border:1px solid var(--gold)!important;color:var(--gold)!important;padding:10px 22px;font-size:.62rem!important;letter-spacing:.2em;cursor:pointer;transition:background .3s,color .3s!important}
+.nav-lang a{color:rgba(201,168,76,.75)!important;letter-spacing:.14em!important}.nav-lang a:hover{color:var(--gold)!important}
+.nav-cta{display:inline-block;white-space:nowrap;background:transparent;border:1px solid var(--gold)!important;color:var(--gold)!important;padding:10px 22px;font-size:.62rem!important;letter-spacing:.2em;cursor:pointer;transition:background .3s,color .3s!important}
 .nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important}
 .nav-cta::after{display:none!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
@@ -183,7 +184,9 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 .reveal.visible{opacity:1;transform:translateY(0)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media(max-width:1440px){.nav-links{gap:20px}.nav-links a{font-size:.62rem;letter-spacing:.13em}nav{padding:20px 32px}nav.scrolled{padding:14px 32px}}
 @media(max-width:1200px){.practice-grid{grid-template-columns:repeat(3,1fr)}.hero-line{display:none}.hero-portrait{max-width:52vw;top:50%;bottom:auto;transform:translateY(-50%)}.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1120px){.nav-links{display:none}.hamburger{display:flex}}
 @media(max-width:900px){nav{padding:20px 24px}nav.scrolled{padding:14px 24px}.nav-links{display:none}.hamburger{display:flex}.hero-portrait,.hero-scrim{display:none}#hero{padding:120px 24px 80px;min-height:auto}#about,#contact,#latam{grid-template-columns:1fr;gap:52px;padding:80px 24px}.practice-grid{grid-template-columns:1fr 1fr}.practice-header{flex-direction:column;align-items:flex-start;gap:20px}.practice-subtitle{text-align:left}#practice,#why,#process{padding:80px 24px}.why-grid{grid-template-columns:1fr;gap:20px}.process-steps{grid-template-columns:1fr 1fr;gap:48px}.process-steps::before{display:none}footer{flex-direction:column;gap:20px;text-align:center;padding:36px 24px}.footer-disclaimer{text-align:center}.form-row{grid-template-columns:1fr}}
 @media(max-width:600px){.practice-grid{grid-template-columns:1fr}.process-steps{grid-template-columns:1fr}}
 </style>
@@ -198,6 +201,8 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
     <li><a href="/guide/pt/">Guia</a></li>
     <li><a href="#latam">América Latina</a></li>
     <li><a href="#why">Por que Juan</a></li>
+    <li class="nav-lang"><a href="/" hreflang="en" lang="en">English</a></li>
+    <li class="nav-lang"><a href="/es/" hreflang="es" lang="es">Español</a></li>
     <li><a href="#contact" class="nav-cta">Consultar</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
@@ -461,7 +466,7 @@ const reveals=document.querySelectorAll('.reveal');
 const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*55);observer.unobserve(entry.target);}});},{threshold:.1});
 reveals.forEach(el=>observer.observe(el));
 function toggleMenu(){const l=document.querySelector('.nav-links');if(l.style.display==='flex'){l.style.display='none';}else{l.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(10,22,40,.98);padding:28px 24px;gap:22px;z-index:99;border-bottom:1px solid rgba(201,168,76,.15);';}}
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});if(window.innerWidth<=900)document.querySelector('.nav-links').style.display='none';});});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});if(window.innerWidth<=1120)document.querySelector('.nav-links').style.display='none';});});
 </script>
 </body>
 </html>
