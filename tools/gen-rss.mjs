@@ -57,8 +57,8 @@ const items = files
   .map((f) => {
     const rel = `guide/${f}`
     const html = readFileSync(join(ROOT, rel), 'utf8')
-    // <title>은 " | Juan" 접미사를 달고 있으니 떼어낸다
-    const title = decode(pick(html, /<title>([\s\S]*?)<\/title>/)).replace(/\s*\|\s*Juan\s*$/, '')
+    // <title>은 " | Juan W. Hong" 접미사를 달고 있으니 떼어낸다 (옛 " | Juan"도 함께)
+    const title = decode(pick(html, /<title>([\s\S]*?)<\/title>/)).replace(/\s*\|\s*Juan(\s+W\.\s*Hong)?\s*$/, '')
     // og:description이 더 짧고 읽기 좋아 우선 사용
     const description =
       decode(pick(html, /<meta property="og:description" content="([\s\S]*?)">/)) ||
