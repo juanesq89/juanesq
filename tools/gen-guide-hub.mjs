@@ -66,13 +66,19 @@ const pick = (t, re) => { const m = t.match(re); return m ? m[1].trim() : null }
 const esc = (s) => s.replace(/&(?!(amp|lt|gt|quot|nbsp|rsquo|mdash|#\d+);)/g, '&amp;')
 
 // 기존 허브들에서 slug → {cat, title, desc} 를 긁는다 (손으로 다듬은 문구 보존용)
-function existingCards(file) {
+// base 경로가 정확히 일치하는 카드만 읽는다. /guide/index.html 한 파일에 en·es·pt 카드가
+// 같은 slug로 함께 들어 있어서, 경로를 가리지 않으면 영문 카드 문구가 pt 카드 문구로
+// 덮어써진다(번역된 slug 13개가 재생성 때마다 포르투갈어로 바뀌던 문제).
+function existingCards(file, base) {
   const p = join(ROOT, file)
   if (!existsSync(p)) return {}
   const t = readFileSync(p, 'utf8')
   const out = {}
-  const re = /<a href="[^"]*\/([a-z0-9-]+)\.html" class="guide-card">\s*<p class="card-cat">([\s\S]*?)<\/p>\s*<h2 class="card-title">([\s\S]*?)<\/h2>\s*<p class="card-desc">([\s\S]*?)<\/p>/g
-  for (const m of t.matchAll(re)) out[m[1]] = { cat: m[2].trim(), title: m[3].trim(), desc: m[4].trim() }
+  const re = /<a href="([^"]*)\/([a-z0-9-]+)\.html" class="guide-card">\s*<p class="card-cat">([\s\S]*?)<\/p>\s*<h2 class="card-title">([\s\S]*?)<\/h2>\s*<p class="card-desc">([\s\S]*?)<\/p>/g
+  for (const m of t.matchAll(re)) {
+    if (m[1] !== base) continue
+    out[m[2]] = { cat: m[3].trim(), title: m[4].trim(), desc: m[5].trim() }
+  }
   return out
 }
 
@@ -86,7 +92,7 @@ const report = []
 let bad = false
 
 for (const L of LANGS) {
-  const cards = existingCards(L.hub)
+  const cards = existingCards(L.hub, L.base)
   const files = readdirSync(join(ROOT, L.dir)).filter((f) => f.endsWith('.html') && f !== 'index.html')
   const items = []
   const unmapped = []
