@@ -6,7 +6,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/"/>
-    <lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
+    <lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
   </url>
   <url>
     <loc>https://juanesq.com/es/</loc>
@@ -58,7 +58,27 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/alien-registration-address-reporting-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/alien-registration-address-reporting-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/alien-registration-address-reporting-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/alien-registration-address-reporting-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/alien-registration-address-reporting-korea-foreigners.html"/>
     <lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/alien-registration-address-reporting-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/alien-registration-address-reporting-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/alien-registration-address-reporting-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/alien-registration-address-reporting-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/alien-registration-address-reporting-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/alien-registration-address-reporting-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/alien-registration-address-reporting-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/alien-registration-address-reporting-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/alien-registration-address-reporting-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/alien-registration-address-reporting-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/apostille-document-authentication-korea-foreigners.html</loc>
@@ -386,7 +406,27 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/dui-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/dui-korea-foreigners.html"/>
     <lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/dui-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/dui-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/dui-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/dui-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/dui-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/e2-health-check-korea-foreigners.html</loc>
@@ -498,7 +538,27 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/jeonse-scam-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/jeonse-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/jeonse-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/jeonse-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/jeonse-scam-korea-foreigners.html"/>
     <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/jeonse-scam-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/jeonse-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/jeonse-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/jeonse-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/jeonse-scam-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/jeonse-scam-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/jeonse-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/jeonse-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/jeonse-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/jeonse-scam-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/kiip-social-integration-program-korea-foreigners.html</loc>
@@ -574,7 +634,27 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/marriage-registration-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/marriage-registration-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/marriage-registration-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/marriage-registration-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/marriage-registration-korea-foreigners.html"/>
     <lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/marriage-registration-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/marriage-registration-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/marriage-registration-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/marriage-registration-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/marriage-registration-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/marriage-registration-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/marriage-registration-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/marriage-registration-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/marriage-registration-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/marriage-registration-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/marriage-visa-korea-foreigners.html</loc>
@@ -910,7 +990,27 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/workplace-injury-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/workplace-injury-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/workplace-injury-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/workplace-injury-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/workplace-injury-korea-foreigners.html"/>
     <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/workplace-injury-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/workplace-injury-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/workplace-injury-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/workplace-injury-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/workplace-injury-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/workplace-injury-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/workplace-injury-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/workplace-injury-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/workplace-injury-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/workplace-injury-korea-foreigners.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/wrongful-termination-korea-foreigners.html</loc>
