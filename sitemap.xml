@@ -526,7 +526,11 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/driving-license-conversion-korea-foreigners.html</loc>
-    <lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/driving-license-conversion-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/driving-license-conversion-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/driving-license-conversion-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/driving-license-conversion-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/drug-charges-korea-foreigners.html</loc>
@@ -690,7 +694,11 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/frozen-bank-account-korea-foreigners.html</loc>
-    <lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/frozen-bank-account-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/frozen-bank-account-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/frozen-bank-account-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/frozen-bank-account-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/gift-tax-korea-foreigners.html</loc>
@@ -718,7 +726,11 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/immigration-detention-release-korea-foreigners.html</loc>
-    <lastmod>2026-08-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/immigration-detention-release-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/immigration-detention-release-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/immigration-detention-release-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/immigration-detention-release-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/indecent-act-by-force-charges-korea-foreigners.html</loc>
@@ -1146,7 +1158,11 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/traffic-violations-korea-foreigners.html</loc>
-    <lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/traffic-violations-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/traffic-violations-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/traffic-violations-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/traffic-violations-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/unemployment-benefits-korea-foreigners.html</loc>
@@ -1230,7 +1246,11 @@
   </url>
   <url>
     <loc>https://juanesq.com/guide/voice-phishing-scam-korea-foreigners.html</loc>
-    <lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/voice-phishing-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/voice-phishing-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/voice-phishing-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/voice-phishing-scam-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/will-testament-korea-foreigners.html</loc>
@@ -1655,5 +1675,85 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/resignation-notice-period-korea-foreigners.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/resignation-notice-period-korea-foreigners.html"/>
     <lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/traffic-violations-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/traffic-violations-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/traffic-violations-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/traffic-violations-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/traffic-violations-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/traffic-violations-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/traffic-violations-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/traffic-violations-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/traffic-violations-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/traffic-violations-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/driving-license-conversion-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/driving-license-conversion-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/driving-license-conversion-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/driving-license-conversion-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/driving-license-conversion-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/driving-license-conversion-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/driving-license-conversion-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/driving-license-conversion-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/driving-license-conversion-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/driving-license-conversion-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/voice-phishing-scam-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/voice-phishing-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/voice-phishing-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/voice-phishing-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/voice-phishing-scam-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/voice-phishing-scam-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/voice-phishing-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/voice-phishing-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/voice-phishing-scam-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/voice-phishing-scam-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/frozen-bank-account-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/frozen-bank-account-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/frozen-bank-account-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/frozen-bank-account-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/frozen-bank-account-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/frozen-bank-account-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/frozen-bank-account-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/frozen-bank-account-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/frozen-bank-account-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/frozen-bank-account-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/es/immigration-detention-release-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/immigration-detention-release-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/immigration-detention-release-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/immigration-detention-release-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/immigration-detention-release-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/guide/pt/immigration-detention-release-korea-foreigners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/guide/immigration-detention-release-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/guide/es/immigration-detention-release-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/guide/pt/immigration-detention-release-korea-foreigners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/guide/immigration-detention-release-korea-foreigners.html"/>
+    <lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
 </urlset>
