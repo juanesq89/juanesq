@@ -127,6 +127,18 @@ section{position:relative;z-index:1}
 .practice-icon{font-size:1.6rem;margin-bottom:16px}
 .practice-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--ivory);margin-bottom:14px;line-height:1.2}
 .practice-desc{font-size:.7rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,.42)}
+.am{margin-top:44px;contain:inline-size}
+.am-label{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:.72rem;font-weight:300;letter-spacing:.04em;color:rgba(245,240,232,.4);margin-bottom:14px}
+.am-date{flex:none;font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,168,76,.6)}
+.am-viewport{height:200px;overflow:hidden;border-bottom:1px solid rgba(201,168,76,.12)}
+.am-list{list-style:none;margin:0;padding:0;transition:transform .6s ease}
+.am-row{height:40px;display:flex;align-items:center;gap:14px;border-top:1px solid rgba(201,168,76,.12);min-width:0}
+.am-tag{flex:none;min-width:76px;text-align:center;box-sizing:border-box;font-size:.58rem;font-weight:500;letter-spacing:.06em;line-height:1;padding:4px 10px;border:1px solid;border-radius:9999px}
+.am-litigation{color:var(--gold-light);border-color:rgba(232,204,133,.4)}
+.am-advisory{color:rgba(245,240,232,.75);border-color:rgba(245,240,232,.25)}
+.am-criminal{color:#e5a3a3;border-color:rgba(229,163,163,.4)}
+.am-text{font-size:.78rem;font-weight:300;color:rgba(245,240,232,.72);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+@media(prefers-reduced-motion:reduce){.am-viewport{overflow-y:auto}.am-list{transition:none}}
 .practice-tags{margin-top:20px;display:flex;flex-wrap:wrap;gap:5px}
 .tag{font-size:.55rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.28);padding:3px 8px}
 #latam{padding:80px 60px;background:linear-gradient(135deg,rgba(19,32,64,.95),rgba(10,22,40,.99));border-top:1px solid rgba(201,168,76,.15);border-bottom:1px solid rgba(201,168,76,.15);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
@@ -272,6 +284,59 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
         <div class="lang-item"><span class="lang-name">English</span><span class="lang-level">Fluido</span></div>
         <div class="lang-item"><span class="lang-name">Español</span><span class="lang-level">Fluido · Argentina, 5 años</span></div>
         <div class="lang-item"><span class="lang-name">Português</span><span class="lang-level">Fluente · Brasil, 3 anos</span></div>
+      </div>
+    </div>
+    <div class="am reveal" aria-labelledby="am-label">
+      <p class="am-label" id="am-label">Actualmente estoy trabajando en...<time class="am-date" id="am-date"></time></p>
+      <div class="am-viewport">
+        <ul class="am-list" id="am-list">
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Subrogación de garantía de jeonse — oposición al reparto</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Ministerio de Tierras — dictamen regulatorio sobre reurbanización</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Medida cautelar por terminación de franquicia — fase de apelación</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Gobierno Metropolitano de Seúl — revisión de ordenanza de bienestar</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Disputa entre accionistas — defensa por daños societarios</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Reestructuración de arrendamiento comercial — acuerdo previo al juicio</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Agresión y lesiones — defensa penal</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Divorcio transfronterizo y división de bienes — Corea / Latinoamérica</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Contrato comercial latinoamericano — disputa con la contraparte</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Acusación de fraude — defensa en fase de investigación</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Acoso laboral — demanda civil por daños</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Inversión en centro de datos — due diligence regulatoria</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Subasta forzosa — disputa de reparto con acreedor preferente</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Delito de drogas — defensa de extranjero</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Fideicomiso de reurbanización — revisión de facultades del comité</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Defectos de construcción — reclamación de responsabilidad solidaria</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Acusación de conducta sexual — fase previa a la acusación</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Responsabilidad del Estado — indemnización a víctima civil</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Recobro de deudas sobre varios inmuebles — proceso monitorio</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Adquisiciones de defensa — revisión de contrato de suministro</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Apropiación indebida — investigación interna de empresa</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Disputa sobre acciones preferentes convertibles (RCPS)</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Desarrollo hotelero — reestructuración de arrendamiento comercial</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Accidente de tráfico — defensa por imprudencia</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Cesión de créditos y embargo — ejecución de sentencia</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Compensación de vivienda pública — dictamen regulatorio</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Ejecución hipotecaria — deudor extranjero</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Difamación — incidente en plataforma en línea</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Tasa de instalación de residuos — asesoría a gobierno local</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Pensión compensatoria y responsabilidad de tercero — fase de apelación</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Tren de levitación magnética — disputa de IVA</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Fraude empresarial — representación de la víctima</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Obstrucción de la posesión — edificio residencial</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Acuerdo de coinversión — división de negocios en Latinoamérica</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Impago a subcontratista — sector de la construcción</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Accidente laboral — proceso penal por imprudencia</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Salud materna — revisión de proyecto de ordenanza</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Conciliación previa — cadena de subarriendo y arriendo principal</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Representación de menor — tutela en disputa hereditaria</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Disputa de garantía bancaria — indemnización de préstamo jeonse</span></li>
+          <li class="am-row"><span class="am-tag am-criminal">penal</span><span class="am-text">Daños materiales — negociación de acuerdo</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Transporte de Seúl — edad para la gratuidad de mayores</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Prelación en reparto circular — oposición de acreedor</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Canal de drenaje — revisión de responsabilidad de ente público</span></li>
+          <li class="am-row"><span class="am-tag am-litigation">litigio</span><span class="am-text">Insolvencia y venta forzosa — coordinación de varios deudores</span></li>
+          <li class="am-row"><span class="am-tag am-advisory">asesoría</span><span class="am-text">Salud neonatal — redacción de ordenanza de Seúl</span></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -542,6 +607,28 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{
 reveals.forEach(el=>observer.observe(el));
 function toggleMenu(){const l=document.querySelector('.nav-links');if(l.style.display==='flex'){l.style.display='none';}else{l.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(10,22,40,.98);padding:28px 24px;gap:22px;z-index:99;border-bottom:1px solid rgba(201,168,76,.15);';}}
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});if(window.innerWidth<=1120)document.querySelector('.nav-links').style.display='none';});});
+</script>
+<script>
+(function(){
+  var d=document.getElementById('am-date');
+  if(d){var now=new Date();
+    d.textContent=new Intl.DateTimeFormat('es-ES',{timeZone:'Asia/Seoul',day:'numeric',month:'short',year:'numeric'}).formatToParts(now).filter(function(x){return x.type!=='literal'}).map(function(x){return x.value.replace('.','')}).join(' ');
+    d.setAttribute('datetime',now.toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'}));}
+  var list=document.getElementById('am-list');
+  if(!list||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var rows=list.children,n=rows.length,VIS=5,H=40,i=0;
+  if(n<=VIS)return;
+  for(var k=0;k<VIS;k++){var c=rows[k].cloneNode(true);c.setAttribute('aria-hidden','true');list.appendChild(c);}
+  setInterval(function(){
+    if(document.hidden)return;
+    i++;
+    list.style.transition='';
+    list.style.transform='translateY('+(-i*H)+'px)';
+    if(i===n){
+      setTimeout(function(){list.style.transition='none';list.style.transform='translateY(0)';i=0;},650);
+    }
+  },1800);
+})();
 </script>
 </body>
 </html>
