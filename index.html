@@ -131,8 +131,9 @@ section{position:relative;z-index:1}
 .practice-icon{font-size:1.6rem;margin-bottom:16px}
 .practice-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--ivory);margin-bottom:14px;line-height:1.2}
 .practice-desc{font-size:.7rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,.42)}
-.am{margin-top:64px;max-width:760px}
-.am-label{font-size:.72rem;font-weight:300;letter-spacing:.08em;color:rgba(245,240,232,.4);margin-bottom:14px}
+.am{margin-top:44px;contain:inline-size}
+.am-label{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:.72rem;font-weight:300;letter-spacing:.04em;color:rgba(245,240,232,.4);margin-bottom:14px}
+.am-date{flex:none;font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,168,76,.6)}
 .am-viewport{height:200px;overflow:hidden;border-bottom:1px solid rgba(201,168,76,.12)}
 .am-list{list-style:none;margin:0;padding:0;transition:transform .6s ease}
 .am-row{height:40px;display:flex;align-items:center;gap:14px;border-top:1px solid rgba(201,168,76,.12);min-width:0}
@@ -315,6 +316,59 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
         <div class="lang-item"><span class="lang-name">Português</span><span class="lang-level">Fluent · Brazil, 3 years</span></div>
       </div>
     </div>
+    <div class="am reveal" aria-labelledby="am-label">
+      <p class="am-label" id="am-label">I am currently working on...<time class="am-date" id="am-date"></time></p>
+      <div class="am-viewport">
+        <ul class="am-list" id="am-list">
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Jeonse guarantee subrogation — dividend objection</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Ministry of Land — urban redevelopment regulatory opinion</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Franchise termination injunction — appellate stage</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Seoul Metropolitan Government — welfare ordinance review</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Shareholder dispute — corporate damages defense</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Commercial lease restructuring — pre-suit settlement</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Assault and bodily harm — criminal defense</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Cross-border divorce and asset division — Korea / LatAm</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Latin American trade contract — counterparty dispute</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Fraud charges — investigation stage defense</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Workplace harassment — civil damages claim</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Data center investment — regulatory due diligence</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Forced auction — priority creditor dividend dispute</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Drug-related offense — foreigner defense</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Urban redevelopment trust — committee authority review</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Construction defect — joint liability claim</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Sexual misconduct allegation — pre-indictment stage</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">State tort — civilian victim compensation claim</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Multi-property debt recovery — payment order proceedings</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Defense procurement — supply chain contract review</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Embezzlement — company internal investigation</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">RCPS convertible preferred share dispute</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Hotel development — commercial lease restructuring</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Traffic accident — criminal negligence defense</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Debt assignment and garnishment — judgment enforcement</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Public housing welfare compensation — regulatory opinion</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Mortgage foreclosure — foreign national debtor</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Defamation — online platform incident</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Waste facility levy — local government advisory</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Alimony and third-party liability — appellate stage</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Magnetic levitation railway — VAT dispute</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Business fraud — victim side representation</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Obstruction of possession — multi-unit residential</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Co-investment agreement — LatAm business division</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Subcontractor payment dispute — construction sector</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Workplace injury — criminal negligence proceedings</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Maternity healthcare — ordinance enactment review</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Pre-trial conciliation — sublease / head-lease chain</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Minor representation — inheritance dispute guardianship</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Bank guarantee dispute — jeonse loan indemnity</span></li>
+        <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Property damage — settlement negotiation</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Seoul transit — elderly fare exemption age policy</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Circular dividend priority — creditor objection</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Drainage canal — public agency liability review</span></li>
+        <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Insolvency and forced sale — multi-debtor coordination</span></li>
+        <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Newborn health services — Seoul ordinance drafting</span></li>
+        </ul>
+      </div>
+    </div>
   </div>
   <div>
     <picture>
@@ -400,59 +454,6 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
       <h3 class="practice-name">Immigration &amp; Visa</h3>
       <p class="practice-desc">Visa applications, extensions, rejections, and deportation defense. Permanent residency (F-5) guidance.</p>
       <div class="practice-tags"><span class="tag">Visa / Residency</span><span class="tag">Deportation</span><span class="tag">F-5 / PR</span></div>
-    </div>
-  </div>
-  <div class="am reveal" aria-label="Active matters">
-    <p class="am-label">active matters</p>
-    <div class="am-viewport">
-      <ul class="am-list" id="am-list">
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Jeonse guarantee subrogation — dividend objection</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Ministry of Land — urban redevelopment regulatory opinion</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Franchise termination injunction — appellate stage</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Seoul Metropolitan Government — welfare ordinance review</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Shareholder dispute — corporate damages defense</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Commercial lease restructuring — pre-suit settlement</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Assault and bodily harm — criminal defense</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Cross-border divorce and asset division — Korea / LatAm</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Latin American trade contract — counterparty dispute</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Fraud charges — investigation stage defense</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Workplace harassment — civil damages claim</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Data center investment — regulatory due diligence</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Forced auction — priority creditor dividend dispute</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Drug-related offense — foreigner defense</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Urban redevelopment trust — committee authority review</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Construction defect — joint liability claim</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Sexual misconduct allegation — pre-indictment stage</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">State tort — civilian victim compensation claim</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Multi-property debt recovery — payment order proceedings</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Defense procurement — supply chain contract review</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Embezzlement — company internal investigation</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">RCPS convertible preferred share dispute</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Hotel development — commercial lease restructuring</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Traffic accident — criminal negligence defense</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Debt assignment and garnishment — judgment enforcement</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Public housing welfare compensation — regulatory opinion</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Mortgage foreclosure — foreign national debtor</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Defamation — online platform incident</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Waste facility levy — local government advisory</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Alimony and third-party liability — appellate stage</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Magnetic levitation railway — VAT dispute</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Business fraud — victim side representation</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Obstruction of possession — multi-unit residential</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Co-investment agreement — LatAm business division</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Subcontractor payment dispute — construction sector</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Workplace injury — criminal negligence proceedings</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Maternity healthcare — ordinance enactment review</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Pre-trial conciliation — sublease / head-lease chain</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Minor representation — inheritance dispute guardianship</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Bank guarantee dispute — jeonse loan indemnity</span></li>
-      <li class="am-row"><span class="am-tag am-criminal">criminal</span><span class="am-text">Property damage — settlement negotiation</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Seoul transit — elderly fare exemption age policy</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Circular dividend priority — creditor objection</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Drainage canal — public agency liability review</span></li>
-      <li class="am-row"><span class="am-tag am-litigation">litigation</span><span class="am-text">Insolvency and forced sale — multi-debtor coordination</span></li>
-      <li class="am-row"><span class="am-tag am-advisory">advisory</span><span class="am-text">Newborn health services — Seoul ordinance drafting</span></li>
-      </ul>
     </div>
   </div>
 </section>
@@ -742,6 +743,10 @@ body { padding-bottom: 68px; }
 </script>
 <script>
 (function(){
+  var d=document.getElementById('am-date');
+  if(d){var now=new Date();
+    d.textContent=now.toLocaleDateString('en-US',{timeZone:'Asia/Seoul',month:'short',day:'numeric',year:'numeric'});
+    d.setAttribute('datetime',now.toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'}));}
   var list=document.getElementById('am-list');
   if(!list||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var rows=list.children,n=rows.length,VIS=5,H=40,i=0;
