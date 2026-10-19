@@ -386,11 +386,11 @@ br.mb{display:none}
 .hero-band .hero-actions{margin:0;justify-content:flex-end;gap:12px}
 .hero--lm .facts{margin-top:0;flex:none}
 .hero--lm>.wrap,.hero--lm .facts{width:100%}
-/* optional (flag, default off): the large portrait cutout, only on wide screens. <section class="hero hero--lm" data-portrait="large"> */
-@media (min-width:1440px) and (min-height:860px){
-  .hero--lm[data-portrait="large"]::after{content:'';position:absolute;z-index:1;right:max(0px,calc(50% - 760px));bottom:calc(var(--facts-h,96px) + 128px);width:380px;height:min(56vh,560px);background:url(/img/juan-hero-cutout.webp) right bottom/contain no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%);pointer-events:none}
-  .hero--lm[data-portrait="large"] .lm-svg{width:84%;left:2%}
-  .hero--lm[data-portrait="large"] .hero-fine{display:none}
+/* optional (flag, default off): the large portrait cutout. <section class="hero hero--lm" data-portrait="large">
+   It only appears where the map is height-limited and leaves a free side gutter (>=1800 wide, >=900 tall), so it never
+   covers the map, the legend or the display line. Below that the flag does nothing (1440 and 1680: collides or too small, see REPORT). */
+@media (min-width:1800px) and (min-height:900px){
+  .hero--lm[data-portrait="large"]::after{content:'';position:absolute;z-index:1;right:0;top:96px;width:min(380px,calc((100vw - 1200px) / 2 - 24px));height:calc(100% - var(--facts-h) - 96px - 300px);background:url(/img/juan-hero-cutout.webp) right bottom/contain no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%);pointer-events:none}
 }
 @media (prefers-reduced-motion:no-preference){
   .lm-land{animation:lm-fade 1.2s .05s ease-out both}
