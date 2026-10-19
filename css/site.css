@@ -515,3 +515,4 @@ a{color:inherit}
 }
 .nav-links a{white-space:nowrap}
 @media (min-width:1021px) and (max-width:1199px){.byline img{width:80px;height:80px}}
+@media (max-width:640px){.chart{margin-top:-12px}.hero-chart figure{height:206px}}
