@@ -1,0 +1,10 @@
+{
+  "name": "juanesq-tools",
+  "private": true,
+  "type": "module",
+  "description": "Build-time helpers. Only gen-langmap.mjs needs dependencies: npm install (in tools/).",
+  "devDependencies": {
+    "d3-geo": "^3.1.1",
+    "topojson-client": "^3.1.0"
+  }
+}
