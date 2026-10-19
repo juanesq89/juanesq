@@ -450,3 +450,7 @@ a{color:inherit}
 .hero>.wrap,.hero .facts{width:100%}
 .byline img{width:64px;height:64px}
 @media (max-width:640px){.byline img{width:52px;height:52px}}
+/* tap targets >= 44px on touch layouts */
+.langs a,.langs span{min-height:44px}
+.foot li a{min-height:44px}
+@media (max-width:640px){.lang{height:44px}.lang a,.lang span{min-width:40px}}
