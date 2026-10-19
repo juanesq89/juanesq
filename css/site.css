@@ -391,19 +391,8 @@ a{color:inherit}
   .lang a,.lang span{min-width:36px;padding:0 6px}
   .menu-btn{margin-right:-8px}
 }
-/* ---------- hero stage (desktop): real portrait inside the route chart ---------- */
-/* home letter: the portrait is in the hero on desktop, so the letter shows his languages/credentials beside the text instead */
-@media (min-width:1021px){
-  .letter--home{grid-template-columns:1fr}
-  .letter--home .plate{display:none}
-  .letter--home .letter-body{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:96px;align-items:start}
-  .letter--home .letter-body>*{grid-column:1}
-  .letter--home .letter-meta{grid-column:2;grid-template-columns:1fr;gap:40px;margin-top:0}
-  .letter--home .letter-body>.letter-meta{grid-row:1/5}
-  .letter--home .letter-body>.letter-meta+.letter-meta{grid-row:5/8;margin-top:40px}
-}
-
-/* 1021-1199px: the round-1 two-column hero (flat chart right, byline photo left) so the stage never touches the headline; nav collapses */
+/* home letter: the big real portrait is back beside the letter on desktop (the hero no longer carries a cutout) */
+.letter--home{grid-template-columns:minmax(0,4.4fr) minmax(0,7.6fr)}
 @media (max-width:1180px){
   .nav-links,.nav-cta{display:none}
   .menu-btn{display:flex}
@@ -415,13 +404,11 @@ a{color:inherit}
   .nav.open .nav-cta{display:flex;order:6;width:100%;margin-bottom:20px;min-height:52px}
 }
 .nav-links a{white-space:nowrap}
-/* 1200-1339: keep the headline clear of the Seoul pin */
 @media (min-width:1200px) and (max-width:1339px){
   .hero-stage{width:60%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 4%),linear-gradient(180deg,#000 0,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 4%),linear-gradient(180deg,#000 0,#000 86%,transparent 100%)}
   .h1{font-size:62px}.h1--long{font-size:56px}
   .hero-grid{grid-template-columns:minmax(0,5.6fr) minmax(0,6.4fr)}
 }
-/* ---- round 3 stage: map layer (destinations inside the frame) + separate portrait layer ---- */
 @media (min-width:1200px){
   .hero>.wrap{position:relative;z-index:2}
   .hero .facts{z-index:3}
