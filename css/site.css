@@ -391,6 +391,7 @@ a{color:inherit}
 .lm-sring{fill:none;stroke:var(--seal);stroke-opacity:.9;stroke-width:1.2px;vector-effect:non-scaling-stroke;transform-box:fill-box;transform-origin:center}
 .lm-halo{transform-box:fill-box;transform-origin:center}
 .lm-sl{font-family:var(--sans);font-size:calc((var(--lfs) + 3px) / var(--s,.8));font-weight:600;font-stretch:88%;letter-spacing:.24em;fill:#f2eee6;paint-order:stroke;stroke:#0b1729;stroke-width:calc(4.8px / var(--s,.8));stroke-linejoin:round}
+.lm-sc{font-size:calc((var(--lfs) - 2px) / var(--s,.8));font-weight:500;letter-spacing:.2em;fill-opacity:.62}
 /* the figure caption is for assistive tech; sighted users get the legend + fine print */
 .lm-key{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 /* copy band */
