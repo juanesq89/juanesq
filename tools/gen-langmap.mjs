@@ -8,9 +8,12 @@
 //
 // What is drawn
 //   - land as a halftone: a hex grid of dots in projected space, one dot per cell centre that falls on land;
-//   - the 35 places where Spanish (21, incl. Puerto Rico) or Portuguese (8) is a principal official language,
-//     plus the six largest countries where English is most people's first language — their dots are lit;
-//   - one route per place from its capital to Seoul, farthest first (CSS animation, see css/site.css .lm-*).
+//   - the 34 countries where Spanish (20) or Portuguese (8) is a principal official language, plus the six largest
+//     countries where English is most people's first language — their dots are lit. Only sovereign states are counted
+//     (Puerto Rico, a US territory, was dropped in r8 so that "thirty-four countries" is literally true);
+//   - one route per country between its capital and Seoul. Opening: the routes draw in three tides and converge on
+//     Seoul, then fade to near-invisible. Resting state: one route at a time pulses out from Seoul and back
+//     (a message and its answer), cycling ES/PT/EN (CSS animation, see css/site.css .lm-*).
 import fs from 'node:fs'; import path from 'node:path'; import { fileURLToPath } from 'node:url'
 import { geoNaturalEarth1, geoContains, geoBounds, geoDistance } from 'd3-geo'
 import { feature } from 'topojson-client'
@@ -33,7 +36,7 @@ const PLACES = {
   es: [[724, 'España', -3.70, 40.42], [484, 'México', -99.13, 19.43], [320, 'Guatemala', -90.51, 14.64],
     [340, 'Honduras', -87.21, 14.07], [222, 'El Salvador', -89.19, 13.69], [558, 'Nicaragua', -86.25, 12.13],
     [188, 'Costa Rica', -84.09, 9.93], [591, 'Panamá', -79.52, 8.98], [192, 'Cuba', -82.37, 23.11],
-    [214, 'República Dominicana', -69.93, 18.49], [630, 'Puerto Rico', -66.11, 18.47], [170, 'Colombia', -74.07, 4.71],
+    [214, 'República Dominicana', -69.93, 18.49], [170, 'Colombia', -74.07, 4.71],
     [862, 'Venezuela', -66.90, 10.49], [218, 'Ecuador', -78.47, -0.18], [604, 'Perú', -77.04, -12.05],
     [68, 'Bolivia', -68.15, -16.50], [152, 'Chile', -70.67, -33.45], [32, 'Argentina', -58.38, -34.60],
     [600, 'Paraguay', -57.58, -25.26], [858, 'Uruguay', -56.16, -34.90], [226, 'Guinea Ecuatorial', 8.78, 3.75]],
@@ -46,9 +49,9 @@ const PLACES = {
 // labels: [iso, dx, dy, anchor, tier]  tier 1 = shown at every width, 2 = desktop only (offsets in map units)
 const LABELS = [
   [484, -14, 2, 'end', 1], [170, 14, -2, 'start', 2], [604, -14, 6, 'end', 1], [152, -14, -2, 'end', 2],
-  [32, -16, 44, 'end', 1], [76, 54, -24, 'start', 1], [840, 14, -12, 'start', 1], [124, 10, -60, 'start', 2],
+  [32, 12, -16, 'start', 1], [76, 54, -24, 'start', 1], [840, 14, -12, 'start', 1], [124, 10, -60, 'start', 2],
   [724, 14, 14, 'start', 2], [620, -14, 4, 'end', 2], [826, 14, -8, 'start', 2], [24, 14, 4, 'start', 2],
-  [508, 14, 6, 'start', 2], [36, -40, 50, 'middle', 2], [192, 6, -12, 'start', 2], [862, 12, -12, 'start', 2]
+  [508, 14, 6, 'start', 2], [36, -70, -95, 'middle', 2], [192, 6, -12, 'start', 2], [862, 12, -12, 'start', 2]
 ]
 const SEOUL = [126.98, 37.57]
 const LIVED = { sp: [-46.63, -23.55], ba: [-58.38, -34.60] }
@@ -61,8 +64,9 @@ const I18N = {
 // ---- projection: Natural Earth, Pacific-centred so Seoul sits left, Americas centre, Iberia/Africa right ----
 const W = 1600
 const proj = geoNaturalEarth1().rotate([100, 0])
-// frame: 98°E (west edge) … 58°E (east edge), 74°N … 57°S
-const frame = { type: 'MultiPoint', coordinates: [[98.5, 0], [57.5, 0], [-100, 74], [-100, -57]] }
+// frame (r8): 84°E (west edge) … 76°E (east edge), 63°N … 47°S. Wider and flatter than r6/r7 (98°E…58°E, 74°N…57°S) so the
+// map can run the full width of a 1280-1440 laptop at the height the type leaves; the Arctic and the tip of Patagonia are cut (the frame fades out there anyway).
+const frame = { type: 'MultiPoint', coordinates: [[84.5, 0], [75.5, 0], [-100, 63], [-100, -47]] }
 proj.fitWidth(W, frame)
 const pts = frame.coordinates.map(c => proj(c))
 const x0 = Math.min(...pts.map(p => p[0])), x1 = Math.max(...pts.map(p => p[0]))
@@ -127,13 +131,17 @@ items.forEach((it, i) => {
   it.dur = Math.round(950 + Math.min(1, d / 1300) * 650)
 })
 const endMs = Math.max(...items.map(it => it.delay + it.dur))
+// resting pulse (r8): one route at a time, Seoul -> capital -> Seoul, cycling Spanish / Portuguese / English.
+// --k is the slot; css/site.css .lm-pk turns it into a delay of (end of opening + k * slot length).
+const PULSE = [32, 76, 840, 484, 620, 826, 724, 24, 124, 170, 508, 36]
+PULSE.forEach((id, k) => { const it = items.find(x => x.id === id); if (it) it.k8 = k })
 
 // ---- SVG ------------------------------------------------------------------------------------------------
 function svg(L) {
   const t = I18N[L]
   const byId = Object.fromEntries(items.map(it => [it.id, it]))
   const o = []
-  o.push(`<svg class="lm-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" style="--lm-end:${endMs}ms">`)
+  o.push(`<svg class="lm-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" style="--lm-end:${endMs}ms;--lm-n:${PULSE.length}">`)
   o.push(`<defs><radialGradient id="lm-glow"><stop offset="0" stop-color="#f3e2b0" stop-opacity=".5"/><stop offset="1" stop-color="#f3e2b0" stop-opacity="0"/></radialGradient>` +
     `<radialGradient id="lm-fadeg" cx="${sxy[0]}" cy="${sxy[1]}" r="150" gradientUnits="userSpaceOnUse"><stop offset=".08" stop-color="#000"/><stop offset=".6" stop-color="#fff"/></radialGradient>` +
     `<mask id="lm-fade" maskUnits="userSpaceOnUse" x="-50" y="-80" width="${W + 100}" height="${H + 160}"><rect x="-50" y="-80" width="${W + 100}" height="${H + 160}" fill="url(#lm-fadeg)"/></mask></defs>`)
@@ -145,15 +153,16 @@ function svg(L) {
     o.push(`<path class="lm-c lm-${it.k}" style="--d:${it.delay - 260}ms" d="${dots(arr.length ? arr : [])}${arr.length ? '' : ''}"/>`)
   }
   o.push(`</g><g class="lm-routes" mask="url(#lm-fade)">`)
-  for (const it of items) o.push(`<path class="lm-r lm-${it.k}" pathLength="1" style="--d:${it.delay}ms;--t:${it.dur}ms" d="${it.d}"/>`)
+  const pk = it => it.k8 === undefined ? '' : ` lm-pk" data-k="${it.k8}`, pv = it => it.k8 === undefined ? '' : `;--k:${it.k8}`
+  for (const it of items) o.push(`<path class="lm-r lm-${it.k}${pk(it)}" pathLength="1" style="--d:${it.delay}ms;--t:${it.dur}ms${pv(it)}" d="${it.d}"/>`)
   o.push(`</g><g class="lm-heads">`)
-  for (const it of items) o.push(`<path class="lm-h" pathLength="1" style="--d:${it.delay}ms;--t:${it.dur}ms" d="${it.d}"/>`)
+  for (const it of items) o.push(`<path class="lm-h${pk(it)}" pathLength="1" style="--d:${it.delay}ms;--t:${it.dur}ms${pv(it)}" d="${it.d}"/>`)
   o.push(`</g><g class="lm-caps">`)
-  for (const it of items) o.push(`<circle class="lm-cap lm-${it.k}" style="--d:${it.delay - 260}ms" cx="${it.xy[0]}" cy="${it.xy[1]}" r="2.6"/>`)
+  for (const it of items) o.push(`<circle class="lm-cap lm-${it.k}${pk(it)}" style="--d:${it.delay - 260}ms${pv(it)}" cx="${it.xy[0]}" cy="${it.xy[1]}" r="2.6"/>`)
   o.push(`</g><g class="lm-labels">`)
   for (const [id, dx, dy, anchor, tier] of LABELS) {
     const it = byId[id]
-    o.push(`<text class="lm-l lm-t${tier}" style="--d:${it.delay + 200}ms" x="${r1(it.xy[0] + dx)}" y="${r1(it.xy[1] + dy)}" text-anchor="${anchor}">${it.name}</text>`)
+    o.push(`<text class="lm-l lm-t${tier}" data-c="${id}" style="--d:${it.delay + 200}ms" x="${r1(it.xy[0] + dx)}" y="${r1(it.xy[1] + dy)}" text-anchor="${anchor}">${it.name}</text>`)
   }
   o.push(`</g><g class="lm-lived">`)
   const [spx, spy] = P(LIVED.sp), colX = r1(spx + 46)

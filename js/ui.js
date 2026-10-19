@@ -37,8 +37,8 @@
     window.addEventListener('scroll', seqReq, { passive: true });
     window.addEventListener('resize', seqReq);
   }
-  /* reveal (practice rows get a stagger index) */
-  var rows = d.querySelectorAll('.rows .row');
+  /* reveal (practice lines get a stagger index) */
+  var rows = d.querySelectorAll(".lines .line");
   for (var j = 0; j < rows.length; j++) rows[j].style.setProperty('--i', j % 5);
   var els = d.querySelectorAll('.rv');
   if ('IntersectionObserver' in window && !reduced) {
