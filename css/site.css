@@ -12,7 +12,7 @@
   /* ACCENT (r7/r8): "seal red". To revert to the r6 gold, swap these four lines for:
      --seal:#e6bd62;--seal-deep:#c9a24a;--seal-hi:#f0cf86;--seal-hover:#d8b35a;--on-seal:#0b1729;--seal-rgb:230,189,98; */
   --seal:#ec6a45;--seal-deep:#b8381a;--seal-hi:#f2805d;--seal-hover:#c8401f;--on-seal:var(--ivory);--seal-rgb:236,106,69;
-  --gold:#e6bd62;--sea:#8fcfb0;--steel:#a9bccf;
+  --gold:#e6bd62;--sea:#8fcfb0;--steel:#6aa8f2;
   --ivory:#f2eee6;--ivory-2:rgba(242,238,230,.76);--ivory-3:rgba(242,238,230,.6);
   --paper:#f3f0e9;--paper-2:#e8e3d9;--text:#121a27;--text-2:#4a5160;
   --rule:rgba(242,238,230,.16);--rule-2:rgba(242,238,230,.09);--rule-p:#d9d2c4;
@@ -370,7 +370,7 @@ a{color:inherit}
 .lm-svg--ph{display:none}
 .lm-c{fill:none;stroke-width:3.1;stroke-linecap:round}
 .lm-es{stroke:var(--es);fill:var(--es)}.lm-pt{stroke:var(--pt);fill:var(--pt)}.lm-en{stroke:var(--en);fill:var(--en)}
-.lm-c.lm-en{stroke-opacity:.78}
+.lm-c.lm-en{stroke-opacity:1}
 /* routes rest at near-invisible (.022): language links, not traffic */
 .lm-r{fill:none;stroke-width:.9px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-opacity:.022;stroke-dasharray:1;stroke-dashoffset:0}
 .lm-h{fill:none;stroke:#fff6ea;stroke-width:2.4px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-dasharray:.016 2;opacity:0}
@@ -594,7 +594,7 @@ br.mb{display:none}
     -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%),linear-gradient(180deg,#000 88%,transparent 100%);-webkit-mask-composite:source-in;
     mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%),linear-gradient(180deg,#000 88%,transparent 100%);mask-composite:intersect}
   .lm-svg--dk{display:none}.lm-svg--ph{display:block}
-  .lm-svg--ph .lm-land{stroke-width:2.5}.lm-svg--ph .lm-c{stroke-width:2.9}.lm-svg--ph .lm-c.lm-en{stroke-opacity:.6}
+  .lm-svg--ph .lm-land{stroke-width:2.5}.lm-svg--ph .lm-c{stroke-width:2.9}.lm-svg--ph .lm-c.lm-en{stroke-opacity:.95}
   .lm-svg--ph{--lfs:13.5px}
   .lm-svg--ph .lm-l{letter-spacing:.12em}
   .lm-svg--ph .lm-t3{--q:0}
