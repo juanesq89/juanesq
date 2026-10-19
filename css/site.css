@@ -346,7 +346,7 @@ a{color:inherit}
    part dims the map so the type stays legible. */
 @media (min-width:1021px){
   .hero--lm{--ov:clamp(56px,5vw,110px);--nat:min(calc(100vw * 576 / 1600),900px)}
-  .lm{min-height:clamp(240px,calc(100svh - 470px),640px)}
+  .lm{min-height:clamp(220px,calc(100svh - 560px),520px)}
   .lm-frame{position:absolute;left:0;right:0;max-height:none;min-height:0;
     height:min(var(--nat),calc(100% + var(--ov)));top:max(0px,calc((100% + var(--ov) - var(--nat)) / 2));
     -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 4.5%,#000 95.5%,transparent 100%),linear-gradient(180deg,#000 calc(100% - var(--ov)),rgba(0,0,0,.5) calc(100% - var(--ov) * .45),transparent 100%);
@@ -360,8 +360,8 @@ a{color:inherit}
 .lm-c{fill:none;stroke-width:3.1;stroke-linecap:round}
 .lm-es{stroke:var(--es);fill:var(--es)}.lm-pt{stroke:var(--pt);fill:var(--pt)}.lm-en{stroke:var(--en);fill:var(--en)}
 .lm-c.lm-en{stroke-opacity:.78}
-/* routes rest at near-invisible (.035): language links, not traffic */
-.lm-r{fill:none;stroke-width:.9px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-opacity:.035;stroke-dasharray:1;stroke-dashoffset:0}
+/* routes rest at near-invisible (.022): language links, not traffic */
+.lm-r{fill:none;stroke-width:.9px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-opacity:.022;stroke-dasharray:1;stroke-dashoffset:0}
 .lm-h{fill:none;stroke:#fff6ea;stroke-width:2.4px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-dasharray:.016 2;opacity:0}
 .lm-cap{stroke:none;transform-box:fill-box;transform-origin:center}
 .lm-l{font-family:var(--serif);font-style:italic;font-weight:400;font-size:24px;fill:#f2eee6;fill-opacity:.84;paint-order:stroke;stroke:#0b1729;stroke-width:6px;stroke-linejoin:round}
@@ -413,10 +413,10 @@ br.mb{display:none}
   .hero--lm[data-portrait="large"]::after{content:'';position:absolute;z-index:1;right:0;top:96px;width:min(380px,calc((100vw - 1200px) / 2 - 24px));height:calc(100% - var(--facts-h) - 96px - 300px);background:url(/img/juan-hero-cutout.webp) right bottom/contain no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%);pointer-events:none}
 }
 @media (prefers-reduced-motion:no-preference){
-  .lm-land{animation:lm-fade 1.2s .05s ease-out both}
+  .lm-land{animation:lm-world 1.2s ease-out both}
   .lm-c{animation:lm-fade .9s var(--d) ease-out both}
   .lm-cap{animation:lm-pop .7s var(--d) var(--expo) both}
-  /* opening (unchanged from r6/r7): three tides converge on Seoul. Then (r8) every route retires to .035 and the map rests;
+  /* opening (unchanged from r6/r7): three tides converge on Seoul. Then (r8) every route retires to .022 and the map rests;
      one route at a time pulses Seoul -> capital -> Seoul (slot --slot, --lm-n slots per cycle, cycling ES/PT/EN). */
   .lm-r{animation:lm-draw var(--t) var(--d) cubic-bezier(.6,.05,.3,1) both,lm-settle 1.8s calc(var(--d) + var(--t)) ease-out both,lm-retire 1.6s calc(var(--lm-end) + 300ms) ease-in-out forwards}
   .lm-h{animation:lm-head var(--t) var(--d) cubic-bezier(.6,.05,.3,1) both}
@@ -431,22 +431,24 @@ br.mb{display:none}
   .hero-fine{animation:lm-fade 1s 5.9s ease-out both}
   .hero--lm .h1 .k{animation:lm-up 1s .15s var(--expo) both}
   .hero--lm .h1 .ln>span{animation:lm-rise 1.2s .32s var(--expo) both}
-  .hero--lm .h1 .dot-s{display:inline-block;animation:lm-land .9s calc(var(--lm-end,5660ms) - 200ms) var(--expo) both}
+  .hero--lm .h1 .dot-s{display:inline-block;transform-origin:50% 80%;animation:lm-land .9s calc(var(--lm-end,5660ms) - 200ms) var(--expo) both}
   .hero-legend li{animation:lm-dim .6s ease-out both}
   .hero-legend .lk-es{animation-delay:.8s}.hero-legend .lk-pt{animation-delay:2.75s}.hero-legend .lk-en{animation-delay:3.7s}
   .hero-row{animation:lm-up .9s .75s var(--expo) both}
 }
 @keyframes lm-fade{from{opacity:0}}
+/* r8: the land is already there at 0s (a dim world), then comes up to full: no empty navy first frame */
+@keyframes lm-world{from{opacity:.35}}
 @keyframes lm-dim{from{opacity:.32}}
 @keyframes lm-pop{from{opacity:0;transform:scale(0)}}
 @keyframes lm-rise{from{transform:translateY(108%)}}
 @keyframes lm-up{from{opacity:0;transform:translateY(14px)}}
-@keyframes lm-land{0%{color:var(--ivory)}60%{color:var(--seal);transform:scale(1.35)}100%{color:var(--seal);transform:none}}
+@keyframes lm-land{0%{color:var(--ivory)}60%{color:var(--seal);transform:scale(1.5)}100%{color:var(--seal);transform:none}}
 @keyframes lm-draw{from{stroke-dashoffset:1;stroke-opacity:.95}to{stroke-dashoffset:0;stroke-opacity:.95}}
 @keyframes lm-settle{from{stroke-opacity:.95}to{stroke-opacity:.2}}
-@keyframes lm-retire{from{stroke-opacity:.2}to{stroke-opacity:.035}}
+@keyframes lm-retire{from{stroke-opacity:.2}to{stroke-opacity:.022}}
 /* pulse keyframes are written for 12 slots (one slot = 8.33% of the cycle): out 0-3%, back 3-6%, dark the rest */
-@keyframes lm-pr{0%{stroke-opacity:.035}1.2%{stroke-opacity:.42}5.4%{stroke-opacity:.42}7.6%,100%{stroke-opacity:.035}}
+@keyframes lm-pr{0%{stroke-opacity:.022}1.2%{stroke-opacity:.42}5.4%{stroke-opacity:.42}7.6%,100%{stroke-opacity:.022}}
 @keyframes lm-ph{0%{stroke-dashoffset:-.984;opacity:0;animation-timing-function:cubic-bezier(.5,0,.3,1)}.3%{opacity:1}3%{stroke-dashoffset:.016;opacity:1;animation-timing-function:cubic-bezier(.5,0,.3,1)}5.8%{opacity:1}6%{stroke-dashoffset:-.984;opacity:0}100%{stroke-dashoffset:-.984;opacity:0}}
 @keyframes lm-pc{0%,2.6%{transform:none}3.3%{transform:scale(2.3)}4.6%,100%{transform:none}}
 @keyframes lm-ping{0%{transform:scale(1);stroke-opacity:.9}35%{transform:scale(2.4);stroke-opacity:0}36%{transform:scale(1);stroke-opacity:0}70%,100%{transform:scale(1);stroke-opacity:.9}}
