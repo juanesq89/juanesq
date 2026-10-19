@@ -304,8 +304,9 @@ a{color:inherit}
    ========================================================================== */
 .seq{position:relative;background:var(--navy);--p:1}
 .seq-stage{position:relative;padding:136px 0 120px}
+.seq-stage>.wrap{width:100%}
 .seq .label{margin-bottom:44px}
-.seq-h{font-family:var(--serif);font-weight:400;font-size:clamp(46px,8.6vw,132px);line-height:.96;letter-spacing:-.034em;color:var(--ivory);font-variation-settings:'opsz' 30;font-variant-numeric:lining-nums}
+.seq-h{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7.4vw,124px);line-height:.96;letter-spacing:-.034em;color:var(--ivory);font-variation-settings:'opsz' 30;font-variant-numeric:lining-nums}
 .seq-l{display:block;padding:.04em 0}
 .seq-l:nth-child(2){padding-left:1.1em}
 .seq-l:nth-child(3){padding-left:2.2em;font-style:italic}
@@ -317,11 +318,13 @@ a{color:inherit}
 .js .seq.is-live{height:280vh}
 .js .seq.is-live .seq-stage{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;padding:76px 0 40px;overflow:hidden}
 .js .seq.is-live .seq-l{
-  --a:clamp(0,calc((var(--p) * 3.3 - var(--i)) * 1.6),1);
+  --a:clamp(0,calc((var(--p) * 3.4 - var(--i) + .25) * 1.6),1);
   opacity:calc(.12 + var(--a) * .88);
   transform:translate3d(calc((1 - var(--a)) * 4vw),0,0);
   will-change:opacity,transform}
-.js .seq.is-live .seq-meta li{opacity:calc(.3 + clamp(0,calc((var(--p) * 3.3 - var(--i)) * 1.6),1) * .7)}
+.js .seq.is-live .seq-meta li{opacity:calc(.3 + clamp(0,calc((var(--p) * 3.4 - var(--i) + .25) * 1.6),1) * .7)}
+.sec-after-seq{padding-top:112px}
+.sec-after-seq .latam-cl{margin-top:0}
 .seq-bar{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--seal);transform-origin:left;transform:scaleX(var(--p));opacity:.9}
 .js .seq:not(.is-live) .seq-bar{display:none}
 
@@ -527,6 +530,7 @@ br.mb{display:none}
   .closing{padding:88px 0}
   .countries{grid-template-columns:1fr 1fr}.countries li{font-size:21px}
   .seq-stage{padding:96px 0 88px}
+  .sec-after-seq{padding-top:72px}
   .seq .label{margin-bottom:28px}
   .seq-h{font-size:clamp(40px,12.4vw,54px);line-height:1}
   .seq-l:nth-child(2){padding-left:.6em}.seq-l:nth-child(3){padding-left:1.2em}

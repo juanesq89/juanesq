@@ -72,7 +72,7 @@
 <link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preload" href="/fonts/piazzolla-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link href="/css/site.css?v=10" rel="stylesheet">
+<link href="/css/site.css?v=11" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -321,12 +321,19 @@
   </div>
 </section>
 
-<section class="sec paper" id="why">
-  <div class="wrap">
-    <div class="sec-head rv">
+<section class="seq" data-seq aria-labelledby="seq-h">
+  <div class="seq-stage">
+    <div class="wrap">
       <p class="label"><span class="no">02</span>Background</p>
-      <h2 class="h2">Five years in Argentina.<br>Three in Brazil. <em>Now in Seoul.</em></h2>
+      <h2 class="seq-h" id="seq-h"><span class="seq-l" style="--i:0">Five years in Argentina.</span> <span class="seq-l" style="--i:1">Three in Brazil.</span> <span class="seq-l" style="--i:2">Now in Seoul<span class="dot-s">.</span></span></h2>
+      <ul class="seq-meta"><li class="m-ar" style="--i:0">Argentina <b>Spanish</b></li><li class="m-br" style="--i:1">Brazil <b>Portuguese · high school in São Paulo</b></li><li class="m-kr" style="--i:2">Seoul <b>Attorney at SNK Law Firm</b></li></ul>
     </div>
+    <div class="seq-bar" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="sec paper sec-after-seq" id="why">
+  <div class="wrap">
     <div class="why">
       <div class="rv"><span class="why-no">i.</span><h3>4 Languages</h3><p>Korean, English, Spanish, and Portuguese — fluent in all four. Your case is handled in the language you are most comfortable with. No meaning lost in translation.</p></div>
       <div class="rv"><span class="why-no">ii.</span><h3>Business Background</h3><p>Ship sales at Hyundai Heavy Industries and Latin America renewable-energy business at POSCO International. I spent years on the commercial side before I read a contract as a lawyer.</p></div>

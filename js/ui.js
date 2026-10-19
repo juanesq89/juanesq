@@ -1,4 +1,4 @@
-/* juanesq.com — home/about UI: sticky nav state, mobile menu, reveal-on-scroll, mobile CTA bar. No dependencies. */
+/* juanesq.com — home/about/guides UI: sticky nav state, mobile menu, scroll sequence, reveal-on-scroll, mobile CTA bar. No dependencies. */
 (function () {
   var d = document, nav = d.getElementById('navbar');
   if (nav) {
@@ -17,9 +17,31 @@
       });
     }
   }
-  /* reveal */
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* pinned typographic sequence (.seq[data-seq]): writes --p (0..1) while the section scrolls past; CSS does the rest.
+     Without JS or with reduced motion it stays a static heading. */
+  var seqs = d.querySelectorAll('[data-seq]');
+  if (seqs.length && !reduced && 'requestAnimationFrame' in window) {
+    var ticking = false;
+    var seqUpd = function () {
+      ticking = false;
+      for (var i = 0; i < seqs.length; i++) {
+        var r = seqs[i].getBoundingClientRect(), span = r.height - window.innerHeight;
+        var p = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 1;
+        seqs[i].style.setProperty('--p', p.toFixed(4));
+      }
+    };
+    for (var k = 0; k < seqs.length; k++) seqs[k].classList.add('is-live');
+    seqUpd();
+    var seqReq = function () { if (!ticking) { ticking = true; requestAnimationFrame(seqUpd); } };
+    window.addEventListener('scroll', seqReq, { passive: true });
+    window.addEventListener('resize', seqReq);
+  }
+  /* reveal (practice rows get a stagger index) */
+  var rows = d.querySelectorAll('.rows .row');
+  for (var j = 0; j < rows.length; j++) rows[j].style.setProperty('--i', j % 5);
   var els = d.querySelectorAll('.rv');
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if ('IntersectionObserver' in window && !reduced) {
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
