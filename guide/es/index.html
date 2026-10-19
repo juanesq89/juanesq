@@ -50,14 +50,14 @@ a{color:inherit}
 .nav .wrap{height:100%;display:flex;align-items:center;gap:32px}
 .wordmark{display:flex;flex-direction:column;text-decoration:none;color:var(--ivory);line-height:1;margin-right:auto}
 .wordmark b{font-family:var(--serif);font-weight:500;font-size:24px;letter-spacing:-.01em}
-.wordmark small{margin-top:6px;font-size:10.5px;font-weight:600;font-stretch:85%;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory-3);white-space:nowrap}
+.wordmark small{margin-top:6px;font-size:12px;font-weight:600;font-stretch:85%;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-3);white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:30px;list-style:none}
 .nav-links a{font-size:15px;font-weight:500;color:var(--ivory-2);text-decoration:none;padding:10px 0;position:relative;white-space:nowrap;transition:color .2s}
 .nav-links a::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:1px;background:var(--seal);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--expo)}
 .nav-links a:hover,.nav-links a[aria-current]{color:var(--ivory)}
 .nav-links a:hover::after,.nav-links a[aria-current]::after{transform:scaleX(1)}
-.lang{display:flex;align-items:center;height:36px;gap:2px}
-.lang a{position:relative;display:flex;align-items:center;justify-content:center;min-width:38px;height:100%;padding:0 8px;font-size:12px;font-weight:600;font-stretch:88%;letter-spacing:.14em;color:var(--ivory-3);text-decoration:none;transition:color .2s}
+.lang{display:flex;align-items:center;height:40px;gap:2px}
+.lang a{position:relative;display:flex;align-items:center;justify-content:center;min-width:38px;height:100%;padding:0 8px;font-size:13px;font-weight:600;font-stretch:88%;letter-spacing:.14em;color:var(--ivory-3);text-decoration:none;transition:color .2s}
 .lang a::after{content:'';position:absolute;left:10px;right:10px;bottom:4px;height:2px;background:var(--seal);transform:scaleX(0);transition:transform .25s var(--expo)}
 .lang a:hover{color:var(--ivory)}
 .lang [aria-current]{color:var(--ivory)}
@@ -86,15 +86,15 @@ a{color:inherit}
 @media(max-width:640px){
   .nav{height:60px}
   .nav .wrap{gap:10px}
-  .wordmark b{font-size:22px}.wordmark small{font-size:9px;letter-spacing:.12em;margin-top:5px}
-  .lang{height:44px;gap:0}.lang a{min-width:38px;padding:0 6px;font-size:11.5px}
+  .wordmark b{font-size:22px}.wordmark small{font-size:10px;letter-spacing:.1em;margin-top:5px}
+  .lang{height:44px;gap:0}.lang a{min-width:38px;padding:0 6px;font-size:13px}
   .lang a::after{left:9px;right:9px;bottom:8px}
 }
 @media(max-width:370px){.wordmark small{display:none}}
 /* HUB HERO — the library's title at display scale, the three counts as numerals */
 .guide-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:64px;align-items:end;background:var(--navy);color:var(--ivory);padding:160px max(clamp(20px,5vw,64px),calc((100% - 1200px)/2)) 64px;border-bottom:1px solid var(--rule)}
 .guide-hero>*{grid-column:1}
-.guide-eyebrow{display:flex;align-items:center;gap:14px;font-size:12px;font-weight:600;font-stretch:88%;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory-2);margin-bottom:28px}
+.guide-eyebrow{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600;font-stretch:88%;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-2);margin-bottom:28px}
 .guide-eyebrow::before{content:'';width:32px;height:1px;background:var(--seal)}
 .guide-title{font-family:var(--serif);font-size:clamp(46px,7.4vw,112px);font-weight:400;line-height:.96;letter-spacing:-.035em;color:var(--ivory);max-width:13em;text-wrap:balance;font-variation-settings:'opsz' 30}
 .guide-title em{font-style:italic;color:var(--ivory-2);letter-spacing:-.025em}
@@ -107,13 +107,13 @@ a{color:inherit}
 .hub-counts>div:first-child{margin-left:0}
 .hub-counts dd{font-family:var(--serif);font-size:clamp(56px,6.4vw,96px);font-weight:400;line-height:.9;letter-spacing:-.04em;color:var(--ivory);font-variant-numeric:lining-nums}
 .hub-counts dt{margin-bottom:14px}
-.hub-counts dt a{font-size:12px;font-weight:600;font-stretch:88%;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory-2);text-decoration:none}
+.hub-counts dt a{font-size:13px;font-weight:600;font-stretch:88%;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-2);text-decoration:none}
 .hub-counts dt a:hover{color:var(--ivory)}
 /* LIBRARY INDEX */
 .hub-lang{max-width:1328px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);column-gap:64px;scroll-margin-top:68px}
 .hub-lang-head{grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:104px 0 20px;border-bottom:1.5px solid var(--navy)}
 .hub-lang-title{font-family:var(--serif);font-size:clamp(44px,5.6vw,80px);font-weight:400;line-height:.95;letter-spacing:-.035em;color:var(--navy)}
-.hub-lang-count{font-size:12px;font-weight:600;font-stretch:88%;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2);font-variant-numeric:tabular-nums}
+.hub-lang-count{font-size:13px;font-weight:600;font-stretch:88%;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2);font-variant-numeric:tabular-nums}
 .hub-group-title{grid-column:1;align-self:start;position:sticky;top:92px;padding:30px 0 0;font-family:var(--serif);font-size:25px;font-weight:400;line-height:1.15;letter-spacing:-.015em;color:var(--navy);scroll-margin-top:84px}
 .hub-group-title span{display:block;margin-top:8px;font-family:var(--serif);font-style:italic;font-size:15px;font-weight:400;letter-spacing:0;color:var(--seal-deep);font-variant-numeric:tabular-nums}
 .hub-lang .guide-grid{grid-column:2;padding:12px 0 36px;border-bottom:1px solid var(--rule-p)}
@@ -125,7 +125,7 @@ section.guide-grid{max-width:1328px;margin:0 auto;padding:48px clamp(20px,5vw,64
 .guide-card::before{counter-increment:g;content:counter(g,decimal-leading-zero);grid-column:1;grid-row:1/4;padding-top:6px;font-family:var(--serif);font-style:italic;font-size:16px;font-weight:400;color:var(--seal-deep);font-variant-numeric:lining-nums tabular-nums}
 .guide-card::after{content:'\2192';grid-column:3;grid-row:1/4;align-self:center;font-size:20px;color:var(--navy);transition:transform .3s var(--expo)}
 .guide-card:hover::after{transform:translateX(5px)}
-.card-cat{grid-column:2;font-size:12px;font-weight:600;font-stretch:88%;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2);margin-bottom:6px}
+.card-cat{grid-column:2;font-size:13px;font-weight:600;font-stretch:88%;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2);margin-bottom:6px}
 .hub-lang .card-cat{display:none}
 .card-title{grid-column:2;font-family:var(--serif);font-size:24px;font-weight:400;line-height:1.18;letter-spacing:-.014em;color:var(--navy);transition:color .2s;text-wrap:balance}
 .guide-card:hover .card-title{color:var(--seal-deep)}
