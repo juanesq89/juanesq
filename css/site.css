@@ -5,7 +5,7 @@
   --ivory:#f3eee5;--ivory-2:rgba(243,238,229,.74);--ivory-3:rgba(243,238,229,.6);
   --paper:#f7f4ee;--paper-2:#efe9de;--text:#16202e;--text-2:#4a5160;
   --rule:rgba(201,168,76,.22);--rule-2:rgba(243,238,229,.1);--rule-p:#e2d9c6;
-  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --serif:'Cormorant Garamond','Pretendard Variable',Pretendard,Georgia,serif;
   --sans:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Segoe UI',Roboto,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
   --m:clamp(20px,5vw,64px);--max:1200px;--ease:cubic-bezier(.2,.7,.2,1);
 }
@@ -417,3 +417,14 @@ a{color:inherit}
 .step-no,.facts b,.h2,.h1,.shelves b,.why-no{font-variant-numeric:lining-nums}
 .plate{align-self:start}
 @media (max-width:1020px){.plate{position:relative;top:auto}}
+.about-hero{position:relative;isolation:isolate}
+.about-hero .cols{z-index:-1}
+.cv-block .cv-list{margin-top:28px}
+.why-2{grid-template-columns:1fr 1fr}
+.why-2>div{padding-right:48px}
+.why-2>div+div{padding-left:48px}
+@media (max-width:1160px){.why-2>div:nth-child(n){border-top:0;margin-top:0}.why-2>div+div{border-left:1px solid var(--rule-p);padding-left:28px}}
+@media (max-width:640px){.why-2{grid-template-columns:1fr}.why-2>div+div{border-left:0;padding-left:0;border-top:1px solid var(--rule-p);margin-top:26px}}
+.cv{grid-template-columns:1fr 1fr}
+.cv .cv-block+.cv-block{margin-top:0}
+@media (max-width:1020px){.cv{grid-template-columns:1fr}.cv .cv-block+.cv-block{margin-top:24px}}
