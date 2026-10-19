@@ -243,6 +243,8 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 .footer-disclaimer a{display:inline-block;margin-top:9px;font-size:.6rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.65);text-decoration:none}
 .footer-disclaimer a:hover{color:var(--gold-light)}
 .jf-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+/* iOS: 16px 미만 입력란은 포커스 시 자동 확대됨 */
+@media(max-width:900px){.form-input,.form-select,.form-textarea,.jf-input,.jf-select,.jf-textarea{font-size:16px}}
 </style>
 </head>
 <body>
