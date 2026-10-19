@@ -460,3 +460,44 @@ a{color:inherit}
   .lang a,.lang span{min-width:36px;padding:0 6px}
   .menu-btn{margin-right:-8px}
 }
+/* ---------- hero stage (desktop): real portrait inside the route chart ---------- */
+.hero-stage{position:absolute;top:0;right:0;bottom:0;width:min(60%,920px);z-index:0;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%),linear-gradient(180deg,#000 0,#000 86%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 18%),linear-gradient(180deg,#000 0,#000 86%,transparent 100%);mask-composite:intersect}
+.stage{display:block;width:100%;height:100%}
+.stage .c-land{stroke-opacity:.34}
+.stage .c-grid{stroke-opacity:.085}
+.c-glow .c-route{stroke-width:5;stroke-opacity:.42}
+.c-glow .c-route--1{stroke-opacity:.26}
+.stage .c-route{stroke-width:1.6}
+.stage .c-spark{fill:#fff;filter:drop-shadow(0 0 3px #fff) drop-shadow(0 0 9px rgba(255,225,160,.95))}
+.stage .c-lab{font-size:12px}.stage .c-sub{font-size:11px}
+.stage .c-edge .c-lab{fill:#e3c67e}
+.stage-portrait{opacity:0}
+@media (prefers-reduced-motion:no-preference){.stage-portrait{animation:fade 1.4s .15s var(--ease) forwards}.c-edge{animation-delay:1.6s}}
+@media (prefers-reduced-motion:reduce){.stage-portrait{opacity:1}}
+.hero-copy{z-index:2}
+@media (min-width:1021px){
+  .hero-chart{display:none}
+  .byline img,.byline picture{display:none}
+  .hero-grid{grid-template-columns:minmax(0,6fr) minmax(0,6fr)}
+}
+@media (max-width:1020px){
+  .hero-stage{display:none}
+  .byline img{width:96px;height:96px}
+  .byline{gap:18px}
+}
+.stage .c-route{vector-effect:none}
+.stage .c-ticks{display:none}
+/* home letter: the portrait is in the hero on desktop, so the letter shows his languages/credentials beside the text instead */
+@media (min-width:1021px){
+  .letter--home{grid-template-columns:1fr}
+  .letter--home .plate{display:none}
+  .letter--home .letter-body{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:96px;align-items:start}
+  .letter--home .letter-body>*{grid-column:1}
+  .letter--home .letter-meta{grid-column:2;grid-template-columns:1fr;gap:40px;margin-top:0}
+  .letter--home .letter-body>.letter-meta{grid-row:1/5}
+  .letter--home .letter-body>.letter-meta+.letter-meta{grid-row:5/8;margin-top:40px}
+}
+@media (max-width:640px){
+  .hero-chart figure{height:196px}
+  .chart{margin-top:-30px}
+}
