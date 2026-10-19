@@ -1,11 +1,12 @@
 /* juanesq.com — home (EN/ES/PT) + /about/. Design tokens: see design spec (navy + gold, Cormorant Garamond + Pretendard). */
+@font-face{font-family:'Serif KR Sub';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/noto-serif-kr-500-sub.woff2) format('woff2');unicode-range:U+AC00-D7A3;size-adjust:90%}
 :root{
   --navy:#0b1729;--navy-2:#101f37;--ink:#07101d;
   --gold:#c9a84c;--gold-2:#e3c67e;--gold-ink:#7a5c17;
   --ivory:#f3eee5;--ivory-2:rgba(243,238,229,.74);--ivory-3:rgba(243,238,229,.6);
   --paper:#f7f4ee;--paper-2:#efe9de;--text:#16202e;--text-2:#4a5160;
   --rule:rgba(201,168,76,.22);--rule-2:rgba(243,238,229,.1);--rule-p:#e2d9c6;
-  --serif:'Cormorant Garamond','Pretendard Variable',Pretendard,Georgia,serif;
+  --serif:'Cormorant Garamond','Serif KR Sub','Pretendard Variable',Pretendard,Georgia,serif;
   --sans:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Segoe UI',Roboto,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
   --m:clamp(20px,5vw,64px);--max:1200px;--ease:cubic-bezier(.2,.7,.2,1);
 }
