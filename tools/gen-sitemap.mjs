@@ -79,6 +79,7 @@ const HOME_ALTS = { en: `${SITE}/`, es: `${SITE}/es/`, pt: `${SITE}/pt/` }
 add(`${SITE}/`, 'index.html', '1.0', 'monthly', HOME_ALTS)
 add(`${SITE}/es/`, 'es/index.html', '0.9', 'monthly', HOME_ALTS)
 add(`${SITE}/pt/`, 'pt/index.html', '0.9', 'monthly', HOME_ALTS)
+add(`${SITE}/about/`, 'about/index.html', '0.7', 'monthly', { en: `${SITE}/about/` })
 
 const HUB_ALTS = { en: `${SITE}/guide/`, es: `${SITE}/guide/es/`, pt: `${SITE}/guide/pt/` }
 add(`${SITE}/guide/`, 'guide/index.html', '0.9', 'weekly', HUB_ALTS)
@@ -117,5 +118,5 @@ xml += '</urlset>\n'
 
 writeFileSync(OUT, xml)
 const noDate = entries.filter((e) => !e.lastmod).length
-console.log(`✅ sitemap.xml — ${entries.length} URL (en ${en.length} / es ${es.size} / pt ${pt.size} + 정적 7)`)
+console.log(`✅ sitemap.xml — ${entries.length} URL (en ${en.length} / es ${es.size} / pt ${pt.size} + 정적 8)`)
 if (noDate) console.warn(`⚠️ 커밋 이력이 없어 lastmod를 못 넣은 URL ${noDate}개`)
