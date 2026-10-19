@@ -392,7 +392,7 @@ a{color:inherit}
   .menu-btn{margin-right:-8px}
 }
 /* home letter: the big real portrait is back beside the letter on desktop (the hero no longer carries a cutout) */
-.letter--home{grid-template-columns:minmax(0,4.4fr) minmax(0,7.6fr)}
+@media (min-width:1021px){.letter--home{grid-template-columns:minmax(0,4.4fr) minmax(0,7.6fr)}}
 @media (max-width:1180px){
   .nav-links,.nav-cta{display:none}
   .menu-btn{display:flex}
