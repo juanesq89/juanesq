@@ -253,6 +253,14 @@ footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;
 .section-label,.hero-eyebrow{font-size:.72rem;letter-spacing:.2em}
 .nav-logo span{font-size:.6rem;letter-spacing:.2em;color:rgba(201,168,76,.75)}
 .tag{font-size:.62rem;letter-spacing:.08em}
+/* CTA: 자간 .25em → .12em, 버튼 문구 한 줄 */
+.btn-primary,.btn-secondary{letter-spacing:.12em;white-space:nowrap}
+.form-submit,.jf-submit{letter-spacing:.12em}
+@media(max-width:600px){
+  .hero-actions{flex-wrap:wrap;gap:14px 22px}
+  .btn-primary{padding:16px 26px;font-size:.75rem}
+  .hero-langs{gap:8px}.hero-lang-badge{letter-spacing:.1em;padding:6px 10px}
+}
 </style>
 <style>
 /* /about/ */
