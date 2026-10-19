@@ -149,6 +149,18 @@ footer{margin-top:96px;padding:48px clamp(20px,5vw,64px);background:var(--ink);b
   section.guide-grid{padding-top:24px}
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
+
+.guide-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:64px;align-items:end}
+.guide-hero>*{grid-column:1}
+.hub-counts{grid-column:2;grid-row:1/span 4;align-self:end;display:flex;gap:0;border-left:1px solid var(--rule)}
+.hub-counts>div{padding:0 28px;border-right:1px solid var(--rule)}
+.hub-counts dd{font-family:var(--serif);font-size:64px;font-weight:500;line-height:1;color:var(--ivory);font-variant-numeric:lining-nums}
+.hub-counts dt{margin-bottom:12px}
+.hub-counts dt a{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);text-decoration:none}
+.hub-counts dt a:hover{color:var(--ivory)}
+.guide-hero{padding-bottom:56px}
+@media(max-width:1020px){.guide-hero{grid-template-columns:1fr}.hub-counts{grid-column:1;grid-row:auto;margin-top:36px;border-left:0}.hub-counts>div:first-child{padding-left:0}}
+@media(max-width:640px){.hub-counts dd{font-size:44px}.hub-counts>div{padding:0 16px}}
 </style>
 </head>
 <body>
@@ -181,6 +193,11 @@ footer{margin-top:96px;padding:48px clamp(20px,5vw,64px);background:var(--ink);b
     <a href="#lang-es" lang="es">Español</a>
     <a href="#lang-pt" lang="pt">Português</a>
   </nav>
+  <dl class="hub-counts" aria-label="Guides by language">
+    <div><dt><a href="/guide/" lang="en">English</a></dt><dd>126</dd></div>
+    <div><dt><a href="/guide/es/" lang="es">Español</a></dt><dd>119</dd></div>
+    <div><dt><a href="/guide/pt/" lang="pt">Português</a></dt><dd>119</dd></div>
+  </dl>
 </section>
 
 <!-- GUIDE-HUB:START — tools/gen-guide-hub.mjs가 생성한다. 직접 고치지 말 것 -->
