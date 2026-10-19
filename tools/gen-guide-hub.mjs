@@ -61,6 +61,8 @@ const CANON = {
 // breadcrumb 안의 분류명은 "Immigration &amp; Visas"처럼 이스케이프된 채로 들어 있다.
 // CANON과 대조하려면 먼저 풀어야 한다.
 const decode = (s) => s.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').trim()
+// 홈의 분류 색인이 /guide/#en-immigration-and-visas 처럼 링크한다. 분류명이 바뀌면 홈 링크도 같이 고칠 것.
+const slugId = (s) => s.toLowerCase().replace(/&/g, ' and ').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const pick = (t, re) => { const m = t.match(re); return m ? m[1].trim() : null }
 // 카드 문구는 이미 HTML로 이스케이프된 상태로 꺼내 쓰므로 그대로 둔다. 분류명만 & 를 처리한다.
 const esc = (s) => s.replace(/&(?!(amp|lt|gt|quot|nbsp|rsquo|mdash|#\d+);)/g, '&amp;')
@@ -130,7 +132,7 @@ for (const L of LANGS) {
   body += `    <span class="hub-lang-count">${L.count(items.length)}</span>\n`
   body += `  </div>\n`
   for (const [canon, list] of groups) {
-    body += `  <h3 class="hub-group-title">${esc(canon)}<span>${list.length}</span></h3>\n`
+    body += `  <h3 class="hub-group-title" id="${L.code}-${slugId(canon)}">${esc(canon)}<span>${list.length}</span></h3>\n`
     body += `  <div class="guide-grid">\n`
     for (const it of list) {
       body += `    <a href="${L.base}/${it.slug}.html" class="guide-card">\n`
