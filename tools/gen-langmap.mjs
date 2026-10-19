@@ -97,14 +97,14 @@ const LABELS = {
     [508, 14, 6, 'start', 2], [36, -70, -95, 'middle', 2], [192, 6, -12, 'start', 2], [862, 12, -12, 'start', 2]],
   ph: [
     [484, -12, 4, 'end', 1], [76, -18, -40, 'end', 1], [604, -12, 8, 'end', 1], [32, -14, 4, 'end', 1],
-    [840, 4, -26, 'middle', 1], [124, 0, -30, 'middle', 3], [170, 12, -14, 'start', 3], [152, -12, 4, 'end', 3],
+    [840, -14, 6, 'end', 1], [124, 0, -18, 'middle', 3], [170, 12, -14, 'start', 3], [68, 12, 22, 'start', 3],
     [192, 4, -16, 'middle', 3], [862, -10, -14, 'end', 3], [858, -14, 28, 'end', 3], [218, -12, 6, 'end', 3]]
 }
 // resting pulse (r8): one route at a time, Seoul -> capital -> Seoul. --k is the slot; css/site.css .lm-pk turns it into a
 // delay of (end of opening + k * slot length). The CSS keyframes assume 12 slots in both lists.
 const PULSE = {
   dk: [32, 76, 840, 484, 620, 826, 724, 24, 124, 170, 508, 36],
-  ph: [32, 76, 840, 484, 152, 124, 170, 604, 192, 862, 858, 218]
+  ph: [32, 76, 840, 484, 68, 124, 170, 604, 192, 862, 858, 218]
 }
 const SEOUL = [126.98, 37.57]
 const lang = {}; for (const k in PLACES) for (const p of PLACES[k]) lang[p[0]] = k
