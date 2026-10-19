@@ -516,3 +516,9 @@ a{color:inherit}
 .nav-links a{white-space:nowrap}
 @media (min-width:1021px) and (max-width:1199px){.byline img{width:80px;height:80px}}
 @media (max-width:640px){.chart{margin-top:-12px}.hero-chart figure{height:206px}}
+/* 1200-1339: keep the headline clear of the Seoul pin */
+@media (min-width:1200px) and (max-width:1339px){
+  .hero-stage{width:60%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 4%),linear-gradient(180deg,#000 0,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 4%),linear-gradient(180deg,#000 0,#000 86%,transparent 100%)}
+  .h1{font-size:62px}.h1--long{font-size:56px}
+  .hero-grid{grid-template-columns:minmax(0,5.6fr) minmax(0,6.4fr)}
+}
