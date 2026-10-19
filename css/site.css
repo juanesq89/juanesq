@@ -454,3 +454,9 @@ a{color:inherit}
 .langs a,.langs span{min-height:44px}
 .foot li a{min-height:44px}
 @media (max-width:640px){.lang{height:44px}.lang a,.lang span{min-width:40px}}
+@media (max-width:640px){
+  .nav .wrap{gap:10px}
+  .wordmark small{font-size:9px;letter-spacing:.1em}
+  .lang a,.lang span{min-width:36px;padding:0 6px}
+  .menu-btn{margin-right:-8px}
+}
