@@ -66,6 +66,7 @@
   gtag('js', new Date());
   gtag('config', 'G-28GWYNEPR3');
 </script>
+<script src="/js/site.js" defer></script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -682,6 +683,7 @@ body { padding-bottom: 68px; }
       .then(function (r) { return r.json(); })
       .then(function (r) {
         if (r && r.success) {
+          if (window.jqTrack) window.jqTrack('generate_lead', { method: 'form', case_type: d.get('case_type') }); /* 분야명만 — 이름·연락처·내용 금지 */
           form.reset();
           show('ok', 'Thank you \u2014 your message has been sent. I will get back to you at the contact you provided.');
         } else {
