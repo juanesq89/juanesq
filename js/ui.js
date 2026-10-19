@@ -47,17 +47,13 @@
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
     els.forEach(function (el) { io.observe(el); });
   } else { els.forEach(function (el) { el.classList.add('in'); }); }
-  /* about: matters list turns one row at a time (first rows cloned at the end so it loops); paused while hidden */
+  /* about: matters list rolls upward without stopping (the whole list is cloned once so it loops); CSS pauses it on hover */
   var am = d.getElementById('am-list');
   if (am && !reduced && am.children.length > 5) {
-    var n = am.children.length, at = 0;
-    for (var q = 0; q < 5; q++) { var cl = am.children[q].cloneNode(true); cl.setAttribute('aria-hidden', 'true'); am.appendChild(cl); }
-    setInterval(function () {
-      if (d.hidden) return;
-      var h = am.children[0].offsetHeight; at++;
-      am.style.transition = ''; am.style.transform = 'translateY(' + (-at * h) + 'px)';
-      if (at === n) setTimeout(function () { am.style.transition = 'none'; am.style.transform = 'translateY(0)'; at = 0; }, 650);
-    }, 2200);
+    var n = am.children.length;
+    for (var q = 0; q < n; q++) { var cl = am.children[q].cloneNode(true); cl.setAttribute('aria-hidden', 'true'); am.appendChild(cl); }
+    am.parentNode.style.setProperty('--n', n);
+    am.parentNode.classList.add('is-live');
   }
   /* mobile CTA bar: show once the hero CTAs are out of view, hide over the contact section */
   var bar = d.getElementById('floating-cta'), hero = d.querySelector('.hero-actions, .closing .hero-actions'), contact = d.getElementById('contact');
