@@ -71,494 +71,321 @@
 <link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#0a1628;--navy-mid:#132040;--gold:#c9a84c;--gold-light:#e8cc85;--ivory:#f5f0e8;--text:#1a1a2e;--text-muted:#6b6b7b}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--ivory);overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 60px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(10,22,40,.95),transparent);transition:background .4s,padding .4s}
-nav.scrolled{background:rgba(10,22,40,.97);padding:16px 60px;box-shadow:0 1px 0 rgba(201,168,76,.2)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;letter-spacing:.08em;color:var(--gold);text-decoration:none}
-.nav-logo span{display:block;white-space:nowrap;font-size:.52rem;font-family:'Montserrat',sans-serif;font-weight:300;letter-spacing:.35em;color:rgba(201,168,76,.55);text-transform:uppercase;margin-top:3px}
-.nav-links{display:flex;gap:36px;list-style:none;align-items:center}
-.nav-links a{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.65);text-decoration:none;transition:color .3s;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
-.nav-links a:hover{color:var(--gold)}
-.nav-links a:hover::after{transform:scaleX(1)}
-.nav-lang a{color:rgba(201,168,76,.75)!important;letter-spacing:.14em!important}.nav-lang a:hover{color:var(--gold)!important}
-.nav-cta{display:inline-block;white-space:nowrap;background:transparent;border:1px solid var(--gold)!important;color:var(--gold)!important;padding:10px 22px;font-size:.62rem!important;letter-spacing:.2em;cursor:pointer;transition:background .3s,color .3s!important}
-.nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important}
-.nav-cta::after{display:none!important}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.hamburger span{width:24px;height:1px;background:var(--gold);transition:.3s}
-#hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:0 60px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(201,168,76,.07) 0%,transparent 60%),radial-gradient(ellipse 50% 80% at 10% 80%,rgba(19,32,64,.8) 0%,transparent 50%),linear-gradient(135deg,#0a1628 0%,#132040 50%,#0d1f3a 100%)}
-.hero-line{position:absolute;top:0;bottom:0;right:38%;width:1px;background:linear-gradient(to bottom,transparent,rgba(201,168,76,.3) 30%,rgba(201,168,76,.3) 70%,transparent)}
-.hero-content{position:relative;z-index:1;max-width:680px}
-.hero-eyebrow{font-size:.62rem;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:fadeUp .8s .2s forwards}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.2rem);font-weight:300;line-height:1.05;color:var(--ivory);margin-bottom:12px;opacity:0;animation:fadeUp .8s .4s forwards}
-.hero-title em{font-style:italic;color:var(--gold-light)}
-.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.6rem);font-weight:400;letter-spacing:.12em;color:rgba(245,240,232,.45);margin-bottom:28px;opacity:0;animation:fadeUp .8s .6s forwards}
-.hero-langs{display:flex;gap:10px;margin-bottom:30px;opacity:0;animation:fadeUp .8s .7s forwards;flex-wrap:wrap}
-.hero-lang-badge{font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;border:1px solid rgba(201,168,76,.4);color:var(--gold);padding:6px 13px}
-.hero-lang-badge{display:inline-flex;align-items:center;min-height:36px}a.hero-lang-badge{text-decoration:none;transition:background .3s,border-color .3s}a.hero-lang-badge:hover{background:rgba(201,168,76,.08);border-color:var(--gold)}a.hero-lang-badge[aria-current]{background:rgba(201,168,76,.1)}
-.hero-desc{font-size:.88rem;font-weight:300;line-height:1.95;color:rgba(245,240,232,.6);max-width:520px;margin-bottom:44px;opacity:0;animation:fadeUp .8s .8s forwards}
-.hero-actions{display:flex;gap:20px;align-items:center;opacity:0;animation:fadeUp .8s 1s forwards}
-.btn-primary{background:var(--gold);color:var(--navy);border:none;padding:16px 40px;font-family:'Montserrat',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;transition:background .3s,transform .2s;text-decoration:none;display:inline-block}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
-.btn-secondary{color:rgba(245,240,232,.55);font-size:.68rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:10px;transition:color .3s}
-.btn-secondary::after{content:'→';transition:transform .3s}
-.btn-secondary:hover{color:var(--gold)}
-.btn-secondary:hover::after{transform:translateX(4px)}
-.hero-portrait{position:absolute;right:7%;bottom:0;height:auto;max-height:91%;width:auto;max-width:46vw;object-fit:contain;object-position:bottom right;z-index:0;opacity:0;animation:fadeIn 1.4s 1.1s forwards;pointer-events:none}
-.hero-scrim{position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,var(--navy) 0%,rgba(10,22,40,.94) 30%,rgba(10,22,40,0) 56%);pointer-events:none}
-.about-portrait{width:190px;height:190px;object-fit:cover;object-position:center 22%;border:1px solid rgba(201,168,76,.28);margin-bottom:36px;display:block}
-section{position:relative;z-index:1}
-.section-label{font-size:.58rem;font-weight:500;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:16px}
-.section-label::before{content:'';width:30px;height:1px;background:var(--gold)}
-#about{padding:140px 60px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;background:var(--navy)}
-.about-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.6rem);font-weight:300;line-height:1.15;color:var(--ivory);margin-bottom:32px}
-.about-title em{font-style:italic;color:var(--gold-light)}
-.about-body{font-size:.86rem;font-weight:300;line-height:2;color:rgba(245,240,232,.62);margin-bottom:22px}
-.about-credentials{display:flex;flex-direction:column;gap:0;margin-top:40px}
-.credential{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-top:1px solid rgba(201,168,76,.12)}
-.credential-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0}
-.credential-text{font-size:.77rem;font-weight:300;color:rgba(245,240,232,.58);line-height:1.6}
-.career-timeline{margin-top:0}
-.career-item{padding:24px 0;border-top:1px solid rgba(201,168,76,.12);display:grid;grid-template-columns:70px 1fr;gap:20px;align-items:start}
-.career-period{font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding-top:5px}
-.career-role{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--ivory);margin-bottom:4px}
-.career-org{font-size:.7rem;font-weight:300;color:rgba(245,240,232,.38);letter-spacing:.04em}
-.lang-showcase{margin-top:44px;padding:28px;border:1px solid rgba(201,168,76,.2);background:rgba(201,168,76,.03)}
-.lang-showcase-title{font-size:.56rem;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.lang-list{display:flex;flex-direction:column;gap:0}
-.lang-item{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid rgba(201,168,76,.14)}
-.lang-item:last-child{border-bottom:none}
-.lang-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--ivory)}
-.lang-level{font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,168,76,.6);text-align:right}
-#practice{padding:140px 60px;background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 50%,var(--navy) 100%)}
-.practice-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:80px}
-.practice-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.6rem);font-weight:300;line-height:1.1;color:var(--ivory)}
-.practice-title em{font-style:italic;color:var(--gold-light)}
-.practice-subtitle{max-width:300px;font-size:.78rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,.4);text-align:right}
-.practice-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
-.practice-card{background:rgba(255,255,255,.02);border:1px solid rgba(201,168,76,.1);padding:44px 28px;cursor:pointer;transition:background .4s,border-color .4s,transform .3s;position:relative;overflow:hidden}
-.practice-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.practice-card:hover{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.3);transform:translateY(-6px)}
-.practice-card:hover::before{transform:scaleX(1)}
-.practice-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(201,168,76,.1);line-height:1;margin-bottom:20px}
-.practice-icon{font-size:1.6rem;margin-bottom:16px}
-.practice-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--ivory);margin-bottom:14px;line-height:1.2}
-.practice-desc{font-size:.7rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,.42)}
-.practice-tags{margin-top:20px;display:flex;flex-wrap:wrap;gap:5px}
-.tag{font-size:.55rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.28);padding:3px 8px}
-#latam{padding:80px 60px;background:linear-gradient(135deg,rgba(19,32,64,.95),rgba(10,22,40,.99));border-top:1px solid rgba(201,168,76,.15);border-bottom:1px solid rgba(201,168,76,.15);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.latam-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.15;color:var(--ivory);margin-bottom:24px}
-.latam-title em{font-style:italic;color:var(--gold-light)}
-.latam-body{font-size:.84rem;font-weight:300;line-height:2;color:rgba(245,240,232,.58)}
-.latam-flags{display:flex;flex-wrap:wrap;gap:10px}
-.latam-flag{font-size:.63rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:9px 16px;border:1px solid rgba(201,168,76,.22);color:rgba(245,240,232,.55)}
-#why{padding:140px 60px;background:var(--ivory);color:var(--text)}
-#why .section-label{color:rgba(10,22,40,.4)}
-#why .section-label::before{background:rgba(10,22,40,.3)}
-.why-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.6rem);font-weight:300;line-height:1.1;color:var(--navy);margin-bottom:80px;max-width:700px}
-.why-title em{font-style:italic;color:var(--gold)}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
-.why-item{padding:40px 32px;background:white;border-top:2px solid var(--gold);position:relative}
-.why-num{font-family:'Cormorant Garamond',serif;font-size:4.5rem;font-weight:300;color:rgba(201,168,76,.12);line-height:1;position:absolute;top:16px;right:20px}
-.why-heading{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--navy);margin-bottom:14px;margin-top:6px}
-.why-body{font-size:.78rem;font-weight:300;line-height:1.9;color:var(--text-muted)}
-#process{padding:140px 60px;background:var(--navy-mid)}
-.process-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.6rem);font-weight:300;color:var(--ivory);margin-bottom:80px}
-.process-title em{font-style:italic;color:var(--gold-light)}
-.process-steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
-.process-steps::before{content:'';position:absolute;top:27px;left:10%;right:10%;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.4),transparent)}
-.process-step{padding:0 28px;text-align:center}
-.process-circle{width:54px;height:54px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);background:var(--navy-mid);position:relative;z-index:1}
-.process-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:var(--ivory);margin-bottom:10px}
-.process-body{font-size:.72rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,.42)}
-#contact{padding:140px 60px;background:var(--navy);display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
-.contact-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.6rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:20px}
-.contact-title em{font-style:italic;color:var(--gold-light)}
-.contact-sub{font-size:.83rem;font-weight:300;line-height:1.95;color:rgba(245,240,232,.48);margin-bottom:44px}
-.contact-items{display:flex;flex-direction:column;gap:0}
-.contact-item{display:flex;align-items:flex-start;gap:18px;padding:18px 0;border-bottom:1px solid rgba(201,168,76,.1)}
-.contact-icon{font-size:1rem;width:38px;height:38px;border:1px solid rgba(201,168,76,.28);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-item-label{font-size:.58rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
-.contact-item-value{font-size:.82rem;font-weight:300;color:rgba(245,240,232,.65)}
-.contact-lang-note{margin-top:28px;padding:18px 22px;border:1px solid rgba(201,168,76,.2);background:rgba(201,168,76,.03)}
-.contact-lang-note p{font-size:.74rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,.5)}
-.contact-lang-note strong{color:var(--gold);font-weight:500}
-.contact-form{display:flex;flex-direction:column;gap:16px}
-.form-group{display:flex;flex-direction:column;gap:7px}
-.form-label{font-size:.58rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(201,168,76,.65)}
-.form-input,.form-select,.form-textarea{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.18);color:var(--ivory);padding:13px 16px;font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:300;transition:border-color .3s;outline:none;width:100%}
-.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold)}
-/* iOS: 16px 미만 입력란은 포커스 시 자동 확대됨 */
-@media(max-width:900px){.form-input,.form-select,.form-textarea,.jf-input,.jf-select,.jf-textarea{font-size:16px}}
-.form-select option{background:var(--navy)}
-.form-textarea{resize:vertical;min-height:110px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.form-submit{background:var(--gold);color:var(--navy);border:none;padding:17px 40px;font-family:'Montserrat',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;transition:background .3s,transform .2s;margin-top:4px;align-self:flex-start}
-.form-submit:hover{background:var(--gold-light);transform:translateY(-2px)}
-.form-note{font-size:.6rem;font-weight:300;color:rgba(245,240,232,.28)}
-footer{padding:48px 60px;border-top:1px solid rgba(201,168,76,.12);display:flex;justify-content:space-between;align-items:center;background:var(--navy)}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;letter-spacing:.1em;color:var(--gold)}
-.footer-copy{font-size:.62rem;font-weight:300;color:rgba(245,240,232,.22);letter-spacing:.1em}
-.footer-disclaimer a{display:inline-block;margin-top:9px;font-size:.6rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.65);text-decoration:none}
-.footer-disclaimer a:hover{color:var(--gold-light)}
-.footer-disclaimer{font-size:.58rem;font-weight:300;color:rgba(245,240,232,.18);text-align:right;max-width:360px;line-height:1.7}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-/* 홈 → 개별 가이드 직접 링크 */
-#guides{padding:110px 60px 120px;background:var(--navy);border-top:1px solid rgba(201,168,76,.12)}
-.guides-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:46px;flex-wrap:wrap}
-.guides-label{font-size:.58rem;font-weight:500;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:16px}
-.guides-label::before{content:'';width:34px;height:1px;background:var(--gold)}
-.guides-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.18;color:var(--ivory);max-width:620px}
-.guides-all{font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;white-space:nowrap;padding-bottom:6px;border-bottom:1px solid rgba(201,168,76,.35);transition:color .3s,border-color .3s}
-.guides-all:hover{color:var(--gold-light);border-color:var(--gold-light)}
-.guides-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.guide-tile{display:block;background:rgba(255,255,255,.02);border:1px solid rgba(201,168,76,.1);padding:32px 28px;text-decoration:none;position:relative;overflow:hidden;transition:background .4s,border-color .4s,transform .3s}
-.guide-tile::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.guide-tile:hover{background:rgba(201,168,76,.05);border-color:rgba(201,168,76,.3);transform:translateY(-4px)}
-.guide-tile:hover::before{transform:scaleX(1)}
-.gt-cat{display:block;font-size:.54rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:rgba(201,168,76,.65);margin-bottom:14px}
-.gt-title{display:block;font-family:'Cormorant Garamond',serif;font-size:1.32rem;font-weight:500;line-height:1.28;color:var(--ivory);margin-bottom:11px}
-.gt-desc{display:block;font-size:.79rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,.5)}
-.gt-more{background:rgba(201,168,76,.045)}
-@media(max-width:1100px){.guides-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:900px){#guides{padding:80px 24px}.guides-grid{grid-template-columns:1fr}.guides-title{font-size:1.62rem}}
-@media(max-width:1440px){.nav-links{gap:20px}.nav-links a{font-size:.62rem;letter-spacing:.13em}nav{padding:20px 32px}nav.scrolled{padding:14px 32px}}
-@media(max-width:1200px){.practice-grid{grid-template-columns:repeat(3,1fr)}.hero-line{display:none}.hero-portrait{max-width:52vw;top:50%;bottom:auto;transform:translateY(-50%)}.why-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:1120px){.nav-links{display:none}.hamburger{display:flex}}
-@media(max-width:900px){nav{padding:20px 24px}nav.scrolled{padding:14px 24px}.nav-links{display:none}.hamburger{display:flex}.hero-portrait,.hero-scrim{display:none}#hero{padding:120px 24px 80px;min-height:auto}#about,#contact,#latam{grid-template-columns:minmax(0,1fr);gap:52px;padding:80px 24px}#about>div,#contact>div,#latam>div{min-width:0}.practice-grid{grid-template-columns:1fr 1fr}.practice-header{flex-direction:column;align-items:flex-start;gap:20px}.practice-subtitle{text-align:left}#practice,#why,#process{padding:80px 24px}.why-grid{grid-template-columns:1fr;gap:20px}.process-steps{grid-template-columns:1fr 1fr;gap:48px}.process-steps::before{display:none}footer{flex-direction:column;gap:20px;text-align:center;padding:36px 24px}.footer-disclaimer{text-align:center}.form-row{grid-template-columns:1fr}}
-@media(max-width:600px){.practice-grid{grid-template-columns:1fr}.process-steps{grid-template-columns:1fr}}
-/* 가독성: 본문·보조 글자 크기·굵기·불투명도만 조정 (색상·폰트·레이아웃 유지) */
-.hero-desc{font-size:1rem;font-weight:400;line-height:1.75;color:rgba(245,240,232,.78)}
-.about-body,.latam-body,.contact-sub{font-size:1rem;font-weight:400;line-height:1.8;color:rgba(245,240,232,.78)}
-.practice-subtitle{font-size:.9rem;font-weight:400;color:rgba(245,240,232,.66)}
-.practice-desc{font-size:.875rem;font-weight:400;line-height:1.7;color:rgba(245,240,232,.72)}
-.why-body{font-size:.9rem;font-weight:400;line-height:1.75;color:#4a4a5a}
-.process-body{font-size:.875rem;font-weight:400;line-height:1.7;color:rgba(245,240,232,.72)}
-.credential-text,.contact-item-value{font-size:.9rem;font-weight:400;color:rgba(245,240,232,.78)}
-.career-org{font-size:.8rem;font-weight:400;color:rgba(245,240,232,.6)}
-.gt-desc{font-size:.875rem;font-weight:400;color:rgba(245,240,232,.7)}
-.footer-copy{font-size:.72rem;color:rgba(245,240,232,.55)}
-.footer-disclaimer{font-size:.7rem;color:rgba(245,240,232,.5)}
-.section-label,.hero-eyebrow{font-size:.72rem;letter-spacing:.2em}
-.nav-logo span{font-size:.6rem;letter-spacing:.2em;color:rgba(201,168,76,.75)}
-.tag{font-size:.62rem;letter-spacing:.08em}
-/* CTA: 자간 .25em → .12em, 버튼 문구 한 줄 */
-.btn-primary,.btn-secondary{letter-spacing:.12em;white-space:nowrap}
-.form-submit,.jf-submit{letter-spacing:.12em}
-@media(max-width:600px){
-  .hero-actions{flex-wrap:wrap;gap:14px 22px}
-  .btn-primary{padding:16px 26px;font-size:.75rem}
-  .hero-langs{gap:8px}.hero-lang-badge{letter-spacing:.1em;padding:6px 10px}
-}
-/* 컬러 이모지 아이콘 숨김 (Windows에서 OS마다 다르게 보임) */
-.practice-icon{display:none}
-</style>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<link href="/css/site.css?v=5" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header class="nav" id="navbar">
+  <div class="wrap">
+    <a href="/pt/" class="wordmark" aria-label="Juan W. Hong"><b>Juan W. Hong</b><small>Advogado · SNK Law Firm</small></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">Perfil</a></li>
+      <li><a href="#practice">Áreas de Atuação</a></li>
+      <li><a href="/guide/pt/">Guia</a></li>
+      <li><a href="#latam">América Latina</a></li>
+      <li><a href="#why">Por que Juan</a></li>
+    </ul>
+    <nav class="lang" aria-label="Idioma">
+      <a href="/" hreflang="en" lang="en">EN</a>
+      <a href="/es/" hreflang="es" lang="es">ES</a>
+      <a href="/pt/" hreflang="pt" lang="pt" aria-current="page">PT</a>
+    </nav>
+    <a href="#contact" class="btn btn-line nav-cta">Agendar uma consulta</a>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+  </div>
+</header>
 
-<nav id="navbar">
-  <a href="#hero" class="nav-logo">Juan W. Hong<span>Advogado · SNK Law Firm</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">Perfil</a></li>
-    <li><a href="#practice">Áreas de Atuação</a></li>
-    <li><a href="/guide/pt/">Guia</a></li>
-    <li><a href="#latam">América Latina</a></li>
-    <li><a href="#why">Por que Juan</a></li>
-    <li class="nav-lang"><a href="/" hreflang="en" lang="en">English</a></li>
-    <li class="nav-lang"><a href="/es/" hreflang="es" lang="es">Español</a></li>
-    <li><a href="#contact" class="nav-cta">Agendar uma consulta</a></li>
-  </ul>
-  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
-</nav>
-
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-line"></div>
-  <picture>
-    <source srcset="/img/juan-hero.webp" type="image/webp">
-    <img class="hero-portrait" src="/img/juan-hero.png" alt="Juan W. Hong, attorney at SNK Law Firm, Seoul" width="1200" height="1600" fetchpriority="high">
-  </picture>
-  <div class="hero-scrim"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">Sediado em Seul, Coreia · Para Estrangeiros na Coreia</p>
-    <h1 class="hero-title">Vive na Coreia?<br><em>Você precisa de um advogado</em><br>que entenda.</h1>
-    <p class="hero-name">Juan W. Hong · Advogado na Coreia</p>
-    <p style="font-size:0.65rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.8);margin-bottom:28px;opacity:0;animation:fadeUp .8s .65s forwards">SNK Law Firm · Seul</p>
-    <div class="hero-langs">
-      <span class="hero-lang-badge" lang="ko">한국어</span>
-      <a class="hero-lang-badge" href="/" hreflang="en" lang="en">English</a>
-      <a class="hero-lang-badge" href="/es/" hreflang="es" lang="es">Español</a>
-      <a class="hero-lang-badge" href="/pt/" hreflang="pt" lang="pt" aria-current="page">Português</a>
+<main id="main">
+<section class="hero" id="hero">
+  <div class="cols" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="label">Sediado em Seul, Coreia · Para Estrangeiros na Coreia</p>
+        <h1 class="h1 h1--long">Vive na Coreia?<br><em>Você precisa de um advogado</em><br>que entenda.</h1>
+        <div class="byline">
+          <picture><source srcset="/img/juan-byline.webp" type="image/webp"><img src="/img/juan-byline.jpg" alt="Juan W. Hong" width="56" height="56"></picture>
+          <div><b>Juan W. Hong · Advogado na Coreia</b><span><span lang="ko">홍우원</span> · SNK Law Firm · Seul</span></div>
+        </div>
+        <p class="hero-lede">Estrangeiros na Coreia enfrentam desafios jurídicos únicos: barreiras linguísticas, leis desconhecidas e um sistema que não foi feito pensando em você. Sou advogado coreano no SNK Law Firm, em Seul, e atendo em inglês, espanhol e português.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-gold">Agendar uma consulta</a>
+          <a href="https://wa.me/821096138897" target="_blank" rel="noopener" class="btn btn-line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37a9.8 9.8 0 0 1 15.27-12.1 9.73 9.73 0 0 1 2.87 6.93c0 5.42-4.41 9.83-9.82 9.83zm8.36-18.2A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>WhatsApp</a>
+        </div>
+        <dl class="langs">
+          <dt>Idiomas</dt>
+          <dd><span lang="ko">한국어</span><a href="/" hreflang="en" lang="en">English</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/pt/" hreflang="pt" lang="pt" aria-current="page">Português</a></dd>
+        </dl>
+      </div>
+      <div class="hero-chart">
+        <figure>
+<svg class="chart chart--route" viewBox="0 0 760 483" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+<defs><radialGradient id="cg-route" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e8cc85" stop-opacity=".35"/><stop offset="1" stop-color="#e8cc85" stop-opacity="0"/></radialGradient></defs>
+<path class="c-grid" d="M42.6,0V483M95.9,0V483M149.2,0V483M202.4,0V483M255.7,0V483M309.0,0V483M362.2,0V483M415.5,0V483M468.8,0V483M522.1,0V483M575.3,0V483M628.6,0V483M681.9,0V483M735.1,0V483M0,28.4H760M0,81.7H760M0,135.0H760M0,188.2H760M0,294.8H760M0,348.0H760M0,401.3H760M0,454.6H760"/>
+<path class="c-eq" d="M0,241.5H760"/>
+<path class="c-land" d="M255.7,298.9l-1.5,1.7 1.2,0.4-5,0.1 5.3,-2.2M124.9,284l2.1,8.5 2.5,-0.5 2.9,2.6 3.9,14.3 8.5,4.7 3.3,7.6 1.3,-1 2.2,0.9 0.6,3.7 3.5,2.4 4.7,6.5 1.6,9.6-2.4,9.8-5.8,7.7-3.9,8-1,6-7.3,1.4-5.9,2.8 0.7,1.5-3.6,-2.1 0.3,-1.1-2.7,0.4 1.4,-0.9-0.8,-0.7-4.8,3.3-7.5,-1.7-5.8,-3.9-0.2,-3.1-2.7,-2.8 1.1,-0.8-3.9,0.9 1.2,-2.1-1.5,-3-1.5,3.4-2.8,0.4 1.8,-1.2 1.9,-4.7-0.5,-3.6-2,3.7-5.6,4.7-1.9,-1.3 1.2,0-0.8,-2.2-3.3,-2.8-0.2,-2.2-11,-3.7-18.6,2.8-5.9,2.6-2.6,3.2-13,0.2-7.1,3.8-4.8,-0.2-5.3,-2.6-0.1,-2.7 1.3,0.5 1.2,-1.6 0,-5.3-2.9,-9.1-6,-10.5 2.3,1.1-1.3,-3.2 2.7,2.5-2.9,-6.6 2.2,-9.1 0.4,2.1 9.1,-6.4 15.3,-3.8 4.7,-5.3-0,-3.7 2.3,-2.2 2.1,3.8 1.1,-2.1-1,-2.5 4.2,0.7-1.3,-0.4 0.1,-2.9 2.2,-0.2-0.8,-1 1.8,-0.1-0.6,-1.4 1.6,-1.7 1.4,0.9 0.1,-1.9 1.8,0.7 1.2,-1.5 2,1 2.6,2.4-0.4,2.2 1.8,-1.9 3.7,1.3 0.8,-1.1-1.7,-1.6 4.4,-7 2.4,-1.2 5.1,0.2-0.2,-1.7-2.5,-1.7 10.9,3.6 3.2,-1.3-0.8,1.4 1.3,0.7 1.7,-1.6 1.4,1.4-1.7,3.1-1.9,0.2-1.7,5.8 13.5,8.5 4.5,1.1 3.2,-5.5 0.2,-8.1 2.4,-10.1 1.6,-0.7 2,4.3M249.6,303.2l1.4,2.5-4.8,0 0.6,-1.9 2.8,-0.6M199.6,313.4l9.8,7.4-7.2,-3.7-2.6,-3.7M70.1,238.5l3.4,-2.4-1.5,2.8 2.2,1.8-3.6,-0.3 1.9,4.3-2.6,-2.3-0.9,-4.9 2.2,-3.8-1.1,4.8M798.7,-9l-3.3,0.1 1.2,-1.4 2.5,0.1M183.8,274.4l3.8,2.1-3.4,-0.2-0.4,-1.9M33.1,211.5l6.8,-7.2 1.1,-3 0.5,2.9-8.4,7.3M51.5,200.3l2.2,1.1-4.1,3-0.2,-5 2.1,0.9M53.7,209.3l-2.6,-2.7 3.1,-4.1 1.1,0.7-1.6,6.1M58.9,201.2l1.6,0.5-0,4.2-2.1,-3.2-0.5,-2 1,0.5M61.2,197l1.8,5.3-1.8,-0.4-3.2,-4.5 3.2,-0.4M45.1,193.6l2.9,1.3-1,3.2-3.2,-4.2 1.3,-0.3M170.3,265.2l-2.2,0.2-2.2,-4.6 4.4,4.4M159.7,258.4l-2.4,-4.2-5.2,-3.6 7.8,5.5-0.2,2.3M108.4,270.9l-3.1,0.4 1.5,-2.9 2.5,-0.7 0.8,1.1-1.7,2.1M77.3,251.7l2.9,0.9 0.8,2.6-3.4,-1.9-6.1,-0.6-0.8,1.2 1,-2.2 5.6,-0M67,252.5l1.3,1.3-1,1.1-3.2,-1.3 0.1,-1.1 2.8,-0M52.5,272.1l-6.2,1.1-4.4,-0.8 2.9,-1.6 6.1,1.3 1.8,-1.9-0.2,1.9M42.7,274.8l2.8,2.6-1.3,0.7-5,-2.3 3.5,-1M36.4,271l2.4,-0 0.6,1.5-8.2,1 1.3,-2.3 2.9,1.3 0.9,-0.5-1.7,-1.6 1.8,0.6M30.7,272.1l-0.2,1-2.6,-0.4 1.9,-2.1 0.9,1.5M26.4,270.5l1,0.9-2,1.5-2.4,-2.4 3.4,-0M-6.9,247.4l1.1,2.9 1.6,0.3-0.5,1.8-5.5,-3.6 1.2,-1.7 2.1,0.3M19.1,-22.7l-2.1,1.1-4.6,-1 6.7,-0.1M117.2,-21.3l-3.2,-0.7 3.2,0.7M466.8,503.4l1,0.9-2.6,1.2-4.5,0.2-3.8,-1.9 9.9,-0.4M446.3,501.8l3.8,1.3-1.9,0.5 4.5,-0.2 2.5,1.7-12,-1.8-0.2,-1.5 3.3,-0M689.5,469l2.2,0.6-3.5,0.5-0.2,-1.6 1.5,0.5M670.6,470.5l-3.9,0.8 2.8,-1.6 1.1,0.8M633.2,492.4l-10,1.2 10,-1.2M628.6,489.1l1.9,0.7-0.7,0.8-4.1,-0.4 2.9,-1.1M546.6,496.9l2.6,1 4.4,-1.1-3.1,1.2 4.9,-0.6-1.6,1.9-22.2,-1.8 15,-0.6M630.9,501.1l-0.8,1.8-5.4,-1.6 2.6,-1.2 3.6,1M653.5,481.1l-4.1,0.2 4.7,-3.2 0.5,1.9-2,0.8 0.9,0.3M255.7,-12.6l8.9,1.2-13.2,1.4 0.4,-1.5 3.9,-1.1M685.9,423.6l3.6,1.5-6,1.9 2.4,-3.4M763.2,433.5l4.6,2.5-7.9,-2.7 3.3,0.2M633,395.4l-2.2,-0.4 1.2,-5.1 2.2,1.4-1.2,4.1M680.8,424.3l3.7,-0.2-4.4,2.8-1.6,-0.5 2.5,-1-1.2,-0.2 1.2,-0.3-1.2,-1 1,0.4M630.5,416l-0.5,3.1-0.4,-2.1-3,1.3 2.4,-3.7 1.5,1.4M675.5,67.1l-9.6,-2.8 5.8,0.7 3.8,2.1M677.9,78.3l1.3,0.7 1.6,-2 1.7,1.3-5.8,0.8 3.4,-4.6 0,2.7-2.2,1.1M286,15.5l9.8,1.2-3.4,1.2-7,-1.4-0.4,-1.2 1,0.2M304.9,27l2,1.7-2,0.5-4.6,-1.5 4.6,-0.7M314.4,46.2l1.4,1.1-6.5,0.5 5.1,-1.6M620.6,175.9l3.7,2-5.5,0.1-2,-1.7 3.8,-0.4M660.1,176l1.8,0.2-1.2,1.5-4.4,-0.1 0.2,-1.8 3.6,0.2M351.9,36.1l2.5,0.9-6.3,2.9 0.7,-0.8-2,0.2-1.3,-1.4 2.1,-1.1 1.5,1.2-0.5,-2 3.3,0.1M353.7,34.2l1,0.7-4.5,0.3 3.5,-1M429.8,44.4l-3.1,0.5 2.1,-2.1 1,1.6M420.6,41.4l5,3.1-1.7,-0 2.4,0.9-0.2,1.7-5.9,-3.7 1.6,-0.5-1.8,-0.2 0.6,-1.3M421.3,39.1l1.5,1.1-1.4,-0.5 0.7,1-1.2,0.3-1.8,-2 2.2,0.1M415.6,37.8l1,4.1-2.7,-3.7-1.3,0.8 1.3,-1.8 1.7,0.6M416.7,34.9l3,1.9-1.7,-1.4 1.4,2.4-1.9,1.1-0.8,-4M412.9,34.6l2.8,0.9-1.4,0.8 1.5,1.1-3.5,0.1-2.4,-1.9 3,-1M438.4,53.5l-0.4,2.3-1.8,-2.5 0.5,-1 1.7,1.2M423.8,49.3l1.8,0.6-1.3,1.1 3.1,-1.8-1.3,3.1-2.6,-0.1 1.2,-0.1-2.4,-2.4 1.5,-0.4M427,52.6l-0.7,1.1 2.6,2.6-4.7,-3.5 2.8,-0.2M668.3,76.5l6.4,0.1-1.8,1.6-4,-0.9-2.6,-1.4 1.4,-1.5 0.6,2.1M637.4,95.9l-5.4,1.3 5.4,-1.3M156,256.8l1.7,0.1-1.2,4-5.7,2.8-7.5,-2.1 5.3,-0.5 0.9,-1.8 0.3,1.8 2,-0 3.3,-2.3-0.3,-2.4 1.2,0.4M68.5,271.4l-10.2,6.1-2.9,0.5 0.4,-2.4 5.2,-3.4 7.5,-0.8M131.6,386.4l4.5,1.3 6.7,-1.1 0.5,4.8-0.5,-0.8-0.7,1-0.1,3.2-2.4,-1.3-1.5,2.9-3,-0.2 0.6,-0.9-2.6,-1.3-1,-2.5 1.1,0.4-2.6,-3.4-0.2,-2.6 1.2,0.5M-30.8,-39.9l2.1,1-1.7,0.4-9.4,-0.5M-18.2,-40l-1.6,1.5 4.9,-1.1 5.4,2.3-19.5,1.9-1.9,-0.2 8,-4.4M113.8,-27.8l2.7,0.7 2.4,-1.8 13.8,2.2-4.8,1.7-6.1,-2.3-0.3,1 3.3,1.5-12.3,0.1-2.1,1.1-7.4,-2.1 0.9,-1.8 5.5,-1.6 4.4,1.3M121.4,-20.9l4.5,2.3-13.4,-0.7 8.9,-1.6M137.8,-26.2l14.3,0.8-9,1.3-7.6,-1.5 1,-1.2 1.3,0.6M231.8,365.6l3.7,1.1 1.5,5.6 2.9,1.3-0.3,-2.6 2.3,4.2 4.1,1.2 2.6,-1.5 1.9,0.5-2.2,5.5-3,-0.1-0.8,3.3-5.5,5.2-2.3,-1.2 2,-3.8-5.1,-3.2 2.8,-1.7 1.3,-3.6-1.2,-2.5 1.2,-0.1-5.4,-5.5 0.8,-0.8-1.8,-0.4-1.5,-2.6 2,1.7M231.3,388.1l4.2,-0.9-1,0.8 1.2,-0.5-0.3,2.2-5.9,5.5 1.6,2.1-3.7,-0.6-2.8,2-1.7,5.7-5.9,2.7-9.3,-2.4 6.7,-6.6 9.5,-4.4 4.4,-7.4 2.3,-0.9-0.8,0.5 1.5,2.2M63.9,208.4l2.1,7.4-1.4,3.3-1.8,-3.4-1.2,5.9-0.4,-1.7-1.1,0.7-3,-1.8 0.5,-3.6-2,-1.5-0.9,1.5-2.8,-1.3-1.7,2.9-0.8,-0.4 1.2,-3.1 4.2,-2.7 1.3,2.3 3.8,-3.3 2.2,-0.1-0.1,-2.7 1.9,1.6M46.5,175.4l4.2,0.5-0.4,2.9 1.3,1.9-4,6.4 1.3,4.1 1.6,0.8 1.4,-1.3 1.7,2 0.8,-1.1 1.8,0.8-1,0.6 2.1,2.2-0.3,1.7-5.2,-4.8 0.1,2.5-3,-2.6-4,0.5 1.1,-3-1.3,-0.9-0.5,1.6-1.3,-1.4-1.1,-5 2.1,0.5 0.8,-8.5 1.8,-0.4M90.5,244.1l2.2,0.4 0.3,5.2 3.2,3.7 10,-6.6 23.3,8.3 4.6,3.5-0.1,2.1 7.4,3.2-0,1.4-3.1,0.6 5.8,7.7 2.2,-0 0.2,1.6 2.7,0.7-0.5,1.2 3.5,0.8-1.9,1.4-9.1,-2-6.1,-7.1-5.4,-1.8-3.1,-0.4 1,1.7-1.1,0.9-5,0 4.1,2-2.6,2-5.3,-0.4-4,-3.6 0.4,-1-4.2,1.2 0.5,-2.4-1.2,-1.1 1.5,-0.3-2,-0.9 0.9,-0.2-1.8,-4.2-3.8,-2.6-11.8,-4-0.4,-2.8-3.1,3.7-0.8,-2.8-2.6,-1.6 6,-0.8 0.8,-1.8-5.8,0.5-1.3,-2.5-3.3,-0.4 0.9,-2.1 4.4,-1.8 3.5,1.4M60,238l-4.1,2.4-11.2,-0.8-1.4,0.9-0.5,3 2.2,2.9 3.2,-2 6.6,-0.1-7.4,3.9 3.4,3.6-0.2,2.6 2.2,2.7-4.5,1.3 0.1,-2.4-2.6,-2 0.6,-2.7-1.5,-0.3-1.4,1 0.6,9.4-3,0 0.2,-5.6-0.6,-1.8-1.9,-0.1-0.5,-2.7 2.6,-6.5 1.2,-0.1-0.5,-2.8 2,-3.7 2.9,-1.3 9.8,1.7 4,-3 0.9,0.7-1.2,1.8M-2.2,262.8l3.4,1 1.2,1.8 6.2,0.6 1.5,-1.9 6,1.8 1.7,2.6 5,0.5 0.6,3.4-28.9,-4.9 0.2,-1.1-4.4,-1.2 2.9,-2.9 4.6,0.3M-39.6,222.8l2.5,0.2 10.6,10.7 1.2,0.9 0.6,-1.1 6.8,5.6-1.5,1.6 3.7,-0.6 0.7,1.2-1.2,2.2 3.3,1.8 1.7,3.6-0.7,1.8 2.7,-0.7 2.3,2.9-1.1,9.3-3.9,-1.1-0.2,1.4-10.7,-9.8-4.5,-8.3-4.1,-4.1-2,-5.4-3.2,-1.8-3.2,-4.8M31.3,217.7l1.5,-0.8 1.6,2.1-0.7,1.6 1.8,-0.6-0.1,1.2 4.6,1.2-3.6,1.4 1.1,2.1-3.8,0.9 1,1.6-2.5,0.2 3.5,4.7-0.9,1 4.2,3.7-3.8,-0.4-1.2,6.6-3,1-1.6,2.6 1,2.3-2.1,4.2-4.5,2-1.3,-3.3-2.2,0.8-2.4,-1.9-4.2,2.2-0.6,-2.3-5.1,0.2-1,-6-3,-2.9-0.2,-6.9 2,-1.9 5.7,2.2 1,-4.7 5.2,-1.5 3.6,-5 5.1,-1.4-0.1,-1.6 5,-4.6M123.5,48.3l2,5.1-0.5,3.6 5.4,11.8-2.4,-2.2-3.3,0.2-2,5.2 3.7,4.9-0.6,1.1-0.5,-1.9-2.5,-0.5-1.8,2.8-0.9,-1.9 1.3,-5.5-1.1,-2.6 1.2,-8.8-2,-3.7 0.6,-3.8 2.5,-0.4 0.7,-1.6-1.4,-1.4 1.6,-0.4M127.2,84.8l3.2,0.7 2.3,-1.4-0.8,2.3 0.7,1.3 1.8,-0.3-6.7,1.8-2.6,3.1-4.9,-2-4.9,0.1-0.5,0.9 2.9,1.7-3.9,1.2-0.7,-3.9 1.9,-2.6 3.5,0.1 1.1,-7.5 7.6,4.5M118,94.6l2.7,6.9-3.6,4.5-1.4,6.8 1.1,1.8-1.9,2-2,0.8 1.1,-2.3-0.9,-0.2-3.4,3.6-0.6,-1.7-1.9,1.8-4,0.1 0.8,-0.7-1.7,-1-1,1.3 1.2,1.3-4.1,3-2.1,-1.9 1.1,-2.1-2.4,-0.6-8.7,1.6-0.6,1.7-4.3,-0.5 0.3,-1.4 6.8,-4 10.6,-0.4 3.3,-6.3 1.7,-0.5-1.5,1.5 1.3,1.3 3.8,-1.7 5.2,-5.9 0.6,-6.4 1.5,-1.9 2.6,1.2 0.5,-1.1-1.6,-0.2 1.5,-0.4M93.6,119.8l1.4,1.6-2,2-2,-0.9-2.9,2.7-1.4,-2.4-1.3,0.3 3.2,-2.7 5,-0.6M82.3,122.2l1.8,-0-0.5,1.1 1.7,1.3-2.4,5.4-2.3,1.4 0.3,-2.5-0.7,1.9-1.5,-0.8 1.4,-5.1-1.1,-1.2 0.3,1.7-2,0.4-0.3,-1.7 1.1,0.7-1.5,-1.3 4.1,-2.5 1.6,1.2M46.2,161.2l-0.9,2.3-2.2,-6 5.2,-5.8 1.2,1.1-3.3,8.4M10.3,170.5l0.4,1.2-3.5,4.4-4.7,-0.4-0.1,-2.8 2.1,-2 5.8,-0.4M311.5,522.9l3.7,-1.8 8.8,1.4M640.4,522.9l16.5,-3.3-7.9,3.2M734.4,521.4l5.3,0 1.6,1.2M715.1,522.9l5.5,-4.2 5.8,-0.8 12.8,1.5-0.3,1.2-4.5,0.8M646.2,487.2l6.1,6.1 0.3,3.3-3.4,2.5-12.7,0.2-1.1,-0.6 1.2,-0.5 9,-0.2-5.1,0.1 2.9,-1.2-5.1,-1-6.1,1.9-5,-1.2 3.9,-1.5 7.4,-0.3-1.8,-0.9 10.1,0.2-4.7,-1.7 5.6,-0.9-7.5,-1.2-1.4,-3.1 6.1,-1.4 1.3,1.4M649.3,428.5l1.9,-0 1.4,1.5-0.9,0.7 4.3,2.8 7.5,2.2-4.8,1.2-19.1,-1.5 5.7,-0.2-2,-1.5 1.2,-1.7 1,2.5 4.2,0.3-3.9,-1.9 2.7,-1.8-3.8,-0.6 1.2,-1-0.9,-0.7 4.3,-0.3M604.3,159.2l7.2,1 20.1,9.7-12.6,1.1 1.7,-2.8-3.2,-0.4-2.1,-3-11.1,-2.2 0,-1.6-3.2,-0.1-7.4,3.1 2.8,-3 7.8,-1.8M707.7,-6.9l2.9,1.2-5.9,1.2-4.8,-1.6 2.1,-0.8-1.8,-0.7 1.7,-0.6 5.8,1.3M443.2,61.7l6.1,1.1 7.7,6.8-5.5,-0.9-1,-0.5 1.2,-1.5-2.4,1-3.8,-1.7 1.5,-0.9-6.1,-1.6 1.4,-1.6-3,-0.8 3.9,0.6M639.4,171.5l7.1,0.1 2.6,1.5-1.4,0.5 4.5,2.1-1.2,1.1-8.3,-0.2-1.4,2.3-2.3,-2.1-6.4,0.6-1.8,-2 7.2,-0-1.2,-2.9-2.5,-1.3 5.1,0.3M718.7,242.3l4.4,0.3-1.6,3.8-5.9,1.4-0.5,-5.3 3.6,-0.2M255.7,-3.5l16.5,4.6-0.1,1.2 1.9,0-0.3,2.6 3.1,1.4 1,-0.7-2.7,-2.4 3.1,-0.2 1.4,1.1 5.2,-0.3 7.4,3.1-3.3,1.5-2.7,-0.6 0.9,1.1-5.8,-0.7 2,0.8-1.5,0.8 1.6,0.7-3.1,0.7 2.5,1.5-2.8,0.5-8.1,-1.9-2.3,-2.3-8.3,-0.1-1.8,-1.9 1.4,-1.3-2.2,0.1-2.2,1.2 1.5,1.8-4.3,2.5-3.3,0.8-7.4,-1.7 2.3,1-9,0.4 5.4,-0.8 0.3,1.1 4.4,-0.6 1.1,1.6 1.9,-0.2 1.7,1.9-0.8,0.9 3.9,2.9-1.6,1.6-7.5,-1.7-14.8,4.7-8,3.7-0.9,1.6-4,-2.2-7.1,0.7-3.3,1.9 0.2,-2.2-4.9,2.3-4.3,-0.7-6.4,6.9 1.6,1.3 2.9,-0.2-1.6,1.9 2,3.6-1.7,0.6-0.8,-0.6 1.5,-1-1.3,0.1-2.1,1.4-1.3,2.1 1.3,2.6-7.2,2-0.1,3.8-5.6,0.4-1.3,4.3-4.8,3-4.2,-15 1.5,-5.4 3.1,-2.1 0.1,-1.8 4.9,-0.7 13.5,-8.7 5.8,-1.6 1.8,-4.9 4.3,-0.6-3.5,-0.9-3.9,0.6-0.9,3.4-2.4,-0.3-7.9,3.6 0.7,-1.3-2.1,0.2 1.9,-3.3-11.5,0.8-9.9,6.5-0.5,1.1 3.6,1.2-13.6,1.1-0.8,-0.7 3.8,-0.7-9,-1.8-3.3,1.8-21.8,0.1-26,15.3 5.5,1.1-0.3,2.9 3.4,-1.7-1.2,0.7 1.8,0.5-2.1,1.4 4.5,-1.4-0.3,1.5 0.9,-2.8 3.9,0.2 5.6,3.4-1.9,0.8 2.3,3.2-3.4,4.9-1.5,8.4-16.4,16.3-8.2,4.1-4.9,-2-7.2,5.5-0.2,3-7.6,3.8-0.6,2.1 3.3,1.8 3.9,5.8 0.5,3.9-1.3,2.8-9.5,3-0.8,-3 1.6,-2.5-2.1,-3.2 2.9,-0.6-1.2,-3-4.6,0.2-2.3,-1.4 3,-2-1.3,-0.4 0.7,-2.6-3.6,-1.7-11.3,4.5 2.3,-2.3-2,-0.5 3.6,-3.4-1.6,-1.7-2.3,0.2-7.8,6.1-4.3,0.2-0.4,2.5 4.6,1.4 0.6,3 2.3,0.1 3.5,-2.4 6.8,1.6-1.2,2-7.6,2.2-3.6,4.8 3.9,2.1 2.1,5.7 3.5,3-6.5,-0.4 2.5,-0.2 4.1,3.8-6,2.4 3.8,-0.2 2.9,1.5-2,1.4 1.6,-0-0.2,1.2-1.6,0 0.5,3-3,1-2.4,4.8-1.7,-0.4 1,1.6-2.6,0.7 1.7,0.4-0,2.2-1.6,-0.2-1.9,3-2.8,0.5 0.7,0.8-2.4,2.3-1.7,-0.2-1.5,2.5-6.5,0.7-1.3,1.6-2.7,-2.8 0.1,3.1-11.1,3.1-0.3,3.7-1.4,0-1,-2.2 1,-2-3.1,0.2-1.7,-1.7-6.8,3.2-3.7,7.2 2.6,4.3 8.7,8.5 2.2,9.9-1.6,4.4-6.1,3.4-2.4,-0.3 0,2.2-1.6,-1.3 1.5,2.1-2.6,-1.3 1.2,2.1-3.7,2.8-1.3,0.1 0.9,-5.3-5.1,-1.7-0.2,-2.1-1.3,0.8-2,-4.5-6,-1.6 0.2,-2.8-3.3,0.3-0.1,4.2-3,6.6 0.3,3.7 2.1,-0.1 2.1,7.5 3.8,1.1 6,5.7 0.9,8.3 2.9,5.5-1,-0.9-1.7,1.1-7.8,-5.5-4.2,-12.7-5,-6.4-1.4,0.1 2,-12.4-3.8,-11.2-0.3,-6-1.2,0.1-1.9,-3.1-0.3,2.5M-39.5,-28.2l6.3,-1.1 4,0.8-0.6,0.8 0.8,-1.2-3.4,-1.3 9.7,0.2-2.4,-0.4 0.2,-1.5 10.7,-2.7 7.3,1.3-6.6,1 11.5,0.6-3.6,1.5 14.4,-0.9 7.6,1.3 0.1,1.2 2.2,-0.7 2.1,1.2-0.8,1.1-4.2,-0.8 4.1,1.9-30,8.9 20,-3.2-3.8,-0.2 1.9,-1 9.9,0.4 1.6,2-1.2,2.1 1.8,0.4-1.6,-0.6 2.4,-1.9-1.3,-0.5 1.9,-0.3 15.6,-0.1 1.7,0.4-1.8,0.9 4.7,0.9 9.9,0.4 3.9,-1.1-0.8,-1.6 4,-0.4 16.2,2.2-1.7,0.8 2.3,0.7-3,0.6 3.1,0.3-0,1.3-5.5,-1.2 11.7,5.9 5.8,-4.1 3.6,1.7 8.6,-0.7 6.5,1.8 1.1,-1.7 6.2,0.4-2.2,-1.6 2.9,-0.9-3.7,-0.5 6.9,-0.9-1,-1.1 19.4,1.6-7,0.9 9,-0.4-2.5,1.3-1.3,-1-2,1.9 7.3,-2.3 8,0.6 1.8,1-3.7,0.7 12.6,3 22,-0.3 4.3,1.5-0.3,2.6 3.8,0.6 1.5,2.5-1.7,1.3 2.5,-1.3-0.1,-1.7 5.9,-1.2 16.6,-0 6.2,3.3 3.3,-0.1 1.6,-1.1-2.9,-1.8 1.1,-1.7 19.3,0.8 14.5,3.2M211.8,519l-5.8,-0.1 5.8,0.1M209.8,516.1l8.1,0.7-9.3,1.2-1.9,-1.2 1.1,-1.2 2,0.5M-24.9,474.8l-2.6,-0.3 2.2,-0.8 1.4,0.5-1,0.6M379.2,510.4l-3.3,-0.5 3.3,0.5M374.3,514.8l-1.8,-0.3 1.8,0.3M367.2,515l-2.5,-0.3 2.5,0.3M364.6,514l3.6,0.2-3.6,-0.2M429.5,506.4l-3.9,-0.6 3.9,0.6M470.4,504.7l-0.9,-1.1 3.3,0.3-2.4,0.8M480.4,504.9l-2.4,-0.2 3.6,-0.9-1.2,1.1M442.6,506.5l-2.7,-1 2.7,1M360.8,516.3l-3.9,-0.4 3.9,0.4M365,515.4l-5.6,-0.5 5.6,0.5M765.1,522.8l7.7,0.1M697.7,465.9l-3.4,0.6 3.4,-0.6M689.1,461.4l-3.7,1 3.7,-1M679.6,463.7l2.8,0.2-2.8,-0.2M571.2,501.4l-1.2,0.1-0.6,-2.1 3.1,-0-1.3,2M557.5,499.6l2.1,-0.2-2.1,0.2M639.3,489l-3.4,-0.6 3.4,0.6M630.8,429.5l4.4,1.5-4.4,-1.5M647.4,436.5l4.4,0.2 1.5,2.4-4.1,-1.7-0.9,0.9-1.9,-0.9 1,-0.9M208.6,294.2l0.3,1.1 0.9,-0.8 0.1,2.3-1.7,-0.6 0.4,-2M184.2,271.8l-5,-3.5 5,3.5M175.7,267.5l-3.6,-2.4 3.6,2.4M665.7,435.8l2.6,0.1-2.6,-0.1M636,431.4l2.5,1.2-2.2,1.1 0.2,-0.9-3.8,-1.1 3.3,-0.3M656.7,437.4l-4.3,-0.6 4.3,0.6M642.8,436.4l2.5,0.8-2.5,-0.8M641.4,433.4l0.9,1.2-3.8,-1.1 2.9,-0.1M633.1,399.2l-1,0.7 0.9,2.4-1.2,0.2-1.8,-2.4 2.2,-1.8 0.9,0.9M20.8,266.7l-4,-0.1 4,0.1M187.3,271l2.2,4.6-2.1,-2.3-0.1,-2.3M190.8,278.4l2.3,1.5-2.3,-1.5M80.3,281.9l3.3,0.2-2.1,1.8-1.2,-2M105.1,368.4l1.9,0.4-2.4,0.8-3.2,-0.6 3.7,-0.6M160.1,333l0.6,-3.7-0.6,3.7M54.6,207.9l2.4,-6.4-0.2,3.1-2.2,3.3M55.8,197.9l1.2,1.9-2.1,-1.7-1.1,1 0.3,-2.3 1.7,1.1M138.7,248.5l1.4,0.1-0.9,0.6-2.3,0.1 1.8,-0.8M97.3,243.8l3.5,1.6-1.7,0.3-1.8,-1.9M97.6,247.2l5,0.7-5,-0.7M81,241.5l1.6,1.3-3.6,-0.6 2,-0.7M95,261.8l-1.1,2.2-0.8,-2.2 1.3,-1 0.6,1M53.9,257.7l0,2.7-1.9,1.2 0.7,-3.7 1.2,-0.2M64,247.9l-2.3,0.1 2.3,-0.1M60.3,247.6l-2.3,0.5 2.3,-0.5M82.8,269.9l-0.6,-1.1 1.8,-2-1.2,3.1M66.8,268.7l-3.6,1.2 3.6,-1.2M-37.4,236.3l1.3,3.2-2.7,-3.1 1.4,-0.1M-31.4,247.8l-1.7,-2.9 1.7,2.9M-1.1,-36l-4.5,-0 4.5,0M146.1,-30.8l-2.6,0.1 2.6,-0.1M100.1,-21l-2.8,-1.2 2.8,1.2M106.4,-12.5l-3.2,-0 3.2,0M217.3,-5.6l-5,-0.9 5.7,-0.2-0.7,1.1M197.6,33.4l0.4,-1.5 2.9,-0.7 0.2,1.2-3.5,1M208.3,46.7l-3.2,-1.6 3.2,1.6M170.2,62.9l-2.6,0.1 3.2,-1.8-0.6,1.7M148,79.4l3.1,-2-3.1,2M144.2,80.6l-6.1,3.2 3.7,-3.5 2.4,0.3M106.3,45.8l1,0.2-1.7,1.4-1.8,-0.5 2.5,-1.1M135.7,83.5l1.1,0.4-3.8,2.3 2.7,-2.7M342.4,174l-1.6,-2.6 0.7,-1.9 3.7,2.7-2.8,1.8M230.2,53.2l2.2,0.6-2.2,-0.6M298.4,52l-3.9,1.9 2.8,-2.4 1.1,0.5M303.2,50.1l1.4,-0.1-0.4,0.9-5.2,1.2 4.2,-2M278.6,56.3l1.9,0.2-1.9,-0.2M274.6,56.7l2.3,-1.1-2.3,1.1M699.6,-17l-4.3,0.2 4.3,-0.2M549.9,148.6l-0.8,-3.7 0.8,3.7M620.7,149.5l-0,-2.3-2.6,-1.2 3.2,1.3-0.6,2.2M622.7,151l1.9,1.2-0.1,1.8-1.8,-3M618.9,153.8l-1.1,1.4-1.4,-1.2 1,-2 1.5,1.8M616.2,146.6l2,0.1-2,-0.1M678.3,205.5l-3.2,0.2 1.5,-0.7-0.6,-1.6 2,-0.4 0.3,2.5M370.3,29.1l2.7,-1.7-2.7,1.7M419.1,39.6l0.9,0.7-1.6,2-0.7,-2.7 1.4,0M710.9,246.6l2,-3.2-2,3.2M570.8,241.4l1.7,2.8-1.2,0.9-1.3,-0.5 1.3,-1.1-1.6,-2 1.1,-0.1M587.4,-10.7l6.3,-0.1 0.5,-2.1-4.4,-1.3 5.8,-0.2-4.8,-2.4 4.9,-0.2-4.2,-1.1 13.6,-2.1 4.8,3.3-3.4,1.6 2.2,-0.5-1.2,1.9 3.9,-1.9 4.5,2-0.4,-1.7 4.2,0.7-3.3,-1.4 4.2,-0.6 7.3,1.1-2.6,2.5 5.9,-1.1-3.3,1.1 1.8,0.1-1.1,1.7 4,-2-1.2,1.3 3.7,0.4 0.9,-1.4 4.5,0.6 1.5,1-5,1.4 7,-0.7-4.4,2.2 2.2,-0.3-0.5,1.3 3.1,-2.1 4.9,-0.1 2.9,1-6.1,1.5 4.6,-0.5-0.8,0.8 0.9,0.1 2.4,-1.3 3.2,1.8-7.4,1 9.1,0.8-8.3,0.7 4.2,0.1-0.1,1-5.1,-0.2 9.1,1.4-0.6,1.4 2.5,-0.8-0.8,1.6 1.8,-0.9 1.9,1.5 1.7,-1.3-0.4,0.9 4.2,0.7-3,0.8 5.9,0.4-2.4,1.5 5.6,-0.8 3,1.4-4.5,0.9 2,1.3-2.1,-0-0.3,1.4-2.8,-0.8-0.5,3.3-6.4,-3 3.4,-1.9-4.9,1.1 0.6,-0.7-4.7,-1.5-0.9,1.1-2.3,-0.6 1.9,1.9-5,-0.9 5.8,2.7 1.5,2.2 4.5,0.3 1.2,1.1-1.7,0.5 4.1,2-0.9,1.7-1.9,-1.9 1.9,3-1.8,-0 0.2,1.1-9.9,-4 0.5,1.2-3.9,-1.2 10.2,5.5-1.2,1.2-17.8,-4.3-2.3,-1.2 2.2,-0.6-4,-0.9-3.4,-2 0.6,-0.7-2.8,0.6-2.2,-1.4-0,1.1-7.7,1-4.2,-1-0.2,-1.5 2.7,-1.9 6.7,2.2-1.2,-1.6 7.9,-0.7-3,-2.4 7.8,-3.9-5.7,-5-3.8,-0.5 0.6,-0.8-6.6,1.2 0.1,-1.1 3.1,-0.5-3,-1.3 1,-0.5-3,0.1-7,-3.4-1.2,0.7 2,1.4-9.7,-0.4 2.3,1.4-28.2,-2.9-2.1,-1.9 8.2,0.2-9.6,-1.7-0.1,-3.3 2.3,-2.4 5.3,-2.2 9.7,-0.2-5.9,3.6 1.6,3.1 4.2,1.9-5.6,1.2M626.5,-39.9l3.4,0.7-14,-0.1 14.5,1.1-6.8,0.9 4.3,0.6-2.4,1.2-7.6,0.2-0.2,1.5-2.3,0.6-11.9,0.2 14.4,1.6-9.9,2.4-6.1,-2 1,0.9-7.1,-0.7-0.1,1.1-3.1,0.2-11.6,-0.4-0.3,-1.3-0.2,1.3-3.6,-0.3 0.2,-1.2 3.4,-0.8 6.1,-0.4-3.4,-1.1-1.1,-0.8 1.2,-0.4 10.7,1.7 6.5,-1.4-8.4,0.7-1,-1.4 4.8,-0.8-2.5,-0.3 0.5,-1-2.9,1.5-7,-0.2 2.7,-2.2 17.8,-0.6-9,-0.1 2.6,-0.3-2.2,-0.6M560,-13.4l4.6,1.6 0.1,1.7 5.1,2.4-2.7,-0.2 1.2,0.7-3.2,1.3 8.7,0.7-2.9,0.6 2.7,1.5 0.8,2.2 3.5,-3.6 4.4,1.6 0.8,1.7-1.9,0.2 0.1,1.2 3.4,2.7 2.8,-1.1 3.1,-4.2 2.9,-0.3-2.2,-3.9 11.1,0.8-1.3,0.5 4.9,1.1-2.1,1.1 2.5,0.5-4.6,1 4.4,3.4-0.6,1.5-6.9,2.5-6,-1.9 4.4,2.4-10.1,-1.1 2.7,1.5-5.3,2.8-14.1,-2.3 15.6,2.8-3.8,3.6-6.9,0.1-0.4,1.6-2.4,0.4-10.2,-2 10.6,3-0.2,1.2-5.7,0.5 1.6,0.8-2.2,0.2 0.1,1.3-2.5,-0.7 1.1,0.5-2.4,1 1,0.6-5.2,4.5-0.7,5.1 2.4,1.3-0.2,1.5 0.8,-1.6 3.3,0 2.7,5-1.3,1.4 7.8,-1 17.5,5.7 1.6,0.9-0.5,1 10.5,0 0.4,7.3 2.5,2.1-0.8,0.7 4.1,1.7 0.8,1.3-1.5,0.9 2.7,-0.5 2.7,1.8-1.3,-2.1 1.4,-0.9 1.4,1.5-0.2,-2.1 1.9,-1.7-2,-6.3-2.5,-2.3 6.8,-2.2 4.4,-3.8-1.2,-4.9-5.8,-3.3 2.8,-3.5 1.4,0.3 0.2,-1.6-1.2,-2.8-2,0 2.4,-2.6-2.2,-2.6 2.7,-1 9.7,1.6 3.3,-1.3 7.3,3.1-0.7,0.6 1.5,1 6.9,0.5-0.7,3.3-3.5,0.2 3.3,0.4 0.2,2 1.2,0.2-0.7,1.5-2.2,0.4 6.3,0.1 0.1,2-2.4,1 3.6,-2.1 1.2,1.7 4.7,-2.8 1.3,1.3-0.2,-1.4 2.4,-0.8-1.2,-0.6 0.8,-0.9 1.6,0.3-1.4,-1.4 3.3,-1.7-1,0.9 1.8,-0.2 3,3.1-1.9,0.5 3.9,1.3-2.4,1.2 3.3,-0.6-2.3,1.8 4.6,0.3-1.9,1.5 4.1,1.7-0.1,1.2-4,-0.4 3.8,1.5-1,0.5 0.9,0.8 4,0.8-1,2.6 3,-0.9 1.2,0.4-1.5,1.3 2.1,-1.3 6.6,2.1-10.6,3.4 1,0.5-0.8,0.8 8.5,-2.9-1.3,-0.4 3.1,0.1 0.3,2.5 2.9,-1 2,1 0.6,2.9-1.9,0.4 2.3,1.2-4.6,2.7-5.4,0.5-5.6,3.7-22.8,0.2-3.1,3-3.2,0.6-5,3.5-4.8,-0.9 4.1,1-0.4,1.6-4.5,3.3-10.9,4.5 1.2,0.7-2.6,1.2 4.1,-1.5 1.4,-2.1 9.4,-3.6 8.1,-5.7 9.7,-2.3 4.4,1.3-0.3,1.7-8.3,1.5 7.1,1-2.2,2.2 1.7,0.2 1,2.9 6.4,2.1 2.8,-0.8 3.3,2-11.6,2.7-4.2,3.6-2.3,-1 0.1,-2.5 5.9,-2.9 1.1,1.1 2.7,-1.2-5.3,0 1.9,-1.7-1.1,-0.4-4.4,2.6-4.4,0.2 0.5,1.2-3.8,1.6-2.5,-0.7-1.7,2.1-3.4,0.8-3.1,5.1 2.2,2 1.6,-0.2-0.4,-0.9 0.5,1.4-4.3,0.7-0.8,-1.1-0.5,1.4-4.9,0.4-3.8,1.9 0.1,-1.8-0.4,5.2-3,3-2.2,-1.9 1.6,-1.8-1.4,0.7 1.6,4.8-3.2,4.6 1,-2.9-2.5,-2.7 1.7,-2.8-2.5,0.8 0.8,4.2-3.1,-1.1 0.7,-1.7-1,1.7 3.7,1.8-0.8,0.8-2.2,-1.7 2.9,2.1-0.6,1-1,-0.8 1.6,1.6-3.4,-1 4.5,1.5 1.6,3.9-1.5,-3 0.5,1.9-3.3,-0.4 2.3,1.9 1.2,-0.5-1.5,1.7-3,-0.6 1.8,0.9-1.6,0.9 1.9,0.7-3.5,0.4-1.8,2.8-10.2,5.3-2.3,4.4 5,15.6-1.6,5.6-2.2,0.3-2.5,-5.5-3.2,-2.9 1.1,-1.2-1.6,0 0.7,-3.7-4.9,-4.3-4.5,1.5-1.1,-2.2-5.6,-0.1 0.7,-0.9-3.6,1.2-0,-1.6-0.4,1.2-7.8,0.3 3.3,0.8-1.2,1.5 2,2.1-3.5,-1.8 0,1.4-2.1,0-4.1,-2.5-1.3,1-5.6,-1.5-3.3,2.1 0.8,-0.5-1.7,-0.6 0.5,1.2-3.5,2.6-2.8,-0.3 0.8,0.9-2.6,1.1-1,2.9-1.2,-0.4 2.3,5.1-2.6,12.1 2,3.7-0.4,1.1-1.2,-2.7 0.4,1.5 6.1,9.9 5.2,2.3 7.2,-1.8 3.2,0.8 2.8,-3.2 1.4,-5.9 11.8,-2.1 0.7,2.1-3.1,4.9 1,0.2-1.5,4.6-0.7,-2-1.1,1.7 0.9,0.5-0.8,5.6-2,2.7 13.9,-0.4 5.7,2.7 0.6,3.2-2.4,10.8 6.4,8.4 3.6,0.4 6.9,-2.6 4.5,1.7 3.8,4-0.5,-2.2 4.5,-3.2 0.7,-4.1 2.2,-1.8 1.5,1.3 0.9,-2 3,0.1 6.1,-4.1 1.6,1.4-2.9,1.7 1.3,3.2-1.9,3 1.8,2.8 2,-2.4-1.5,-4.4 5.9,-1.8-1.7,-1.5 1,-1.1 1.4,2.5 4.3,1.2 1,2.3 6.7,-0.5 4,2 4.9,-1.5-2,-0.5 8.6,-0.3-3.7,0.7 0.6,1.7 7,2.5-3,2.7 1.1,0.6 4.1,-0.7 4.8,3.1 1.2,1.5-0.7,3.3 0.9,-1.6 1.5,0.2 2.7,2.2 0.2,2.3 0.7,-1.7 3.8,1.1 5.5,-0.8 0.7,2 1.1,-1.5 3.4,1.2 3.2,3.8 0.6,-1 0.6,2.1 1.6,-0.1 1.7,6.9 2.7,1.7 0.2,1.8-4.9,4.4-2.4,4.6-2.5,0.6 2.6,0.1 3.7,-2.3 1.8,3.9 3.8,-1-1.1,3.2 1.5,-2.6 3,-1.5 0.9,-2.7 2.5,-0.4 9.8,4-0.4,1.8 1.3,0.4-1.2,3 1.8,-2.6 0.1,1.2 2.9,-1.6 6.7,2 5.4,-0.2 9.9,7.2 6,0.9 2.4,6.6-1.9,7.9-7.1,7.2-3.2,5.6-2.1,-0.2-1.1,17.5-1.8,1.9-0.4,4.7-4.2,5.9-0.2,2.7-3.7,3.4-3.9,-0.8-5.3,1.2-12.6,8.4-1.9,-0.2 1.2,0.8-1.3,2.4-0.2,8.2-11.5,12.6 5.2,-6-2.5,-1.4 0,2.5-2.4,2.3-2.4,6.2-5.4,5.4-7.2,0.9-5.8,-1.6-2.2,-2.6 0.9,-4.5-1.2,6.5 4.8,3.8-0.7,1.9 2.3,1.7-0,2.1-5.2,5.2-10.4,2-4.3,-0.7 1,2-1.2,5.4-4.4,1-5.4,-1 0.6,4.3 2,1.2 2.2,-1.1 0.6,2-4.8,-0.1 2.3,1.1-3.3,2.1-1.4,5.1-4.6,0.9-2.3,2.9 2.9,3.3 3.3,0.6 0.3,1.4-1.6,1 1.4,0.4-5.8,3.5-1.6,3.7-3.8,0.1 2,0.5-3.4,3.1 1.1,1.9-1.4,0.1 3.8,2.6-3.1,-0.4-5.5,2-1.8,4-3.9,-1.9 2.2,0.4 2,-2.3-4.7,2.3-1.8,-0.8 1.2,-1.7 4.3,-0.6-4.3,-0.2-1.4,1.9-1.9,-0.9 1.9,-1.2-3.2,0.6-0.9,-1.9 5.2,-0.6 1,1.1-0.1,-2-2.2,-0.9 2,1.3-3.2,0.8-2.4,-1.3 0.9,-1.4-4.1,-2.1 1.6,-1.1 2.9,2 0.6,-1.6-1.2,1.2-2.3,-2.2 2.4,-0.7-1.2,-1.4 1.6,-0-0.3,-2.1-1.6,1.3 0.1,-2.8 1.2,-0.4-1.6,-0.1-0.4,-1.6 4.2,0.5-1.1,-1.8-1.9,1.2-1.5,-1 1.9,-0.4-1.3,-0.6 0.6,-2.2-4.9,-0.3 2.8,-2-0.5,-1 3.2,-0.4 0.7,-1.2-0.2,2.3-1.3,0.5 2.3,-1.4-0.4,2.7 0.4,-3.9 2.8,-0.1-1.6,-1.2 2.5,-1.8-2,-1.5 1.7,-6.8 1.3,0.4-1.5,-1.7 1.8,-1.4-4.3,1-1.5,-2.4 2.6,-6.7-1.6,-6.7 1.6,-0.6 3.6,-7.4 2.7,-8.6-0.2,-13.3 3.1,-9.2 0.1,-10.9 1.8,-6.3-0.9,-11-4.2,-3.9-15.6,-9.4-1.6,-2.8 0.5,-1.7-5,-7.4-4,-9.5-4.3,-6.6-4.1,-2.5 0.9,-1.5-1.6,-3.4 5.7,-7.4-0.4,-1.9-1.6,2.3-2.4,-1.8 0.2,-4 2.2,-1.6 0.7,-5 4.2,-1.5 1.1,-4.1 2.8,-1.2 2.6,-4.3-1.6,-1.1 0.6,-8.4-3.8,-5.2 1,-1.2 1.4,0.9-6,-3.1-3.6,2.8 1.6,2.6-3,1-0.7,-2.5-0.8,1-1.6,-1.8-4.1,0.2-1.4,-2.1-1.2,0.7-0.4,-2.4-5.4,-3.9 0.6,2.3-1.9,-1.1-0.5,-4.2-6.8,-6.4 1.2,-0.2-0.6,-1.4-3.6,0.6-10.2,-2.9-10.6,-8.1 1.3,0.9-3.2,-1.4-5.7,2.7-24.6,-9.5-7.3,-5.8-0.6,-1.5 1.4,-0.7-0.9,-0.8 1.1,-2.4-2.1,-4.1-8,-8.6-3.5,-1.5 0.6,-0.9-1.5,0.4 0.1,-3.2-8.6,-6.9-3.7,-5.4-1.1,-4.2-2.6,-1.4-4.1,-1.2 1.1,6.2 10.8,12.2 3.3,8.5 4.4,3-2.1,2.1-1.3,-2.5-6.1,-4.4-1,-4.9-9.3,-5.4 3.2,0.2 0.1,-2.7-5.8,-4.7-6.3,-12.5-3.7,-2.6-7.6,-2 0,-1.8-6.6,-8.7 0.2,-0.9 1.3,1.1-0.8,-1.9 2.8,-0.2-5.3,0.3-2.5,-3.3-2.3,-5.2 1,-3.8-1.6,-4.8 1.9,-12.1 2.7,0.2-3,-0.5 0.8,-2.4-1,0-2,-5 6.8,0.8-1.3,2.8 2.2,-2-0.2,2.2-1.6,0.6 1.5,-0 1.3,-3.1-3.4,-4 1.2,-0.9-3.8,-0.5 1.3,-0.5-1.1,-1.8-0.9,1.4-2,-0.6-1.3,-1.7 0.7,-1.6-0.7,1.3-3.7,0.1-1.2,-0.4 1.9,-0.4-2.1,0.1-0.1,-1.3-4.2,-0.4 1,-1.6 2.6,-0.3-4.1,0.1 1.5,-2.4 2.5,1-1.7,-1.4 0.7,-1.4-3.9,3.8-0.9,-1.3 1.1,-2.7-4,-2.2 4.4,0.9-2.6,-1 0.5,-1.1-3.7,2.2-2.7,-1.7 2.5,-1.8-2.9,-0.7 3.1,-3.7-1.7,1.5 0.1,-3-1.8,4.1-1.8,-1.5 1,-0.6-1,-2.7-3.9,1.8 2.1,-2.2-6.8,-3.4-0.7,-1.7 1.9,0.3-1.5,-1 1.2,-0.1-2.9,-0.7 0.5,-1.6-2.8,0.5-2.5,-3.7 1,4.1-2.9,-0.5-0.9,-2.3-0.2,1-2.8,-0.9 3.3,2-1.9,0.7-11.2,-4.5 0.9,-1.5 0.8,1.2 1,-0.8-1.5,-0.6-3.5,1-3.5,-1.4-9.8,0.4-2.6,-1.2 0.7,-1.2-4.3,0.7-2.4,-0.9 1,-1.3-5.7,0.8 0.5,-1.2-2.8,1.4 1,0.5-1.3,0.7 2.4,-0-1.7,1.7-3.4,-0.4-8.3,3.3 2.4,-2.1-2.8,-0 1.7,-3.4 8.1,-0.5-3.5,-1 1.6,-1.2-12.1,4.3 1.3,1-5.4,3 2.6,1.4-17.6,8.3-0.3,1.3-9.6,2.4-1.2,-0.8-6.4,2.7 5.8,-3.8 5,0.4-0,-1.8 10,-4.2-0.5,-2 1.5,-0.5-1.2,-0.8 2.6,-2.5-4.9,1.8-1.2,-0.8 1.5,-0.5-2.5,0.1-0.5,2-5.1,-2.3-6.3,1.4 1.8,-1.6-1.2,-0.2 0.5,-1.5-2.1,-2.5 1.7,-1.4-2.6,1.5 0.4,0.9-4.7,0.7-5.2,-2.6 2,-1.3 3.8,1.1 1.1,-0.6-1.7,-0.3 1.1,-0.2-5.4,-0.1 0.8,-0.6-2.4,-0-2.2,-2 5,-3 1.3,-2.5 3.9,0.6 8.4,-2.2-0.2,-2.1-1.8,-0.6 2.2,-1.3-6.5,1.5-12.2,-0.8-2.8,-2 2.8,-0.5-6.9,-1.3 12.9,-3.3 2.9,0.1-1.4,1.2 1.2,0.5 9.5,-0.4-4.8,-2.7 2.8,1.8 4.8,0.1-5.8,-1 0.5,-1.1-6.4,-0.3-2.1,-1.8-9.5,-2.7 2.1,-1.8 8.3,-0.6 7,-4.6 6.3,-0.9 0.9,1.1 1.7,-0.9-2.5,-0.4 1.5,-0.5 6.3,-0.3 5.1,-1.9 3.1,1-1.4,1 2.9,-0.9 10.2,0.9-0.6,0.7 1.8,0.7 31,1.2 28.3,5.1-2.3,-1.5 5.3,-2.1 1.9,0.6-1.1,0.9 16.5,-3-11.2,3-2.6,1.5 1,0.3 4.8,-2.4 2.9,0.8 3.1,-1.8 4.4,-0.1 4.2,-1.8-1.1,-1.1 8.8,4.3 3.4,-2.8 1.5,1.6-0.7,1.2 8,-1.6 25.2,3.4 3.6,1.6-4.1,0.9-1.1,0.8 1.1,0.3 17.9,-0.6 7.4,2.6-1.8,0.6 4.4,2.5-1.7,-2 2.1,0.3-2.9,-3.4 7.9,-2.7-8.9,1.6-1.7,-0.6 1.5,-1.1 7.6,-1.1 6,3.1 7.7,1.1 12,0.1 1.9,-0.3-0.8,-1 4.2,1.7 0.8,-0.9-3.5,-0.2-1.6,-1.6 2.9,-0.6 5,0.8-1,1 2.6,-0.8-1.4,2.6 3.4,1.8-3.6,-0.1 2.3,1.5-0.9,-1.1 2.8,-1.2-1.4,-1.7 0.6,-1 7.2,-2.1-1.4,-1.4-2.7,0.7 1.2,-1.8 2.9,-0.2-9.3,-1.6-1.7,-1.8 2.3,-1.3-1.7,0.1-0.5,-1.6 3.4,-0.7-1.1,-0.9 2.4,-1.2 3.1,0.5M608.2,54.2l-4.6,-1.1 3.2,-0.6 1.4,1.7M633.5,0.8l-4,-0.9 4,0.9M618.4,16.1l1.2,0.8-1.5,0.4-2.1,-1 2.4,-0.2M603.7,17.9l-3.6,2.7-3.1,-0.8 1.9,-1.7 4.8,-0.2M612.5,19.8l0.9,0.8-1.4,2-2.1,-0.6 2.6,-2.2M523.6,-32.5l-5.3,-2 5.3,2M555.8,-34.8l8.4,0.5-10.1,0.6-0.8,-0.8 2.5,-0.3M575.9,-32.9l-4.8,-1 4.8,1M562.7,-25l-0.1,1.3-3.4,0.1-7.3,-1.5 6.1,-2 4.7,2.1M504.9,-37.8l1.2,1.2-13.5,-0.1 12.3,-1.1M474.7,-26.9l-3.8,-0.2 6.3,-1.7-2.5,1.9M521,-17.5l-5.9,-2.1 8.2,-0.3-2.3,2.4M539.8,-21.1l10.3,0.5-1.9,1.1 1.3,0.4-4.1,1.5 6.7,0.9-0.3,3.1-6,-0.1 0.4,1.5-3.4,0.2-12.4,-4.8 1.6,-1.2 3.3,1.2 4.1,-0.6-1.5,-1.1 2.5,-0-6,-1 3.6,0.1-1.6,-1.2 3.4,-0.5M593.4,9.7l1.5,-0.7 8.7,2.9 1.3,1.6-0.8,0.6 5.8,0.8-2.8,1.2-8,-2.4-7.4,3.6-1.3,-2-5,0.4 3.2,-2 1.6,-6 2,0.1 1.2,1.9M626.2,-1.1l2.2,0.6-1.2,2.8-5.5,0.4-1.3,-1.6 2.2,-2 3.6,-0.2M612.5,-20.1l8.3,0.6 3.9,2.2-13.2,0.2-3.7,-3.2 4.7,0.2M548,-30.1l0.6,1.3-1.3,1.2 2,1.2-2,0.1 0.8,0.9-1.2,0.4-8.1,0 0.5,-0.7-2,-0.6 5.4,-1-12.8,0.3 6.5,-0.7-4.2,-1.7 1.3,-0.6 6.8,1.9-0.9,-0.7 2,-0.1-4.5,-1.4 11.1,0.2M529.5,-39.9l1.2,1.3 3.1,-0.7 7.4,1.7-0.6,0.9 2.8,1.2-3.4,0.7-4,-1.4-13.1,-0.6 4.9,-1.3-5.4,-0.3 0.5,-0.8-2.7,-0.7M592.4,-39.9l-8.6,2-1.5,-1.2 0.2,1.7-2.7,-0.2-0.3,1.4-4.3,-1.5 1.9,1.6-4,0.1-12.4,-2.8 5.1,-0.9M560.1,-31.7l3.8,0.6-1.1,1.1 7.9,-0.8 7.2,1.3-7.6,0.3 8.9,2.7 24,-1.3 8.8,1.3-2.5,1.5 3.5,0.4-9,1.6-5.7,-1.5-0,1.1-3.2,0.3-25.3,-0.5-3,-2.2 0.8,-2.1-3.3,-1.8-7.7,0.3-5.7,-1.6 3.7,-1.2 5.5,0.5M553.3,-37.4l4.6,0.5-1.5,0.6 1.4,0.5-7.3,1-2.4,-1 2.6,-0.3-4,-0.6-1,-1.5 7.6,0.8M502.7,-35.9l3,0.2-4.5,0.8 2.7,0.4-2,1-6,0.2-3.3,-1.6 10.1,-1M484.6,-33.3l-2.8,0.9 1.4,1.5-4.6,1.5-2.7,-0.5 0.4,-1.4-3.9,2.4-2.1,-0.7-1.2,1.7-10.6,-1 13.5,-4.1 12.6,-0.3M510.4,-28.6l4.9,1.3 0.8,-1.2 3.7,0.3-1.2,2.9-23.3,2.5-6.3,-1 11.4,-2-9.3,0.7 0.9,-1.2-2,-0.1-6,1.7-6.7,-1.1 8.7,-1.5-7.1,0.1 7.7,-0.8-6,-0.3 6.7,-0.7-3.7,-0.4 3,-0.8 14,3.4 6.9,0.1-2.7,-1.5 1.5,-0.6-3.1,-1 5.3,-1.5 1.9,2.7M564.1,-21.9l9.9,1.2-6.2,3.8-7.4,0 2.4,0.9-1.8,1.7-4.1,-0-1.6,-5.9 8.8,-1.7M548.9,-5.8l7.7,2.9-4.7,1.3-10.1,-1.7 3.2,-2.3 1.8,0.4-0.6,-1.2 2.7,0.6M488.2,-16.3l6.3,-1.4 5.3,1-1.4,1.4 5.2,-1.3-1.6,-1.2 2.3,0.1 4.4,1.5 3.4,3.3 1.8,-0.9-3.3,-4.5 6.2,-0.2 3.8,1.5 3.6,4.3-0.4,1.8 12.8,4.5-9,0.5 1.1,1.6 3.5,-1 1.3,1.1-4,1.3-7.8,-0.4-5.5,-1.8-10,2.7-13,0.6-2,-2.4-10,-0.9-2.4,-2.2 19.7,-0.9-7.5,-1.4-13.6,0.3-2.5,-1.5 10.6,-1.6-9.4,0.4-1,-0.3 1.7,-0.7-4.4,-0.4 2.7,-1.7-0.5,-1 6.4,-1.9 8,-0.9 0.9,1.3-1.7,1.3M469.7,-21.7l7.9,-0.4 7.5,2.6-13,3-3.9,1.5-1.6,2.5-8.8,1.5-3.3,-2.1-6.5,-1 7.3,-6.4-3.2,-2 11.3,-0.7 6.3,1.5M614.6,41.7l-0.8,1.3-0.1,-1.1-2.9,1 2,-2.2-0.3,1.3 0.9,-1.5 1.2,1.2M545.9,-20.8l-4,-0.1 5.7,-0.8-1.7,0.9M645.2,19.4l-3.2,-1.2 3.2,1.2M612.9,-6.3l-4.9,0.3 4.9,-0.3M617.8,-6.1l-2.9,0.8 2.9,-0.8M613.6,-3l3.5,-1.7-3.5,1.7M597.6,7.8l-2.6,-1 2.6,1M531.9,-28.5l-3.9,0.9-3.8,-1.2 5.9,-0.7 1.8,1M535.5,-30.5l3.4,-0.5-3.4,0.5M525.5,-30.5l3.5,0.6-4.7,0.3-0.8,-1 2,0.1M533.8,-34.4l-2.8,-0.7 2.8,0.7M576.3,-30.2l-3,-0.9 3,0.9M553.7,-26.7l-3.3,0.2 3.3,-0.2M490.7,-34.6l-4.3,-0.8 4.3,0.8M491.7,-31l-4.6,-0.2 4.6,0.2M525.2,-25l-2.7,-0.4 2.8,-1 1.6,1-1.7,0.4M698,58.5l-2,0.7 0.8,1.1-3.6,5 2.2,-1.8 2.4,0.5-2.2,1.3 3.2,0.4-0.4,1.5 3,-1.6 3.1,0.7-1.7,3.3 3.8,-0.8-3,2.2 0.7,1.3 2.9,-1.7-1.1,2.2 1.9,-0.2-1.5,3.1-1.9,0.2 0,-1.8-2,0.9 1.1,-2-1.2,-1.5-5.7,3.6 3.6,-2.9-15.9,0.1-0.3,-1 3.6,-2.1-3,-0.2 4.2,-1.5-0.8,-1.4 1.5,-0.4 2.7,-5.4 5.6,-1.8M614.2,-28.2l-2.3,0.2 2.3,-0.2M640.4,-33.1l-2.9,-0.2 2.9,0.2M798.8,-10.5l-4.7,-0.1 1.2,1-3.6,0.9 8.3,-0.1M799.9,-8.2l-3.1,1 3.1,-0.8M799.7,-2.3l-14.8,2.1-4.8,-1.4 0.6,1.6-8.7,5.6-4.4,-0.1 0.8,1.1-7.5,1.9-0.9,-0.4 2.6,-2.1-3.2,-0.3 1.5,0.5-2.7,0.9 1.1,1-7,0.6 2.1,0.7-1.3,0.7-4.1,0.2 3.3,2.2-5,0.6 3.4,0.6 0.2,1.5-2.9,2.3-2.8,-0.5 1.9,0.9-1,0.8-3.7,0 2.8,0.6 0.2,2.5-1.7,0.5 0.9,0.4-2.5,3.9-3.2,-0.2 2.8,0.8-0.6,1.5-7.3,-1 2.3,-1.6-4.7,0.1 0.7,-2.1-8,1.7 1.2,-0.9-5.4,-2.1-0.3,-1.1 1.9,-0.7-2.8,0.3-2.5,-1.7 1.9,-2-2.1,0.8-4.1,-3.3 4.6,-1.7-4.7,0.4 0.6,-1.2 4.9,0-0.3,-0.9-3,-1.8 0.6,1.7-4.5,1.4-1.7,-3.5 5.1,-1.6-7.5,0.6-0.5,-1.7 7.5,-2.8-8.4,2.6 0.6,-1.8 3.7,-0.8-4.6,-0.4-0.4,-1.5 4.6,-1.3 6.7,0.9-6.1,-1.1-5,1 2.1,-2.3 5.5,0.5 1.5,-1.2-7.8,0.3 1.2,-1.1 6.8,0.1 1.1,-0.7-1.6,0.2 0.6,-1.4 2.8,-0.2-2.7,-0.1 2.6,-2.9-6.8,-0.1-8.1,-2.3 13.7,1.1-3.9,-2.2 2.7,0-7.1,-0.6 4.4,-1.8-5.9,0.4 1,-0.8-1.8,-2-1,0.2 1.6,1.6-1.7,1.4-5.8,-0.3 2.7,-3-2.6,0.8 1,-0.7-1.1,-0.3 3.1,-1.5-3.4,-0.5 1.4,-1.1-2.9,-0.8 0.9,-0.8-1.3,-1.3-3.6,0 3.5,-1.4-8.2,-2.9 1.1,-0.6-1,-0.6-16.9,-2.4-17.9,1-4.1,-1.1 4.9,-0.9-10.9,-1.5 17,-0.8 0.3,-1-10.8,0.4-12.3,-2.5 4.1,-1.6 20.7,-2M354.8,522.9l-15.5,-2.1 7.7,-1.4-14.2,-1.1-0.7,-0.6 1.7,-2.4 29.4,2.5 5.6,-1.2-2.5,-0.6 1,-0.7 10.3,1.4-0.3,-2.6-13.8,-1.4 4.7,-0.9 10.2,1.1-3.3,-1.1 1.4,-0.8 13,-1.4 5.2,0.9-1.3,-0.7 5.5,-1.2 10.8,-0.2 4.5,-1.6 49.1,0.2 22.5,-1 2.1,-2 3.9,0.6-0.8,1 1.5,0.3-2.8,1.9 8.6,-0.7-0.4,-1.8 2.2,-0.3 3.4,1.2-4,2.4 29.2,-0.4 7.4,1.2 8.8,-0.9-6.8,-1.1 1.3,-1.3-4,-0.1-5.5,-2.9 13.8,-0.2-14.2,-1.1-1.7,-1.7 1,-0.3 43.3,2.1 7.6,-2.3 2,0.4-0.8,1.6 9.3,-0.2 12.9,2.4 3.1,-0.4 0.5,-1.8 2.9,0.6-0.3,-1.6 5.9,2 6.8,-0.2-0.7,1.4 29.2,-2.7 4.1,-0.9 3,-2.7-6.7,-9.4 6.2,-1-1.5,-1 2.6,-4.7-3.1,-0.1 0.2,-1.4 3.5,0.6-0,-2.2 7,-2.5 2.5,-1.6-0.9,-0.9 1.1,-0.8 2.5,0.3 7.8,-3.7 12.3,-3.1 2,1.5-5.1,0.5-2.7,1.6 0.9,1.1-4.2,-0.4-7.5,3 1.1,1.1-1.9,1.2 6,0.1-1.5,1.4-5.9,-0.4 0.2,1.7-4,-1.5-1.1,1.3 1.1,0.8-3.3,-0.2-0.5,1.7-2.4,0.3-0.5,2.7 2.9,-0-2.2,0.7 1.6,0.3-0.6,0.7 7.9,-0.6-2.8,0.9 6.3,5-1.5,0.9 3.1,0.4-1.6,1.5 3.6,1.2-3.6,1.5 3.3,0.6-4.3,0.7 5.4,0.2-2,1.8 4.5,1.2-0.4,1.2-6.7,-0.4 4.4,2-3.8,2 4.1,0.1-5.5,0.5 1.4,1.2-1,0.5-3.7,-0.9-2.7,1.2 2.5,0.5-3.7,0.5 3.2,0.6-24.3,4.3-24.8,-0.2 5.1,2.8 10.2,1-6.8,1.7-24.1,-1.1 14.8,2.1-1.6,1.1-8.6,0.2-12.4,-2.9 2,1.4-1.3,0.8 7.4,1.9M787.3,522.6l-13.8,-0.1-7.2,-1.2 0.2,-1.1 7.4,-3.7 24.7,-4.5M-39.8,477.9l9.2,0.3 11.7,-2.8 24.1,3.7 5.1,-2.9 7.8,-1 9,3.4-5.7,2.4 21.9,-1.7-3.8,1.5 24,-3.6 5.9,2.4 5.1,0.2 5.7,-3.2 10.2,-0.4 3.4,1.4 3.3,-1.3 29.8,2.7 3.2,0.9-2.3,2.6 7.1,-0.8 3.9,2.6 13.7,-0 1.2,1.6 6.4,0.1 2.9,-1.9 5.8,2.5 15.1,1.8 8.6,5.4-0.6,-2.1 2.3,-0.5 17.4,1.8 11.4,3.3-2.7,1.3 0.6,1.6-6.3,-0.6 5,1.2-1,1.1-11,-0.4 4.5,1.7-8.4,1.7-1.9,-1.7-0.2,2.2 2.3,1.9-7.2,-0.6-3.5,3-5.3,0.3 6.8,1.9-1.4,1.1 1.4,1.1-1.3,1.7 7,3.3-1.6,1.2 5.1,-0.6 6.1,2-15.9,1-3.5,-1.3 1,1.8-5.2,0.6"/>
+<g class="c-ticks"><text x="46.6" y="17.6">120°E</text><text x="153.2" y="17.6">150°E</text><text x="259.7" y="17.6">180°</text><text x="366.2" y="17.6">150°W</text><text x="472.8" y="17.6">120°W</text><text x="579.3" y="17.6">90°W</text><text x="685.9" y="17.6">60°W</text><text x="754" y="235.5" text-anchor="end">0°</text></g>
+<path class="c-route c-route--0" pathLength="1" d="M687.6,364.4Q439.0,87.4 67.4,108.1"/>
+<circle class="c-spark c-spark--0" r="2.9" opacity="0"><animateMotion dur="9s" begin="3.2s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1;1" keyTimes="0;.62;1" keySplines=".45 0 .25 1;0 0 1 1" path="M687.6,364.4Q439.0,87.4 67.4,108.1"/><animate attributeName="opacity" dur="9s" begin="3.2s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.06;.56;.64;1"/></circle>
+<path class="c-route c-route--1" pathLength="1" d="M729.4,325.1Q439.6,90.8 67.4,108.1"/>
+<circle class="c-spark c-spark--1" r="2.9" opacity="0"><animateMotion dur="9s" begin="4.800000000000001s" repeatCount="indefinite" calcMode="spline" keyPoints="0;1;1" keyTimes="0;.62;1" keySplines=".45 0 .25 1;0 0 1 1" path="M729.4,325.1Q439.6,90.8 67.4,108.1"/><animate attributeName="opacity" dur="9s" begin="4.800000000000001s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.06;.56;.64;1"/></circle>
+<g class="c-city c-city--home" transform="translate(67.4,108.1)">
+<circle class="c-halo" r="22.0" fill="url(#cg-route)"/><circle class="c-ring" r="9.9"/>
+<circle class="c-dot" r="3.5"/>
+<text class="c-lab" x="18" y="-16" text-anchor="start">SEOUL</text>
+<text class="c-sub" x="18" y="-1.1" text-anchor="start">37°34′N · 126°58′E</text>
+</g>
+<g class="c-city" transform="translate(687.6,364.4)">
+<circle class="c-dot" r="3.5"/>
+<text class="c-lab" x="-16" y="24" text-anchor="end">BUENOS AIRES</text>
+<text class="c-sub" x="-16" y="38.9" text-anchor="end">34°36′S · 58°23′W</text>
+</g>
+<g class="c-city" transform="translate(729.4,325.1)">
+<circle class="c-dot" r="3.5"/>
+<text class="c-lab" x="-16" y="-30" text-anchor="end">SÃO PAULO</text>
+<text class="c-sub" x="-16" y="-15.1" text-anchor="end">23°33′S · 46°38′W</text>
+</g>
+</svg>
+          <figcaption><b>Seul · Buenos Aires · São Paulo.</b> Cinco anos na Argentina, três no Brasil e o ensino médio em São Paulo.</figcaption>
+        </figure>
+      </div>
     </div>
-    <p class="hero-desc">Estrangeiros na Coreia enfrentam desafios jurídicos únicos: barreiras linguísticas, leis desconhecidas e um sistema que não foi feito pensando em você. Sou advogado coreano no SNK Law Firm, em Seul, e atendo em inglês, espanhol e português.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Agendar uma consulta</a>
-      <a href="https://wa.me/821096138897" target="_blank" rel="noopener" class="btn-secondary">WhatsApp</a>
+  </div>
+  <div class="facts">
+    <div class="wrap">
+      <ul>
+        <li><b>Advogado, República da Coreia</b><span>Ordem dos Advogados da Coreia · Ordem dos Advogados de Seul</span></li>
+        <li><b>SNK Law Firm</b><span><span lang="ko">법무법인 에스엔케이</span>&nbsp;·&nbsp;Seul</span></li>
+        <li><b>4 Idiomas</b><span>coreano, inglês, espanhol e português</span></li>
+        <li><b>Os 119 guias em português</b><span>English · 126 · Español · 119</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-
-<section id="about">
-  <div>
-    <p class="section-label reveal">Sobre Juan</p>
-    <h2 class="about-title reveal">Não apenas um advogado.<br>Alguém que <em>entende<br>o seu mundo.</em></h2>
-    <p class="about-body reveal">Antes de me tornar advogado registrado na Coreia, passei anos no mundo dos negócios: primeiro em vendas de navios na Hyundai Heavy Industries, depois na seção de América Latina da POSCO International, cobrindo energias renováveis, e antes disso como intérprete de espanhol na Samsung SDS. Sei o que significa navegar por sistemas complexos em um país estrangeiro, negociar entre culturas e tomar decisões de alto risco sem uma rede de segurança.</p>
-    <p class="about-body reveal">Essa experiência define como exerço a advocacia hoje. Seja você um expatriado, um cidadão latino-americano ou um estrangeiro abrindo um negócio na Coreia, trabalho com você no idioma em que você pensa.</p>
-    <p class="about-body reveal">Atuo no SNK Law Firm, em Seul. Os casos são assumidos pelo escritório; eu sou a pessoa com quem você fala, no seu idioma, desde a primeira mensagem.</p>
-    <div class="lang-showcase reveal">
-      <div class="lang-showcase-title">Idiomas</div>
-      <div class="lang-list">
-        <div class="lang-item"><span class="lang-name">한국어 Korean</span><span class="lang-level">Nativo</span></div>
-        <div class="lang-item"><span class="lang-name">English</span><span class="lang-level">Fluente</span></div>
-        <div class="lang-item"><span class="lang-name">Español</span><span class="lang-level">Fluente · Argentina, 5 anos</span></div>
-        <div class="lang-item"><span class="lang-name">Português</span><span class="lang-level">Fluente · Brasil, 3 anos</span></div>
-      </div>
-    </div>
-  </div>
-  <div>
-        <picture>
-      <source srcset="/img/juan-portrait.webp" type="image/webp">
-      <img class="about-portrait reveal" src="/img/juan-portrait.jpg" alt="Juan W. Hong, attorney at SNK Law Firm, Seoul" width="800" height="800" loading="lazy">
-    </picture>
-<p class="section-label reveal">Trajetória</p>
-    <div class="career-timeline reveal">
-      <div class="career-item">
-        <div class="career-period">Atual</div>
-        <div><div class="career-role">Advogado</div><div class="career-org">SNK Law Firm · Seul, Coreia</div></div>
-      </div>
-      <div class="career-item">
-        <div class="career-period">Atual</div>
-        <div><div class="career-role">Desenvolvedor de Aplicações Jurídicas</div><div class="career-org">Ferramentas para procedimentos do dia a dia</div></div>
-      </div>
-      <div class="career-item">
-        <div class="career-period">Anterior</div>
-        <div><div class="career-role">Negócios na América Latina</div><div class="career-org">POSCO International · Seção América Latina, Grupo de Energias Renováveis</div></div>
-      </div>
-      <div class="career-item">
-        <div class="career-period">Anterior</div>
-        <div><div class="career-role">Vendas Globais de Navios</div><div class="career-org">Hyundai Heavy Industries</div></div>
-      </div>
-      <div class="career-item">
-        <div class="career-period">Anterior</div>
-        <div><div class="career-role">U.S. Army 142nd Military Police Company</div><div class="career-org">KATUSA</div></div>
-      </div>
-      <div class="career-item">
-        <div class="career-period">Anterior</div>
-        <div><div class="career-role">Intérprete de Espanhol</div><div class="career-org">Samsung SDS</div></div>
-      </div>
-    </div>
-    <p class="section-label reveal" style="margin-top:44px">Formação</p>
-    <div class="career-timeline reveal">
-      <div class="career-item"><div class="career-period">Direito</div><div><div class="career-role">Faculdade de Direito, Universidade Nacional de Jeonbuk</div><div class="career-org">Mestrado em Direito</div></div></div>
-      <div class="career-item"><div class="career-period">Graduação</div><div><div class="career-role">Korea University</div><div class="career-org">Economia</div></div></div>
-      <div class="career-item"><div class="career-period">Ensino médio</div><div><div class="career-role">The American School of São Paulo</div><div class="career-org">São Paulo, Brasil</div></div></div>
-    </div>
-    <div class="about-credentials reveal" style="margin-top:40px">
-      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Advogado, República da Coreia</div></div>
-      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Ordem dos Advogados da Coreia · Ordem dos Advogados de Seul</div></div>
-      <div class="credential"><div class="credential-dot"></div><div class="credential-text">Idiomas de trabalho: coreano, inglês, espanhol e português</div></div>
-    </div>
-</div>
-</section>
-
-<section id="practice">
-  <div class="practice-header reveal">
-    <div>
-      <p class="section-label">Áreas de Atuação</p>
-      <h2 class="practice-title">Cada questão jurídica<br>que os <em>estrangeiros enfrentam</em> na Coreia</h2>
-    </div>
-    <p class="practice-subtitle">Casos que conduzo no SNK Law Firm, em quatro idiomas.</p>
-  </div>
-  <div class="practice-grid">
-    <div class="practice-card reveal">
-      <div class="practice-num">01</div><div class="practice-icon">🏢</div>
-      <h3 class="practice-name">Imobiliário e Construção</h3>
-      <p class="practice-desc">Compra, venda e locação de imóveis na Coreia sendo estrangeiro. Contratos jeonse (전세), disputas de construção e conflitos entre locador e locatário.</p>
-      <div class="practice-tags"><span class="tag">Compra de Imóvel</span><span class="tag">Jeonse</span><span class="tag">Disputas de Locação</span></div>
-    </div>
-    <div class="practice-card reveal">
-      <div class="practice-num">02</div><div class="practice-icon">👨‍👩‍👧</div>
-      <h3 class="practice-name">Direito de Família e Divórcio</h3>
-      <p class="practice-desc">Divórcio internacional, guarda de filhos, herança e pensão alimentícia para cidadãos estrangeiros e casais de nacionalidade mista na Coreia.</p>
-      <div class="practice-tags"><span class="tag">Divórcio</span><span class="tag">Guarda</span><span class="tag">Herança</span></div>
-    </div>
-    <div class="practice-card reveal">
-      <div class="practice-num">03</div><div class="practice-icon">🏛️</div>
-      <h3 class="practice-name">Direito Empresarial e Societário</h3>
-      <p class="practice-desc">Constituição de empresas, elaboração de contratos, disputas trabalhistas e fusões e aquisições para investidores estrangeiros, empreendedores e empresas latino-americanas que entram na Coreia.</p>
-      <div class="practice-tags"><span class="tag">Constituição</span><span class="tag">Contratos</span><span class="tag">M&amp;A</span></div>
-    </div>
-    <div class="practice-card reveal">
-      <div class="practice-num">04</div><div class="practice-icon">🛡️</div>
-      <h3 class="practice-name">Defesa Criminal</h3>
-      <p class="practice-desc">Representação de cidadãos estrangeiros em processos criminais coreanos. Investigação policial, acusação, julgamento e recurso, explicados no seu idioma em cada etapa.</p>
-      <div class="practice-tags"><span class="tag">Investigação</span><span class="tag">Defesa em Julgamento</span><span class="tag">Recurso</span></div>
-    </div>
-    <div class="practice-card reveal">
-      <div class="practice-num">05</div><div class="practice-icon">✈️</div>
-      <h3 class="practice-name">Imigração e Vistos</h3>
-      <p class="practice-desc">Solicitações de visto, prorrogações, indeferimentos e defesa contra deportação. Orientação sobre residência permanente (F-5).</p>
-      <div class="practice-tags"><span class="tag">Visto / Residência</span><span class="tag">Deportação</span><span class="tag">F-5 / Residência</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="latam">
-  <div class="reveal">
-    <p class="section-label" style="color:var(--gold)">Para latino-americanos · Para brasileiros</p>
-    <h2 class="latam-title">Advogado coreano.<br><em>Fala a sua língua.</em><br>Entende a sua cultura.</h2>
-    <p class="latam-body">Sou advogado coreano e falo espanhol. Antes de exercer a advocacia, trabalhei na área de América Latina da POSCO International e fui intérprete de espanhol na Samsung SDS. Morei cinco anos na Argentina.<br><br><span style="color:rgba(245,240,232,.55);font-size:.8rem">Também atendo em português. Morei três anos no Brasil e concluí o ensino médio em São Paulo.</span></p>
-  </div>
-  <div class="reveal">
-    <p class="section-label">Clientes De</p>
-    <div class="latam-flags">
-      <div class="latam-flag">Brasil</div>
-      <div class="latam-flag">México</div>
-      <div class="latam-flag">Colômbia</div>
-      <div class="latam-flag">Argentina</div>
-      <div class="latam-flag">Chile</div>
-      <div class="latam-flag">Peru</div>
-      <div class="latam-flag">Venezuela</div>
-      <div class="latam-flag">Ecuador</div>
-      <div class="latam-flag">+ Todos os países de língua espanhola e portuguesa</div>
-    </div>
-  </div>
-</section>
-
-<section id="why">
-  <div class="reveal">
-    <p class="section-label">Por que Juan</p>
-    <h2 class="why-title">Por que os clientes<br><em>trabalham comigo.</em></h2>
-  </div>
-  <div class="why-grid">
-    <div class="why-item reveal"><div class="why-num">I</div><h3 class="why-heading">4 Idiomas</h3><p class="why-body">Coreano, inglês, espanhol e português, fluente nos quatro. Seu caso é conduzido no idioma em que você se sente mais confortável. Sem intérprete. Sem sentido perdido na tradução.</p></div>
-    <div class="why-item reveal"><div class="why-num">II</div><h3 class="why-heading">Experiência Empresarial</h3><p class="why-body">Vendas de navios na Hyundai Heavy Industries e energias renováveis na seção de América Latina da POSCO International. Passei anos no lado comercial antes de ler um contrato como advogado.</p></div>
-    <div class="why-item reveal"><div class="why-num">III</div><h3 class="why-heading">Vida no Exterior</h3><p class="why-body">Cinco anos na Argentina, três no Brasil e o ensino médio em São Paulo. Ser o estrangeiro que não sabe como o sistema funciona não é algo que li num processo.</p></div>
-    <div class="why-item reveal"><div class="why-num">IV</div><h3 class="why-heading">Advogado com Visão Tecnológica</h3><p class="why-body">Eu mesmo desenvolvo as aplicações jurídicas que uso, então a papelada anda com ferramentas e não com espera. Você recebe documentos legíveis e um processo que dá para acompanhar.</p></div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="reveal">
-    <p class="section-label">Como Funciona</p>
-    <h2 class="process-title">Do primeiro contato<br>à <em>resolução</em></h2>
-  </div>
-  <div class="process-steps">
-    <div class="process-step reveal"><div class="process-circle">1</div><h3 class="process-name">Contato Inicial</h3><p class="process-body">Envie uma mensagem em inglês, espanhol ou português. Descreva sua situação. Respondo em até 24 horas.</p></div>
-    <div class="process-step reveal"><div class="process-circle">2</div><h3 class="process-name">Consultoria</h3><p class="process-body">Ligação ou reunião de 30 a 60 minutos. Sua situação é analisada, as opções avaliadas e a estratégia discutida, no seu idioma.</p></div>
-    <div class="process-step reveal"><div class="process-circle">3</div><h3 class="process-name">Contratação</h3><p class="process-body">Se seguirmos adiante, a contratação é feita com o SNK Law Firm. O escopo e os honorários ficam definidos por escrito antes do início.</p></div>
-    <div class="process-step reveal"><div class="process-circle">4</div><h3 class="process-name">Resolução</h3><p class="process-body">O escritório atua por você e eu mantenho você informado no seu idioma conforme o caso avança.</p></div>
-  </div>
-</section>
-
-<section id="contact">
-  <div>
-    <p class="section-label reveal">Contato</p>
-    <h2 class="contact-title reveal">Vamos conversar.<br><em>Em português, inglês ou espanhol.</em></h2>
-    <p class="contact-sub reveal">Seja para um assunto jurídico urgente ou apenas para entender suas opções, escreva em inglês, espanhol ou português. O primeiro passo é uma conversa.</p>
-    <div class="contact-items reveal">
-      <div class="contact-item"><div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold)" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></div><div><div class="contact-item-label">E-mail</div><div class="contact-item-value"><a href="mailto:wwhong@snkpartners.com" style="color:rgba(245,240,232,0.65);text-decoration:none;">wwhong@snkpartners.com</a></div></div></div>
-      <div class="contact-item"><div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold)" aria-hidden="true"><path d="M20.5 11.5a8 8 0 0 1-11.7 7.1L3.5 20l1.4-4.9A8 8 0 1 1 20.5 11.5z"/></svg></div><div><div class="contact-item-label">WhatsApp</div><div class="contact-item-value"><a href="https://wa.me/821096138897" target="_blank" style="color:rgba(245,240,232,0.65);text-decoration:none;">wa.me/821096138897</a><br><span style="font-size:0.7rem;color:rgba(245,240,232,.55)">Toque para abrir o WhatsApp</span></div></div></div>
-      
-      <div class="contact-item"><div class="contact-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold)" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.2a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.6"/></svg></div><div><div class="contact-item-label">Localização</div><div class="contact-item-value">Seul, República da Coreia<br><span style="font-size:.7rem;color:rgba(245,240,232,.55)">Consultas por vídeo disponíveis em todo o mundo</span></div></div></div>
-    </div>
-    <div class="contact-lang-note reveal">
-      <p>Você pode escrever em <strong>inglês</strong>, <strong>espanhol</strong> ou <strong>português</strong>. O coreano também é bem-vindo. Todas as comunicações são tratadas diretamente pelo Juan.</p>
-    </div>
-  </div>
-  <div class="reveal" style="display:flex;flex-direction:column;justify-content:flex-end;height:100%;">
-    <div style="padding:32px;border:1px solid rgba(201,168,76,0.2);background:rgba(201,168,76,0.03);">
-      <p style="font-size:0.58rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Envie uma Mensagem</p>
-      <p style="font-size:0.85rem;font-weight:300;line-height:1.9;color:rgba(245,240,232,0.5);margin-bottom:32px;">Clique no ícone de e-mail para abrir o Gmail, ou fale diretamente pelo WhatsApp. O Juan responde em inglês, espanhol e português.</p>
-
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:20px 24px;border:1px solid rgba(201,168,76,0.25);background:rgba(255,255,255,0.03);margin-bottom:12px;min-width:0;">
-        <span style="font-size:0.95rem;font-weight:400;color:var(--ivory);letter-spacing:0.03em;min-width:0;overflow-wrap:anywhere;word-break:break-all;">wwhong@snkpartners.com</span>
-        <div style="display:flex;gap:10px;margin-left:auto;">
-          <a href="https://mail.google.com/mail/?view=cm&to=wwhong@snkpartners.com&su=Legal%20Inquiry%20via%20juanesq.com" target="_blank" title="Enviar pelo Gmail" style="width:36px;height:36px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;color:var(--gold);text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.15)'" onmouseout="this.style.background='transparent'">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-          </a>
-          <button onclick="copyEmail()" title="Copiar endereço de e-mail" style="width:36px;height:36px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;color:var(--gold);background:transparent;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='rgba(201,168,76,0.15)'" onmouseout="this.style.background='transparent'" id="copy-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-          </button>
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="letter">
+      <figure class="plate rv">
+        <picture><source srcset="/img/juan-letter.webp" type="image/webp"><img src="/img/juan-letter.jpg" alt="Juan W. Hong, attorney at SNK Law Firm, Seoul" width="640" height="800" loading="lazy"></picture>
+        <figcaption><b>Juan W. Hong</b><span lang="ko">홍우원 · Seul</span></figcaption>
+      </figure>
+      <div class="letter-body">
+        <p class="label rv"><span class="no">01</span>Sobre Juan</p>
+        <h2 class="h2 rv">Não apenas um advogado.<br>Alguém que <em>entende<br>o seu mundo.</em></h2>
+        <div class="letter-text rv">
+          <p class="first">Antes de me tornar advogado registrado na Coreia, passei anos no mundo dos negócios: primeiro em vendas de navios na Hyundai Heavy Industries, depois na seção de América Latina da POSCO International, cobrindo energias renováveis, e antes disso como intérprete de espanhol na Samsung SDS. Sei o que significa navegar por sistemas complexos em um país estrangeiro, negociar entre culturas e tomar decisões de alto risco sem uma rede de segurança.</p>
+          <p>Essa experiência define como exerço a advocacia hoje. Seja você um expatriado, um cidadão latino-americano ou um estrangeiro abrindo um negócio na Coreia, trabalho com você no idioma em que você pensa.</p>
+          <p>Atuo no SNK Law Firm, em Seul. Os casos são assumidos pelo escritório; eu sou a pessoa com quem você fala, no seu idioma, desde a primeira mensagem.</p>
+        </div>
+        <div class="signoff rv">
+          <span class="sig">Juan W. Hong</span>
+          <span class="sig-sub">Advogado na Coreia · <span lang="ko">홍우원</span></span>
+        </div>
+        <div class="letter-meta rv">
+          <div>
+            <p class="dl-title">Idiomas</p>
+            <ul class="dl">
+              <li><b>한국어 Korean</b><span>Nativo</span></li>
+              <li><b>English</b><span>Fluente</span></li>
+              <li><b>Español</b><span>Fluente · Argentina, 5 anos</span></li>
+              <li><b>Português</b><span>Fluente · Brasil, 3 anos</span></li>
+            </ul>
+          </div>
+          <div>
+            <p class="dl-title">Trajetória</p>
+            <ul class="dl">
+              <li><b>Advogado</b><span>SNK Law Firm · Seul, Coreia</span></li>
+              <li><b>Desenvolvedor de Aplicações Jurídicas</b><span>Ferramentas para procedimentos do dia a dia</span></li>
+              <li><b>Negócios na América Latina</b><span>POSCO International · Seção América Latina, Grupo de Energias Renováveis</span></li>
+              <li><b>Vendas Globais de Navios</b><span>Hyundai Heavy Industries</span></li>
+              <li><b>U.S. Army 142nd Military Police Company</b><span>KATUSA</span></li>
+              <li><b>Intérprete de Espanhol</b><span>Samsung SDS</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="letter-meta rv">
+          <div>
+            <p class="dl-title">Formação</p>
+            <ul class="dl">
+              <li><b>Faculdade de Direito, Universidade Nacional de Jeonbuk</b><span>Mestrado em Direito</span></li>
+              <li><b>Korea University</b><span>Economia</span></li>
+              <li><b>The American School of São Paulo</b><span>São Paulo, Brasil</span></li>
+            </ul>
+          </div>
+          <div>
+            <p class="dl-title">SNK Law Firm</p>
+            <ul class="dl creds">
+              <li>Advogado, República da Coreia</li>
+              <li>Ordem dos Advogados da Coreia · Ordem dos Advogados de Seul</li>
+              <li>Idiomas de trabalho: coreano, inglês, espanhol e português</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <a href="https://wa.me/821096138897" target="_blank" style="display:flex;align-items:center;gap:16px;padding:20px 24px;border:1px solid rgba(201,168,76,0.25);background:rgba(255,255,255,0.03);text-decoration:none;transition:background 0.3s;margin-bottom:12px;" onmouseover="this.style.background='rgba(201,168,76,0.06)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#c9a84c" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span style="font-size:0.95rem;font-weight:400;color:var(--ivory);letter-spacing:0.03em;">WhatsApp · Juan W. Hong</span>
-        <span style="margin-left:auto;font-size:0.65rem;color:rgba(201,168,76,0.8);letter-spacing:0.15em;text-transform:uppercase;">Conversar Agora →</span>
-      </a>
-
-      <p style="font-size:0.6rem;font-weight:300;color:rgba(245,240,232,0.6);margin-top:4px;">🔒 O sigilo profissional advogado-cliente se aplica a todas as comunicações.</p>
     </div>
   </div>
 </section>
 
-
-<section id="guides">
-  <div class="guides-head">
-    <div>
-      <p class="guides-label">Guias</p>
-      <h2 class="guides-title">Para ler mais, antes ou depois de falarmos.</h2>
+<section class="sec sec-cont" id="practice">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label"><span class="no">02</span>Áreas de Atuação</p>
+      <h2 class="h2">Cada questão jurídica que os <em>estrangeiros enfrentam</em> na Coreia</h2>
+      <p class="intro">Casos que conduzo no SNK Law Firm, em quatro idiomas.</p>
     </div>
-    <a href="/guide/pt/" class="guides-all">Todos os 126 guias</a>
-  </div>
-  <div class="guides-grid">
-    <a href="/guide/pt/korea-police-rights.html" class="guide-tile">
-      <span class="gt-cat">Defesa Criminal</span>
-      <span class="gt-title">A polícia coreana te chamou</span>
-      <span class="gt-desc">Que direitos você tem desde o primeiro minuto e quais perde se não invocar a tempo.</span>
-    </a>
-    <a href="/guide/pt/divorce-korea-foreigners.html" class="guide-tile">
-      <span class="gt-cat">Direito de Família</span>
-      <span class="gt-title">Divorciar na Coreia sendo estrangeiro</span>
-      <span class="gt-desc">Jurisdição, culpa, divisão de bens, guarda — e o que acontece com o seu visto depois.</span>
-    </a>
-    <a href="/guide/pt/visa-overstay-korea-foreigners.html" class="guide-tile">
-      <span class="gt-cat">Imigração</span>
-      <span class="gt-title">Visto vencido na Coreia</span>
-      <span class="gt-desc">Começa como infração administrativa. Multas, saída voluntária e ordem de saída ou deportação.</span>
-    </a>
-    <a href="/guide/pt/unpaid-wages-korea-foreigners.html" class="guide-tile">
-      <span class="gt-cat">Direito Trabalhista</span>
-      <span class="gt-title">O patrão não pagou o salário</span>
-      <span class="gt-desc">Seja qual for o seu visto, dá para cobrar. A denúncia no escritório do trabalho, passo a passo.</span>
-    </a>
-    <a href="/guide/pt/jeonse-scam-korea-foreigners.html" class="guide-tile">
-      <span class="gt-cat">Moradia</span>
-      <span class="gt-title">O golpe do depósito jeonse</span>
-      <span class="gt-desc">O que olhar na matrícula antes de assinar, e o que fazer quando o locador não devolve.</span>
-    </a>
-    <a href="/guide/pt/start-business-korea.html" class="guide-tile">
-      <span class="gt-cat">Direito Empresarial</span>
-      <span class="gt-title">Abrir um negócio na Coreia</span>
-      <span class="gt-desc">Visto D-8, capital mínimo, constituição da empresa e os trâmites que quase todos esquecem.</span>
-    </a>
-    <a href="/guide/pt/" class="guide-tile gt-more">
-      <span class="gt-cat">Mais guias</span>
-      <span class="gt-title">Os 126 guias em português</span>
-      <span class="gt-desc">Criminal, imigração, trabalho, família, habitação e empresa. O arquivo completo (126 guias) está em inglês.</span>
-    </a>
+    <ol class="rows">
+      <li class="row rv"><span class="row-no">01</span><h3 class="row-title">Imobiliário e Construção</h3><p class="row-desc">Compra, venda e locação de imóveis na Coreia sendo estrangeiro. Contratos jeonse (전세), disputas de construção e conflitos entre locador e locatário.</p><ul class="row-tags"><li>Compra de Imóvel</li><li>Jeonse</li><li>Disputas de Locação</li></ul></li>
+      <li class="row rv"><span class="row-no">02</span><h3 class="row-title">Direito de Família e Divórcio</h3><p class="row-desc">Divórcio internacional, guarda de filhos, herança e pensão alimentícia para cidadãos estrangeiros e casais de nacionalidade mista na Coreia.</p><ul class="row-tags"><li>Divórcio</li><li>Guarda</li><li>Herança</li></ul></li>
+      <li class="row rv"><span class="row-no">03</span><h3 class="row-title">Direito Empresarial e Societário</h3><p class="row-desc">Constituição de empresas, elaboração de contratos, disputas trabalhistas e fusões e aquisições para investidores estrangeiros, empreendedores e empresas latino-americanas que entram na Coreia.</p><ul class="row-tags"><li>Constituição</li><li>Contratos</li><li>M&amp;A</li></ul></li>
+      <li class="row rv"><span class="row-no">04</span><h3 class="row-title">Defesa Criminal</h3><p class="row-desc">Representação de cidadãos estrangeiros em processos criminais coreanos. Investigação policial, acusação, julgamento e recurso, explicados no seu idioma em cada etapa.</p><ul class="row-tags"><li>Investigação</li><li>Defesa em Julgamento</li><li>Recurso</li></ul></li>
+      <li class="row rv"><span class="row-no">05</span><h3 class="row-title">Imigração e Vistos</h3><p class="row-desc">Solicitações de visto, prorrogações, indeferimentos e defesa contra deportação. Orientação sobre residência permanente (F-5).</p><ul class="row-tags"><li>Visto / Residência</li><li>Deportação</li><li>F-5 / Residência</li></ul></li>
+    </ol>
   </div>
 </section>
 
-<footer>
-  <div class="footer-logo">Juan W. Hong, Advogado</div>
-  <div class="footer-copy">홍우원 · 법무법인 에스엔케이 (SNK Law Firm), Seul<br>© 2026 juanesq.com</div>
-  <div class="footer-disclaimer">Este site tem caráter meramente informativo e não constitui aconselhamento jurídico. O contato com este escritório não estabelece uma relação advogado-cliente.<br><a href="/guide/pt/">Guias Jurídicos</a> &nbsp;·&nbsp; <a href="/privacy.html#pt">Política de Privacidade</a></div>
+<section class="sec paper" id="latam">
+  <div class="wrap">
+    <div class="latam">
+      <div class="rv">
+        <p class="label"><span class="no">03</span>Para latino-americanos · Para brasileiros</p>
+        <h2 class="h2">Advogado coreano.<br><em>Fala a sua língua.</em><br>Entende a sua cultura.</h2>
+      </div>
+      <div class="rv">
+        <p class="intro latam-1">Sou advogado coreano e falo espanhol. Antes de exercer a advocacia, trabalhei na área de América Latina da POSCO International e fui intérprete de espanhol na Samsung SDS. Morei cinco anos na Argentina.</p>
+        <p class="intro latam-2" lang="pt">Também atendo em português. Morei três anos no Brasil e concluí o ensino médio em São Paulo.</p>
+        <p class="dl-title latam-cl">Clientes De</p>
+        <ul class="countries">
+          <li>Brasil</li>
+          <li>México</li>
+          <li>Colômbia</li>
+          <li>Argentina</li>
+          <li>Chile</li>
+          <li>Peru</li>
+          <li>Venezuela</li>
+          <li>Ecuador</li>
+          <li>+ Todos os países de língua espanhola e portuguesa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label"><span class="no">04</span>Por que Juan</p>
+      <h2 class="h2">Por que os clientes<br><em>trabalham comigo.</em></h2>
+    </div>
+    <div class="why why-dark">
+      <div class="rv"><span class="why-no">i.</span><h3>4 Idiomas</h3><p>Coreano, inglês, espanhol e português, fluente nos quatro. Seu caso é conduzido no idioma em que você se sente mais confortável. Sem intérprete. Sem sentido perdido na tradução.</p></div>
+      <div class="rv"><span class="why-no">ii.</span><h3>Experiência Empresarial</h3><p>Vendas de navios na Hyundai Heavy Industries e energias renováveis na seção de América Latina da POSCO International. Passei anos no lado comercial antes de ler um contrato como advogado.</p></div>
+      <div class="rv"><span class="why-no">iii.</span><h3>Vida no Exterior</h3><p>Cinco anos na Argentina, três no Brasil e o ensino médio em São Paulo. Ser o estrangeiro que não sabe como o sistema funciona não é algo que li num processo.</p></div>
+      <div class="rv"><span class="why-no">iv.</span><h3>Advogado com Visão Tecnológica</h3><p>Eu mesmo desenvolvo as aplicações jurídicas que uso, então a papelada anda com ferramentas e não com espera. Você recebe documentos legíveis e um processo que dá para acompanhar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-cont" id="process">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label"><span class="no">05</span>Como Funciona</p>
+      <h2 class="h2">Do primeiro contato<br>à <em>resolução</em></h2>
+    </div>
+    <ol class="steps">
+      <li class="rv"><span class="step-no">01</span><h3>Contato Inicial</h3><p>Envie uma mensagem em inglês, espanhol ou português. Descreva sua situação. Respondo em até 24 horas.</p></li>
+      <li class="rv"><span class="step-no">02</span><h3>Consultoria</h3><p>Ligação ou reunião de 30 a 60 minutos. Sua situação é analisada, as opções avaliadas e a estratégia discutida, no seu idioma.</p></li>
+      <li class="rv"><span class="step-no">03</span><h3>Contratação</h3><p>Se seguirmos adiante, a contratação é feita com o SNK Law Firm. O escopo e os honorários ficam definidos por escrito antes do início.</p></li>
+      <li class="rv"><span class="step-no">04</span><h3>Resolução</h3><p>O escritório atua por você e eu mantenho você informado no seu idioma conforme o caso avança.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <p class="label rv"><span class="no">06</span>Contato</p>
+        <h2 class="h2 rv">Vamos conversar.<br><em>Em português, inglês ou espanhol.</em></h2>
+        <p class="intro rv">Seja para um assunto jurídico urgente ou apenas para entender suas opções, escreva em inglês, espanhol ou português. O primeiro passo é uma conversa.</p>
+        <ul class="channels rv">
+          <li><span class="ch-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></span><div><span class="ch-label">E-mail</span><div class="ch-val"><a href="mailto:wwhong@snkpartners.com">wwhong@snkpartners.com</a></div></div></li>
+          <li><span class="ch-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8 8 0 0 1-11.7 7.1L3.5 20l1.4-4.9A8 8 0 1 1 20.5 11.5z"/></svg></span><div><span class="ch-label">WhatsApp</span><div class="ch-val"><a href="https://wa.me/821096138897" target="_blank" rel="noopener">wa.me/821096138897</a><span class="ch-note">Toque para abrir o WhatsApp</span></div></div></li>
+          <li><span class="ch-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.2a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.6"/></svg></span><div><span class="ch-label">Localização</span><div class="ch-val">Seul, República da Coreia<span class="ch-note">Consultas por vídeo disponíveis em todo o mundo</span></div></div></li>
+        </ul>
+        <p class="note rv">Você pode escrever em <strong>inglês</strong>, <strong>espanhol</strong> ou <strong>português</strong>. O coreano também é bem-vindo. Todas as comunicações são tratadas diretamente pelo Juan.</p>
+      </div>
+      <div class="panel rv">
+        <p class="panel-title">Envie uma Mensagem</p>
+        <p class="panel-sub">Clique no ícone de e-mail para abrir o Gmail, ou fale diretamente pelo WhatsApp. O Juan responde em inglês, espanhol e português.</p>
+        <div class="mail-row">
+          <span>wwhong@snkpartners.com</span>
+          <div class="acts">
+            <a class="icon-btn" href="https://mail.google.com/mail/?view=cm&to=wwhong@snkpartners.com&su=Legal%20Inquiry%20via%20juanesq.com" target="_blank" rel="noopener" title="Enviar pelo Gmail" aria-label="Enviar pelo Gmail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></a>
+            <button class="icon-btn" type="button" onclick="copyEmail()" title="Copiar endereço de e-mail" aria-label="Copiar endereço de e-mail" id="copy-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button>
+          </div>
+        </div>
+        <a class="wa-row" href="https://wa.me/821096138897" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37a9.8 9.8 0 0 1 15.27-12.1 9.73 9.73 0 0 1 2.87 6.93c0 5.42-4.41 9.83-9.82 9.83zm8.36-18.2A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg><span>WhatsApp · Juan W. Hong</span><em>Conversar Agora →</em></a>
+        <p class="panel-foot">O sigilo profissional advogado-cliente se aplica a todas as comunicações.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper" id="guides">
+  <div class="wrap">
+    <div class="library">
+      <div class="rv">
+        <p class="label"><span class="no">07</span>Guias</p>
+        <h2 class="h2">Para ler mais, antes ou depois de falarmos.</h2>
+        <ul class="shelves">
+          <li><a href="/guide/pt/" hreflang="pt"><b>Português</b><span>Todos os 119 guias</span></a></li>
+          <li><a href="/guide/es/" hreflang="es" lang="es"><b>Español</b><span>119</span></a></li>
+          <li><a href="/guide/" hreflang="en" lang="en"><b>English</b><span>126</span></a></li>
+        </ul>
+        <p class="shelf-note">Criminal, imigração, trabalho, família, habitação e empresa. O arquivo completo (126 guias) está em inglês.</p>
+      </div>
+      <div>
+        <ul class="picks rv">
+          <li><a class="pick" href="/guide/pt/korea-police-rights.html"><span class="pick-cat">Defesa Criminal</span><span class="pick-title">A polícia coreana te chamou</span><span class="pick-desc">Que direitos você tem desde o primeiro minuto e quais perde se não invocar a tempo.</span><svg class="pick-arrow" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14h19M17 8l6 6-6 6"/></svg></a></li>
+          <li><a class="pick" href="/guide/pt/divorce-korea-foreigners.html"><span class="pick-cat">Direito de Família</span><span class="pick-title">Divorciar na Coreia sendo estrangeiro</span><span class="pick-desc">Jurisdição, culpa, divisão de bens, guarda — e o que acontece com o seu visto depois.</span><svg class="pick-arrow" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14h19M17 8l6 6-6 6"/></svg></a></li>
+          <li><a class="pick" href="/guide/pt/visa-overstay-korea-foreigners.html"><span class="pick-cat">Imigração</span><span class="pick-title">Visto vencido na Coreia</span><span class="pick-desc">Começa como infração administrativa. Multas, saída voluntária e ordem de saída ou deportação.</span><svg class="pick-arrow" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14h19M17 8l6 6-6 6"/></svg></a></li>
+          <li><a class="pick" href="/guide/pt/unpaid-wages-korea-foreigners.html"><span class="pick-cat">Direito Trabalhista</span><span class="pick-title">O patrão não pagou o salário</span><span class="pick-desc">Seja qual for o seu visto, dá para cobrar. A denúncia no escritório do trabalho, passo a passo.</span><svg class="pick-arrow" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14h19M17 8l6 6-6 6"/></svg></a></li>
+          <li><a class="pick" href="/guide/pt/jeonse-scam-korea-foreigners.html"><span class="pick-cat">Moradia</span><span class="pick-title">O golpe do depósito jeonse</span><span class="pick-desc">O que olhar na matrícula antes de assinar, e o que fazer quando o locador não devolve.</span><svg class="pick-arrow" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14h19M17 8l6 6-6 6"/></svg></a></li>
+          <li><a class="pick" href="/guide/pt/start-business-korea.html"><span class="pick-cat">Direito Empresarial</span><span class="pick-title">Abrir um negócio na Coreia</span><span class="pick-desc">Visto D-8, capital mínimo, constituição da empresa e os trâmites que quase todos esquecem.</span><svg class="pick-arrow" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14h19M17 8l6 6-6 6"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="/pt/" class="wordmark"><b>Juan W. Hong</b><small>Advogado</small></a>
+        <p class="foot-name">홍우원 · 법무법인 에스엔케이 (SNK Law Firm), Seul</p>
+      </div>
+      <div><h4>juanesq.com</h4><ul><li><a href="#practice">Áreas de Atuação</a></li><li><a href="#about">Perfil</a></li><li><a href="#contact">Contato</a></li></ul></div>
+      <div><h4>Guias Jurídicos</h4><ul><li><a href="/guide/pt/">Português</a></li><li><a href="/guide/es/" lang="es">Español</a></li><li><a href="/guide/" lang="en">English</a></li></ul></div>
+      <div><h4>Idiomas</h4><ul><li><a href="/" lang="en">English</a></li><li><a href="/es/" lang="es">Español</a></li><li><a href="/pt/" lang="pt">Português</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <p>Este site tem caráter meramente informativo e não constitui aconselhamento jurídico. O contato com este escritório não estabelece uma relação advogado-cliente.</p>
+      <p>© 2026 juanesq.com · <a href="/privacy.html#pt" style="color:inherit">Política de Privacidade</a></p>
+    </div>
+  </div>
 </footer>
+
+<div id="floating-cta">
+  <a href="https://wa.me/821096138897" target="_blank" rel="noopener" class="btn btn-line"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37a9.8 9.8 0 0 1 15.27-12.1 9.73 9.73 0 0 1 2.87 6.93c0 5.42-4.41 9.83-9.82 9.83zm8.36-18.2A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>WhatsApp</a>
+  <a href="#contact" class="btn btn-gold">Agendar uma consulta</a>
+</div>
 
 <script>
 function copyEmail(){
@@ -587,13 +414,7 @@ function copyEmail(){
     showCheck();
   }
 }
-const navbar=document.getElementById('navbar');
-window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
-const reveals=document.querySelectorAll('.reveal');
-const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*55);observer.unobserve(entry.target);}});},{threshold:.1});
-reveals.forEach(el=>observer.observe(el));
-function toggleMenu(){const l=document.querySelector('.nav-links');if(l.style.display==='flex'){l.style.display='none';}else{l.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(10,22,40,.98);padding:28px 24px;gap:22px;z-index:99;border-bottom:1px solid rgba(201,168,76,.15);';}}
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});if(window.innerWidth<=1120)document.querySelector('.nav-links').style.display='none';});});
 </script>
+<script src="/js/ui.js" defer></script>
 </body>
 </html>

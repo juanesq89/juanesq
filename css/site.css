@@ -428,3 +428,22 @@ a{color:inherit}
 .cv{grid-template-columns:1fr 1fr}
 .cv .cv-block+.cv-block{margin-top:0}
 @media (max-width:1020px){.cv{grid-template-columns:1fr}.cv .cv-block+.cv-block{margin-top:24px}}
+/* ES/PT: Latin America band + why on navy */
+.latam{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 96px;align-items:start}
+.latam .h2{margin-top:22px}
+.latam-2{margin-top:18px;font-size:16px}
+.latam-cl{margin-top:40px;color:var(--gold-ink);border-color:var(--rule-p)}
+.countries{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--rule-p)}
+.countries li{padding:14px 16px;border-right:1px solid var(--rule-p);border-bottom:1px solid var(--rule-p);font-family:var(--serif);font-size:21px;font-weight:600;color:var(--navy);line-height:1.2}
+.countries li:last-child{grid-column:1/-1;font-family:var(--sans);font-size:14px;font-weight:500;color:var(--text-2)}
+.why-dark{border-top-color:var(--rule)}
+.why-dark>div+div{border-left-color:var(--rule-2)}
+.why-dark .why-no{color:var(--gold)}
+.why-dark h3{color:var(--ivory)}
+.why-dark p{color:var(--ivory-2)}
+.shelf-note{margin-top:22px;font-size:14px;line-height:1.6;color:var(--text-2)}
+@media (max-width:1160px){.why-dark>div:nth-child(n+3){border-top-color:var(--rule-2)}}
+@media (max-width:1020px){.latam{grid-template-columns:1fr}}
+@media (max-width:640px){.countries{grid-template-columns:1fr 1fr}.countries li{font-size:19px}.why-dark>div,.why-dark>div+div{border-top-color:var(--rule-2)}}
+.h1--long{font-size:clamp(42px,5.3vw,68px)}
+@media (max-width:640px){.h1--long{font-size:39px}}
