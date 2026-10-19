@@ -306,7 +306,7 @@ a{color:inherit}
 .seq-stage{position:relative;padding:136px 0 120px}
 .seq-stage>.wrap{width:100%}
 .seq .label{margin-bottom:44px}
-.seq-h{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7.4vw,124px);line-height:.96;letter-spacing:-.034em;color:var(--ivory);font-variation-settings:'opsz' 30;font-variant-numeric:lining-nums}
+.seq-h{font-family:var(--serif);font-weight:400;font-size:clamp(44px,8.4vw,132px);line-height:.96;letter-spacing:-.034em;color:var(--ivory);font-variation-settings:'opsz' 30;font-variant-numeric:lining-nums}
 .seq-l{display:block;padding:.04em 0}
 .seq-l:nth-child(2){padding-left:1.1em}
 .seq-l:nth-child(3){padding-left:2.2em;font-style:italic}
