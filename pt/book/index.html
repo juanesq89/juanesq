@@ -209,10 +209,6 @@
         <button class="jf-submit" type="submit" id="bk-submit">Pedir agendamento</button>
         <div class="jf-msg" id="bk-result" role="status" aria-live="polite"></div>
       </form>
-      <div class="bk-pay" id="bk-pay-after" hidden>
-        <h3>Depois, pague para confirmar</h3>
-        <div class="bk-paybox"></div>
-      </div>
       <p class="bk-note">Não sabe se eu atuo no seu tipo de caso? Uma mensagem curta pelo <a href="/pt/#contact">formulário de contato</a> é gratuita, e eu digo.</p>
       <p class="panel-foot">A relação advogado-cliente só começa quando o SNK Law Firm aceita o caso por escrito. Uma consulta, por si só, não a cria.</p>
     </div>
@@ -250,7 +246,8 @@
   var LABEL = { phone_video_30: 'Phone/video 30 min — KRW 120,000', in_person_60: 'In person 60 min — KRW 250,000' };
   function show(k, t) { out.className = 'jf-msg ' + k; out.textContent = t; }
 
-  /* /js/booking-config.js 값이 있으면 켠다: 전화·화상은 구글 캘린더 예약 일정, 결제는 페이팔 버튼. 없으면 신청서만. */
+  /* /js/booking-config.js 값이 있으면 켠다: 전화·화상은 구글 캘린더 예약 일정, 결제는 페이팔 버튼. 없으면 신청서만.
+     페이팔 버튼은 캘린더로 시간이 실제로 잡히는 경우에만 보인다 — 신청서(시간 미확정)는 확정 메일에서 결제 안내. */
   var C = window.JQ_BOOKING || {}, P = { btn: 'Pagar {usd} com PayPal', none: 'Os dados de pagamento (transferência, ou Wise do exterior) chegam por e-mail em até um dia útil.', note: 'O PayPal cobra em dólares americanos ({usd}), o equivalente a {krw}.' };
   var KRW = { phone_video_30: '₩120.000', in_person_60: '₩250.000' };
   var USD = { phone_video_30: (C.priceUSD || {}).phone, in_person_60: (C.priceUSD || {}).inperson };
@@ -292,7 +289,6 @@
         if (r && r.success) {
           if (window.jqTrack) window.jqTrack('generate_lead', { method: 'booking', consult_type: type });
           form.reset(); document.querySelector('input[name="consult"][value="' + type + '"]').checked = true; show('ok', M.ok);
-          var after = document.getElementById('bk-pay-after'); after.querySelector('.bk-paybox').innerHTML = payHTML(type); after.hidden = false;
         } else show('err', M.send);
       })
       .catch(function () { show('err', M.send); })
