@@ -34,6 +34,19 @@
 <link href="/css/site.css?v=15" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
+.bk-prep{margin-top:56px;max-width:760px}
+.bk-prep-body{margin-top:14px;font-size:16.5px;line-height:1.7;color:var(--ivory-2)}
+.bk-prep ul{margin-top:14px;padding-left:20px}
+.bk-prep li{font-size:15px;line-height:1.75;color:var(--ivory-2)}
+.bk-frame{margin-top:8px;background:#fff;border:1px solid var(--rule-2)}
+.bk-frame iframe{display:block;width:100%;height:640px;border:0}
+.bk-pay{margin-top:26px;padding-top:24px;border-top:1px solid var(--rule)}
+.bk-pay h3{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--ivory)}
+.bk-pay p{margin-top:8px;font-size:15px;line-height:1.65;color:var(--ivory-2)}
+.bk-paybtn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;margin-top:16px;padding:0 26px;background:var(--seal-deep);color:var(--on-seal,#fff);font-size:15px;font-weight:600;text-decoration:none}
+.bk-paybtn:hover{background:var(--seal-hover)}
+.bk-paynote{font-size:13px!important;color:var(--ivory-3)!important}
+[hidden]{display:none!important}
 .bk-hero{padding:168px 0 72px;background:var(--navy);color:var(--ivory)}
 .bk-hero .h2{margin-top:18px}
 .bk-intro{max-width:620px;margin-top:22px;font-size:18px;line-height:1.7;color:var(--ivory-2)}
@@ -109,7 +122,7 @@
         <span class="bk-plan-k">30 minutes</span>
         <span class="bk-plan-t">Phone or video</span>
         <span class="bk-plan-p">₩120,000</span>
-        <span class="bk-plan-d">Zoom, Google Meet, WhatsApp call or phone. Wherever you are.</span>
+        <span class="bk-plan-d">Google Meet by default: a link that opens in your browser, nothing to install, from any country. WhatsApp or a phone call if you prefer.</span>
       </label>
       <label class="bk-plan">
         <input type="radio" name="consult" value="in_person_60" form="bk-form">
@@ -124,10 +137,38 @@
     <div style="margin-top:56px">
       <p class="label">How it works</p>
       <ol class="bk-steps">
-        <li><b><span>01</span>Request a time</b><p>Choose the type of consultation and give two or three times that suit you.</p></li>
+        <li><b><span>01</span>Choose a time</b><p>Pick a free slot in my calendar. For an in-person meeting, give two or three times that suit you.</p></li>
         <li><b><span>02</span>Payment details by e-mail</b><p>I reply within one business day to confirm a time and send payment details.</p></li>
         <li><b><span>03</span>Confirmed once paid</b><p>The booking is confirmed when payment arrives. A time left unpaid for 24 hours is released.</p></li>
       </ol>
+    </div>
+    <div class="bk-prep">
+      <p class="label">Before the consultation</p>
+      <p class="bk-prep-body">Once your booking is confirmed, please send me the full story and every document you have by e-mail, at least one business day before we speak. The more I have read beforehand, the more of our time goes to answers rather than questions — and the more precise those answers can be.</p>
+      <ul>
+        <li>A timeline of what happened, in your own words</li>
+        <li>Contracts, notices, letters and anything you have signed</li>
+        <li>Court, police, prosecution or immigration papers</li>
+        <li>Messages, e-mails and receipts that matter to the story</li>
+        <li>Your residence card or visa details, if your status is involved</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bk-form" id="schedule" hidden>
+  <div class="wrap">
+    <div class="panel">
+      <p class="panel-title">Choose a time</p>
+      <p class="panel-sub">Free slots in my calendar, shown in your own time zone. You will receive a calendar invitation with the Google Meet link.</p>
+      <div class="bk-frame"><iframe id="bk-cal" title="Choose a time" loading="lazy"></iframe></div>
+      <p class="bk-note"><a id="bk-cal-open" href="#" target="_blank" rel="noopener">Calendar not showing? Open it in a new tab.</a></p>
+      <div class="bk-pay" data-plan="phone_video_30">
+        <h3>Then pay to confirm</h3>
+        <p>The slot is held for 24 hours and confirmed once payment arrives. Pay by PayPal (card accepted) or by bank transfer — from abroad, Wise is the cheapest way; bank details come by e-mail.</p>
+        <div class="bk-paybox"></div>
+      </div>
+      <p class="bk-note">Not sure whether your matter is one I handle? A short message through the <a href="/#contact">contact form</a> is free, and I will tell you.</p>
     </div>
   </div>
 </section>
@@ -168,6 +209,10 @@
         <button class="jf-submit" type="submit" id="bk-submit">Request booking</button>
         <div class="jf-msg" id="bk-result" role="status" aria-live="polite"></div>
       </form>
+      <div class="bk-pay" id="bk-pay-after" hidden>
+        <h3>Then pay to confirm</h3>
+        <div class="bk-paybox"></div>
+      </div>
       <p class="bk-note">Not sure whether your matter is one I handle? A short message through the <a href="/#contact">contact form</a> is free, and I will tell you.</p>
       <p class="panel-foot">A lawyer–client relationship begins only once SNK Law Firm accepts the matter in writing. A consultation does not by itself create one.</p>
     </div>
@@ -194,6 +239,7 @@
 </footer>
 
 <script src="/js/ui.js?v=9" defer></script>
+<script src="/js/booking-config.js"></script>
 <script>
 /* 유료 상담 예약 신청 — 문의 폼과 같은 Web3Forms 키로 wwhong@snkpartners.com에 메일 전송.
    결제 안내(계좌 등)는 페이지에 쓰지 않고 답장 메일로만 보낸다. */
@@ -203,6 +249,27 @@
   var M = { fill: 'Please fill in every required field.', agree: 'Please tick both boxes before sending.', send: 'Could not send right now. Please try again, or write to wwhong@snkpartners.com.', ok: 'Thank you — your request has been sent. I will reply by e-mail within one business day with a confirmed time and payment details.', sending: 'Sending…' };
   var LABEL = { phone_video_30: 'Phone/video 30 min — KRW 120,000', in_person_60: 'In person 60 min — KRW 250,000' };
   function show(k, t) { out.className = 'jf-msg ' + k; out.textContent = t; }
+
+  /* /js/booking-config.js 값이 있으면 켠다: 전화·화상은 구글 캘린더 예약 일정, 결제는 페이팔 버튼. 없으면 신청서만. */
+  var C = window.JQ_BOOKING || {}, P = { btn: 'Pay {usd} with PayPal', none: 'Payment details (bank transfer, or Wise from abroad) come by e-mail within one business day.', note: 'PayPal charges in US dollars ({usd}), the equivalent of {krw}.' };
+  var KRW = { phone_video_30: '₩120,000', in_person_60: '₩250,000' };
+  var USD = { phone_video_30: (C.priceUSD || {}).phone, in_person_60: (C.priceUSD || {}).inperson };
+  var sched = document.getElementById('schedule'), req = document.getElementById('request'), cal = document.getElementById('bk-cal');
+  function cur() { return (document.querySelector('input[name="consult"]:checked') || {}).value || 'phone_video_30'; }
+  function payHTML(type) {
+    if (!C.paypalMe || !USD[type]) return '<p>' + P.none + '</p>';
+    var usd = 'US$' + USD[type], url = 'https://www.paypal.com/paypalme/' + encodeURIComponent(C.paypalMe) + '/' + USD[type] + 'USD';
+    return '<a class="bk-paybtn" href="' + url + '" target="_blank" rel="noopener">' + P.btn.replace('{usd}', usd) + '</a>' +
+      '<p class="bk-paynote">' + P.note.replace('{usd}', usd).replace('{krw}', KRW[type]) + '</p><p class="bk-paynote">' + P.none + '</p>';
+  }
+  function update() {
+    var type = cur(), useCal = !!C.googleSchedule && type === 'phone_video_30';
+    sched.hidden = !useCal; req.hidden = useCal;
+    if (useCal && !cal.src) { cal.src = C.googleSchedule + (C.googleSchedule.indexOf('?') < 0 ? '?' : '&') + 'gv=true'; document.getElementById('bk-cal-open').href = C.googleSchedule; }
+    document.querySelectorAll('#schedule .bk-paybox').forEach(function (b) { b.innerHTML = payHTML('phone_video_30'); });
+  }
+  document.querySelectorAll('input[name="consult"]').forEach(function (r) { r.addEventListener('change', update); });
+  update();
   form.addEventListener('submit', function (e) {
     e.preventDefault(); out.className = 'jf-msg';
     if (['bk-name', 'bk-email', 'bk-where', 'bk-matter', 'bk-times', 'bk-sum'].some(function (id) { return !(document.getElementById(id).value || '').trim(); })) return show('err', M.fill);
@@ -224,7 +291,8 @@
       .then(function (r) {
         if (r && r.success) {
           if (window.jqTrack) window.jqTrack('generate_lead', { method: 'booking', consult_type: type });
-          form.reset(); show('ok', M.ok);
+          form.reset(); document.querySelector('input[name="consult"][value="' + type + '"]').checked = true; show('ok', M.ok);
+          var after = document.getElementById('bk-pay-after'); after.querySelector('.bk-paybox').innerHTML = payHTML(type); after.hidden = false;
         } else show('err', M.send);
       })
       .catch(function () { show('err', M.send); })
