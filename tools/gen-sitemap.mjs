@@ -88,6 +88,11 @@ add(`${SITE}/guide/pt/`, 'guide/pt/index.html', '0.8', 'weekly', HUB_ALTS)
 
 add(`${SITE}/privacy.html`, 'privacy.html', '0.3', 'yearly', null)
 
+const BOOK_ALTS = { en: `${SITE}/book/`, es: `${SITE}/es/book/`, pt: `${SITE}/pt/book/` }
+add(`${SITE}/book/`, 'book/index.html', '0.8', 'monthly', BOOK_ALTS)
+add(`${SITE}/es/book/`, 'es/book/index.html', '0.7', 'monthly', BOOK_ALTS)
+add(`${SITE}/pt/book/`, 'pt/book/index.html', '0.7', 'monthly', BOOK_ALTS)
+
 for (const slug of en) {
   const alts = { en: `${SITE}/guide/${slug}.html` }
   if (es.has(slug)) alts.es = `${SITE}/guide/es/${slug}.html`
