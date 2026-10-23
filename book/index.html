@@ -46,6 +46,7 @@
 .bk-paybtn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;margin-top:16px;padding:0 26px;background:var(--seal-deep);color:var(--on-seal,#fff);font-size:15px;font-weight:600;text-decoration:none}
 .bk-paybtn:hover{background:var(--seal-hover)}
 .bk-paynote{font-size:13px!important;color:var(--ivory-3)!important}
+.bk-bt{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;margin-top:14px;max-width:760px}.bk-bt .jf-input{min-height:52px}.bk-bt button{min-height:52px;padding:0 22px;border:0;background:var(--seal-deep);color:var(--on-seal,#fff);font-family:var(--sans);font-size:15px;font-weight:600;cursor:pointer}.bk-bt button:hover{background:var(--seal-hover)}.bk-bt button:disabled{opacity:.6;cursor:default}.bk-bt-msg{margin-top:10px;font-size:14px;line-height:1.6;color:var(--ivory-2)}@media(max-width:760px){.bk-bt{grid-template-columns:1fr}}
 [hidden]{display:none!important}
 .bk-hero{padding:168px 0 72px;background:var(--navy);color:var(--ivory)}
 .bk-hero .h2{margin-top:18px}
@@ -237,27 +238,31 @@
 <script src="/js/ui.js?v=9" defer></script>
 <script src="/js/booking-config.js"></script>
 <script>
-/* 유료 상담 예약 신청 — 문의 폼과 같은 Web3Forms 키로 wwhong@snkpartners.com에 메일 전송.
-   결제 안내(계좌 등)는 페이지에 쓰지 않고 답장 메일로만 보낸다. */
+/* 유료 상담 예약 신청 — preverdict 서버(/api/jq-book)가 변호사 메일 + 신청자 입금 안내 메일(이 언어)을 보낸다.
+   서버가 안 되면 문의 폼과 같은 Web3Forms 키로 변호사에게만 보낸다(그때는 직접 답장).
+   계좌 등 결제 정보는 페이지에 쓰지 않고 메일로만 보낸다. */
 (function () {
   var KEY = '22c217af-88e9-48dc-ae74-06da43e6c315';
+  var API = 'https://www.preverdict.net/api/jq-book', LANG = 'en';
   var form = document.getElementById('bk-form'), btn = document.getElementById('bk-submit'), out = document.getElementById('bk-result');
-  var M = { fill: 'Please fill in every required field.', agree: 'Please tick both boxes before sending.', send: 'Could not send right now. Please try again, or write to wwhong@snkpartners.com.', ok: 'Thank you — your request has been sent. I will reply by e-mail within one business day with a confirmed time and payment details.', sending: 'Sending…' };
+  var M = { fill: 'Please fill in every required field.', agree: 'Please tick both boxes before sending.', send: 'Could not send right now. Please try again, or write to wwhong@snkpartners.com.', ok: 'Thank you — your request has been sent. Payment details are on their way to your e-mail (please check spam if you don\'t see it), and I will reply within one business day to confirm a time.', ok2: 'Thank you — your request has been sent. I will reply by e-mail within one business day with a confirmed time and payment details.', sending: 'Sending…' };
   var LABEL = { phone_video_30: 'Phone/video 30 min — KRW 120,000', in_person_60: 'In person 60 min — KRW 250,000' };
   function show(k, t) { out.className = 'jf-msg ' + k; out.textContent = t; }
 
   /* /js/booking-config.js 값이 있으면 켠다: 전화·화상은 구글 캘린더 예약 일정, 결제는 페이팔 버튼. 없으면 신청서만.
      페이팔 버튼은 캘린더로 시간이 실제로 잡히는 경우에만 보인다 — 신청서(시간 미확정)는 확정 메일에서 결제 안내. */
-  var C = window.JQ_BOOKING || {}, P = { btn: 'Pay {usd} with PayPal', none: 'Payment details (bank transfer, or Wise from abroad) come by e-mail within one business day.', note: 'PayPal charges in US dollars ({usd}), the equivalent of {krw}.' };
+  var C = window.JQ_BOOKING || {}, P = { btn: 'Pay {usd} with PayPal', none: 'Paying by bank transfer, or Wise from abroad? Enter the name and e-mail you booked with and the bank details arrive by e-mail straight away.', note: 'PayPal charges in US dollars ({usd}), the equivalent of {krw}.' };
+  var BT = '<form class="bk-bt" novalidate><input class="jf-input" name="name" autocomplete="name" placeholder="Name" aria-label="Name"><input class="jf-input" type="email" name="email" autocomplete="email" placeholder="E-mail" aria-label="E-mail"><button type="submit">E-mail me the bank details</button></form><p class="bk-bt-msg" role="status" aria-live="polite"></p>';
+  var BTM = { ok: 'Sent — please check your e-mail (and spam). Reply to that e-mail once you have paid.', err: 'Could not send right now. Please write to wwhong@snkpartners.com and I will send the details.' };
   var KRW = { phone_video_30: '₩120,000', in_person_60: '₩250,000' };
   var USD = { phone_video_30: (C.priceUSD || {}).phone, in_person_60: (C.priceUSD || {}).inperson };
   var sched = document.getElementById('schedule'), req = document.getElementById('request'), cal = document.getElementById('bk-cal');
   function cur() { return (document.querySelector('input[name="consult"]:checked') || {}).value || 'phone_video_30'; }
   function payHTML(type) {
-    if (!C.paypalMe || !USD[type]) return '<p>' + P.none + '</p>';
+    if (!C.paypalMe || !USD[type]) return '<p>' + P.none + '</p>' + BT;
     var usd = 'US$' + USD[type], url = 'https://www.paypal.com/paypalme/' + encodeURIComponent(C.paypalMe) + '/' + USD[type] + 'USD';
     return '<a class="bk-paybtn" href="' + url + '" target="_blank" rel="noopener">' + P.btn.replace('{usd}', usd) + '</a>' +
-      '<p class="bk-paynote">' + P.note.replace('{usd}', usd).replace('{krw}', KRW[type]) + '</p><p class="bk-paynote">' + P.none + '</p>';
+      '<p class="bk-paynote">' + P.note.replace('{usd}', usd).replace('{krw}', KRW[type]) + '</p><p class="bk-paynote">' + P.none + '</p>' + BT;
   }
   function update() {
     var type = cur(), useCal = !!C.googleSchedule && type === 'phone_video_30';
@@ -265,6 +270,18 @@
     if (useCal && !cal.src) { cal.src = C.googleSchedule + (C.googleSchedule.indexOf('?') < 0 ? '?' : '&') + 'gv=true'; document.getElementById('bk-cal-open').href = C.googleSchedule; }
     document.querySelectorAll('#schedule .bk-paybox').forEach(function (b) { b.innerHTML = payHTML('phone_video_30'); });
   }
+  document.addEventListener('submit', function (e) {
+    var f = e.target; if (!f.classList || !f.classList.contains('bk-bt')) return;
+    e.preventDefault(); var m = f.nextElementSibling, b = f.querySelector('button');
+    var nm = f.querySelector('[name=name]').value.trim(), em = f.querySelector('[name=email]').value.trim();
+    if (!nm || !/^\S+@\S+\.\S+$/.test(em)) { f.querySelector(nm ? '[name=email]' : '[name=name]').focus(); return; }
+    b.disabled = true;
+    fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source: 'calendar', plan: 'phone_video_30', lang: LANG, name: nm, email: em }) })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (r) { if (!r.success || r.mailed === false) throw 0; m.textContent = BTM.ok; if (window.jqTrack) window.jqTrack('generate_lead', { method: 'booking_bank_details' }); })
+      .catch(function () { m.textContent = BTM.err; })
+      .then(function () { b.disabled = false; });
+  });
   document.querySelectorAll('input[name="consult"]').forEach(function (r) { r.addEventListener('change', update); });
   update();
   form.addEventListener('submit', function (e) {
@@ -282,15 +299,22 @@
       botcheck: d.get('botcheck') ? true : false,
       fee_acknowledged: 'yes', consent: 'Agreed to Privacy Policy (rev. 2026-09-13), incl. transfer to Web3Forms (US)', consent_at: new Date().toISOString()
     };
+    var LG = { 'English': 'en', 'Español': 'es', 'Português': 'pt' }[d.get('language')] || LANG;
+    var api = { source: 'form', plan: type, lang: LG, name: d.get('name'), email: d.get('email'), phone: d.get('phone') || '', where: d.get('where'), language: d.get('language'),
+      matter: d.get('matter'), times: d.get('times'), summary: d.get('summary'), hp: d.get('botcheck') ? '1' : '' };
     btn.disabled = true; var label = btn.textContent; btn.textContent = M.sending;
-    fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
-      .then(function (r) { return r.json(); })
-      .then(function (r) {
-        if (r && r.success) {
-          if (window.jqTrack) window.jqTrack('generate_lead', { method: 'booking', consult_type: type });
-          form.reset(); document.querySelector('input[name="consult"][value="' + type + '"]').checked = true; show('ok', M.ok);
-        } else show('err', M.send);
-      })
+    function done(msg) {
+      if (window.jqTrack) window.jqTrack('generate_lead', { method: 'booking', consult_type: type });
+      form.reset(); document.querySelector('input[name="consult"][value="' + type + '"]').checked = true; show('ok', msg);
+    }
+    function web3() {
+      return fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
+        .then(function (r) { return r.json(); })
+        .then(function (r) { if (r && r.success) done(M.ok2); else show('err', M.send); });
+    }
+    fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(api) })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (r) { if (!r.success) throw 0; done(r.mailed === false ? M.ok2 : M.ok); }, web3)
       .catch(function () { show('err', M.send); })
       .then(function () { btn.disabled = false; btn.textContent = label; });
   });
