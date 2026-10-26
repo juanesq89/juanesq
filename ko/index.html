@@ -56,11 +56,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
 <link href="/css/site.css?v=19" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 /* 한국어 페이지: 사이트의 한글 명조는 이름 몇 자만 담은 부분 폰트라 본문 제목에는 전체 폰트를 쓴다 */
 :root{--serif:'Piazzolla','Noto Serif KR','AppleMyungjo','Batang',serif}
-.ko .h2{line-height:1.25;letter-spacing:-.02em}
-.ko .h2 em{font-style:normal;opacity:.72}
+/* 한글 본문은 고딕(Pretendard). 명조는 제목에만, 크기를 줄여 이력 칸과 같은 결로 */
+.ko{--sans:'Archivo','Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif}
+.ko .h2,.ko .about-hero .h2,.ko .letter-body .h2{font-size:clamp(32px,3.8vw,54px);font-weight:500;line-height:1.2;letter-spacing:-.035em}
+.ko .h2 em{display:block;margin-top:16px;font-family:var(--sans);font-style:normal;font-size:clamp(18px,1.55vw,22px);font-weight:500;line-height:1.5;letter-spacing:-.01em;color:var(--ivory-3)}
+.ko .paper .h2 em{color:var(--text-2)}
+.ko .letter-body .h2{margin-bottom:32px}
+.ko .letter-text p{font-family:var(--sans);font-size:17px;line-height:1.85;letter-spacing:-.005em;color:var(--ivory-2);max-width:34em}
+.ko .letter-text p.first{color:var(--ivory)}
+.ko #career{padding:96px 0 136px}
+.ko #read{border-top:1px solid rgba(0,0,0,.1)}
+@media (max-width:860px){.ko #career{padding:80px 0 96px}.ko .letter-text p{font-size:16px}}
 .why-3{grid-template-columns:repeat(3,1fr)}
 @media (max-width:860px){.why-3{grid-template-columns:1fr}.ko-links a{flex-direction:column;gap:4px}}
 .ko-links{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid currentColor}
@@ -78,8 +88,8 @@
   <div class="wrap">
     <a href="/ko/" class="wordmark" aria-label="홍우원 변호사"><b>Juan W. Hong</b><small>홍우원 변호사 · 법무법인 에스엔케이</small></a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#who">이런 일</a></li>
       <li><a href="#career">이력</a></li>
+      <li><a href="#who">이런 일</a></li>
       <li><a href="#read">한국어 글</a></li>
       <li><a href="#contact">상담</a></li>
     </ul>
@@ -105,7 +115,7 @@
       </figure>
       <div class="letter-body">
         <p class="label">한국어 · 홍우원 변호사</p>
-        <h1 class="h2">홍우원 변호사.<br><em>스페인어·포르투갈어로 직접 상담합니다.</em></h1>
+        <h1 class="h2">홍우원 변호사.<em>스페인어·포르투갈어로 직접 상담합니다.</em></h1>
         <div class="letter-text">
           <p class="first">경제학을 공부했고, 변호사가 되기 전에는 현대중공업과 포스코인터내셔널에서 숫자와 계약서로 일했습니다. 아르헨티나와 브라질에서 살았고 상파울루에서 고등학교를 다녀, 영어·스페인어·포르투갈어를 원어민 수준으로 씁니다.</p>
           <p>지금은 서울의 법무법인 에스엔케이에서 일합니다. 한국어·영어·스페인어·포르투갈어 중 편한 말로, 통역 없이 상담합니다.</p>
@@ -127,37 +137,8 @@
               <li>대한변호사협회 · 서울지방변호사회</li>
             </ul>
           </div>
-          <div>
-            <p class="dl-title">학력</p>
-            <ul class="dl creds">
-              <li>고려대학교 경제학과</li>
-              <li>The American School of São Paulo</li>
-            </ul>
-          </div>
-          <div>
-            <p class="dl-title">변호사가 되기 전</p>
-            <ul class="dl creds">
-              <li>포스코인터내셔널 · 중남미 신재생에너지 사업</li>
-              <li>현대중공업 · 선박 영업</li>
-              <li>삼성SDS · 스페인어 통역</li>
-              <li>카투사 · 미 육군 142 헌병중대</li>
-            </ul>
-          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec paper" id="who">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <p class="label"><span class="no">01</span>이런 일로 연락을 받습니다</p>
-    </div>
-    <div class="why why-3">
-      <div class="rv"><span class="why-no">i.</span><h3>가족이 스페인어·포르투갈어를 쓸 때</h3><p>국제결혼, 이혼, 양육, 상속처럼 배우자나 가족이 직접 설명을 듣고 서류를 이해해야 하는 일. 한국인 가족과 외국인 가족에게 같은 내용을 각자의 말로 설명합니다.</p></div>
-      <div class="rv"><span class="why-no">ii.</span><h3>회사에 중남미 직원이나 거래처가 있을 때</h3><p>근로계약, 체류자격, 임금·해고 문제, 거래 분쟁. 회사 입장을 한국어로 듣고, 상대에게 전할 내용은 그 사람의 언어로 정리합니다.</p></div>
-      <div class="rv"><span class="why-no">iii.</span><h3>한국에서 일이 생긴 지인을 도울 때</h3><p>경찰 조사, 비자 문제, 출국정지처럼 시간이 급한 일. 본인과 통역 없이 바로 이야기할 수 있어 첫 연락부터 사정을 빨리 파악합니다.</p></div>
     </div>
   </div>
 </section>
@@ -166,7 +147,7 @@
   <div class="wrap">
     <div class="cv">
       <div class="cv-block rv">
-        <p class="label"><span class="no">02</span>이력</p>
+        <p class="label"><span class="no">01</span>이력</p>
         <ul class="cv-list">
           <li><span class="cv-when">현재</span><div><div class="cv-role">변호사</div><div class="cv-org">법무법인 에스엔케이 · 서울</div></div></li>
           <li><span class="cv-when">이전</span><div><div class="cv-role">중남미 신재생에너지 사업</div><div class="cv-org">포스코인터내셔널</div></div></li>
@@ -176,12 +157,25 @@
         </ul>
       </div>
       <div class="cv-block rv">
-        <p class="label"><span class="no">03</span>학력</p>
+        <p class="label"><span class="no">02</span>학력</p>
         <ul class="cv-list">
           <li><span class="cv-when">대학</span><div><div class="cv-role">고려대학교</div><div class="cv-org">경제학과</div></div></li>
           <li><span class="cv-when">고교</span><div><div class="cv-role">The American School of São Paulo</div><div class="cv-org">브라질 상파울루</div></div></li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper" id="who">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label"><span class="no">03</span>이런 일로 연락을 받습니다</p>
+    </div>
+    <div class="why why-3">
+      <div class="rv"><span class="why-no">i.</span><h3>가족이 스페인어·포르투갈어를 쓸 때</h3><p>국제결혼, 이혼, 양육, 상속처럼 배우자나 가족이 직접 설명을 듣고 서류를 이해해야 하는 일. 한국인 가족과 외국인 가족에게 같은 내용을 각자의 말로 설명합니다.</p></div>
+      <div class="rv"><span class="why-no">ii.</span><h3>회사에 중남미 직원이나 거래처가 있을 때</h3><p>근로계약, 체류자격, 임금·해고 문제, 거래 분쟁. 회사 입장을 한국어로 듣고, 상대에게 전할 내용은 그 사람의 언어로 정리합니다.</p></div>
+      <div class="rv"><span class="why-no">iii.</span><h3>한국에서 일이 생긴 지인을 도울 때</h3><p>경찰 조사, 비자 문제, 출국정지처럼 시간이 급한 일. 본인과 통역 없이 바로 이야기할 수 있어 첫 연락부터 사정을 빨리 파악합니다.</p></div>
     </div>
   </div>
 </section>
@@ -204,7 +198,7 @@
 
 <section class="closing" id="contact">
   <div class="wrap">
-    <h2 class="h2">상담 예약<br><em>한국어로 적어 주셔도 됩니다.</em></h2>
+    <h2 class="h2">상담 예약<em>한국어로 적어 주셔도 됩니다.</em></h2>
     <div class="hero-actions">
       <a href="/book/" class="btn btn-gold">상담 예약 신청</a>
     </div>
@@ -219,7 +213,7 @@
         <a href="/ko/" class="wordmark"><b>Juan W. Hong</b><small>홍우원 변호사</small></a>
         <p class="foot-name">홍우원 · 법무법인 에스엔케이, 서울</p>
       </div>
-      <div><h4>사이트</h4><ul><li><a href="#who">이런 일</a></li><li><a href="#career">이력</a></li><li><a href="#contact">상담</a></li></ul></div>
+      <div><h4>사이트</h4><ul><li><a href="#career">이력</a></li><li><a href="#who">이런 일</a></li><li><a href="#contact">상담</a></li></ul></div>
       <div><h4>가이드</h4><ul><li><a href="/guide/" lang="en">English</a></li><li><a href="/guide/es/" lang="es">Español</a></li><li><a href="/guide/pt/" lang="pt">Português</a></li></ul></div>
       <div><h4>언어</h4><ul><li><a href="/" lang="en">English</a></li><li><a href="/es/" lang="es">Español</a></li><li><a href="/pt/" lang="pt">Português</a></li><li><a href="/ko/" aria-current="page">한국어</a></li></ul></div>
     </div>
