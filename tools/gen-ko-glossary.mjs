@@ -50,6 +50,8 @@ const GROUPS = [
     ['영주권 (F-5)', 'Permanent residency', 'Residencia permanente', 'Residência permanente', 'permanent-residency-korea-foreigners'],
     ['강제퇴거 · 출국명령', 'Deportation · Departure order', 'Deportación · Orden de salida', 'Deportação · Ordem de saída', 'deportation-entry-ban-korea-foreigners'],
     ['불법체류 (체류기간 초과)', 'Visa overstay', 'Visa vencida', 'Visto vencido', 'visa-overstay-korea-foreigners'],
+    ['외국인등록', 'Alien registration', 'Registro de extranjería', 'Registro de estrangeiro', 'alien-registration-address-reporting-korea-foreigners'],
+    ['재입국허가', 'Re-entry permit', 'Permiso de reingreso', 'Permissão de reentrada', 're-entry-permit-korea-foreigners'],
   ]],
   ['노동', [
     ['부당해고', 'Unfair dismissal', 'Despido improcedente', 'Demissão sem justa causa', 'wrongful-termination-korea-foreigners'],
