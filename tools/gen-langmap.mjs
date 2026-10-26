@@ -176,9 +176,9 @@ function build(M) {
 
 const LIVED = { sp: [-46.63, -23.55], ba: [-58.38, -34.60] }
 const I18N = {
-  en: { seoul: 'SEOUL', sp: ['São Paulo', 'lived 3 yrs'], ba: ['Buenos Aires', 'lived 5 yrs'] },
-  es: { seoul: 'SEÚL', sp: ['São Paulo', 'viví 3 años'], ba: ['Buenos Aires', 'viví 5 años'] },
-  pt: { seoul: 'SEUL', sp: ['São Paulo', 'morei 3 anos'], ba: ['Buenos Aires', 'morei 5 anos'] }
+  en: { seoul: 'SEOUL', sp: ['São Paulo', 'lived here'], ba: ['Buenos Aires', 'lived here'] },
+  es: { seoul: 'SEÚL', sp: ['São Paulo', 'viví aquí'], ba: ['Buenos Aires', 'viví aquí'] },
+  pt: { seoul: 'SEUL', sp: ['São Paulo', 'morei aqui'], ba: ['Buenos Aires', 'morei aqui'] }
 }
 // zero-length segments with round caps = dots; relative moves keep it small
 const dots = arr => { let s = '', px = 0, py = 0; for (const [x, y] of arr) { s += (s ? 'm' + r1(x - px) + ' ' + r1(y - py) : 'M' + x + ' ' + y) + 'h0'; px = x; py = y } return s }

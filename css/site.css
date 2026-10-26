@@ -161,7 +161,7 @@ a{color:inherit}
 .signoff{margin-top:28px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .signoff .sig{font-size:15px;font-weight:600;letter-spacing:.01em;color:var(--ivory)}
 .signoff .sig-sub{font-size:14px;font-weight:500;color:var(--ivory-3);line-height:1.5}
-.letter-meta{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:56px}
+.letter-meta{display:grid;grid-template-columns:1fr 1fr;gap:36px 48px;margin-top:56px}
 .dl-title{font-size:13px;font-weight:600;font-stretch:88%;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-2);padding-bottom:12px;border-bottom:1px solid var(--rule)}
 .dl{list-style:none}
 .dl li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule-2);font-size:15px;color:var(--ivory-2)}
