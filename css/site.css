@@ -451,7 +451,7 @@ br.mb{display:none}
   .hero--lm .h1 .ln>span{animation:lm-rise 1.2s .32s var(--expo) both}
   .hero--lm .h1 .dot-s{display:inline-block;transform-origin:50% 80%;animation:lm-land .9s calc(var(--lm-end,5660ms) - 200ms) var(--expo) both}
   .hero-legend li{animation:lm-dim .6s ease-out both}
-  .hero-legend .lk-es{animation-delay:.8s}.hero-legend .lk-pt{animation-delay:2.75s}.hero-legend .lk-en{animation-delay:3.7s}.hero-legend .lk-ko{animation-delay:4.3s}
+  .hero-legend .lk-en{animation-delay:.8s}.hero-legend .lk-es{animation-delay:1.7s}.hero-legend .lk-pt{animation-delay:3.5s}.hero-legend .lk-ko{animation-delay:5.3s}
   .hero-row{animation:lm-up .9s .75s var(--expo) both}
 }
 @keyframes lm-fade{from{opacity:0}}

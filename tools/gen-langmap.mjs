@@ -145,10 +145,11 @@ function build(M) {
     if (!xy || xy[0] < 0 || xy[0] > W || xy[1] < 0 || xy[1] > H) continue
     items.push({ id, k, name, lon, lat, xy, gd: geoDistance([lon, lat], SEOUL) })
   }
-  // three tides, Spanish → Portuguese → English; inside each tide the farthest place flies first
-  const TIDE = { es: { at: 800, step: 82 }, pt: { at: 2750, step: 105 }, en: { at: 3700, step: 120 } }
-  if (M.key === 'ph') { TIDE.es.step = 92; TIDE.pt.step = 160; TIDE.en.step = 200 }
-  const ORDER = { es: 0, pt: 1, en: 2 }
+  // three tides, English → Spanish → Portuguese (same order as the hero legend; Korean = Seoul lights last); inside each
+  // tide the farthest place flies first. css/site.css .hero-legend delays follow TIDE.at (desktop) — change both together.
+  const TIDE = { en: { at: 800, step: 120 }, es: { at: 1700, step: 82 }, pt: { at: 3500, step: 105 } }
+  if (M.key === 'ph') { TIDE.en.step = 200; TIDE.es.at = 2000; TIDE.es.step = 92; TIDE.pt.at = 3900; TIDE.pt.step = 160 }
+  const ORDER = { en: 0, es: 1, pt: 2 }
   items.sort((a, b) => ORDER[a.k] - ORDER[b.k] || b.gd - a.gd)
   const seen = { es: 0, pt: 0, en: 0 }
   const hash = n => { let h = n * 2654435761 % 4294967296; return (h / 4294967296) }
