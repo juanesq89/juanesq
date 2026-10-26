@@ -75,10 +75,11 @@ const entries = []
 const add = (loc, file, priority, changefreq, alts) =>
   entries.push({ loc, lastmod: lastmodOf(file), priority, changefreq, alts })
 
-const HOME_ALTS = { en: `${SITE}/`, es: `${SITE}/es/`, pt: `${SITE}/pt/` }
+const HOME_ALTS = { en: `${SITE}/`, es: `${SITE}/es/`, pt: `${SITE}/pt/`, ko: `${SITE}/ko/` }
 add(`${SITE}/`, 'index.html', '1.0', 'monthly', HOME_ALTS)
 add(`${SITE}/es/`, 'es/index.html', '0.9', 'monthly', HOME_ALTS)
 add(`${SITE}/pt/`, 'pt/index.html', '0.9', 'monthly', HOME_ALTS)
+add(`${SITE}/ko/`, 'ko/index.html', '0.9', 'monthly', HOME_ALTS) // 한국어 프로필 — 이름 검색의 정본
 add(`${SITE}/about/`, 'about/index.html', '0.7', 'monthly', { en: `${SITE}/about/` })
 
 const HUB_ALTS = { en: `${SITE}/guide/`, es: `${SITE}/guide/es/`, pt: `${SITE}/guide/pt/` }
@@ -109,7 +110,7 @@ for (const e of entries) {
   xml += '  <url>\n'
   xml += `    <loc>${e.loc}</loc>\n`
   if (e.alts) {
-    for (const lang of ['en', 'es', 'pt']) {
+    for (const lang of ['en', 'es', 'pt', 'ko']) {
       if (e.alts[lang]) xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${e.alts[lang]}"/>\n`
     }
     xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${e.alts.en}"/>\n`
