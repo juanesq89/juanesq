@@ -80,6 +80,7 @@ add(`${SITE}/`, 'index.html', '1.0', 'monthly', HOME_ALTS)
 add(`${SITE}/es/`, 'es/index.html', '0.9', 'monthly', HOME_ALTS)
 add(`${SITE}/pt/`, 'pt/index.html', '0.9', 'monthly', HOME_ALTS)
 add(`${SITE}/ko/`, 'ko/index.html', '0.9', 'monthly', HOME_ALTS) // 한국어 프로필 — 이름 검색의 정본
+add(`${SITE}/ko/glossary/`, 'ko/glossary/index.html', '0.7', 'monthly') // 법률 용어 사전 (tools/gen-ko-glossary.mjs)
 add(`${SITE}/about/`, 'about/index.html', '0.7', 'monthly', { en: `${SITE}/about/` })
 
 const HUB_ALTS = { en: `${SITE}/guide/`, es: `${SITE}/guide/es/`, pt: `${SITE}/guide/pt/` }
