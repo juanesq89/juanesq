@@ -104,6 +104,7 @@ function canonicalise(lang, raw) {
 let body = ''
 const report = []
 let bad = false
+const groupCounts = {} // "en-criminal-defense" → 27 (홈 분야 목록 숫자용)
 
 for (const L of LANGS) {
   const cards = existingCards(L.hub, L.base)
@@ -144,6 +145,7 @@ for (const L of LANGS) {
   body += `    <span class="hub-lang-count">${L.count(items.length)}</span>\n`
   body += `  </div>\n`
   for (const [canon, list] of groups) {
+    groupCounts[`${L.code}-${slugId(canon)}`] = list.length
     body += `  <h3 class="hub-group-title" id="${L.code}-${slugId(canon)}">${esc(canon)}<span>${list.length}</span></h3>\n`
     body += `  <div class="guide-grid">\n`
     for (const it of list) {
@@ -163,7 +165,9 @@ for (const L of LANGS) {
 if (bad) { console.error('\n분류가 빠진 가이드가 있어 허브를 쓰지 않았습니다.'); process.exit(1) }
 
 let hub = readFileSync(HUB, 'utf8')
-const block = START + body + END
+// 작업 트리는 CRLF다. 생성 블록만 LF로 끼워 넣으면 줄바꿈이 섞이므로 파일 쪽에 맞춘다.
+const nl = hub.includes('\r\n') ? '\r\n' : '\n'
+const block = (START + body + END).replace(/\r?\n/g, nl)
 const esc_re = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
 if (hub.includes(START)) {
@@ -184,3 +188,18 @@ if (hub.includes(START)) {
 writeFileSync(HUB, hub)
 console.log('✅ guide/index.html 재생성')
 for (const r of report) console.log('   ' + r)
+
+// 홈(/, /es/, /pt/)의 분야 목록은 <a href="/guide/#en-criminal-defense">…<span class="line-n">27 guides
+// 처럼 허브 분류 앵커로 링크한다. 그 숫자를 허브 분류별 편수에 맞춘다(숫자만 바꾼다).
+for (const home of ['index.html', 'es/index.html', 'pt/index.html']) {
+  const p = join(ROOT, home)
+  const src = readFileSync(p, 'utf8')
+  const changed = []
+  const out = src.replace(/(<a href="\/guide\/#([a-z0-9-]+)">(?:(?!<\/a>)[\s\S])*?<span class="line-n">)(\d+)/g, (m, pre, id, n) => {
+    if (!(id in groupCounts)) { console.error(`⚠️  ${home}: 허브에 없는 분류 앵커 #${id} (숫자 그대로 둠)`); return m }
+    if (+n !== groupCounts[id]) changed.push(`#${id} ${n}→${groupCounts[id]}`)
+    return pre + groupCounts[id]
+  })
+  if (out !== src) writeFileSync(p, out)
+  console.log(`✅ ${home} 분야 숫자 ${changed.length ? changed.join(', ') : '변경 없음'}`)
+}
