@@ -217,6 +217,9 @@ a{color:inherit}
 .panel{background:var(--navy-2);border:1px solid var(--rule-2);padding:44px}
 .panel-title{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.1;letter-spacing:-.02em;color:var(--ivory)}
 .panel-sub{margin:10px 0 28px;font-size:15px;line-height:1.7;color:var(--ivory-2)}
+.cb-steps{list-style:none;counter-reset:st;margin:18px 0 26px;padding:0;display:grid;gap:10px}
+.cb-steps li{counter-increment:st;display:flex;align-items:baseline;gap:12px;font-size:15px;line-height:1.5;color:var(--ivory-2)}
+.cb-steps li::before{content:counter(st);flex:none;width:24px;height:24px;display:inline-grid;place-items:center;border:1px solid var(--rule-2);border-radius:50%;font-size:12px;font-weight:600;color:var(--ivory)}
 .panel-foot{margin-top:18px;font-size:13px;line-height:1.6;color:var(--ivory-3)}
 .wa-row{display:flex;align-items:center;gap:14px;min-height:60px;margin-top:22px;padding:0 20px;border:1px solid var(--rule);text-decoration:none;color:var(--ivory);transition:background .2s,border-color .2s}
 .wa-row:hover{background:rgba(242,238,230,.04);border-color:rgba(242,238,230,.4)}
