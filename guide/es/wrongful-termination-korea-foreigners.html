@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-area="labor">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Despido Improcedente en Corea</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -268,18 +279,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/es/alien-registration-address-reporting-korea-foreigners.html"><span class="rg-cat">Inmigración y Visados</span>Registro de Extranjería y Cambio de Domicilio en Corea: Los Trámites Pequeños Que Cuestan el Estatus</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Cómo Puedo Ayudar</p>
+<div class="article-cta" data-area="labor"><div class="cta-box">
+    <p class="cta-eyebrow">Qué vemos en 30 minutos</p>
     <p class="cta-title">¿Te despidieron y el plazo está corriendo?</p>
-    <p class="cta-body">Reviso si el despido tiene causa válida y si se siguió el procedimiento, preparo y presento la reclamación ante la Comisión de Relaciones Laborales (노동위원회), y planteo en paralelo qué hacer con tu visa. Los 3 meses corren desde el día del despido.</p>
+    <p class="cta-body">Envíame tus documentos antes de hablar y los 30 minutos se van en respuestas:</p>
+    <ul class="cta-list"><li>Qué se te debe (salarios, horas extra, indemnización por fin de contrato) y una cifra aproximada</li><li>Denuncia ante la oficina de trabajo, negociación o demanda: qué vía encaja</li><li>Qué pasa con tu visado si te vas o te despiden</li></ul>
     <div class="cta-actions">
-      <a href="/es/book/" class="cta-wa">Reservar una consulta</a>
+      <a href="/es/book/" class="cta-wa">Reservar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica el secreto profesional · Consultas en inglés, español y portugués</p>
   </div></div>
 <p class="article-disclaimer">Este artículo tiene fines exclusivamente informativos y no constituye asesoramiento legal. Las leyes y los procedimientos pueden cambiar. Para asesoría sobre su caso concreto, consulte a un abogado colegiado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Abogado</div><div class="footer-copy">© 2026 Juan W. Hong, Abogado · juanesq.com<br>Abogado responsable: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/es/">Guías Legales</a> &nbsp;·&nbsp; <a href="/privacy.html#es">Política de Privacidad</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-area="visa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Detención Migratoria en Corea: la Liberación Temporal</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -233,6 +244,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <p>Lo más desconcertante para las familias es que la detención no se detiene cuando se impugna la orden de expulsión. Una persona puede seguir retenida mientras dura el pleito, y precisamente por eso la solicitud de liberación suele presentarse en paralelo a la impugnación de la orden, no después.</p>
     <p class="pullquote">No hay condena que cumplir ni fecha de salida que esperar. La detención termina cuando la persona sale del país, o cuando alguien solicita con éxito que termine.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>¿Un problema con inmigración ahora mismo?</b> Habla conmigo antes de firmar o declarar <a href="/es/book/">Reservar →</a></p>
     <h2><span class="n">2</span>La Liberación Temporal (보호일시해제)</h2>
     <div class="section-rule"></div>
     <p>La liberación temporal es el objetivo práctico en la mayoría de los casos. Es una solicitud al jefe de la oficina de inmigración, y puede concederse sujeta a una fianza (보증금), a condiciones de residencia y de presentación, y a cualquier otra condición que se imponga.</p>
@@ -290,18 +302,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/es/alien-registration-address-reporting-korea-foreigners.html"><span class="rg-cat">Inmigración y Visados</span>Registro de Extranjería y Cambio de Domicilio: Los Trámites Que Cuestan el Estatus</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Cómo Puedo Ayudar</p>
+<div class="article-cta" data-area="visa"><div class="cta-box">
+    <p class="cta-eyebrow">Qué vemos en 30 minutos</p>
     <p class="cta-title">¿Alguien detenido y nadie sabe explicarte qué pasa ahora?</p>
-    <p class="cta-body">Represento a extranjeros retenidos en detención migratoria (보호) en Corea: solicitudes de liberación temporal (보호일시해제), objeciones contra la orden de detención, impugnación de la orden de expulsión (강제퇴거명령) por vía administrativa y judicial, y negociación de una orden de salida (출국명령) cuando es el mejor resultado. La diferencia entre salir con una orden de salida y ser expulsado decide si se puede volver, y normalmente se resuelve pronto, no en el aeropuerto.</p>
+    <p class="cta-body">Envíame tus documentos antes de hablar y los 30 minutos se van en respuestas:</p>
+    <ul class="cta-list"><li>Cómo está hoy tu situación migratoria y qué opciones siguen abiertas: prórroga, cambio de visado o salida voluntaria</li><li>Si te pasaste del plazo: la multa y el tiempo de prohibición de entrada que puedes esperar, y cómo reducirlos</li><li>Las tres cosas que tienes que hacer esta semana, en orden</li></ul>
     <div class="cta-actions">
-      <a href="/es/book/" class="cta-wa">Reservar una consulta</a>
+      <a href="/es/book/" class="cta-wa">Reservar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica el secreto profesional · Consultas en inglés, español y portugués</p>
   </div></div>
 <p class="article-disclaimer">Este artículo tiene fines exclusivamente informativos y no constituye asesoramiento legal. Las leyes y los procedimientos pueden cambiar. Para asesoría sobre su caso concreto, consulte a un abogado colegiado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Abogado</div><div class="footer-copy">© 2026 Juan W. Hong, Abogado · juanesq.com<br>Abogado responsable: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/es/">Guías Legales</a> &nbsp;·&nbsp; <a href="/privacy.html#es">Política de Privacidad</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

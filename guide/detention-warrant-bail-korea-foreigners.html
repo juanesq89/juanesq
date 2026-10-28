@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="criminal">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -201,6 +201,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -249,6 +260,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <p>The hearing is short. It is also the only point at which a judge looks at you rather than at a file, and the only realistic opportunity to prevent months of pre-trial custody.</p>
     <p class="pullquote">The warrant hearing is not about guilt. It is about whether you can be trusted to remain reachable — and that is a question foreigners are presumed to fail.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>Under investigation now?</b> Talk before you give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">→</span>What the Judge Is Actually Deciding</h2>
     <div class="section-rule"></div>
     <p>The statutory grounds are narrow: whether there is reason to suspect the offence, and then whether the suspect has no fixed dwelling, may destroy evidence, or may flee. The last two do the real work.</p>
@@ -313,13 +325,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/compensation-order-criminal-korea-foreigners.html"><span class="rg-cat">Criminal Procedure</span>Damages Without a Second Lawsuit: The Compensation Order (배상명령)</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="criminal">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Someone you know was arrested in Korea, or a warrant hearing is set for tomorrow?</p>
-    <p class="cta-body">I represent foreign residents at detention warrant hearings, prepare the residence, employment, and guarantor evidence courts actually respond to, file for review of detention and bail, negotiate settlement with victims, and advise on the immigration consequences that follow a disposition. If the forty-eight hours are still running, act now rather than after the decision.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Before a police or prosecution interview: what to check before you give a statement</li><li>How a settlement (합의) with the other side would affect the outcome</li><li>The realistic range of outcomes, and what it means for your visa</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul · English, Español, Português</p>
   </div>
@@ -330,6 +343,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

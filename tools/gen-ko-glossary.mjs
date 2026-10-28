@@ -220,6 +220,7 @@ q.addEventListener('input',function(){var v=q.value.trim().toLowerCase(),shown=0
 document.querySelectorAll('.gl-sec').forEach(function(sec){var c=0;sec.querySelectorAll('li').forEach(function(li){var ok=!v||li.getAttribute('data-k').indexOf(v)>-1;li.style.display=ok?'':'none';if(ok)c++});sec.style.display=c?'':'none';shown+=c});
 none.style.display=shown?'none':'block'})})();
 </script>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="visa">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -202,6 +202,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -244,6 +255,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <h3>The Generational Cutoff That Catches People Off Guard</h3>
     <p>For years, the Act's practical reach excluded many descendants of Koreans who emigrated before Korea's 1948 government was established, since those emigrants were never technically "Korean nationals" under the law's original wording — a gap that disproportionately affected some overseas Korean communities with older emigration histories. A 2019 amendment extended eligibility to close much of that gap, but generational documentation requirements still trip up applicants whose family records were lost, never registered, or exist only in a foreign country's civil records rather than Korea's own family register system. Confirming exactly which generation you fall into, and what documents can substitute for a missing Korean-side record, is worth doing before assuming you qualify.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>Trouble with immigration right now?</b> Talk before you sign or give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">→</span>What F-4 Status Actually Permits</h2>
     <div class="section-rule"></div>
     <p>F-4 holders get long-term residence that renews indefinitely rather than expiring after a fixed career stage, free entry and exit from Korea without a separate re-entry permit in most cases, the ability to engage in most economic activities without a separate work permit tied to one employer, real estate purchase and ownership on largely the same footing as other foreign nationals, and eligibility to enroll in National Health Insurance. For someone with Korean heritage who wants to live and work in Korea flexibly rather than being locked to one sponsoring employer, F-4 is usually a considerably better fit than a standard work visa.</p>
@@ -279,13 +291,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/military-service-dual-nationality-korea.html"><span class="rg-cat">Nationality &amp; Military Service</span>Korean Dual Nationality and Military Service: The Renunciation Deadline (국적이탈) Explained</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="visa">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Not sure if you qualify for F-4 status?</p>
-    <p class="cta-body">I help overseas Koreans confirm eligibility under the Overseas Koreans Act, sort out generational documentation issues, and understand what F-4 does and doesn't allow before they apply — clearly, in English, Spanish, or Portuguese.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Where your status stands today and which options are still open — extension, change of status or voluntary departure</li><li>If you have overstayed: the likely fine and entry-ban period, and how to reduce them</li><li>The three things to do this week, in order</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul · English, Español, Português</p>
   </div>
@@ -296,6 +309,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

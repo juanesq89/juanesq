@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="visa">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -201,6 +201,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -244,6 +255,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     </ul>
     <p>The practical consequence is the ordering. The foreign-investment report is filed <em>before</em> the funds are remitted, at a designated foreign exchange bank or the relevant investment support agency. Money that arrives first, in a personal account, as a loan, or as an unreported transfer, is difficult and sometimes impossible to convert into recognised investment afterwards.</p>
     <p class="pullquote">A wire transfer is not a foreign investment (외국인투자). It becomes one only if the report was filed first, the funds came from abroad in the investor's own name, and the shares were issued against them.</p>
+    <p class="jq-inv" data-pos="guide_banner"><b>Trouble with immigration right now?</b> Talk before you sign or give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">→</span>The Subcategories</h2>
     <div class="section-rule"></div>
     <p>D-8 is not a single visa. Which sub-type applies changes the documents, and sometimes the amount.</p>
@@ -300,13 +312,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/commercial-lease-korea-foreigners.html"><span class="rg-cat">Real Estate &amp; Leasing</span>Renting a Shop or Office in Korea: The Commercial Lease Act (상가임대차보호법) for Foreign Business Owners</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="visa">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Planning a company in Korea, and a status to run it?</p>
-    <p class="cta-body">I advise foreign founders and investors on the D-8 corporate investment visa (기업투자): the foreign-investment report (외국인투자신고) and the order in which funds must move, incorporation and share structure, change of status from inside Korea, and extensions where the business has to be shown as real. If money has already been remitted, that is worth reviewing before anything is incorporated — the sequence is usually still repairable at that stage.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Where your status stands today and which options are still open — extension, change of status or voluntary departure</li><li>If you have overstayed: the likely fine and entry-ban period, and how to reduce them</li><li>The three things to do this week, in order</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul · English, Español, Português</p>
   </div>
@@ -317,6 +330,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="visa">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -201,6 +201,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -240,6 +251,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <div class="section-rule"></div>
     <p>The part-time work permit (시간제 취업허가) generally isn't available immediately after you enroll. Degree-seeking students typically need to complete at least one semester in good standing before immigration will consider an application — the idea being that a student should first show they can handle their coursework before adding a job on top of it. Language institute (어학원) students on a D-4 visa face a longer wait and tighter restrictions than degree-track D-2 students, and are barred from the permit entirely during their first two terms in most cases. Applying before you're eligible doesn't just get rejected — it can flag your file for closer scrutiny on future applications.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>Trouble with immigration right now?</b> Talk before you sign or give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">→</span>Your Weekly Hour Cap Depends on More Than Just Being a Student</h2>
     <div class="section-rule"></div>
     <p>Once eligible, the number of hours you're allowed to work each week during the semester is not a flat number for every D-2 holder. It scales with your degree level (graduate students are generally allowed more hours than undergraduates), your GPA and attendance record from the prior semester, and — for many students — your demonstrated Korean ability, often measured through a TOPIK score or completion of a Korean language program. Students who clear the higher proficiency bar are typically permitted more weekly hours than those who haven't. During the two officially recognized vacation periods each year, the semester-time cap is lifted and full-time work becomes possible with the permit still in place.</p>
@@ -285,13 +297,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/f2-7-points-based-visa-korea-foreigners.html"><span class="rg-cat">Immigration &amp; Visas</span>The F-2-7 Points-Based Residence Visa (거주): How You Are Scored, and What Changes When You Have It</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="visa">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Working through Korea's student visa rules?</p>
-    <p class="cta-body">I help international students and the businesses that hire them sort out part-time work permits, respond to immigration inquiries about unauthorized employment, and plan visa transitions after graduation — clearly, in English, Spanish, or Portuguese.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Where your status stands today and which options are still open — extension, change of status or voluntary departure</li><li>If you have overstayed: the likely fine and entry-ban period, and how to reduce them</li><li>The three things to do this week, in order</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul · English, Español, Português</p>
   </div>
@@ -302,6 +315,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

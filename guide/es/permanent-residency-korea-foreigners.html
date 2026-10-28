@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-area="visa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Residencia Permanente en Corea (Visa F-5)</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -222,6 +233,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <div class="section-rule"></div>
     <p>A diferencia de la mayoría de las visas coreanas, la residencia permanente (영주권) no hay que renovarla en un calendario fijo y no está atada a un empleador ni a una actividad concreta. Puedes cambiar de trabajo con libertad, y desaparece casi toda la dependencia del patrocinador que traen las visas de trabajo. No es la ciudadanía: conservas tu nacionalidad de origen, pero tampoco ganas el voto en las elecciones nacionales (los residentes permanentes sí tienen un derecho limitado al voto local) y sigues sujeto a las obligaciones de extranjería, como comunicar los cambios de domicilio.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>¿Un problema con inmigración ahora mismo?</b> Habla conmigo antes de firmar o declarar <a href="/es/book/">Reservar →</a></p>
     <h2><span class="n">→</span>Vía 1 — Por Puntos (la Más Común Para Profesionales)</h2>
     <div class="section-rule"></div>
     <p>La mayoría de los profesionales extranjeros llegan a la F-5 pasando primero por una visa de residente por puntos (거주비자), que suele mantenerse varios años antes de poder solicitar la residencia permanente. Los puntos se calculan con factores como la edad, la formación, el nivel de coreano, los ingresos y los años de estancia legal previa en Corea. Los umbrales de puntos y el plazo de espera exactos se ajustan periódicamente por política migratoria, así que las cifras vigentes siempre deben confirmarse con inmigración (출입국·외국인청) o con un abogado antes de hacer planes en torno a una puntuación concreta.</p>
@@ -267,18 +279,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/es/naturalization-korea-foreigners.html"><span class="rg-cat">Nacionalidad</span>La Residencia Permanente No Te Hace Coreano: Cómo Funciona la Naturalización (귀화)</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Cómo Puedo Ayudar</p>
+<div class="article-cta" data-area="visa"><div class="cta-box">
+    <p class="cta-eyebrow">Qué vemos en 30 minutos</p>
     <p class="cta-title">¿Planeando tu camino a la residencia permanente?</p>
-    <p class="cta-body">Ayudo a extranjeros a identificar la vía de F-5 correcta para su situación, a revisar la elegibilidad antes de presentar y a resolver los problemas penales o de estatus que más a menudo hacen fracasar una solicitud. Tracemos tu calendario antes de que presentes nada.</p>
+    <p class="cta-body">Envíame tus documentos antes de hablar y los 30 minutos se van en respuestas:</p>
+    <ul class="cta-list"><li>Cómo está hoy tu situación migratoria y qué opciones siguen abiertas: prórroga, cambio de visado o salida voluntaria</li><li>Si te pasaste del plazo: la multa y el tiempo de prohibición de entrada que puedes esperar, y cómo reducirlos</li><li>Las tres cosas que tienes que hacer esta semana, en orden</li></ul>
     <div class="cta-actions">
-      <a href="/es/book/" class="cta-wa">Reservar una consulta</a>
+      <a href="/es/book/" class="cta-wa">Reservar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica el secreto profesional · Consultas en inglés, español y portugués</p>
   </div></div>
 <p class="article-disclaimer">Este artículo tiene fines exclusivamente informativos y no constituye asesoramiento legal. Las leyes y los procedimientos pueden cambiar. Para asesoría sobre su caso concreto, consulte a un abogado colegiado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Abogado</div><div class="footer-copy">© 2026 Juan W. Hong, Abogado · juanesq.com<br>Abogado responsable: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/es/">Guías Legales</a> &nbsp;·&nbsp; <a href="/privacy.html#es">Política de Privacidad</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

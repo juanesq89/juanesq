@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" data-area="criminal">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Acusado de Agressão na Coreia Sendo Estrangeiro</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -222,6 +233,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <div class="section-rule"></div>
     <p>A agressão (폭행) abrange o uso de força física contra outra pessoa, deixe marca ou não: um empurrão, um tapa, até um objeto arremessado que nem chega a acertar pode se enquadrar. A lesão corporal (상해) exige que o ato tenha causado dano físico real, normalmente comprovado por um laudo médico (진단서) que indica um período de recuperação. Um caso que começa como agressão (폭행) pode virar lesão corporal (상해) se a outra parte apresentar um diagnóstico médico depois, mesmo dias após o ocorrido — ou seja, a falta de ferimento visível na hora não garante que o caso vá ficar no crime mais leve.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>Está sendo investigado?</b> Fale comigo antes de depor <a href="/pt/book/">Agendar →</a></p>
     <h2><span class="n">2</span>A Agressão Simples Depende da Vontade da Vítima — e Essa É a Sua Maior Alavanca</h2>
     <div class="section-rule"></div>
     <p>A agressão simples (폭행) é classificada como um crime que, em regra, não pode ser processado contra a vontade expressa da vítima (반의사불벌죄): se a outra parte retirar formalmente a queixa, o normal é o caso ser arquivado. A lesão corporal (상해), por outro lado, não funciona assim — um acordo (합의) com a vítima continua pesando enormemente na pena, mas não encerra o caso automaticamente como pode acontecer com a agressão simples (폭행). Saber em qual categoria o seu caso está muda o que é, realisticamente, o melhor resultado possível.</p>
@@ -267,18 +279,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/pt/assaulting-a-driver-korea-foreigners.html"><span class="rg-cat">Defesa Criminal</span>Agredir um Motorista de Táxi ou Ônibus na Coreia (운전자 폭행): Por Que uma Discussão de Madrugada Vira Crime Agravado</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Como Posso Ajudar</p>
+<div class="article-cta" data-area="criminal"><div class="cta-box">
+    <p class="cta-eyebrow">O que vemos em 30 minutos</p>
     <p class="cta-title">Sendo investigado por agressão na Coreia?</p>
-    <p class="cta-body">Ajudo estrangeiros em investigações por agressão (폭행) e lesão corporal (상해), negocio acordos (합의) quando fazem sentido e cuido do risco migratório que um processo criminal pode trazer.</p>
+    <p class="cta-body">Me envie seus documentos antes da conversa e os 30 minutos vão para respostas:</p>
+    <ul class="cta-list"><li>Antes de depor na polícia ou no Ministério Público: o que verificar antes de dar a sua versão</li><li>Como um acordo (합의) com a outra parte afetaria o resultado</li><li>A faixa realista de resultados e o que ela significa para o seu visto</li></ul>
     <div class="cta-actions">
-      <a href="/pt/book/" class="cta-wa">Agendar uma consulta</a>
+      <a href="/pt/book/" class="cta-wa">Agendar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica-se o sigilo profissional · Consultas em inglês, espanhol e português</p>
   </div></div>
 <p class="article-disclaimer">Este artigo tem caráter meramente informativo e não constitui aconselhamento jurídico. As leis e os procedimentos podem mudar. Para orientação sobre o seu caso específico, consulte um advogado habilitado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Advogado</div><div class="footer-copy">© 2026 Juan W. Hong, Advogado · juanesq.com<br>Advogado responsável: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/pt/">Guias Jurídicos</a> &nbsp;·&nbsp; <a href="/privacy.html#pt">Política de Privacidade</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

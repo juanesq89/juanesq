@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-area="visa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pedir Asilo en Corea: Refugio, Entrevista y Plazos</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -229,6 +240,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <p class="pullquote">Presentar en el aeropuerto es más rápido para empezar y mucho más difícil de superar. Presentar dentro de Corea te da procedimiento, pero solo si tu estatus no se ha derrumbado ya.</p>
     <p>Hay además una regla de tiempo que atrapa a quien espera: una solicitud presentada mucho después de llegar, o solo cuando la expulsión ya es una posibilidad real, invita a pensar que responde al problema migratorio y no a lo que pasó en tu país. Esa conclusión se puede rebatir (el trauma, la desinformación y el miedo a la embajada de tu país son explicaciones reales), pero hay que afrontarla, no ignorarla.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>¿Un problema con inmigración ahora mismo?</b> Habla conmigo antes de firmar o declarar <a href="/es/book/">Reservar →</a></p>
     <h2><span class="n">→</span>Qué Puedes Hacer Mientras Esperas</h2>
     <div class="section-rule"></div>
     <p>A quien se le admite la solicitud se le da un estatus para mantener durante el procedimiento, en la práctica la categoría G-1 (기타, gita), junto con un certificado de solicitante de refugio que hay que renovar en las fechas previstas. Perder la pista de esas renovaciones es una de las formas más evitables de dañar tu caso.</p>
@@ -282,18 +294,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/es/f4-visa-overseas-koreans-korea.html"><span class="rg-cat">Inmigración y Visados</span>Visa F-4 (재외동포) en Corea: el Estatus de Coreano en el Exterior, Explicado</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Cómo Puedo Ayudar</p>
+<div class="article-cta" data-area="visa"><div class="cta-box">
+    <p class="cta-eyebrow">Qué vemos en 30 minutos</p>
     <p class="cta-title">¿Tienes la entrevista por delante, o una denegación con un plazo encima?</p>
-    <p class="cta-body">Asesoro en solicitudes de refugio (난민) antes de la entrevista, que es cuando se documenta el relato y se crea el acta, y en las vías de objeción y de demanda contencioso-administrativa tras una denegación, también cuando el plazo ya está cerca. Si ahora mismo estás en un puerto de entrada, o tu estatus de solicitante está a punto de caducar, hay que hablar esta misma semana, no el mes que viene.</p>
+    <p class="cta-body">Envíame tus documentos antes de hablar y los 30 minutos se van en respuestas:</p>
+    <ul class="cta-list"><li>Cómo está hoy tu situación migratoria y qué opciones siguen abiertas: prórroga, cambio de visado o salida voluntaria</li><li>Si te pasaste del plazo: la multa y el tiempo de prohibición de entrada que puedes esperar, y cómo reducirlos</li><li>Las tres cosas que tienes que hacer esta semana, en orden</li></ul>
     <div class="cta-actions">
-      <a href="/es/book/" class="cta-wa">Reservar una consulta</a>
+      <a href="/es/book/" class="cta-wa">Reservar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica el secreto profesional · Consultas en inglés, español y portugués</p>
   </div></div>
 <p class="article-disclaimer">Este artículo tiene fines exclusivamente informativos y no constituye asesoramiento legal. Las leyes y los procedimientos pueden cambiar. Para asesoría sobre su caso concreto, consulte a un abogado colegiado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Abogado</div><div class="footer-copy">© 2026 Juan W. Hong, Abogado · juanesq.com<br>Abogado responsable: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/es/">Guías Legales</a> &nbsp;·&nbsp; <a href="/privacy.html#es">Política de Privacidad</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

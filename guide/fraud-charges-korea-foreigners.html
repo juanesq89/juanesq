@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="criminal">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -202,6 +202,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -241,6 +252,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <div class="section-rule"></div>
     <p>The core element separating criminal fraud (사기죄) from a simple breach of contract is intent to deceive for unlawful gain (편취의 고의) — and critically, that intent has to exist at the time the deal was made, not develop afterward. If you genuinely intended to deliver the goods, repay the loan, or complete the service when you made the agreement, and circumstances later made that impossible, that is ordinarily a civil matter, not a crime — even if the other party never gets paid. Fraud requires a deceptive act (기망행위) that induced the other party to hand over money or property based on a false premise that existed from the beginning.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>Under investigation now?</b> Talk before you give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">→</span>Why So Many Business Disputes Turn Into Police Complaints</h2>
     <div class="section-rule"></div>
     <p>A civil lawsuit in Korea can take months or years and doesn't guarantee actual recovery even after winning. A fraud complaint (고소), by contrast, costs nothing to file, can result in a police summons within weeks, and creates real leverage — a business partner facing potential criminal exposure is often far more motivated to negotiate than one only facing a lawsuit. This dynamic means fraud complaints get used, fairly or not, as a collection tool in disputes that are fundamentally about money owed rather than deception.</p>
@@ -285,13 +297,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/insult-crime-korea-foreigners.html"><span class="rg-cat">Criminal Defense</span>Insult (모욕죄) in Korea: How a Rude Comment Becomes a Criminal Case</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="criminal">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Facing a fraud complaint or police summons over a business dispute?</p>
-    <p class="cta-body">I help foreign entrepreneurs and professionals show that a soured deal was never criminal fraud (사기죄) to begin with, prepare for police questioning, and negotiate a settlement (합의) that actually resolves both the business and criminal sides of the dispute. Clearly, in English, Spanish, or Portuguese.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Before a police or prosecution interview: what to check before you give a statement</li><li>How a settlement (합의) with the other side would affect the outcome</li><li>The realistic range of outcomes, and what it means for your visa</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul · English, Español, Português</p>
   </div>
@@ -302,6 +315,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

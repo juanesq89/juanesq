@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-area="visa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Entrada Denegada en el Aeropuerto de Corea</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -224,6 +235,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <p>La visa la expide una misión diplomática coreana y confirma que, según la documentación presentada, pareces cumplir los requisitos del estatus que solicitaste. La autorización de entrada la concede un agente de inmigración en el puerto de entrada, que examina si se cumplen las condiciones de admisión en el momento de la llegada.</p>
     <p>El agente no está revisando la decisión de la misión. Aplica las causas de prohibición de entrada previstas en la Ley de Inmigración y, lo que en la práctica es más frecuente, evalúa si tu propósito real coincide con el estatus que tienes. Quienes viajan sin visa o con K-ETA pasan por el mismo examen con menos respaldo documental, y por eso la tasa de denegación es mayor en ese grupo.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>¿Un problema con inmigración ahora mismo?</b> Habla conmigo antes de firmar o declarar <a href="/es/book/">Reservar →</a></p>
     <h2><span class="n">→</span>Por Qué Se Deniega la Entrada</h2>
     <div class="section-rule"></div>
     <p>Las causas legales cubren las categorías que cabría esperar — enfermedades infecciosas, armas, estupefacientes, personas que puedan dañar la seguridad pública o las buenas costumbres, personas expulsadas antes de Corea que siguen dentro del periodo de prohibición, y cualquiera a quien el Ministro de Justicia considere inapropiado admitir.</p>
@@ -282,18 +294,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/es/departure-ban-korea-foreigners.html"><span class="rg-cat">Defensa Penal</span>No Puedes Salir de Corea y Te Enteras en el Mostrador de Facturación</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Cómo Puedo Ayudar</p>
+<div class="article-cta" data-area="visa"><div class="cta-box">
+    <p class="cta-eyebrow">Qué vemos en 30 minutos</p>
     <p class="cta-title">¿Te denegaron la entrada en Corea, o temes que te la denieguen?</p>
-    <p class="cta-body">Asesoro a extranjeros en denegaciones de entrada en Corea: impugnar la decisión, averiguar si quedó registrada una prohibición de entrada (입국규제) y solicitar su levantamiento, y preparar la documentación para un nuevo intento. Si la denegación ya ocurrió, el acta levantada en el aeropuerto es el material sobre el que se discute todo lo demás. Con claridad, en español o portugués.</p>
+    <p class="cta-body">Envíame tus documentos antes de hablar y los 30 minutos se van en respuestas:</p>
+    <ul class="cta-list"><li>Cómo está hoy tu situación migratoria y qué opciones siguen abiertas: prórroga, cambio de visado o salida voluntaria</li><li>Si te pasaste del plazo: la multa y el tiempo de prohibición de entrada que puedes esperar, y cómo reducirlos</li><li>Las tres cosas que tienes que hacer esta semana, en orden</li></ul>
     <div class="cta-actions">
-      <a href="/es/book/" class="cta-wa">Reservar una consulta</a>
+      <a href="/es/book/" class="cta-wa">Reservar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica el secreto profesional · Consultas en inglés, español y portugués</p>
   </div></div>
 <p class="article-disclaimer">Este artículo tiene fines exclusivamente informativos y no constituye asesoramiento legal. Las leyes y los procedimientos pueden cambiar. Para asesoría sobre su caso concreto, consulte a un abogado colegiado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Abogado</div><div class="footer-copy">© 2026 Juan W. Hong, Abogado · juanesq.com<br>Abogado responsable: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/es/">Guías Legales</a> &nbsp;·&nbsp; <a href="/privacy.html#es">Política de Privacidad</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

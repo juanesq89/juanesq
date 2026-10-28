@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="visa">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -201,6 +201,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -240,6 +251,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <div class="section-rule"></div>
     <p>Unlike skilled-worker visas where a candidate negotiates directly with an employer, entry under the Employment Permit System (고용허가제) usually starts with a labor agreement between Korea and the worker's home country, followed by a standardized selection and matching process run through the job center (고용센터). By the time most workers arrive, the employer and the terms of the contract are already fixed. This matters later, because the same government structure that placed you is also the one you have to go through if the placement falls apart.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>Trouble with immigration right now?</b> Talk before you sign or give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">→</span>Your Visa Is Tied to One Employer, and a Workplace Change (사업장 변경) Is Not Automatic</h2>
     <div class="section-rule"></div>
     <p>E-9 status is employer-specific. You cannot simply quit and start working somewhere else — a workplace change (사업장 변경) has to be approved through the job center, and it is only available for a limited, defined set of reasons, not general dissatisfaction with the job.</p>
@@ -287,13 +299,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/employer-holding-passport-korea-foreigners.html"><span class="rg-cat">Labor &amp; Employment</span>Your Employer Is Holding Your Passport in Korea: Why It Is Unlawful and How to Get It Back</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="visa">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Dealing with a workplace dispute or transfer denial on your E-9 visa?</p>
-    <p class="cta-body">I help foreign workers document wage and safety disputes for a workplace change (사업장 변경) request, understand the re-entry special case (재입국 특례), and recover departure insurance (출국만기보험) they're owed before leaving Korea. Clearly, in English, Spanish, or Portuguese.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Where your status stands today and which options are still open — extension, change of status or voluntary departure</li><li>If you have overstayed: the likely fine and entry-ban period, and how to reduce them</li><li>The three things to do this week, in order</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul · English, Español, Português</p>
   </div>
@@ -304,6 +317,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

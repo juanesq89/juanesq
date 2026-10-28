@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="visa">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -202,6 +202,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -240,6 +251,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <div class="section-rule"></div>
     <p>The F-6 marriage visa (결혼이민비자) actually covers three sub-categories: F-6-1 for those married to a Korean national, F-6-2 for foreign parents raising a child with a Korean national, and F-6-3 for those divorced or widowed from a Korean spouse without being at fault for the marriage's end. Most applicants fall under F-6-1, but the requirements and evidence expected differ across the three, so confirming which applies to your situation is the first step.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>Trouble with immigration right now?</b> Talk before you sign or give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">2</span>The Income Requirement Trips Up More Couples Than Expected</h2>
     <div class="section-rule"></div>
     <p>The Korea Immigration Service (출입국·외국인청) requires the household — generally led by the Korean sponsor spouse's income — to meet a minimum threshold, tied to a percentage of Korea's Gross National Income (GNI) and adjusted periodically. This is documented through tax filing records, not just a bank balance on the day of application. Couples where the Korean spouse is a student, recently self-employed, or has a thin tax filing history frequently get stuck here — sometimes needing a joint sponsor, savings documentation, or a delay until a fuller income record exists.</p>
@@ -286,13 +298,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/f3-dependent-visa-korea-foreigners.html"><span class="rg-cat">Immigration &amp; Visas</span>F-3 Dependent Visa (동반비자) in Korea: Bringing Your Spouse and Children</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="visa">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Applying for an F-6 marriage visa?</p>
-    <p class="cta-body">I help binational couples prepare a complete F-6 marriage visa (결혼이민비자) application — income documentation, cohabitation proof, foreign marriage authentication — and respond to denials or evidence requests before they derail the process.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Where your status stands today and which options are still open — extension, change of status or voluntary departure</li><li>If you have overstayed: the likely fine and entry-ban period, and how to reduce them</li><li>The three things to do this week, in order</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul · English, Español, Português</p>
   </div>
@@ -303,6 +316,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

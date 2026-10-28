@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" data-area="criminal">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dirigir Alcoolizado na Coreia</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -231,6 +242,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <p class="pullquote">0,03% significa que duas doses normais já podem colocar você acima do limite.</p>
     <p>O limite nos Estados Unidos é 0,08%. Na Alemanha, 0,05%. Os 0,03% coreanos significam que, para muita gente, uma cerveja ou duas taças de vinho bastam. <strong>Recusar o bafômetro não é um ato neutro na Coreia</strong> — carrega a mesma pena de soprar 0,08% ou mais.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>Está sendo investigado?</b> Fale comigo antes de depor <a href="/pt/book/">Agendar →</a></p>
     <h2><span class="n">→</span>Sim, Bicicletas e Patinetes Também Contam</h2>
     <div class="section-rule"></div>
     <p>Essa é a parte que mais surpreende. As patinetes elétricas (전동킥보드) — aquelas de aluguel espalhadas por Seul — são classificadas como veículos motorizados. Andar alcoolizado em uma delas é punido com menos rigor do que dirigir um carro embriagado, mas ainda pode custar a sua habilitação: veja <a href="/guide/pt/electric-scooter-korea-foreigners.html">o guia do patinete elétrico</a>. Pedalar alcoolizado dá multa de até 30.000 wones.</p>
@@ -285,18 +297,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/pt/assaulting-a-driver-korea-foreigners.html"><span class="rg-cat">Defesa Criminal</span>Agredir um Motorista de Táxi ou Ônibus na Coreia (운전자 폭행): Por Que uma Discussão de Madrugada Vira Crime Agravado</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Como Posso Ajudar</p>
+<div class="article-cta" data-area="criminal"><div class="cta-box">
+    <p class="cta-eyebrow">O que vemos em 30 minutos</p>
     <p class="cta-title">Foi parado na blitz e tem um visto a perder?</p>
-    <p class="cta-body">Acompanho estrangeiros desde o primeiro depoimento na delegacia: o que dizer e o que não dizer, quando pedir o exame de sangue, como se constrói a atenuação e qual o efeito real do processo na renovação ou na residência permanente (F-5).</p>
+    <p class="cta-body">Me envie seus documentos antes da conversa e os 30 minutos vão para respostas:</p>
+    <ul class="cta-list"><li>Antes de depor na polícia ou no Ministério Público: o que verificar antes de dar a sua versão</li><li>Como um acordo (합의) com a outra parte afetaria o resultado</li><li>A faixa realista de resultados e o que ela significa para o seu visto</li></ul>
     <div class="cta-actions">
-      <a href="/pt/book/" class="cta-wa">Agendar uma consulta</a>
+      <a href="/pt/book/" class="cta-wa">Agendar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica-se o sigilo profissional · Consultas em inglês, espanhol e português</p>
   </div></div>
 <p class="article-disclaimer">Este artigo tem caráter meramente informativo e não constitui aconselhamento jurídico. As leis e os procedimentos podem mudar. Para orientação sobre o seu caso específico, consulte um advogado habilitado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Advogado</div><div class="footer-copy">© 2026 Juan W. Hong, Advogado · juanesq.com<br>Advogado responsável: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/pt/">Guias Jurídicos</a> &nbsp;·&nbsp; <a href="/privacy.html#pt">Política de Privacidade</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

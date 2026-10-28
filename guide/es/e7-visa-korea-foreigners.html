@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-area="visa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Visa E-7 en Corea: Requisitos y Patrocinio del Empleador</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -222,6 +233,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <div class="section-rule"></div>
     <p>Las autoridades de inmigración de Corea mantienen una lista de categorías de actividad específica (특정활동) que pueden patrocinarse con una E-7. Abarca aproximadamente noventa ocupaciones, agrupadas en vías de profesionales, de semicualificados y de determinados trabajadores cualificados generales. Que la empresa llame al puesto «manager» o «especialista» no lo hace elegible: las funciones reales, las cualificaciones exigidas y el sector tienen que coincidir con una categoría de la lista, y el funcionario de inmigración compara la descripción del puesto en el contrato con los requisitos de esa categoría, no con el cargo que aparece en tu tarjeta de visita.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>¿Un problema con inmigración ahora mismo?</b> Habla conmigo antes de firmar o declarar <a href="/es/book/">Reservar →</a></p>
     <h2><span class="n">→</span>Al Empleador Que Te Patrocina Se Le Exige Tanto Como a Ti</h2>
     <div class="section-rule"></div>
     <p>Una solicitud de E-7 no es solo una revisión del trabajador extranjero: también es una revisión de la empresa que lo patrocina. Inmigración aplica una proporción que limita cuántos trabajadores E-7 puede patrocinar una empresa en relación con su número de empleados coreanos, y las empresas por debajo de cierto tamaño, o sin un periodo mínimo de registro y de declaraciones fiscales, pueden tener problemas para patrocinar incluso a un candidato plenamente cualificado. Por eso una oferta de una empresa muy pequeña o recién registrada a veces se cae en la fase de la visa, y no en la de la contratación.</p>
@@ -263,18 +275,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/es/change-of-status-korea-foreigners.html"><span class="rg-cat">Inmigración</span>Tu Situación Cambió. Tu Visa No Cambió Con Ella.</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Cómo Puedo Ayudar</p>
+<div class="article-cta" data-area="visa"><div class="cta-box">
+    <p class="cta-eyebrow">Qué vemos en 30 minutos</p>
     <p class="cta-title">¿Tienes una oferta con visa E-7 o un problema en la renovación?</p>
-    <p class="cta-body">Ayudo a profesionales extranjeros y a sus empleadores a confirmar que el puesto encaja en una categoría elegible, a revisar el riesgo del patrocinio antes de firmar el contrato y a tramitar bien, a la primera, el cambio de centro de trabajo y la renovación. Con claridad, y en inglés, español o portugués.</p>
+    <p class="cta-body">Envíame tus documentos antes de hablar y los 30 minutos se van en respuestas:</p>
+    <ul class="cta-list"><li>Cómo está hoy tu situación migratoria y qué opciones siguen abiertas: prórroga, cambio de visado o salida voluntaria</li><li>Si te pasaste del plazo: la multa y el tiempo de prohibición de entrada que puedes esperar, y cómo reducirlos</li><li>Las tres cosas que tienes que hacer esta semana, en orden</li></ul>
     <div class="cta-actions">
-      <a href="/es/book/" class="cta-wa">Reservar una consulta</a>
+      <a href="/es/book/" class="cta-wa">Reservar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica el secreto profesional · Consultas en inglés, español y portugués</p>
   </div></div>
 <p class="article-disclaimer">Este artículo tiene fines exclusivamente informativos y no constituye asesoramiento legal. Las leyes y los procedimientos pueden cambiar. Para asesoría sobre su caso concreto, consulte a un abogado colegiado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Abogado</div><div class="footer-copy">© 2026 Juan W. Hong, Abogado · juanesq.com<br>Abogado responsable: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/es/">Guías Legales</a> &nbsp;·&nbsp; <a href="/privacy.html#es">Política de Privacidad</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

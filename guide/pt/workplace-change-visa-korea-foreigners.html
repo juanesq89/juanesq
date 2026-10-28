@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" data-area="visa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mudar de Empresa com Visto de Trabalho na Coreia</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -228,6 +239,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     </ul>
     <p class="pullquote">A autorização de troca de local (사업장 변경허가) não é um papel que se entrega depois: na maioria dos vistos de trabalho, <em>quando</em> você deixa um emprego e <em>quando</em> começa o outro é toda a questão jurídica.</p>
 
+    <p class="jq-inv" data-pos="guide_banner"><b>Problema com a imigração agora?</b> Fale comigo antes de assinar ou depor <a href="/pt/book/">Agendar →</a></p>
     <h2><span class="n">→</span>Trabalhadores E-9: o Sistema de Permissão de Emprego (고용허가제)</h2>
     <div class="section-rule"></div>
     <p>Quem tem visto E-9 trabalha sob o Sistema de Permissão de Emprego (고용허가제, <em>goyong heogaje</em>), que restringe a troca de emprego muito mais do que quase qualquer outra categoria. Historicamente, um trabalhador E-9 precisava demonstrar uma de uma lista limitada de causas para trocar de local — fechamento do negócio, não renovação do contrato pelo empregador, ou maus-tratos documentados como salário não pago ou abuso — e não simplesmente preferir outro emprego. Reformas recentes ampliaram o número de trocas permitidas e afrouxaram algumas restrições em setores específicos, mas a estrutura de fundo continua a mesma: a troca passa pelo sistema de centros de emprego do Ministério do Emprego e Trabalho, que casa o trabalhador com um novo empregador registrado, em vez de o trabalhador arranjar o emprego por conta própria como faria um coreano.</p>
@@ -278,18 +290,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/pt/employer-holding-passport-korea-foreigners.html"><span class="rg-cat">Direito Trabalhista</span>Seu Empregador na Coreia Está com o Seu Passaporte: Por Que É Ilegal e Como Recuperá-lo</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Como Posso Ajudar</p>
+<div class="article-cta" data-area="visa"><div class="cta-box">
+    <p class="cta-eyebrow">O que vemos em 30 minutos</p>
     <p class="cta-title">Trocando de empresa com visto de trabalho, ou já dentro de uma lacuna de status?</p>
-    <p class="cta-body">Oriento trabalhadores com E-9, E-7 e outros vistos de trabalho a planejar a troca de local na ordem correta, a documentar as infrações do empregador que permitem uma transferência mais rápida ou sem restrições, e a corrigir lacunas de status antes que virem multa ou proibição de entrada.</p>
+    <p class="cta-body">Me envie seus documentos antes da conversa e os 30 minutos vão para respostas:</p>
+    <ul class="cta-list"><li>Como está hoje a sua situação migratória e quais opções ainda estão abertas: prorrogação, mudança de visto ou saída voluntária</li><li>Se você passou do prazo: a multa e o período de proibição de entrada esperados, e como reduzi-los</li><li>As três coisas a fazer nesta semana, em ordem</li></ul>
     <div class="cta-actions">
-      <a href="/pt/book/" class="cta-wa">Agendar uma consulta</a>
+      <a href="/pt/book/" class="cta-wa">Agendar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica-se o sigilo profissional · Consultas em inglês, espanhol e português</p>
   </div></div>
 <p class="article-disclaimer">Este artigo tem caráter meramente informativo e não constitui aconselhamento jurídico. As leis e os procedimentos podem mudar. Para orientação sobre o seu caso específico, consulte um advogado habilitado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Advogado</div><div class="footer-copy">© 2026 Juan W. Hong, Advogado · juanesq.com<br>Advogado responsável: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/pt/">Guias Jurídicos</a> &nbsp;·&nbsp; <a href="/privacy.html#pt">Política de Privacidade</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

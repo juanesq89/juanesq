@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="criminal">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -202,6 +202,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -247,6 +258,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     </table>
     <p>Notice what is missing from that table: any figure below which the conduct stops being theft. A three-thousand-won item is theft on the same provision as a three-million-won one. The value goes to the sentence and to the charging decision, not to whether an offence exists.</p>
     <p>Notice also the third row. Whether an item was <strong>taken from someone&rsquo;s possession</strong> or <strong>already lost</strong> changes the offence entirely, and with it the exposure. A wallet left on a restaurant table is usually still treated as within the establishment&rsquo;s control; a wallet found on a street may not be. This distinction is worth more than most people realise, and it is decided on facts that are established in the first interview.</p>
+    <p class="jq-inv" data-pos="guide_banner"><b>Under investigation now?</b> Talk before you give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">1</span>Paying the Shop Back Does Not End It</h2>
     <div class="section-rule"></div>
     <p>Some Korean offences are &ldquo;&#48152;&#51032;&#49324;&#48520;&#48268;&#51396;&rdquo; &mdash; the prosecution cannot proceed if the victim expressly asks that it not. Defamation and simple assault work that way. <em>Theft does not.</em></p>
@@ -296,13 +308,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/illegal-filming-charges-korea-foreigners.html"><span class="rg-cat">Criminal Defense</span>Illegal Filming (불법촬영) Charges in Korea: The Phone, the Forensics, and What Counts as a Crime</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="criminal">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Under investigation for theft in Korea?</p>
-    <p class="cta-body">I represent foreign residents from the first police interview onward &mdash; the stage where a theft case is either steered toward a suspended indictment or allowed to become a conviction. Restitution, settlement, the written statement, and the immigration consequences that follow. Clearly, in English, Spanish, or Portuguese.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Before a police or prosecution interview: what to check before you give a statement</li><li>How a settlement (합의) with the other side would affect the outcome</li><li>The realistic range of outcomes, and what it means for your visa</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul &middot; English, Espa&ntilde;ol, Portugu&ecirc;s</p>
   </div>
@@ -313,6 +326,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

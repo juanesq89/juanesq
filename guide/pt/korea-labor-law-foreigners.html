@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" data-area="labor">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Direitos Trabalhistas na Coreia para Estrangeiros</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -277,18 +288,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/pt/employer-holding-passport-korea-foreigners.html"><span class="rg-cat">Direito Trabalhista</span>Seu Empregador na Coreia Está com o Seu Passaporte: Por Que É Ilegal e Como Recuperá-lo</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Como Posso Ajudar</p>
+<div class="article-cta" data-area="labor"><div class="cta-box">
+    <p class="cta-eyebrow">O que vemos em 30 minutos</p>
     <p class="cta-title">O seu empregador está violando os seus direitos?</p>
-    <p class="cta-body">Oriento e represento trabalhadores estrangeiros na Coreia em conflitos trabalhistas — salários não pagos, demissões injustas, pedidos de indenização e direitos no trabalho. Explico a sua situação com clareza, no seu idioma.</p>
+    <p class="cta-body">Me envie seus documentos antes da conversa e os 30 minutos vão para respostas:</p>
+    <ul class="cta-list"><li>O que lhe devem (salários, horas extras, verbas rescisórias) e um valor aproximado</li><li>Queixa no escritório do trabalho, negociação ou ação: qual caminho faz sentido</li><li>O que acontece com o seu visto se você sair ou for demitido</li></ul>
     <div class="cta-actions">
-      <a href="/pt/book/" class="cta-wa">Agendar uma consulta</a>
+      <a href="/pt/book/" class="cta-wa">Agendar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica-se o sigilo profissional · Consultas em inglês, espanhol e português</p>
   </div></div>
 <p class="article-disclaimer">Este artigo tem caráter meramente informativo e não constitui aconselhamento jurídico. As leis e os procedimentos podem mudar. Para orientação sobre o seu caso específico, consulte um advogado habilitado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Advogado</div><div class="footer-copy">© 2026 Juan W. Hong, Advogado · juanesq.com<br>Advogado responsável: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/pt/">Guias Jurídicos</a> &nbsp;·&nbsp; <a href="/privacy.html#pt">Política de Privacidade</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

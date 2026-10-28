@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="criminal">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -201,6 +201,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -241,6 +252,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <p>It runs from the day judgment is <strong>pronounced</strong> in open court. It does not run from the day the written judgment is served on you, and it does not wait for a translation. If you were in the courtroom and heard the sentence through an interpreter, the clock started.</p>
     <p>The notice of appeal (항소장) is filed with the court that gave the first instance judgment — not with the appellate court. Filing it in the wrong place while the seven days expire is a real way to lose an appeal.</p>
     <p>The notice itself is short. It does not need to contain your arguments. Its only job is to preserve the appeal.</p>
+    <p class="jq-inv" data-pos="guide_banner"><b>Under investigation now?</b> Talk before you give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">→</span>The Second Clock</h2>
     <div class="section-rule"></div>
     <p>After the case moves up, the appellate court sends a notice of receipt of trial records (소송기록접수통지). From the day you receive that notice, you have twenty days to file the statement of grounds for appeal (항소이유서).</p>
@@ -283,13 +295,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/hit-and-run-korea-foreigners.html"><span class="rg-cat">Criminal Defense</span>Leaving the Scene in Korea: Hit-and-Run (뺑소니) and the Penalty Gap Nobody Expects</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="criminal">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Convicted at first instance, and the clock is running?</p>
-    <p class="cta-body">I represent foreign nationals in criminal appeals (항소) before Korean courts: filing the notice of appeal (항소장) within the seven-day window, drafting the statement of grounds for appeal (항소이유서), building the sentencing record that the second instance court will actually weigh, and managing the immigration consequences that follow a confirmed conviction. If judgment was pronounced in the last few days, that is the call to make first.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Before a police or prosecution interview: what to check before you give a statement</li><li>How a settlement (합의) with the other side would affect the outcome</li><li>The realistic range of outcomes, and what it means for your visa</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul · English, Español, Português</p>
   </div>
@@ -300,6 +313,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

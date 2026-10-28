@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-area="criminal">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Detenido en Corea: la Audiencia de Prisión Preventiva</title>
@@ -188,6 +188,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -230,6 +241,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     </table>
     <p>La vista es corta. Es también el único momento en que un juez te mira a ti y no a un expediente, y la única ocasión realista de evitar meses de prisión provisional.</p>
     <p class="pullquote">La audiencia no va de culpabilidad. Va de si se puede confiar en que sigas localizable — y esa es la pregunta que un extranjero se presume que suspende.</p>
+    <p class="jq-inv" data-pos="guide_banner"><b>¿Te están investigando?</b> Habla conmigo antes de declarar <a href="/es/book/">Reservar →</a></p>
     <h2><span class="n">2</span>Qué Está Decidiendo el Juez en Realidad</h2>
     <div class="section-rule"></div>
     <p>Los motivos legales son estrechos: que haya razón para sospechar del delito y, después, que el sospechoso carezca de domicilio fijo, pueda destruir pruebas o pueda fugarse. Los dos últimos son los que hacen el trabajo de verdad.</p>
@@ -292,18 +304,20 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/es/drug-charges-korea-foreigners.html"><span class="rg-cat">Defensa Penal</span>Detenido por Drogas en Corea Siendo Extranjero: Qué Pasa Después</a></li>
   </ul>
 </aside>
-<div class="article-cta"><div class="cta-box">
-    <p class="cta-eyebrow">Cómo Puedo Ayudar</p>
+<div class="article-cta" data-area="criminal"><div class="cta-box">
+    <p class="cta-eyebrow">Qué vemos en 30 minutos</p>
     <p class="cta-title">¿Han detenido a alguien en Corea y la audiencia es mañana?</p>
-    <p class="cta-body">Asisto a extranjeros en la audiencia de prisión preventiva, preparo la prueba de domicilio, empleo y avalista a la que los juzgados sí responden, pido la revisión de la detención y la libertad bajo fianza, negocio el acuerdo con la víctima y explico la consecuencia migratoria que viene después. Si las cuarenta y ocho horas aún corren, actúa ahora y no tras la decisión.</p>
+    <p class="cta-body">Envíame tus documentos antes de hablar y los 30 minutos se van en respuestas:</p>
+    <ul class="cta-list"><li>Antes de declarar ante la policía o la fiscalía: qué revisar antes de dar tu versión</li><li>Cómo influiría un acuerdo (합의) con la otra parte en el resultado</li><li>El rango realista de resultados y qué supone para tu visado</li></ul>
     <div class="cta-actions">
-      <a href="/es/book/" class="cta-wa">Reservar una consulta</a>
+      <a href="/es/book/" class="cta-wa">Reservar 30 minutos · ₩120.000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">Aplica el secreto profesional · Consultas en inglés, español y portugués</p>
   </div></div>
 <p class="article-disclaimer">Este artículo tiene fines exclusivamente informativos y no constituye asesoramiento legal. Las leyes y los procedimientos pueden cambiar. Para asesoría sobre su caso concreto, consulte a un abogado colegiado.</p>
 <footer><div class="footer-logo">Juan W. Hong, Abogado</div><div class="footer-copy">© 2026 Juan W. Hong, Abogado · juanesq.com<br>Abogado responsable: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div><div class="footer-legal"><a href="/guide/es/">Guías Legales</a> &nbsp;·&nbsp; <a href="/privacy.html#es">Política de Privacidad</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>

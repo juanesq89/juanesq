@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-area="criminal">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -201,6 +201,17 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   footer{flex-direction:column;align-items:flex-start;margin-top:72px;padding:40px 20px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* jq-1028: area box list, investigation banner */
+.cta-list{margin:0 0 26px;padding:0;list-style:none}
+.cta-list li{position:relative;padding:0 0 0 22px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--ivory)}
+.cta-list li::before{content:'';position:absolute;left:2px;top:.78em;width:9px;height:1.5px;background:var(--seal)}
+.cta-actions .cta-wa{display:inline-block;padding:15px 26px;line-height:1.45;text-align:center}
+.cta-wa span{font-weight:500;opacity:.8;white-space:nowrap}
+.jq-inv{display:block;margin:30px 0;padding:14px 18px;border-left:2px solid var(--seal-deep);background:var(--paper-2);font-size:15.5px;line-height:1.5;color:var(--text)}
+.jq-inv b{color:var(--navy);font-weight:600}
+.article-body .jq-inv a{margin-left:8px;font-weight:600;color:var(--seal-deep);text-decoration:none;white-space:nowrap}
+.article-body .jq-inv a:hover{text-decoration:underline}
+@media(max-width:760px){.jq-inv{font-size:15px}.article-body .jq-inv a{margin-left:6px}}
 </style>
 </head>
 <body>
@@ -243,6 +254,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
       <li>Up to <strong>5 years in prison</strong> or a fine up to 10 million KRW if committed through printed materials, writing, or online — which includes social media, review sites, and messaging apps</li>
     </ul>
     <p>And here is the part that makes foreigners' jaws drop: Article 310 states that truth is a defense — but <em>only if the statement was made solely for the public benefit.</em> If a court decides your true statement wasn't sufficiently in the public interest, you can still be convicted.</p>
+    <p class="jq-inv" data-pos="guide_banner"><b>Under investigation now?</b> Talk before you give a statement <a href="/book/">Book →</a></p>
     <h2><span class="n">→</span>Real Situations That Lead to Criminal Complaints</h2>
     <div class="section-rule"></div>
     <p>These aren't hypotheticals — they result in actual complaints filed in Korea every year:</p>
@@ -290,13 +302,14 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
     <li><a href="/guide/suspended-dispositions-korea-foreigners.html"><span class="rg-cat">Criminal Defense</span>Three Words That All Translate as “Suspended” — and Mean Completely Different Things</a></li>
   </ul>
 </aside>
-<div class="article-cta">
+<div class="article-cta" data-area="criminal">
   <div class="cta-box">
-    <p class="cta-eyebrow">How I Can Help</p>
+    <p class="cta-eyebrow">What we cover in 30 minutes</p>
     <p class="cta-title">Facing a defamation complaint in Korea?</p>
-    <p class="cta-body">I represent foreign nationals facing defamation complaints in Korea. I know how sudden and frightening a police summons feels over something you posted online — and I can guide you through it in your language, at every step. Whether you've been complained against or want advice before posting, reach out.</p>
+    <p class="cta-body">Send me your documents before we speak, and the 30 minutes go to answers:</p>
+    <ul class="cta-list"><li>Before a police or prosecution interview: what to check before you give a statement</li><li>How a settlement (합의) with the other side would affect the outcome</li><li>The realistic range of outcomes, and what it means for your visa</li></ul>
     <div class="cta-actions">
-      <a href="/book/" class="cta-wa">Book a consultation</a>
+      <a href="/book/" class="cta-wa">Book 30 minutes · ₩120,000 <span>(≈ US$90)</span></a>
     </div>
     <p class="cta-langs">SNK Law Firm, Seoul · English, Español, Português</p>
   </div>
@@ -307,6 +320,7 @@ footer{margin-top:104px;padding:52px clamp(20px,5vw,64px);background:var(--ink);
   <div class="footer-copy">© 2026 Juan W. Hong, Attorney at Law · juanesq.com<br>Responsible attorney: Juan W. Hong (<span lang="ko">홍우원</span>), SNK Law Firm</div>
 <div class="footer-legal"><a href="/guide/">Legal Guides</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></div>
 </footer>
+<script src="/js/site.js?v=2" defer></script>
 <script src="/js/ui.js?v=8" defer></script>
 </body>
 </html>
