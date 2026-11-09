@@ -44,9 +44,11 @@ const GROUPS = [
     ['사실혼', 'Common-law marriage', 'Unión de hecho', 'União estável', 'common-law-marriage-korea-foreigners'],
     ['상속 · 한정승인 · 상속포기', 'Inheritance · Limited acceptance · Renunciation', 'Herencia · Aceptación a beneficio de inventario · Renuncia', 'Herança · Aceitação limitada · Renúncia', 'inheritance-korea-foreigners'],
     ['유언', 'Will', 'Testamento', 'Testamento', 'will-testament-korea-foreigners'],
+    ['혼전계약서 (부부재산계약)', 'Prenuptial agreement (prenup)', 'Acuerdo prenupcial', 'Pacto antenupcial', 'prenuptial-agreement-korea-foreigners'],
   ]],
   ['체류 · 비자', [
     ['귀화', 'Naturalization', 'Naturalización', 'Naturalização', 'naturalization-korea-foreigners'],
+    ['국적이탈 (복수국적 · 병역)', 'Renouncing Korean nationality (dual nationality · military service)', 'Renuncia a la nacionalidad coreana (doble nacionalidad · servicio militar)', 'Renúncia à nacionalidade coreana (dupla cidadania · serviço militar)', 'military-service-dual-nationality-korea'],
     ['영주권 (F-5)', 'Permanent residency', 'Residencia permanente', 'Residência permanente', 'permanent-residency-korea-foreigners'],
     ['강제퇴거 · 출국명령', 'Deportation · Departure order', 'Deportación · Orden de salida', 'Deportação · Ordem de saída', 'deportation-entry-ban-korea-foreigners'],
     ['불법체류 (체류기간 초과)', 'Visa overstay', 'Visa vencida', 'Visto vencido', 'visa-overstay-korea-foreigners'],
@@ -59,6 +61,7 @@ const GROUPS = [
     ['퇴직금', 'Severance pay', 'Indemnización por años de servicio', 'Indenização por tempo de serviço', 'severance-pay-korea-foreigners'],
     ['직장 내 괴롭힘', 'Workplace bullying', 'Acoso laboral', 'Assédio moral no trabalho', 'workplace-bullying-korea-foreigners'],
     ['산업재해', 'Workplace injury', 'Accidente de trabajo', 'Acidente de trabalho', 'workplace-injury-korea-foreigners'],
+    ['출산휴가 · 육아휴직', 'Maternity leave · Parental leave', 'Licencia de maternidad · Permiso parental', 'Licença-maternidade · Licença parental', 'parental-maternity-leave-korea-foreigners'],
   ]],
   ['집 · 돈 · 소송', [
     ['전세사기', 'Jeonse scam', 'Estafa del jeonse', 'Golpe do jeonse', 'jeonse-scam-korea-foreigners'],
@@ -66,6 +69,7 @@ const GROUPS = [
     ['명도소송', 'Eviction lawsuit', 'Juicio de desahucio', 'Ação de despejo', 'eviction-korea-foreigners'],
     ['가압류', 'Provisional attachment', 'Embargo preventivo', 'Arresto cautelar', 'provisional-attachment-korea-foreigners'],
     ['소액사건', 'Small claims', 'Demanda de menor cuantía', 'Pequenas causas', 'small-claims-court-korea-foreigners'],
+    ['지급명령', 'Payment order', 'Orden de pago', 'Ordem de pagamento', 'payment-order-korea-foreigners'],
     ['강제집행', 'Compulsory execution', 'Ejecución forzosa', 'Execução forçada', 'enforcing-a-judgment-korea-foreigners'],
     ['소멸시효', 'Statute of limitations', 'Prescripción', 'Prescrição', 'limitation-periods-deadlines-korea-foreigners'],
   ]],
@@ -139,7 +143,7 @@ ${JSON.stringify(ld, null, 1)}
 <link rel="preload" href="/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
-<link href="/css/site.css?v=19" rel="stylesheet">
+<link href="/css/site.css?v=21" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{--serif:'Piazzolla','Noto Serif KR','AppleMyungjo','Batang',serif}
