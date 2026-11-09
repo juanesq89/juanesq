@@ -5,9 +5,17 @@
     <link>https://juanesq.com/</link>
     <description>Plain-English guides to Korean law for foreign residents — immigration and visas, criminal defense, employment, real estate, family law, and tax.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 01:19:56 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 13:58:54 GMT</lastBuildDate>
     <generator>juanesq</generator>
     <atom:link href="https://juanesq.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Collect a Debt in Korea Without a Hearing: Payment Order (지급명령)</title>
+      <link>https://juanesq.com/guide/payment-order-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/payment-order-korea-foreigners.html</guid>
+      <category>Civil Claims &amp; Debt Recovery</category>
+      <description>Owed money in Korea? A payment order (지급명령) has no hearing: if the debtor does not object within 2 weeks of service, it works like a final judgment.</description>
+      <pubDate>Mon, 09 Nov 2026 13:58:54 GMT</pubDate>
+    </item>
     <item>
       <title>Trade Dispute With a Korean Company: Arbitration or Court?</title>
       <link>https://juanesq.com/guide/international-trade-dispute-korea-foreigners.html</link>
@@ -478,14 +486,6 @@
       <guid isPermaLink="true">https://juanesq.com/guide/detention-warrant-bail-korea-foreigners.html</guid>
       <category>Criminal Defense</category>
       <description>Police can hold you 48 hours before a judge decides. A Korean attorney explains the detention warrant hearing (구속영장실질심사) and the two routes out of custody.</description>
-      <pubDate>Sat, 08 Aug 2026 10:24:36 GMT</pubDate>
-    </item>
-    <item>
-      <title>The F-2-7 Points-Based Residence Visa in Korea</title>
-      <link>https://juanesq.com/guide/f2-7-points-based-visa-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/f2-7-points-based-visa-korea-foreigners.html</guid>
-      <category>Immigration &amp; Visas</category>
-      <description>The F-2-7 points visa (거주) frees you from employer sponsorship and shortens the road to permanent residency. A Korean attorney explains scoring and pitfalls.</description>
       <pubDate>Sat, 08 Aug 2026 10:24:36 GMT</pubDate>
     </item>
   </channel>
