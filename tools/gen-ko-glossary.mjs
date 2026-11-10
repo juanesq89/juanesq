@@ -27,6 +27,7 @@ const GROUPS = [
     ['보이스피싱', 'Voice phishing', 'Estafa telefónica', 'Golpe por telefone', 'voice-phishing-scam-korea-foreigners'],
     ['명의대여 · 차명계좌', 'Lending your name · Borrowed-name account', 'Prestar tu nombre o tu cuenta', 'Emprestar seu nome ou sua conta', 'lending-your-name-korea-foreigners'],
     ['고소', 'Criminal complaint', 'Denuncia penal', 'Queixa-crime', 'criminal-complaint-victim-korea-foreigners'],
+    ['무고', 'False accusation', 'Denuncia falsa', 'Denunciação caluniosa', 'false-accusation-korea-foreigners'],
     ['구속영장', 'Detention warrant', 'Orden de prisión preventiva', 'Mandado de prisão preventiva', 'detention-warrant-bail-korea-foreigners'],
     ['약식명령', 'Summary order', 'Orden sumaria', 'Ordem sumária', 'summary-order-criminal-fine-korea-foreigners'],
     ['기소유예', 'Suspended indictment', 'Suspensión de la acusación', 'Suspensão da denúncia', 'suspended-dispositions-korea-foreigners'],
@@ -43,6 +44,7 @@ const GROUPS = [
     ['양육비', 'Child support', 'Pensión alimenticia', 'Pensão alimentícia', 'child-support-korea-foreigners'],
     ['혼인신고', 'Marriage registration', 'Registro del matrimonio', 'Registro do casamento', 'marriage-registration-korea-foreigners'],
     ['사실혼', 'Common-law marriage', 'Unión de hecho', 'União estável', 'common-law-marriage-korea-foreigners'],
+    ['가정폭력', 'Domestic violence', 'Violencia doméstica', 'Violência doméstica', 'domestic-violence-korea-foreigners'],
     ['상속 · 한정승인 · 상속포기', 'Inheritance · Limited acceptance · Renunciation', 'Herencia · Aceptación a beneficio de inventario · Renuncia', 'Herança · Aceitação limitada · Renúncia', 'inheritance-korea-foreigners'],
     ['유언', 'Will', 'Testamento', 'Testamento', 'will-testament-korea-foreigners'],
     ['혼전계약서 (부부재산계약)', 'Prenuptial agreement (prenup)', 'Acuerdo prenupcial', 'Pacto antenupcial', 'prenuptial-agreement-korea-foreigners'],
@@ -69,6 +71,7 @@ const GROUPS = [
   ['집 · 돈 · 소송', [
     ['전세사기', 'Jeonse scam', 'Estafa del jeonse', 'Golpe do jeonse', 'jeonse-scam-korea-foreigners'],
     ['임대차 보증금', 'Rental deposit', 'Fianza', 'Caução do aluguel', 'deposit-return-korea-foreigners'],
+    ['계약갱신요구권', 'Lease renewal right', 'Derecho de renovación del alquiler', 'Direito de renovação do aluguel', 'lease-renewal-right-korea-foreigners'],
     ['명도소송', 'Eviction lawsuit', 'Juicio de desahucio', 'Ação de despejo', 'eviction-korea-foreigners'],
     ['가압류', 'Provisional attachment', 'Embargo preventivo', 'Arresto cautelar', 'provisional-attachment-korea-foreigners'],
     ['소액사건', 'Small claims', 'Demanda de menor cuantía', 'Pequenas causas', 'small-claims-court-korea-foreigners'],
@@ -76,6 +79,7 @@ const GROUPS = [
     ['지급정지 (계좌 동결)', 'Frozen bank account (payment suspension)', 'Cuenta bancaria bloqueada', 'Conta bancária bloqueada', 'frozen-bank-account-korea-foreigners'],
     ['강제집행', 'Compulsory execution', 'Ejecución forzosa', 'Execução forçada', 'enforcing-a-judgment-korea-foreigners'],
     ['소멸시효', 'Statute of limitations', 'Prescripción', 'Prescrição', 'limitation-periods-deadlines-korea-foreigners'],
+    ['개인회생 · 개인파산', 'Personal rehabilitation · Personal bankruptcy', 'Rehabilitación · Quiebra personal', 'Reabilitação · Falência pessoal', 'personal-bankruptcy-korea-foreigners'],
   ]],
 ]
 
