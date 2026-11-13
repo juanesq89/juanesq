@@ -226,6 +226,9 @@ a{color:inherit}
 .wa-row svg{width:20px;height:20px;fill:#25D366;flex:none}
 .wa-row span{font-size:16px;font-weight:500}
 .wa-row em{margin-left:auto;font-style:normal;font-size:13px;font-weight:600;color:var(--ivory-2);white-space:nowrap}
+.wa-row.kk-row svg{fill:#FEE500}
+.wa-row+.kk-row{margin-top:10px}
+.bk-hero .wa-row.kk-row{margin-top:0}
 .mail-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;min-height:60px;padding:10px 12px 10px 20px;border:1px solid var(--rule);min-width:0}
 .mail-row>span{font-size:16px;color:var(--ivory);overflow-wrap:anywhere;min-width:0}
 .mail-row .acts{display:flex;gap:8px;margin-left:auto}

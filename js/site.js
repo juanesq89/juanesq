@@ -3,6 +3,7 @@
    book_form_start {plan}            — first interaction with the booking form (fired by the /book/ script via jqTrack)
    book_submit     {plan, area}      — booking request accepted (fired by the /book/ script via jqTrack)
    whatsapp_click  {page, position}  — wa.me links (booking questions only)
+   kakao_click     {page, position}  — open.kakao.com links (booking questions only)
    outbound_site   {to, page}        — links to the sister sites (gotbom, preverdict, nohulaw)
    contact_click   {method, position} / generate_lead — kept from the earlier home-page setup.
    Every call is a no-op when gtag is missing (blocked, offline, local preview). No personal data is ever sent.
@@ -55,6 +56,11 @@
     if (/^https:\/\/wa\.me\//.test(h)) {
       ev('whatsapp_click', { page: page, position: pos });
       ev('contact_click', { method: 'whatsapp', position: pos });
+      return;
+    }
+    if (/^https:\/\/open\.kakao\.com\//.test(h)) {
+      ev('kakao_click', { page: page, position: pos });
+      ev('contact_click', { method: 'kakaotalk', position: pos });
       return;
     }
     if (/^mailto:/i.test(h) || /^https:\/\/mail\.google\.com\//.test(h)) {
