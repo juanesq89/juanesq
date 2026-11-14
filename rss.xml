@@ -5,9 +5,25 @@
     <link>https://juanesq.com/</link>
     <description>Plain-English guides to Korean law for foreign residents — immigration and visas, criminal defense, employment, real estate, family law, and tax.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 22:09:57 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 22:09:50 GMT</lastBuildDate>
     <generator>juanesq</generator>
     <atom:link href="https://juanesq.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Forged Documents in Korea (문서위조): Visa Papers, IDs, Diplomas</title>
+      <link>https://juanesq.com/guide/document-forgery-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/document-forgery-korea-foreigners.html</guid>
+      <category>Criminal Defense</category>
+      <description>Forging or using a fake document in Korea: up to 5 years (private) or 10 (public). In a visa file it is also an Immigration Act crime and a deportation ground.</description>
+      <pubDate>Sat, 14 Nov 2026 22:09:50 GMT</pubDate>
+    </item>
+    <item>
+      <title>Stolen Goods in Korea (장물죄): Up to 7 Years for Buying or Keeping</title>
+      <link>https://juanesq.com/guide/handling-stolen-goods-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/handling-stolen-goods-korea-foreigners.html</guid>
+      <category>Criminal Defense</category>
+      <description>Buying, keeping, carrying or selling goods you know are stolen is 장물 in Korea: up to 7 years or 15M won (Criminal Act Art. 362). Dealers: negligence counts.</description>
+      <pubDate>Fri, 13 Nov 2026 22:11:31 GMT</pubDate>
+    </item>
     <item>
       <title>Deepfake Sexual Images in Korea: Making, Sharing, Even Watching</title>
       <link>https://juanesq.com/guide/deepfake-sexual-images-korea-foreigners.html</link>
@@ -470,22 +486,6 @@
       <guid isPermaLink="true">https://juanesq.com/guide/indecent-act-by-force-charges-korea-foreigners.html</guid>
       <category>Criminal Defense</category>
       <description>Indecent act by force (강제추행) is charged broadly in Korea and settlement no longer ends it. A Korean attorney explains registration and immigration fallout.</description>
-      <pubDate>Fri, 14 Aug 2026 02:07:59 GMT</pubDate>
-    </item>
-    <item>
-      <title>Applying for Refugee Status in Korea</title>
-      <link>https://juanesq.com/guide/refugee-asylum-application-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/refugee-asylum-application-korea-foreigners.html</guid>
-      <category>Immigration &amp; Visas</category>
-      <description>Refugee status (난민) in Korea turns on an interview and appeals measured in days. A Korean attorney explains the routes and how humanitarian stay differs.</description>
-      <pubDate>Fri, 14 Aug 2026 02:07:59 GMT</pubDate>
-    </item>
-    <item>
-      <title>Sending Money Out of Korea: Why Transfers Get Blocked</title>
-      <link>https://juanesq.com/guide/sending-money-out-of-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/sending-money-out-of-korea-foreigners.html</guid>
-      <category>Banking &amp; Foreign Exchange</category>
-      <description>Korean banks block outbound transfers over documents, not amounts. A Korean attorney explains the foreign exchange rules (외국환거래) and split remittances.</description>
       <pubDate>Fri, 14 Aug 2026 02:07:59 GMT</pubDate>
     </item>
   </channel>
