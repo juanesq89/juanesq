@@ -20,6 +20,7 @@ const GROUPS = [
     ['횡령 · 배임', 'Embezzlement · Breach of trust', 'Apropiación indebida · Administración desleal', 'Apropriação indébita · Gestão desleal', 'embezzlement-charges-korea-foreigners'],
     ['절도', 'Theft', 'Hurto', 'Furto', 'theft-shoplifting-charges-korea-foreigners'],
     ['장물', 'Handling stolen goods', 'Receptación', 'Receptação', 'handling-stolen-goods-korea-foreigners'],
+    ['문서위조', 'Document forgery', 'Falsificación de documentos', 'Falsificação de documento', 'document-forgery-korea-foreigners'],
     ['강제추행', 'Indecent act by force', 'Abuso sexual', 'Abuso sexual', 'indecent-act-by-force-charges-korea-foreigners'],
     ['불법촬영', 'Illegal filming', 'Grabación sin consentimiento', 'Filmagem sem consentimento', 'illegal-filming-charges-korea-foreigners'],
     ['딥페이크 (허위영상물)', 'Deepfake sexual images', 'Deepfake sexual', 'Deepfake sexual', 'deepfake-sexual-images-korea-foreigners'],
@@ -52,6 +53,7 @@ const GROUPS = [
     ['사실혼', 'Common-law marriage', 'Unión de hecho', 'União estável', 'common-law-marriage-korea-foreigners'],
     ['입양', 'Adoption', 'Adopción', 'Adoção', 'adoption-korea-foreigners'],
     ['가정폭력', 'Domestic violence', 'Violencia doméstica', 'Violência doméstica', 'domestic-violence-korea-foreigners'],
+    ['학교폭력', 'School violence', 'Acoso y violencia escolar', 'Bullying e violência escolar', 'school-violence-korea-foreigners'],
     ['상속 · 한정승인 · 상속포기', 'Inheritance · Limited acceptance · Renunciation', 'Herencia · Aceptación a beneficio de inventario · Renuncia', 'Herança · Aceitação limitada · Renúncia', 'inheritance-korea-foreigners'],
     ['유언', 'Will', 'Testamento', 'Testamento', 'will-testament-korea-foreigners'],
     ['혼전계약서 (부부재산계약)', 'Prenuptial agreement (prenup)', 'Acuerdo prenupcial', 'Pacto antenupcial', 'prenuptial-agreement-korea-foreigners'],
@@ -67,6 +69,7 @@ const GROUPS = [
     ['재입국허가', 'Re-entry permit', 'Permiso de reingreso', 'Permissão de reentrada', 're-entry-permit-korea-foreigners'],
     ['체류자격 변경허가', 'Change of status permit', 'Cambio de visa dentro de Corea', 'Mudança de visto dentro da Coreia', 'change-of-status-korea-foreigners'],
     ['난민 신청', 'Refugee status application', 'Solicitud de asilo', 'Pedido de refúgio', 'refugee-asylum-application-korea-foreigners'],
+    ['아포스티유', 'Apostille', 'Apostilla', 'Apostila', 'apostille-document-authentication-korea-foreigners'],
   ]],
   ['노동', [
     ['부당해고', 'Unfair dismissal', 'Despido improcedente', 'Demissão sem justa causa', 'wrongful-termination-korea-foreigners'],
@@ -91,6 +94,7 @@ const GROUPS = [
     ['지급정지 (계좌 동결)', 'Frozen bank account (payment suspension)', 'Cuenta bancaria bloqueada', 'Conta bancária bloqueada', 'frozen-bank-account-korea-foreigners'],
     ['강제집행', 'Compulsory execution', 'Ejecución forzosa', 'Execução forçada', 'enforcing-a-judgment-korea-foreigners'],
     ['소멸시효', 'Statute of limitations', 'Prescripción', 'Prescrição', 'limitation-periods-deadlines-korea-foreigners'],
+    ['의료과실 (의료사고)', 'Medical malpractice', 'Negligencia médica', 'Erro médico', 'medical-malpractice-korea-foreigners'],
     ['개인회생 · 개인파산', 'Personal rehabilitation · Personal bankruptcy', 'Rehabilitación · Quiebra personal', 'Reabilitação · Falência pessoal', 'personal-bankruptcy-korea-foreigners'],
   ]],
 ]
