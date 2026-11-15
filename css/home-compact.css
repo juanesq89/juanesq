@@ -63,3 +63,8 @@
 }
 /* r3: 사진 옆 중복 제목 삭제 — 라벨 바로 밑에 경력·학력 */
 .who-cv{margin-top:0}
+/* 2026-11-15: matters list sits under Career inside .who-body; practice areas follow the .who grid at full width */
+.who-body .am{margin-top:8px}
+.am-intl{color:#1a1206;background:var(--gold);border-color:var(--gold)}
+.who + .areas{margin-top:64px}
+@media (max-width:860px){.who + .areas{margin-top:44px}}
