@@ -5,9 +5,33 @@
     <link>https://juanesq.com/</link>
     <description>Plain-English guides to Korean law for foreign residents — immigration and visas, criminal defense, employment, real estate, family law, and tax.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 22:13:24 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 22:14:18 GMT</lastBuildDate>
     <generator>juanesq</generator>
     <atom:link href="https://juanesq.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Marriage Annulment in Korea (혼인무효·취소): Grounds and Deadlines</title>
+      <link>https://juanesq.com/guide/marriage-annulment-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/marriage-annulment-korea-foreigners.html</guid>
+      <category>Family Law</category>
+      <description>Korea has two ways to undo a marriage: a void marriage (혼인무효) and annulment (혼인취소). Fraud must be raised within 3 months of finding out.</description>
+      <pubDate>Fri, 20 Nov 2026 22:14:18 GMT</pubDate>
+    </item>
+    <item>
+      <title>Sent Money to the Wrong Account in Korea? How to Get It Back</title>
+      <link>https://juanesq.com/guide/mistaken-bank-transfer-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/mistaken-bank-transfer-korea-foreigners.html</guid>
+      <category>Civil Claims &amp; Debt Recovery</category>
+      <description>Typed the wrong account number in Korea? Call your bank, then use KDIC's mistaken-transfer return service (착오송금 반환지원), then court. Spending it is embezzlement.</description>
+      <pubDate>Fri, 20 Nov 2026 22:14:18 GMT</pubDate>
+    </item>
+    <item>
+      <title>Water Leak in a Korean Apartment: Who Pays, Landlord or Tenant?</title>
+      <link>https://juanesq.com/guide/water-leak-repairs-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/water-leak-repairs-korea-foreigners.html</guid>
+      <category>Real Estate &amp; Leasing</category>
+      <description>A leak from upstairs or a burst pipe in a rented flat in Korea: what the landlord must fix (Civil Act Art. 623), what you must report, who pays the neighbor.</description>
+      <pubDate>Fri, 20 Nov 2026 22:14:18 GMT</pubDate>
+    </item>
     <item>
       <title>Property Division in a Korean Divorce (재산분할): 2-Year Limit</title>
       <link>https://juanesq.com/guide/divorce-property-division-korea-foreigners.html</link>
@@ -463,30 +487,6 @@
       <category>Labor &amp; Employment</category>
       <description>A Korean non-compete (경업금지) is neither void nor automatically valid. A Korean attorney explains the six factors and the injunction that lands before trial.</description>
       <pubDate>Thu, 27 Aug 2026 02:03:49 GMT</pubDate>
-    </item>
-    <item>
-      <title>Criminal Trial in Korea as a Foreigner: The Courtroom Sequence</title>
-      <link>https://juanesq.com/guide/criminal-trial-process-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/criminal-trial-process-korea-foreigners.html</guid>
-      <category>Criminal Defense</category>
-      <description>Interpretation covers the hearing, not the case file. A Korean attorney explains the order a Korean criminal trial (공판) follows and the seven days after it.</description>
-      <pubDate>Mon, 24 Aug 2026 03:56:27 GMT</pubDate>
-    </item>
-    <item>
-      <title>Winning Is Not Collecting: Enforcing a Judgment in Korea</title>
-      <link>https://juanesq.com/guide/enforcing-a-judgment-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/enforcing-a-judgment-korea-foreigners.html</guid>
-      <category>Civil Claims &amp; Debt Recovery</category>
-      <description>A Korean judgment does not move money on its own. A Korean attorney explains enforcement titles, property disclosure and the three routes of execution (강제집행).</description>
-      <pubDate>Mon, 24 Aug 2026 03:56:27 GMT</pubDate>
-    </item>
-    <item>
-      <title>Working Hours, Overtime and Annual Leave in Korea</title>
-      <link>https://juanesq.com/guide/working-hours-annual-leave-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/working-hours-annual-leave-korea-foreigners.html</guid>
-      <category>Labor &amp; Employment</category>
-      <description>Korean working time turns on two numbers. A Korean attorney explains the 52-hour ceiling, the premiums, the under-five exemption and annual leave (연차).</description>
-      <pubDate>Mon, 24 Aug 2026 03:56:27 GMT</pubDate>
     </item>
   </channel>
 </rss>
