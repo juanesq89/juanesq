@@ -5,9 +5,25 @@
     <link>https://juanesq.com/</link>
     <description>Plain-English guides to Korean law for foreign residents — immigration and visas, criminal defense, employment, real estate, family law, and tax.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 22:13:35 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 22:14:27 GMT</lastBuildDate>
     <generator>juanesq</generator>
     <atom:link href="https://juanesq.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Korean Police Case After You Left Korea: Summons and Warrant</title>
+      <link>https://juanesq.com/guide/police-case-after-leaving-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/police-case-after-leaving-korea-foreigners.html</guid>
+      <category>Criminal Defense</category>
+      <description>Back home and Korean police are calling? The case does not close: the limitation clock can stop while you are abroad, and a warrant can wait for your return.</description>
+      <pubDate>Tue, 24 Nov 2026 22:14:27 GMT</pubDate>
+    </item>
+    <item>
+      <title>Spouse’s Debt in Korea: Are You Liable? The Household Rule</title>
+      <link>https://juanesq.com/guide/spouse-debt-liability-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/spouse-debt-liability-korea-foreigners.html</guid>
+      <category>Family Law</category>
+      <description>In Korea you do not owe your spouse’s loans just because you are married. The exceptions: household debts (일상가사, Civil Act Art. 832) and what you signed.</description>
+      <pubDate>Tue, 24 Nov 2026 22:14:27 GMT</pubDate>
+    </item>
     <item>
       <title>Logged Into Someone’s Account in Korea? Hacking Charges</title>
       <link>https://juanesq.com/guide/account-hacking-charges-korea-foreigners.html</link>
@@ -273,11 +289,11 @@
       <pubDate>Fri, 30 Oct 2026 01:19:56 GMT</pubDate>
     </item>
     <item>
-      <title>Re-entry Permit in Korea: Leaving Without Losing Your Visa</title>
+      <title>Re-entry Permit in Korea: Exempt for 1 Year, F-5 for 2 Years</title>
       <link>https://juanesq.com/guide/re-entry-permit-korea-foreigners.html</link>
       <guid isPermaLink="true">https://juanesq.com/guide/re-entry-permit-korea-foreigners.html</guid>
       <category>Immigration &amp; Visas</category>
-      <description>Leaving Korea for months? Most registered foreigners need no re-entry permit for 1 year (F-5: 2 years), but never past their stay. A Korean attorney explains.</description>
+      <description>Leaving Korea for a while? Most registered foreigners need no re-entry permit for 1 year (F-5: 2 years), but never past their period of stay. Check your card.</description>
       <pubDate>Mon, 26 Oct 2026 22:45:34 GMT</pubDate>
     </item>
     <item>
@@ -470,22 +486,6 @@
       <guid isPermaLink="true">https://juanesq.com/guide/extortion-settlement-demand-korea-foreigners.html</guid>
       <category>Criminal Defense</category>
       <description>Extortion in Korean is 공갈 (gonggal). Where a lawful settlement (합의) demand ends and extortion begins, and why paying quietly is rarely the safe option.</description>
-      <pubDate>Thu, 03 Sep 2026 01:37:50 GMT</pubDate>
-    </item>
-    <item>
-      <title>Brokerage Commission and Maintenance Fees in Korea</title>
-      <link>https://juanesq.com/guide/rental-brokerage-fee-maintenance-cost-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/rental-brokerage-fee-maintenance-cost-korea-foreigners.html</guid>
-      <category>Real Estate</category>
-      <description>The rent is not the whole rent. A Korean attorney explains how brokerage commission (중개보수) is capped and what a maintenance fee (관리비) may lawfully contain.</description>
-      <pubDate>Thu, 03 Sep 2026 01:37:50 GMT</pubDate>
-    </item>
-    <item>
-      <title>기소유예 in English: Suspended Indictment vs 선고유예 vs 집행유예</title>
-      <link>https://juanesq.com/guide/suspended-dispositions-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/suspended-dispositions-korea-foreigners.html</guid>
-      <category>Criminal Defense</category>
-      <description>기소유예 in English is a suspended indictment: the prosecutor files no charge. 선고유예 = sentence withheld; 집행유예 = prison suspended. What each means for your visa.</description>
       <pubDate>Thu, 03 Sep 2026 01:37:50 GMT</pubDate>
     </item>
   </channel>
