@@ -5,9 +5,25 @@
     <link>https://juanesq.com/</link>
     <description>Plain-English guides to Korean law for foreign residents — immigration and visas, criminal defense, employment, real estate, family law, and tax.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 22:14:27 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 22:11:47 GMT</lastBuildDate>
     <generator>juanesq</generator>
     <atom:link href="https://juanesq.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Broken Engagement in Korea: Gifts, Damages and Who Pays</title>
+      <link>https://juanesq.com/guide/broken-engagement-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/broken-engagement-korea-foreigners.html</guid>
+      <category>Family Law</category>
+      <description>Korean law lets you end an engagement but never forces a wedding. When the other side owes damages (Civil Act Art. 806) and who keeps the gifts (예물).</description>
+      <pubDate>Wed, 25 Nov 2026 22:11:47 GMT</pubDate>
+    </item>
+    <item>
+      <title>Co-Signing a Loan in Korea (보증): What a Guarantor Owes</title>
+      <link>https://juanesq.com/guide/loan-guarantor-korea-foreigners.html</link>
+      <guid isPermaLink="true">https://juanesq.com/guide/loan-guarantor-korea-foreigners.html</guid>
+      <category>Civil Claims &amp; Debt Recovery</category>
+      <description>A guarantee (보증) in Korea is valid only if signed on paper — not by app or message. What a guarantor or joint guarantor (연대보증) owes, and the defences.</description>
+      <pubDate>Wed, 25 Nov 2026 22:11:47 GMT</pubDate>
+    </item>
     <item>
       <title>Korean Police Case After You Left Korea: Summons and Warrant</title>
       <link>https://juanesq.com/guide/police-case-after-leaving-korea-foreigners.html</link>
@@ -471,22 +487,6 @@
       <category>Legal Guide &amp;middot; Employment</category>
       <description>No Korean employer can compel you to keep working, but how you resign decides your final pay, benefits and visa. A Korean attorney explains the notice rules.</description>
       <pubDate>Fri, 04 Sep 2026 09:18:07 GMT</pubDate>
-    </item>
-    <item>
-      <title>Theft and Shoplifting Charges in Korea for Foreigners</title>
-      <link>https://juanesq.com/guide/theft-shoplifting-charges-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/theft-shoplifting-charges-korea-foreigners.html</guid>
-      <category>Legal Guide &amp;middot; Criminal Defense</category>
-      <description>Korean theft law (절도) has no minimum value, and repaying the shop does not end it. A Korean attorney explains detention risk and suspended indictment.</description>
-      <pubDate>Fri, 04 Sep 2026 09:18:07 GMT</pubDate>
-    </item>
-    <item>
-      <title>Extortion in Korean: 공갈 (Gonggal) and When a Demand Is a Crime</title>
-      <link>https://juanesq.com/guide/extortion-settlement-demand-korea-foreigners.html</link>
-      <guid isPermaLink="true">https://juanesq.com/guide/extortion-settlement-demand-korea-foreigners.html</guid>
-      <category>Criminal Defense</category>
-      <description>Extortion in Korean is 공갈 (gonggal). Where a lawful settlement (합의) demand ends and extortion begins, and why paying quietly is rarely the safe option.</description>
-      <pubDate>Thu, 03 Sep 2026 01:37:50 GMT</pubDate>
     </item>
   </channel>
 </rss>
