@@ -189,13 +189,13 @@ writeFileSync(HUB, hub)
 console.log('✅ guide/index.html 재생성')
 for (const r of report) console.log('   ' + r)
 
-// 홈(/, /es/, /pt/)의 분야 목록은 <a href="/guide/#en-criminal-defense">…<span class="line-n">27 guides
-// 처럼 허브 분류 앵커로 링크한다. 그 숫자를 허브 분류별 편수에 맞춘다(숫자만 바꾼다).
-for (const home of ['index.html', 'es/index.html', 'pt/index.html']) {
+// 업무 분야 페이지(/practice/, /es/practice/, /pt/practice/ — 2026-11-27 홈에서 분리)의 분야 목록은 <a href="/guide/#en-criminal-defense">…<span class="line-n">27 guides
+// (또는 ar-n) 처럼 허브 분류 앵커로 링크한다. 그 숫자를 허브 분류별 편수에 맞춘다(숫자만 바꾼다).
+for (const home of ['practice/index.html', 'es/practice/index.html', 'pt/practice/index.html']) {
   const p = join(ROOT, home)
   const src = readFileSync(p, 'utf8')
   const changed = []
-  const out = src.replace(/(<a href="\/guide\/#([a-z0-9-]+)">(?:(?!<\/a>)[\s\S])*?<span class="line-n">)(\d+)/g, (m, pre, id, n) => {
+  const out = src.replace(/(<a href="\/guide\/#([a-z0-9-]+)">(?:(?!<\/a>)[\s\S])*?<span class="(?:line-n|ar-n)">)(\d+)/g, (m, pre, id, n) => {
     if (!(id in groupCounts)) { console.error(`⚠️  ${home}: 허브에 없는 분류 앵커 #${id} (숫자 그대로 둠)`); return m }
     if (+n !== groupCounts[id]) changed.push(`#${id} ${n}→${groupCounts[id]}`)
     return pre + groupCounts[id]

@@ -81,7 +81,13 @@ add(`${SITE}/es/`, 'es/index.html', '0.9', 'monthly', HOME_ALTS)
 add(`${SITE}/pt/`, 'pt/index.html', '0.9', 'monthly', HOME_ALTS)
 add(`${SITE}/ko/`, 'ko/index.html', '0.9', 'monthly', HOME_ALTS) // 한국어 프로필 — 이름 검색의 정본
 add(`${SITE}/ko/glossary/`, 'ko/glossary/index.html', '0.7', 'monthly') // 법률 용어 사전 (tools/gen-ko-glossary.mjs)
-add(`${SITE}/about/`, 'about/index.html', '0.7', 'monthly', { en: `${SITE}/about/` })
+// 2026-11-27 페이지 분리: 소개·업무 분야·연락이 언어별 각 페이지
+for (const [k, pr] of [['about', '0.7'], ['practice', '0.8'], ['contact', '0.8']]) {
+  const A = { en: `${SITE}/${k}/`, es: `${SITE}/es/${k}/`, pt: `${SITE}/pt/${k}/` }
+  add(A.en, `${k}/index.html`, pr, 'monthly', A)
+  add(A.es, `es/${k}/index.html`, pr, 'monthly', A)
+  add(A.pt, `pt/${k}/index.html`, pr, 'monthly', A)
+}
 
 const HUB_ALTS = { en: `${SITE}/guide/`, es: `${SITE}/guide/es/`, pt: `${SITE}/guide/pt/` }
 add(`${SITE}/guide/`, 'guide/index.html', '0.9', 'weekly', HUB_ALTS)
