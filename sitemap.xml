@@ -43,8 +43,74 @@
   <url>
     <loc>https://juanesq.com/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/about/"/>
-    <lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/es/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/about/"/>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/pt/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/about/"/>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/practice/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/practice/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/practice/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/practice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/practice/"/>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/es/practice/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/practice/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/practice/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/practice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/practice/"/>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/pt/practice/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/practice/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/practice/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/practice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/practice/"/>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/contact/"/>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/es/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/contact/"/>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanesq.com/pt/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanesq.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/contact/"/>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/</loc>
@@ -72,7 +138,7 @@
   </url>
   <url>
     <loc>https://juanesq.com/privacy.html</loc>
-    <lastmod>2026-10-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
+    <lastmod>2026-11-27</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
   </url>
   <url>
     <loc>https://juanesq.com/book/</loc>
@@ -80,7 +146,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/book/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/book/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/book/"/>
-    <lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://juanesq.com/es/book/</loc>
@@ -88,7 +154,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/book/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/book/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/book/"/>
-    <lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
   <url>
     <loc>https://juanesq.com/pt/book/</loc>
@@ -96,7 +162,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://juanesq.com/es/book/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://juanesq.com/pt/book/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://juanesq.com/book/"/>
-    <lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
   <url>
     <loc>https://juanesq.com/guide/account-hacking-charges-korea-foreigners.html</loc>
