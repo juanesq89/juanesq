@@ -1,0 +1,75 @@
+/* 2026-11-27 페이지 분리: 홈은 첫 화면 하나, 나머지는 메뉴로 넘어가는 각 페이지 */
+
+/* 홈: 한 화면 안에 이름·소개·예약 + 아래 입구 네 개 */
+body[data-page="home"] .hero--quiet{min-height:100vh;min-height:100svh}
+body[data-page="home"] .foot{margin-top:0}
+.doors{position:relative;z-index:2;border-top:1px solid var(--rule-2);background:rgba(6,13,24,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);margin-top:auto}
+.doors ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.doors li{border-left:1px solid var(--rule-2)}
+.doors li:first-child{border-left:0}
+.doors a{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;column-gap:12px;row-gap:6px;padding:24px 24px 26px;text-decoration:none;color:inherit;transition:background .2s}
+.doors li:first-child a{padding-left:0}
+.doors a::after{content:'→';grid-column:3;grid-row:1;align-self:center;color:var(--ivory-3);transition:transform .25s var(--ease),color .2s}
+.doors a:hover{background:rgba(242,238,230,.04)}
+.doors a:hover::after{transform:translateX(4px);color:var(--gold)}
+.d-no{grid-row:1;align-self:baseline;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--seal)}
+.doors b{grid-row:1;font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.2;color:var(--ivory)}
+.d-sub{grid-column:2/4;font-size:14px;line-height:1.45;color:var(--ivory-3)}
+
+/* 하위 페이지 머리 */
+.phead{padding:150px 0 56px;border-bottom:1px solid var(--rule-2)}
+.phead .h2{font-size:clamp(40px,5.4vw,80px);margin-top:18px}
+.phead-lede{margin-top:22px;max-width:36em;font-size:18px;line-height:1.6;color:var(--ivory-2)}
+.psec.sec{padding:72px 0}
+.psec.ptop{padding-top:150px}
+.psec .picks{margin-top:22px}
+#matters.sec{padding:72px 0}
+#matters .am{margin:0}
+
+/* 페이지 끝: 다음 페이지로 */
+.pnext{border-top:1px solid var(--rule-2)}
+.pnext a{display:flex;align-items:baseline;gap:18px;padding:40px 0 44px;text-decoration:none;color:inherit}
+.pnext span{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-3)}
+.pnext b{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3vw,36px);color:var(--ivory)}
+.pnext i{font-style:normal;margin-left:auto;font-size:28px;color:var(--gold);transition:transform .25s var(--ease)}
+.pnext a:hover i{transform:translateX(6px)}
+
+@media (max-width:1020px){
+  .doors ul{grid-template-columns:1fr 1fr}
+  .doors li:nth-child(3){border-left:0}
+  .doors li:nth-child(n+3){border-top:1px solid var(--rule-2)}
+  .doors li:nth-child(3) a{padding-left:0}
+}
+@media (max-width:640px){
+  .doors a{padding:16px 12px 17px 14px;row-gap:3px}
+  .doors li:nth-child(odd) a{padding-left:0}
+  .doors b{font-size:18px}
+  .d-sub{font-size:12.5px}
+  .doors a::after{display:none}
+  .phead{padding:112px 0 36px}
+  .phead-lede{font-size:16px}
+  .psec.sec,#matters.sec{padding:48px 0}
+  .psec.ptop{padding-top:112px}
+  .pnext a{padding:30px 0 34px}
+}
+
+/* 분야 목록·사건 목록: 홈 전용 CSS(home-compact)에 있던 규칙을 하위 페이지에도 */
+.areas{list-style:none;border-top:1px solid var(--rule)}
+.areas a{display:grid;grid-template-columns:40px minmax(0,1fr) auto;column-gap:16px;padding:18px 0;border-bottom:1px solid var(--rule-2);text-decoration:none;color:inherit;transition:background .2s}
+.areas a:hover{background:rgba(242,238,230,.03)}
+.ar-no{grid-row:1/3;padding-top:6px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--seal)}
+.ar-t{font-family:var(--serif);font-size:26px;line-height:1.2;letter-spacing:-.015em;color:var(--ivory)}
+.ar-n{grid-column:3;grid-row:1;align-self:center;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-3);white-space:nowrap}
+.ar-d{grid-column:2/4;margin-top:4px;font-size:15px;line-height:1.55;color:var(--ivory-3)}
+#matters .am-viewport{--row:52px;height:calc(var(--row) * 6)}
+.am-intl{color:#1a1206;background:var(--gold);border-color:var(--gold)}
+@media (max-width:860px){.ar-t{font-size:22px}.areas a{padding:15px 0}}
+/* 휴대폰 홈: 입구 네 개가 첫 화면 안에 들도록 */
+@media (max-width:640px){
+  body[data-page="home"] .hero--quiet .hero-lede{font-size:16px;line-height:1.5}
+  body[data-page="home"] .d-sub{display:none}
+  body[data-page="home"] .doors a{padding:14px 10px 15px 12px;grid-template-columns:auto 1fr}
+  body[data-page="home"] .doors li:nth-child(odd) a{padding-left:0}
+  body[data-page="home"] .doors b{font-size:17px}
+}
+@media (max-width:640px){body[data-page="home"] .lm-frame{max-height:38svh}}
